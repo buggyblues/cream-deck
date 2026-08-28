@@ -359,23 +359,52 @@ const initMotion = () => {
       scrollTrigger: { trigger: '.scenarios-section', start: 'top 82%', once: true }
     });
 
-    const scenarioFrames = gsap.utils.toArray('.scenario-frame');
-    if (scenarioFrames.length > 1) {
-      const frameLoop = gsap.timeline({ paused: true, repeat: -1, repeatDelay: .58 });
-      const keyframes = [
-        ['sneak', 0, 0], ['squash', 1, .34], ['starJump', 2, .52], ['dive', 3, .7],
-        ['splat', 4, .88], ['spring', 5, 1.18], ['celebrate', 6, 1.38], ['wobble', 7, 1.62]
-      ];
+    const startSpriteLoop = ({ frameSelector, keyframes, repeatDelay, trigger }) => {
+      const frames = gsap.utils.toArray(frameSelector);
+      if (frames.length < 2) return;
+      const loop = gsap.timeline({ paused: true, repeat: -1, repeatDelay });
       keyframes.forEach(([label, frame, at]) => {
-        frameLoop.addLabel(label, at).set(scenarioFrames, { autoAlpha: 0 }, label).set(scenarioFrames[frame], { autoAlpha: 1 }, label);
+        loop.addLabel(label, at).set(frames, { autoAlpha: 0 }, label).set(frames[frame], { autoAlpha: 1 }, label);
       });
-      ScrollTrigger.create({
-        trigger: '.scenarios-section',
+      const watcher = ScrollTrigger.create({
+        trigger,
         start: 'top 85%',
         end: 'bottom 15%',
-        onToggle: (self) => self.isActive ? frameLoop.play() : frameLoop.pause()
+        onToggle: (self) => self.isActive ? loop.play() : loop.pause()
       });
-    }
+      cleanups.push(() => {
+        watcher.kill();
+        loop.kill();
+      });
+    };
+
+    startSpriteLoop({
+      frameSelector: '.pairing-frame',
+      trigger: '.how-section',
+      repeatDelay: .82,
+      keyframes: [
+        ['present', 0, 0], ['lift', 1, .38], ['show', 2, .72], ['point', 3, 1.06],
+        ['tilt', 4, 1.4], ['bounce', 5, 1.7], ['wave', 6, 1.98], ['settle', 7, 2.34]
+      ]
+    });
+    startSpriteLoop({
+      frameSelector: '.scenario-frame',
+      trigger: '.scenarios-section',
+      repeatDelay: .58,
+      keyframes: [
+        ['sneak', 0, 0], ['squash', 1, .34], ['starJump', 2, .52], ['dive', 3, .7],
+        ['splat', 4, .88], ['spring', 5, 1.18], ['celebrate', 6, 1.38], ['wobble', 7, 1.62]
+      ]
+    });
+    startSpriteLoop({
+      frameSelector: '.download-frame',
+      trigger: '.download-section',
+      repeatDelay: .78,
+      keyframes: [
+        ['peek', 0, 0], ['pull', 1, .4], ['hug', 2, .76], ['drag', 3, 1.1],
+        ['stand', 4, 1.46], ['wave', 5, 1.78], ['hop', 6, 2.08], ['sit', 7, 2.4]
+      ]
+    });
 
     const softwareWall = document.querySelector('.software-wall');
     const softwareTrack = document.querySelector('.software-track');
@@ -404,7 +433,7 @@ const initMotion = () => {
       .from('.mac-section > img', { ...reveal, x: desktop ? 46 : 0, scale: .96 }, '-=.42');
     gsap.from('.faq-section > h2, .faq-list details', { ...reveal, y: 22, stagger: .055, scrollTrigger: { trigger: '.faq-section', start: 'top 76%', once: true } });
     gsap.timeline({ scrollTrigger: { trigger: '.download-section', start: 'top 82%', once: true } })
-      .from('.download-section img', { autoAlpha: 0, scale: .74, rotation: -8, duration: .65, ease: 'back.out(1.7)' })
+      .from('.download-art', { autoAlpha: 0, scale: .74, rotation: -8, duration: .65, ease: 'back.out(1.7)' })
       .from('.download-section h2, .download-copy', { ...reveal, y: 21, stagger: .07 }, '-=.32')
       .from('.download-section .button', { autoAlpha: 0, y: 16, scale: .95, duration: .5, ease: 'back.out(1.5)' }, '-=.25');
 
@@ -422,7 +451,6 @@ const initMotion = () => {
     return () => cleanups.forEach((cleanup) => cleanup());
   });
 
-  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
 };
 
 initLayoutTabs();

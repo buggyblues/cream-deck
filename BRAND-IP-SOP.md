@@ -9,7 +9,9 @@ Use this guide for the website, releases, and promotional artwork. Poses may cha
 - Standing pose and pairing card: `assets/mascot-pairing-v2.webp`
 - Mouse-following pose: `assets/mascot-look-v2.webp`
 - Inline paw glyph: `assets/panda-paw-glyph-v1.webp`
-- Eight-frame action sequence: `assets/mascot-action-v4-frame-01.webp` through `assets/mascot-action-v4-frame-08.webp`
+- Action sequence: `assets/mascot-action-v5-frame-01.webp` through `assets/mascot-action-v5-frame-08.webp`
+- Pairing sequence: `assets/mascot-pairing-v3-frame-01.webp` through `assets/mascot-pairing-v3-frame-08.webp`
+- Download sequence: `assets/mascot-download-v1-frame-01.webp` through `assets/mascot-download-v1-frame-08.webp`
 
 Check every reference before creating a new image.
 
@@ -39,6 +41,8 @@ Check every reference before creating a new image.
 - Favor exaggerated squash-and-stretch silhouettes over small pose changes. The action must still read when displayed around `16–19rem` wide.
 - Keep the render crisp with no depth of field, motion blur, bloom, or soft-focus treatment.
 - Keep every frame visually distinct. Do not mirror, duplicate, or reverse a small set of poses to imitate extra frames.
+- Pairing cards stay beside the body and never cover the face or warm ivory chest.
+- Wide poses use the compact grid safe area. Leave at least 98 source pixels horizontally and 92 source pixels vertically between the full silhouette and every cell edge.
 
 ## Workflow
 
@@ -51,6 +55,7 @@ Check every reference before creating a new image.
 7. Keep the original aspect ratio on the website with `height: auto` and `object-fit: contain`.
 8. Save approved artwork with a versioned filename. Do not overwrite a published asset.
 9. Reuse approved iOS character assets when they already match the website pose. Generate a new pose only when the page interaction requires it.
+10. Inspect the transparent 4 × 2 contact sheet before export. Any straight cut through a face, ear, limb, prop, or shadow rejects the whole sheet.
 
 ## Release check
 
@@ -64,5 +69,6 @@ Check every reference before creating a new image.
 - [ ] Original aspect ratio preserved
 - [ ] Animation frames share one canvas, scale, prop design, and character identity
 - [ ] The full sequence contains eight distinct poses with readable motion between adjacent frames
+- [ ] No straight cell-edge cuts or neighboring-frame pixels remain after splitting
 - [ ] Mouse-following pupils stay inside the generated eye whites at every viewport edge
 - [ ] Inline paw shape and pad colors match the approved character
