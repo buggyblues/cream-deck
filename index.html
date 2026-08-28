@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -8,8 +8,10 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="奶猫妙控｜用 iPhone 控制 Mac">
   <meta property="og:description" content="扫码连接，把常用操作放到手边。">
-  <meta property="og:image" content="https://buggyblues.github.io/cream-deck/assets/app-icon.png">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
+  <meta property="og:url" content="https://cream-deck.vercel.app/">
   <meta property="og:locale" content="zh_CN">
+  <link rel="canonical" href="https://cream-deck.vercel.app/">
   <link rel="icon" type="image/png" href="assets/app-icon.png">
   <link rel="apple-touch-icon" href="assets/app-icon.png">
   <link rel="manifest" href="site.webmanifest">
@@ -20,109 +22,141 @@
   <a class="skip-link" href="#main">跳到正文</a>
 
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="奶猫妙控首页">
-        <img src="assets/app-icon.png" alt="" width="42" height="42">
-        <span>奶猫妙控</span>
-      </a>
-      <nav aria-label="主导航">
-        <a href="#control">功能</a>
-        <a href="#how">连接</a>
-      </nav>
-      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 Mac 端</a>
-    </div>
+    <a class="brand" href="#top" aria-label="奶猫妙控首页">
+      <img src="assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#screens">界面</a>
+      <a href="#how">连接</a>
+      <a href="#faq">问题</a>
+    </nav>
+    <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载</a>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
         <p class="eyebrow">iPhone × Mac</p>
-        <h1>iPhone，按你习惯的方式控制 Mac。</h1>
-        <p class="hero-lede">扫码连接。把常用按键、旋钮和触控板放到手边，每套工作都能有自己的布局。</p>
+        <h1>用 iPhone 控制 Mac。</h1>
+        <p class="hero-lede">把按键、旋钮、触控板和屏幕预览放到 iPhone。扫码后直接用。</p>
         <div class="hero-actions">
-          <a class="button primary" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 macOS 通用版</a>
-          <a class="button secondary" href="#control">查看 App</a>
+          <a class="button primary" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 Mac 端</a>
+          <a class="button secondary" href="#screens">看界面</a>
         </div>
-        <p class="availability"><span data-release-status>首个公证版本准备中</span> · macOS 13+</p>
+        <p class="availability"><span data-release-status>公证版准备中</span> · macOS 13+</p>
       </div>
-      <div class="hero-art">
-        <img src="assets/mascot-hero-v2.png" alt="无尾熊猫伙伴坐在奶油控制台旁转动旋钮" width="1536" height="1024">
+      <img class="hero-mascot" src="assets/mascot-hero-v3.webp" alt="无尾熊猫伙伴坐在奶油控制台旁转动旋钮" width="1216" height="896">
+    </section>
+
+    <section class="screens-section" id="screens">
+      <p class="eyebrow">真实界面</p>
+      <h2>打开就是控制台。</h2>
+      <div class="screen-gallery">
+        <figure>
+          <img src="assets/screens/control-studio.webp" alt="奶猫妙控的日常工作控制台" width="1179" height="2556" loading="lazy">
+          <figcaption><strong>日常工作</strong><span>触控板、搜索、截图、窗口和系统控制。</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screens/control-codex.webp" alt="奶猫妙控的 Codex Micro 控制台" width="1179" height="2556" loading="lazy">
+          <figcaption><strong>Codex Micro</strong><span>Agent、推理强度、批准、语音和发送。</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screens/control-resolve.webp" alt="奶猫妙控的 DaVinci Resolve 控制台" width="1179" height="2556" loading="lazy">
+          <figcaption><strong>DaVinci Resolve</strong><span>搜索旋钮、剪辑、修剪和播放。</span></figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="product-section" id="control">
-      <div class="product-shot">
-        <div class="phone-frame">
-          <img src="assets/iphone-control.png" alt="奶猫妙控在 iPhone 模拟器中的真实运行画面" width="1179" height="2556">
-        </div>
-        <span class="shot-label">模拟器真实画面</span>
-      </div>
+      <figure class="product-shot">
+        <img src="assets/screens/layout-editor.webp" alt="奶猫妙控布局编辑器" width="1179" height="2556" loading="lazy">
+        <figcaption class="shot-label">布局编辑</figcaption>
+      </figure>
       <div class="product-copy">
-        <p class="eyebrow">一块属于你的面板</p>
-        <h2>常用操作，抬手就能按到。</h2>
-        <p>按钮、旋钮、触控板、滑杆和状态组件可以自由组合。布局保存在 iPhone 上，需要时直接编辑。</p>
+        <p class="eyebrow">布局</p>
+        <h2>按住、拖动，排成顺手的样子。</h2>
+        <p>添加组件，再为每个组件选择动作。布局保存在 iPhone 上。</p>
         <div class="feature-list">
-          <article><h3>自由布局</h3><p>移动、缩放和绑定动作，不受固定键位限制。</p></article>
-          <article><h3>顺手控制</h3><p>轻点、旋转、滑动和长按都有清晰反馈。</p></article>
-          <article><h3>随工作切换</h3><p>日常控制、Codex 和 Resolve 布局一划即换。</p></article>
+          <article><h3>编辑</h3><p>移动、缩放、改外观。</p></article>
+          <article><h3>绑定</h3><p>快捷键、媒体、鼠标、Codex 和 Resolve。</p></article>
+          <article><h3>切换</h3><p>不同工作使用不同布局。</p></article>
         </div>
       </div>
     </section>
 
     <section class="how-section" id="how">
-      <div class="pairing-art">
-        <img src="assets/mascot-pairing-v1.png" alt="无尾熊猫伙伴站着举起配对二维码" width="1122" height="1402" loading="lazy">
-      </div>
-      <div class="how-copy">
-        <div class="section-title">
-          <p class="eyebrow">开始使用</p>
-          <h2>三步连上 Mac。</h2>
-        </div>
-        <ol class="steps">
-          <li><span>01</span><div><h3>安装 Mac 端</h3><p>打开 DMG，把奶猫妙控拖入“应用程序”。</p></div></li>
-          <li><span>02</span><div><h3>允许辅助功能</h3><p>按系统提示授权，让控制操作可以执行。</p></div></li>
-          <li><span>03</span><div><h3>用 iPhone 扫码</h3><p>两台设备连同一 Wi‑Fi，扫一下菜单栏里的二维码。</p></div></li>
-        </ol>
+      <img class="pairing-art" src="assets/mascot-pairing-v2.webp" alt="无尾熊猫伙伴站着举起配对二维码" width="728" height="1249" loading="lazy">
+      <p class="eyebrow">开始使用</p>
+      <h2>三步连上 Mac。</h2>
+      <ol class="steps">
+        <li><span>01</span><div><h3>安装 Mac 端</h3><p>打开 DMG，把奶猫妙控拖入“应用程序”。</p></div></li>
+        <li><span>02</span><div><h3>允许辅助功能</h3><p>按系统提示授权，让控制操作可以执行。</p></div></li>
+        <li><span>03</span><div><h3>用 iPhone 扫码</h3><p>两台设备连同一 Wi‑Fi，扫一下菜单栏里的二维码。</p></div></li>
+      </ol>
+    </section>
+
+    <section class="quick-section">
+      <p class="eyebrow">少走一步</p>
+      <h2>长按扫码，小组件直达控制。</h2>
+      <p class="section-intro">长按 App 图标选择“扫码配对”。小组件可看连接状态、打开控制台或扫码。</p>
+      <div class="quick-screens">
+        <figure>
+          <img src="assets/screens/device-pairing.webp" alt="奶猫妙控设备与配对页面" width="1179" height="2556" loading="lazy">
+          <figcaption><strong>设备与配对</strong><span>自动发现 Mac，也可以扫码。</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screens/layout-switcher.webp" alt="奶猫妙控布局切换页面" width="1179" height="2556" loading="lazy">
+          <figcaption><strong>布局切换</strong><span>点按管理；长按并滑动可快速切换。</span></figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="layouts-section">
-      <div class="section-title">
-        <p class="eyebrow">切换工作</p>
-        <h2>一套布局，做好一类事情。</h2>
-      </div>
-      <div class="layout-list">
-        <article><h3>日常控制</h3><p>音量、亮度、媒体、应用切换和触控板。</p></article>
-        <article><h3>Codex Micro</h3><p>Agent 状态、推理强度、语音和常用命令。</p></article>
-        <article><h3>DaVinci Resolve</h3><p>剪辑、修剪、播放、搜索旋钮和时间码。</p></article>
-      </div>
+    <section class="scenarios-section">
+      <p class="eyebrow">适用场景</p>
+      <h2>手离不开键盘时，让 iPhone 接手。</h2>
+      <ul class="scenario-list">
+        <li><strong>日常办公</strong><span>搜索、截图、复制粘贴、窗口、音量和亮度。</span></li>
+        <li><strong>写代码</strong><span>控制 Codex Agent、推理强度、批准、语音和发送。</span></li>
+        <li><strong>视频剪辑</strong><span>控制 Resolve、Final Cut Pro 和剪映的播放、切分与时间线。</span></li>
+        <li><strong>演示与媒体</strong><span>翻页、黑屏、播放、进度和音量。</span></li>
+        <li><strong>音乐与游戏</strong><span>MIDI 键盘、鼓垫和游戏按键。</span></li>
+      </ul>
     </section>
 
     <section class="privacy-section">
-      <img src="assets/brand-mark.png" alt="奶猫妙控熊猫标志" width="1024" height="1024" loading="lazy">
-      <div>
-        <p class="eyebrow">本地连接</p>
-        <h2>不登录账号，也能好好工作。</h2>
-        <p>iPhone 与 Mac 在同一局域网内直接通信。布局、配对信息和设置保存在你的设备上。</p>
-        <a href="privacy.html">查看隐私说明 →</a>
+      <img src="assets/brand-mark.webp" alt="奶猫妙控熊猫标志" width="1024" height="1024" loading="lazy">
+      <p class="eyebrow">本地连接</p>
+      <h2>不用登录。</h2>
+      <p class="privacy-copy">iPhone 与 Mac 在同一局域网内直接通信。布局和配对信息保存在设备上。</p>
+      <a href="privacy.html">隐私说明 →</a>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <p class="eyebrow">常见问题</p>
+      <h2>连接前，先把这些说清楚。</h2>
+      <div class="faq-list">
+        <details><summary>需要连同一个 Wi‑Fi 吗？</summary><p>需要。iPhone 和 Mac 通过同一局域网直接通信。</p></details>
+        <details><summary>Mac 为什么没有反应？</summary><p>在“系统设置 → 隐私与安全性 → 辅助功能”中允许奶猫妙控。</p></details>
+        <details><summary>为什么看不到 Mac 画面？</summary><p>屏幕预览需要额外允许“屏幕录制”。普通按键、旋钮和触控板不受影响。</p></details>
+        <details><summary>怎么最快打开扫码？</summary><p>长按 App 图标选择“扫码配对”，或点按奶猫妙控小组件。</p></details>
+        <details><summary>换一台 Mac 怎么配对？</summary><p>打开“设备”，扫描新 Mac 菜单栏中的二维码。</p></details>
+        <details><summary>控制内容会上传吗？</summary><p>不会。App 不要求账号，控制指令在已配对设备之间传输。</p></details>
+        <details><summary>支持哪些 Mac？</summary><p>支持 macOS 13 及以上；Universal 版本兼容 Apple 芯片和 Intel。</p></details>
       </div>
     </section>
 
     <section class="download-section">
-      <img src="assets/app-icon.png" alt="奶猫妙控 App 图标" width="128" height="128" loading="lazy">
-      <div>
-        <h2>把 Mac 的下一次操作，放到手边。</h2>
-        <p>Universal DMG 同时支持 Apple 芯片和 Intel Mac。</p>
-      </div>
+      <img src="assets/app-icon.webp" alt="奶猫妙控 App 图标" width="128" height="128" loading="lazy">
+      <h2>下载 Mac 端。</h2>
+      <p>macOS 13+ · Apple 芯片和 Intel</p>
       <a class="button dark" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 Mac 端</a>
     </section>
   </main>
 
   <footer>
-    <div>
-      <a class="brand" href="#top"><img src="assets/app-icon.png" alt="" width="40" height="40"><span>奶猫妙控</span></a>
-      <p>用 iPhone 控制 Mac。</p>
-    </div>
+    <a class="brand" href="#top"><img src="assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>用 iPhone 控制 Mac。</p>
     <nav aria-label="页脚导航">
       <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
       <a href="support.html">支持</a>

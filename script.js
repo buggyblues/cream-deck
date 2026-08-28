@@ -13,5 +13,10 @@ fetch('https://api.github.com/repos/buggyblues/cream-deck/releases/latest', {
     releaseLinks.forEach((link) => { link.href = release.html_url; });
   })
   .catch(() => {
-    if (releaseStatus) releaseStatus.textContent = '首个公证版本准备中';
+    if (releaseStatus) releaseStatus.textContent = '公证版准备中';
+    releaseLinks.forEach((link) => {
+      link.href = 'https://github.com/buggyblues/cream-deck/releases';
+      link.textContent = link.classList.contains('header-download') ? '发布' : '查看发布进度';
+      link.setAttribute('aria-label', '查看 Mac 端发布进度');
+    });
   });

@@ -5,5 +5,6 @@
 - 官网：由 Vercel 部署，GitHub Pages 提供备用访问入口
 - 下载：请前往 [Releases](https://github.com/buggyblues/cream-deck/releases)
 - 支持：请使用 [Issues](https://github.com/buggyblues/cream-deck/issues)
+- 形象规范：所有官网插画遵循 [IP 形象制作 SOP](BRAND-IP-SOP.md)
 
 macOS 安装包为 Developer ID 签名、Apple 公证的 Universal DMG，支持 Apple 芯片与 Intel Mac。
