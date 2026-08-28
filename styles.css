@@ -48,7 +48,6 @@ a:focus-visible, summary:focus-visible { outline: .2rem solid var(--purple); out
 .button:hover { transform: translateY(-.125rem); }
 .button.primary { background: var(--purple); color: white; }
 .button.primary:hover { background: #5143c6; }
-.button.secondary { border-color: var(--line); background: rgba(255,253,248,.72); }
 .availability { margin-top: 1rem; color: var(--muted); font-size: .8125rem; }
 .hero-mascot { width: 100%; max-height: 36.875rem; min-width: 0; object-fit: contain; object-position: center; }
 
