@@ -7,9 +7,9 @@ Use this guide for the website, releases, and promotional artwork. Poses may cha
 - Face and overall style: `assets/app-icon.png`
 - Seated pose and console: `assets/mascot-hero-v3.webp`
 - Standing pose and pairing card: `assets/mascot-pairing-v2.webp`
-- Action sequence: `assets/mascot-keyframe-1.webp`, `assets/mascot-keyframe-2.webp`, and `assets/mascot-keyframe-3.webp`
+- Eight-frame action sequence: `assets/mascot-action-v2-frame-01.webp` through `assets/mascot-action-v2-frame-08.webp`
 
-Check all three references before creating a new image.
+Check every reference before creating a new image.
 
 ## Fixed details
 
@@ -30,7 +30,8 @@ Check all three references before creating a new image.
 - Use a cream console with a black panel, one blue switch, and a small green status light.
 - A pairing card may contain a QR code. It must not cover the face or chest.
 - Keep animation frames on the same canvas, at the same scale, with unchanged props and colors.
-- Use the action sequence in order: anticipation, button press, follow-through, then reverse to rest.
+- Use the action sequence in order: idle, crouch, launch, contact, impact, recoil, follow-through, and landing.
+- Keep every frame visually distinct. Do not mirror, duplicate, or reverse a small set of poses to imitate extra frames.
 
 ## Workflow
 
@@ -54,3 +55,4 @@ Check all three references before creating a new image.
 - [ ] Clean edges on light and dark backgrounds
 - [ ] Original aspect ratio preserved
 - [ ] Animation frames share one canvas, scale, prop design, and character identity
+- [ ] The full sequence contains eight distinct poses with readable motion between adjacent frames

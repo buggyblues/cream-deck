@@ -157,13 +157,22 @@ const initMotion = () => {
           .set(scenarioFrames, { autoAlpha: 0 }, position)
           .set(scenarioFrames[index], { autoAlpha: 1 }, position);
       };
-      const frameLoop = gsap.timeline({ paused: true, repeat: -1, repeatDelay: .85 });
+      const frameLoop = gsap.timeline({ paused: true, repeat: -1, repeatDelay: .9 });
+      const keyframeSequence = [
+        { label: 'idle', frame: 0, at: 0 },
+        { label: 'crouch', frame: 1, at: .32 },
+        { label: 'launch', frame: 2, at: .5 },
+        { label: 'contact', frame: 3, at: .68 },
+        { label: 'impact', frame: 4, at: .84 },
+        { label: 'recoil', frame: 5, at: 1.02 },
+        { label: 'followThrough', frame: 6, at: 1.2 },
+        { label: 'landing', frame: 7, at: 1.42 }
+      ];
 
-      showScenarioFrame(frameLoop, 0, 0);
-      showScenarioFrame(frameLoop, 1, .2);
-      showScenarioFrame(frameLoop, 2, .34);
-      showScenarioFrame(frameLoop, 1, .54);
-      showScenarioFrame(frameLoop, 0, .68);
+      keyframeSequence.forEach(({ label, frame, at }) => {
+        frameLoop.addLabel(label, at);
+        showScenarioFrame(frameLoop, frame, label);
+      });
 
       ScrollTrigger.create({
         trigger: '.scenarios-section',
