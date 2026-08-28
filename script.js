@@ -231,16 +231,137 @@ const initLookingPanda = (gsap) => {
   window.addEventListener('resize', onResize, { passive: true });
 };
 
+const initRoleCarousel = (gsap) => {
+  const section = document.querySelector('.scenarios-section');
+  const tabs = Array.from(document.querySelectorAll('[data-role-index]'));
+  const panels = Array.from(document.querySelectorAll('.role-panel'));
+  const figures = Array.from(document.querySelectorAll('.role-figure'));
+  if (!section || tabs.length !== panels.length || tabs.length !== figures.length) return;
+
+  let current = 0;
+  let timer = null;
+  let transition = null;
+  let isVisible = false;
+
+  const syncState = (index) => {
+    tabs.forEach((tab, tabIndex) => {
+      const selected = tabIndex === index;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach((panel, panelIndex) => {
+      const selected = panelIndex === index;
+      panel.classList.toggle('is-active', selected);
+      panel.setAttribute('aria-hidden', String(!selected));
+    });
+    figures.forEach((figure, figureIndex) => {
+      figure.classList.toggle('is-active', figureIndex === index);
+    });
+  };
+
+  const schedule = () => {
+    timer?.kill();
+    timer = null;
+    if (!gsap || prefersReducedMotion || !isVisible || document.hidden) return;
+    timer = gsap.delayedCall(4.4, () => select((current + 1) % tabs.length));
+  };
+
+  const select = (index, moveFocus = false) => {
+    if (index === current) {
+      if (moveFocus) tabs[index].focus();
+      schedule();
+      return;
+    }
+
+    const previous = current;
+    current = index;
+    if (moveFocus) tabs[index].focus();
+    transition?.kill();
+
+    if (!gsap || prefersReducedMotion) {
+      syncState(index);
+      schedule();
+      return;
+    }
+
+    const outgoing = [panels[previous], figures[previous]];
+    const incoming = [panels[index], figures[index]];
+    tabs.forEach((tab, tabIndex) => {
+      const selected = tabIndex === index;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    panels[index].classList.add('is-active');
+    panels[index].setAttribute('aria-hidden', 'false');
+    figures[index].classList.add('is-active');
+
+    transition = gsap.timeline({
+      defaults: { ease: 'power3.out' },
+      onComplete: () => {
+        panels[previous].classList.remove('is-active');
+        panels[previous].setAttribute('aria-hidden', 'true');
+        figures[previous].classList.remove('is-active');
+        gsap.set(outgoing, { clearProps: 'all' });
+        transition = null;
+      }
+    });
+    transition
+      .to(panels[previous], { autoAlpha: 0, x: -18, duration: .22 }, 0)
+      .to(figures[previous], { autoAlpha: 0, xPercent: -7, rotation: -3, duration: .24 }, 0)
+      .fromTo(panels[index], { autoAlpha: 0, x: 22 }, { autoAlpha: 1, x: 0, duration: .42 }, .1)
+      .fromTo(figures[index], {
+        autoAlpha: 0,
+        xPercent: 10,
+        yPercent: 4,
+        rotation: 5,
+        scale: .9
+      }, {
+        autoAlpha: 1,
+        xPercent: 0,
+        yPercent: 0,
+        rotation: 0,
+        scale: 1,
+        duration: .58,
+        ease: 'back.out(1.55)'
+      }, .08);
+    schedule();
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => select(index));
+    tab.addEventListener('keydown', (event) => {
+      let nextIndex = index;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') nextIndex = 0;
+      else if (event.key === 'End') nextIndex = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      select(nextIndex, true);
+    });
+  });
+
+  const observer = new IntersectionObserver(([entry]) => {
+    isVisible = entry.isIntersecting && entry.intersectionRatio >= .28;
+    schedule();
+  }, { threshold: [.28] });
+  observer.observe(section);
+  document.addEventListener('visibilitychange', schedule);
+  syncState(0);
+};
+
 const initMotion = () => {
   const panda = document.querySelector('.look-panda');
   if (!window.gsap) {
     panda?.classList.add('is-ready');
+    initRoleCarousel(null);
     return;
   }
 
   const { gsap } = window;
   initTypewriter(gsap);
   initLookingPanda(gsap);
+  initRoleCarousel(gsap);
 
   if (!prefersReducedMotion) {
     gsap.to('.hero-paw', {
@@ -278,41 +399,55 @@ const initMotion = () => {
       .from('.site-header', { autoAlpha: 0, y: -18, duration: .5 })
       .from('.hero-line-accent', { autoAlpha: 0, y: 38, rotation: 1.2, duration: .65 }, '-=.12')
       .from('.hero-actions, .availability', { autoAlpha: 0, y: 16, duration: .42, stagger: .07 }, '-=.28')
-      .from('.hero-screen', { autoAlpha: 0, y: 72, rotation: desktop ? -3 : -1, scale: .97, duration: .88 }, '-=.32');
+      .from('.hero-control', {
+        autoAlpha: 0,
+        y: desktop ? 42 : 28,
+        rotation: (index) => index % 2 ? -8 : 8,
+        scale: .78,
+        duration: .72,
+        stagger: { amount: .52, from: 'random' }
+      }, '-=.48');
 
-    const heroFloat = gsap.to('.hero-product', {
-      y: -7,
-      duration: 3.2,
-      ease: 'sine.inOut',
-      repeat: -1,
-      yoyo: true,
-      paused: true
+    const heroControls = gsap.utils.toArray('.hero-control');
+    const heroFloats = heroControls.map((control, index) => {
+      const tween = gsap.to(control, {
+        x: ((index * 11) % 17) - 8,
+        y: ((index * 7) % 15) - 7,
+        rotation: ((index * 5) % 9) - 4,
+        duration: 3.8 + (index % 5) * .55,
+        ease: 'sine.inOut',
+        repeat: -1,
+        yoyo: true,
+        paused: true
+      });
+      tween.progress((index * .137) % 1);
+      return tween;
     });
     ScrollTrigger.create({
       trigger: '.hero',
       start: 'top bottom',
       end: 'bottom top',
-      onToggle: (self) => self.isActive ? heroFloat.play() : heroFloat.pause()
+      onToggle: (self) => heroFloats.forEach((tween) => self.isActive ? tween.play() : tween.pause())
     });
+    cleanups.push(() => heroFloats.forEach((tween) => tween.kill()));
 
     if (finePointer) {
-      const heroProduct = document.querySelector('.hero-product');
-      const heroScreen = document.querySelector('.hero-screen');
-      if (heroProduct && heroScreen) {
-        gsap.set(heroScreen, { transformPerspective: 900, transformOrigin: '50% 38%' });
-        const rotateX = gsap.quickTo(heroScreen, 'rotationX', { duration: .45, ease: 'power3.out' });
-        const rotateY = gsap.quickTo(heroScreen, 'rotationY', { duration: .45, ease: 'power3.out' });
+      const hero = document.querySelector('.hero');
+      const heroField = document.querySelector('.hero-field');
+      if (hero && heroField) {
+        const shiftX = gsap.quickTo(heroField, 'x', { duration: .7, ease: 'power3.out' });
+        const shiftY = gsap.quickTo(heroField, 'y', { duration: .7, ease: 'power3.out' });
         const onPointerMove = (event) => {
-          const bounds = heroProduct.getBoundingClientRect();
-          rotateX(((event.clientY - bounds.top) / bounds.height - .5) * -5);
-          rotateY(((event.clientX - bounds.left) / bounds.width - .5) * 7);
+          const bounds = hero.getBoundingClientRect();
+          shiftX(((event.clientX - bounds.left) / bounds.width - .5) * 14);
+          shiftY(((event.clientY - bounds.top) / bounds.height - .5) * 10);
         };
-        const onPointerLeave = () => { rotateX(0); rotateY(0); };
-        heroProduct.addEventListener('pointermove', onPointerMove);
-        heroProduct.addEventListener('pointerleave', onPointerLeave);
+        const onPointerLeave = () => { shiftX(0); shiftY(0); };
+        hero.addEventListener('pointermove', onPointerMove);
+        hero.addEventListener('pointerleave', onPointerLeave);
         cleanups.push(() => {
-          heroProduct.removeEventListener('pointermove', onPointerMove);
-          heroProduct.removeEventListener('pointerleave', onPointerLeave);
+          hero.removeEventListener('pointermove', onPointerMove);
+          hero.removeEventListener('pointerleave', onPointerLeave);
         });
       }
     }
@@ -328,7 +463,7 @@ const initMotion = () => {
       .from('.feature-list article', { ...reveal, y: 20, stagger: .075 }, '-=.32');
 
     gsap.timeline({ scrollTrigger: { trigger: '.how-section', start: 'top 74%', once: true } })
-      .from('.pairing-art', { ...reveal, x: desktop ? -54 : 0, rotation: -4, scale: .95 })
+      .from('.connection-art', { ...reveal, x: desktop ? -54 : 0, rotation: -4, scale: .95 })
       .from('.how-section > .eyebrow, .how-section > h2', { ...reveal, y: 24, stagger: .07 }, '-=.4')
       .from('.steps li', { ...reveal, y: 19, stagger: .08 }, '-=.32');
 
@@ -336,28 +471,10 @@ const initMotion = () => {
       .from('.quick-copy > *', { ...reveal, y: 24, stagger: .07 })
       .from('.quick-screens figure', { ...reveal, y: 52, rotation: (index) => index ? 2 : -2, stagger: .12 }, '-=.34');
 
-    gsap.from('.scenarios-section > h2, .scenario-list li', {
-      ...reveal,
-      y: 26,
-      stagger: .075,
-      scrollTrigger: { trigger: '.scenarios-section', start: 'top 76%', once: true }
-    });
-    gsap.fromTo('.scenario-mascot', {
-      autoAlpha: 0,
-      xPercent: desktop ? 18 : 0,
-      y: 62,
-      rotation: 10,
-      scale: .86
-    }, {
-      autoAlpha: 1,
-      xPercent: 0,
-      y: 0,
-      rotation: -2,
-      scale: 1,
-      duration: .82,
-      ease: 'back.out(1.45)',
-      scrollTrigger: { trigger: '.scenarios-section', start: 'top 82%', once: true }
-    });
+    gsap.timeline({ scrollTrigger: { trigger: '.scenarios-section', start: 'top 76%', once: true } })
+      .from('.role-tabs', { ...reveal, y: 18 })
+      .from('.role-panel.is-active > *', { ...reveal, y: 23, stagger: .07 }, '-=.34')
+      .from('.role-stage', { autoAlpha: 0, xPercent: desktop ? 12 : 0, y: 38, rotation: 5, scale: .9, duration: .72, ease: 'back.out(1.45)' }, '-=.48');
 
     const startSpriteLoop = ({ frameSelector, keyframes, repeatDelay, trigger }) => {
       const frames = gsap.utils.toArray(frameSelector);
@@ -386,33 +503,18 @@ const initMotion = () => {
     };
 
     startSpriteLoop({
-      frameSelector: '.pairing-frame',
+      frameSelector: '.connection-frame',
       trigger: '.how-section',
-      repeatDelay: .5,
+      repeatDelay: .8,
       keyframes: [
-        ['present', 0, 0, { rotation: 0 }],
-        ['lift', 1, .22, { yPercent: -1.2, rotation: -1.2 }],
-        ['show', 2, .42, { yPercent: -2, rotation: 1 }],
-        ['point', 3, .62, { yPercent: -1, rotation: -1.5 }],
-        ['tiltLeft', 4, .79, { rotation: -4.2, ease: 'back.out(1.5)' }],
-        ['tiltRight', 5, .96, { rotation: 4.2, ease: 'back.out(1.5)' }],
-        ['lower', 6, 1.16, { yPercent: 1, rotation: -1 }],
-        ['settle', 7, 1.38, { yPercent: 0, rotation: 0, duration: .18 }]
-      ]
-    });
-    startSpriteLoop({
-      frameSelector: '.scenario-frame',
-      trigger: '.scenarios-section',
-      repeatDelay: .42,
-      keyframes: [
-        ['ready', 0, 0, { scaleX: 1, scaleY: 1 }],
-        ['compress', 1, .2, { yPercent: 1.5, scaleX: 1.035, scaleY: .965 }],
-        ['launch', 2, .36, { yPercent: -2.5, scaleX: .98, scaleY: 1.04 }],
-        ['reach', 3, .51, { yPercent: -1.5, rotation: 2.5 }],
-        ['splat', 4, .66, { yPercent: 2.5, scaleX: 1.07, scaleY: .92, duration: .1, ease: 'power3.in' }],
-        ['rebound', 5, .79, { yPercent: -4, scaleX: .96, scaleY: 1.06, duration: .12, ease: 'back.out(2)' }],
-        ['wobble', 6, .96, { yPercent: 0, rotation: -5, duration: .13, ease: 'back.out(2.2)' }],
-        ['reset', 7, 1.15, { rotation: 0, scaleX: 1, scaleY: 1, duration: .16 }]
+        ['ready', 0, 0, { rotation: 0, scaleX: 1, scaleY: 1 }],
+        ['windup', 1, .25, { xPercent: -1, rotation: -2.2, scaleX: 1.02, scaleY: .98 }],
+        ['lasso', 2, .46, { yPercent: -1.5, rotation: 1.7, scaleY: 1.025 }],
+        ['throw', 3, .66, { xPercent: 1.5, rotation: 2.8, ease: 'power3.out' }],
+        ['flight', 4, .84, { xPercent: 2.5, yPercent: -1.5, rotation: 1.5 }],
+        ['aim', 5, 1.01, { xPercent: 1, yPercent: 0, rotation: -.8 }],
+        ['click', 6, 1.18, { yPercent: -3, scaleX: .97, scaleY: 1.045, duration: .12, ease: 'back.out(2.1)' }],
+        ['tip', 7, 1.42, { xPercent: 0, yPercent: 0, rotation: 0, scaleX: 1, scaleY: 1, duration: .2 }]
       ]
     });
     startSpriteLoop({
@@ -431,28 +533,6 @@ const initMotion = () => {
       ]
     });
 
-    const softwareWall = document.querySelector('.software-wall');
-    const softwareTrack = document.querySelector('.software-track');
-    if (softwareWall && softwareTrack) {
-      softwareWall.classList.add('is-animated');
-      const softwareLoop = gsap.to(softwareTrack, { xPercent: -50, duration: desktop ? 34 : 25, ease: 'none', repeat: -1, paused: true });
-      let visible = false;
-      const sync = () => visible && !document.hidden ? softwareLoop.play() : softwareLoop.pause();
-      const onVisibilityChange = () => sync();
-      document.addEventListener('visibilitychange', onVisibilityChange);
-      cleanups.push(() => {
-        document.removeEventListener('visibilitychange', onVisibilityChange);
-        softwareWall.classList.remove('is-animated');
-      });
-      ScrollTrigger.create({
-        trigger: '.software-section',
-        start: 'top bottom',
-        end: 'bottom top',
-        onToggle: (self) => { visible = self.isActive; sync(); }
-      });
-    }
-
-    gsap.from('.software-section > h2', { ...reveal, y: 24, scrollTrigger: { trigger: '.software-section', start: 'top 78%', once: true } });
     gsap.timeline({ scrollTrigger: { trigger: '.mac-section', start: 'top 76%', once: true } })
       .from('.mac-copy > *', { ...reveal, y: 24, stagger: .07 })
       .from('.mac-section > img', { ...reveal, x: desktop ? 46 : 0, scale: .96 }, '-=.42');

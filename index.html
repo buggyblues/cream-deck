@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0e6">
-  <meta name="description" content="奶猫妙控是一款自由组合布局的掌上 Mac 控制台，支持快捷键、触控板、旋钮、屏幕预览以及 Codex、DaVinci Resolve、PowerPoint、Apple Music 等专属布局">
+  <meta name="description" content="奶猫妙控是一款可以自由组合的掌上 Mac 小键盘，支持快捷键、触控板、旋钮、屏幕预览以及 Codex、DaVinci Resolve、PowerPoint、Apple Music 等专属小键盘">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="application-name" content="奶猫妙控">
   <meta name="apple-mobile-web-app-title" content="奶猫妙控">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
   <meta property="og:title" content="奶猫妙控｜自由全能小键盘，跃然掌上">
-  <meta property="og:description" content="自由组合布局的掌上 Mac 控制台">
+  <meta property="og:description" content="自由组合的掌上 Mac 小键盘">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <meta property="og:image:alt" content="奶猫妙控熊猫 App 图标">
   <meta property="og:url" content="https://cream-deck.vercel.app/">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="奶猫妙控｜自由全能小键盘，跃然掌上">
-  <meta name="twitter:description" content="自由组合布局的掌上 Mac 控制台">
+  <meta name="twitter:description" content="自由组合的掌上 Mac 小键盘">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <link rel="canonical" href="https://cream-deck.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,13 +40,13 @@
     "image": "https://cream-deck.vercel.app/assets/app-icon.png",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "macOS 13+, iOS 17+, iPadOS 17+",
-    "description": "自由组合布局的掌上 Mac 控制台",
+    "description": "自由组合的掌上 Mac 小键盘",
     "featureList": [
-      "自定义按键、旋钮与触控板布局",
+      "自定义按键、旋钮与触控板",
       "Mac 屏幕预览",
       "二维码配对",
       "桌面小组件与长按快捷操作",
-      "Codex、DaVinci Resolve、PowerPoint 与 Apple Music 专属布局"
+      "Codex、DaVinci Resolve、PowerPoint 与 Apple Music 专属小键盘"
     ],
     "sameAs": "https://github.com/buggyblues/cream-deck"
   }
@@ -84,7 +84,7 @@
       <span>奶猫妙控</span>
     </a>
     <nav aria-label="主导航">
-      <a href="#layouts">布局</a>
+      <a href="#layouts">小键盘</a>
       <a href="#how">连接</a>
       <a href="#scenarios">场景</a>
       <a href="#faq">问题</a>
@@ -94,6 +94,19 @@
 
   <main id="main">
     <section class="hero" id="top">
+      <div class="hero-field" aria-hidden="true">
+        <span class="hero-control hero-key hero-key-blue">搜索</span>
+        <span class="hero-control hero-key hero-key-lilac">截图</span>
+        <span class="hero-control hero-key hero-key-yellow">切换应用</span>
+        <span class="hero-control hero-key hero-key-coral">静音</span>
+        <span class="hero-control hero-key hero-key-cream">⌨︎</span>
+        <span class="hero-control hero-key hero-key-dark">显示桌面</span>
+        <span class="hero-control hero-trackpad"></span>
+        <span class="hero-control hero-knob"></span>
+        <span class="hero-control hero-slider"></span>
+        <span class="hero-control hero-key hero-key-small">复制</span>
+        <span class="hero-control hero-key hero-key-small hero-key-peach">粘贴</span>
+      </div>
       <div class="hero-copy">
         <h1 aria-label="自由全能小键盘，跃然掌上">
           <span class="hero-line hero-line-first"><span data-typewriter data-text="自由全能小键盘，">自由全能小键盘，</span><span class="type-caret" aria-hidden="true"></span></span>
@@ -104,15 +117,12 @@
         </div>
         <p class="availability">macOS 13+ · Apple 芯片与 Intel · &gt;w&lt;</p>
       </div>
-      <figure class="hero-product">
-        <img class="hero-screen" src="assets/screens/control-studio.webp" alt="奶猫妙控日常工作控制台" width="1179" height="2556" fetchpriority="high">
-      </figure>
     </section>
 
     <section class="layouts-section" id="layouts">
       <div class="layout-copy">
-        <h2>看看不同软件的布局</h2>
-        <div class="layout-tabs" role="tablist" aria-label="软件布局">
+        <h2>看看不同软件的小键盘</h2>
+        <div class="layout-tabs" role="tablist" aria-label="软件小键盘">
           <button id="layout-tab-codex" class="layout-tab" type="button" role="tab" aria-selected="true" aria-controls="layout-panel" tabindex="0" data-image="assets/screens/control-codex.webp" data-name="Codex" data-description="Agent、推理强度、批准、语音和发送" data-alt="奶猫妙控 Codex 控制台">
             <img src="assets/software/codex.png" alt="" width="1024" height="1024"><span>Codex</span>
           </button>
@@ -147,7 +157,7 @@
 
     <section class="product-section" id="control">
       <figure class="product-shot">
-        <img src="assets/screens/layout-editor.webp" alt="奶猫妙控布局编辑器" width="1179" height="2556" loading="lazy">
+        <img src="assets/screens/layout-editor.webp" alt="奶猫妙控小键盘编辑器" width="1179" height="2556" loading="lazy">
       </figure>
       <div class="product-copy">
         <h2>按自己的习惯摆放</h2>
@@ -155,21 +165,21 @@
         <div class="feature-list">
           <article><h3>调整</h3><p>修改位置、大小和外观</p></article>
           <article><h3>操作</h3><p>选择快捷键、媒体、鼠标等操作</p></article>
-          <article><h3>布局</h3><p>为不同软件保存不同布局</p></article>
+          <article><h3>小键盘</h3><p>为不同软件保存不同小键盘</p></article>
         </div>
       </div>
     </section>
 
     <section class="how-section" id="how">
-      <figure class="pairing-art sprite-sequence" aria-label="无尾熊猫伙伴展示配对卡">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-01.webp" alt="无尾熊猫伙伴展示配对卡" width="768" height="768" loading="lazy">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-02.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-03.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-04.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-05.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-06.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-07.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame pairing-frame" src="assets/mascot-pairing-v4-frame-08.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
+      <figure class="connection-art sprite-sequence" aria-label="戴牛仔帽的无尾熊猫将插头甩进 Mac">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-01.png" alt="戴牛仔帽的无尾熊猫准备连接 Mac" width="1200" height="1200" loading="lazy">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-02.png" alt="" width="1200" height="1200" loading="lazy" aria-hidden="true">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-03.png" alt="" width="1200" height="1200" loading="lazy" aria-hidden="true">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-04.png" alt="" width="1200" height="1200" loading="lazy" aria-hidden="true">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-05.png" alt="" width="1200" height="1200" loading="lazy" aria-hidden="true">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-06.png" alt="" width="1200" height="1200" loading="lazy" aria-hidden="true">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-07.png" alt="" width="1200" height="1200" loading="lazy" aria-hidden="true">
+        <img class="sprite-frame connection-frame" src="assets/mascot-connection-cowboy-v2-frame-08.png" alt="" width="1200" height="1200" loading="lazy" aria-hidden="true">
       </figure>
       <h2>连接 Mac，只要三步</h2>
       <ol class="steps">
@@ -190,58 +200,65 @@
           <figcaption><strong>设备与配对</strong><span>自动查找附近的 Mac，也可以扫码连接</span></figcaption>
         </figure>
         <figure>
-          <img src="assets/screens/layout-switcher.webp" alt="奶猫妙控布局切换页面" width="1179" height="2556" loading="lazy">
-          <figcaption><strong>布局切换</strong><span>长按并滑动，快速切换布局</span></figcaption>
+          <img src="assets/screens/layout-switcher.webp" alt="奶猫妙控小键盘切换页面" width="1179" height="2556" loading="lazy">
+          <figcaption><strong>小键盘切换</strong><span>长按并滑动，快速切换小键盘</span></figcaption>
         </figure>
       </div>
     </section>
 
     <section class="scenarios-section" id="scenarios">
-      <h2>剪辑、音乐、演示和开发</h2>
-      <figure class="scenario-mascot sprite-sequence" aria-label="无尾熊猫伙伴扑向按键又被弹起">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-01.webp" alt="无尾熊猫伙伴扑向按键又被弹起" width="768" height="768" loading="lazy">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-02.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-03.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-04.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-05.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-06.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-07.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-        <img class="sprite-frame scenario-frame" src="assets/mascot-action-v6-frame-08.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
-      </figure>
-      <ul class="scenario-list">
-        <li><strong>剪辑</strong><span>播放、切分、修剪和调色</span></li>
-        <li><strong>音乐</strong><span>播放、切歌、调音量，也能放 MIDI 键盘和鼓垫</span></li>
-        <li><strong>演示</strong><span>翻页、黑屏、计时和播放</span></li>
-        <li><strong>开发</strong><span>控制 Codex 的 Agent、推理强度、批准和语音</span></li>
-      </ul>
-    </section>
-
-    <section class="software-section" id="software">
-      <h2>支持这些软件</h2>
-      <div class="software-wall" aria-label="适配的软件">
-        <div class="software-track">
-          <ul class="software-list">
-            <li class="software-item"><img src="assets/software/codex.png" alt="" width="1024" height="1024" decoding="async"><span>Codex</span></li>
-            <li class="software-item"><img src="assets/software/davinci-resolve.png" alt="" width="512" height="512" decoding="async"><span>DaVinci Resolve</span></li>
-            <li class="software-item"><img src="assets/software/microsoft-powerpoint.png" alt="" width="512" height="512" decoding="async"><span>Microsoft PowerPoint</span></li>
-            <li class="software-item"><img src="assets/software/apple-music.jpg" alt="" width="512" height="512" decoding="async"><span>Apple Music</span></li>
-            <li class="software-item"><img src="assets/software/spotify.png" alt="" width="939" height="940" decoding="async"><span>Spotify</span></li>
-            <li class="software-item"><img src="assets/software/keynote.jpg" alt="" width="512" height="512" decoding="async"><span>Keynote</span></li>
-            <li class="software-item"><img src="assets/software/final-cut-pro.png" alt="" width="512" height="512" decoding="async"><span>Final Cut Pro</span></li>
-            <li class="software-item"><img src="assets/software/jianying-pro.jpg" alt="" width="512" height="512" decoding="async"><span>剪映专业版</span></li>
-          </ul>
-          <ul class="software-list" aria-hidden="true">
-            <li class="software-item"><img src="assets/software/codex.png" alt="" width="1024" height="1024" loading="lazy" decoding="async"><span>Codex</span></li>
-            <li class="software-item"><img src="assets/software/davinci-resolve.png" alt="" width="512" height="512" loading="lazy" decoding="async"><span>DaVinci Resolve</span></li>
-            <li class="software-item"><img src="assets/software/microsoft-powerpoint.png" alt="" width="512" height="512" loading="lazy" decoding="async"><span>Microsoft PowerPoint</span></li>
-            <li class="software-item"><img src="assets/software/apple-music.jpg" alt="" width="512" height="512" loading="lazy" decoding="async"><span>Apple Music</span></li>
-            <li class="software-item"><img src="assets/software/spotify.png" alt="" width="939" height="940" loading="lazy" decoding="async"><span>Spotify</span></li>
-            <li class="software-item"><img src="assets/software/keynote.jpg" alt="" width="512" height="512" loading="lazy" decoding="async"><span>Keynote</span></li>
-            <li class="software-item"><img src="assets/software/final-cut-pro.png" alt="" width="512" height="512" loading="lazy" decoding="async"><span>Final Cut Pro</span></li>
-            <li class="software-item"><img src="assets/software/jianying-pro.jpg" alt="" width="512" height="512" loading="lazy" decoding="async"><span>剪映专业版</span></li>
-          </ul>
+      <div class="scenario-copy">
+        <div class="role-tabs" role="tablist" aria-label="使用场景">
+          <button id="role-tab-edit" type="button" role="tab" aria-selected="true" aria-controls="role-panel-edit" tabindex="0" data-role-index="0"><strong>剪辑</strong><span>导演</span></button>
+          <button id="role-tab-music" type="button" role="tab" aria-selected="false" aria-controls="role-panel-music" tabindex="-1" data-role-index="1"><strong>音乐</strong><span>乐手</span></button>
+          <button id="role-tab-present" type="button" role="tab" aria-selected="false" aria-controls="role-panel-present" tabindex="-1" data-role-index="2"><strong>演示</strong><span>演讲者</span></button>
+          <button id="role-tab-code" type="button" role="tab" aria-selected="false" aria-controls="role-panel-code" tabindex="-1" data-role-index="3"><strong>开发</strong><span>程序员</span></button>
+        </div>
+        <div class="role-panels">
+          <article class="role-panel is-active" id="role-panel-edit" role="tabpanel" aria-labelledby="role-tab-edit">
+            <p class="role-name">导演</p>
+            <h2>剪辑时，时间线不离手</h2>
+            <p>播放、切分、修剪和调色，都放在顺手的位置</p>
+            <ul class="role-apps" aria-label="剪辑软件">
+              <li><img src="assets/software/davinci-resolve.png" alt="" width="512" height="512"><span>DaVinci Resolve</span></li>
+              <li><img src="assets/software/final-cut-pro.png" alt="" width="512" height="512"><span>Final Cut Pro</span></li>
+              <li><img src="assets/software/jianying-pro.jpg" alt="" width="512" height="512"><span>剪映专业版</span></li>
+            </ul>
+          </article>
+          <article class="role-panel" id="role-panel-music" role="tabpanel" aria-labelledby="role-tab-music" aria-hidden="true">
+            <p class="role-name">乐手</p>
+            <h2>音乐响起，就跟着节奏来</h2>
+            <p>切歌、调音量，也能放进 MIDI 键盘和鼓垫</p>
+            <ul class="role-apps" aria-label="音乐软件">
+              <li><img src="assets/software/apple-music.jpg" alt="" width="512" height="512"><span>Apple Music</span></li>
+              <li><img src="assets/software/spotify.png" alt="" width="939" height="940"><span>Spotify</span></li>
+            </ul>
+          </article>
+          <article class="role-panel" id="role-panel-present" role="tabpanel" aria-labelledby="role-tab-present" aria-hidden="true">
+            <p class="role-name">演讲者</p>
+            <h2>讲到哪，就控到哪</h2>
+            <p>翻页、黑屏、计时和播放，不用回头找键盘</p>
+            <ul class="role-apps" aria-label="演示软件">
+              <li><img src="assets/software/microsoft-powerpoint.png" alt="" width="512" height="512"><span>Microsoft PowerPoint</span></li>
+              <li><img src="assets/software/keynote.jpg" alt="" width="512" height="512"><span>Keynote</span></li>
+            </ul>
+          </article>
+          <article class="role-panel" id="role-panel-code" role="tabpanel" aria-labelledby="role-tab-code" aria-hidden="true">
+            <p class="role-name">程序员</p>
+            <h2>写代码，也有自己的控制台</h2>
+            <p>切换 Agent、调整推理强度、批准和语音输入</p>
+            <ul class="role-apps" aria-label="开发软件">
+              <li><img src="assets/software/codex.png" alt="" width="1024" height="1024"><span>Codex</span></li>
+            </ul>
+          </article>
         </div>
       </div>
+      <figure class="role-stage" aria-hidden="true">
+        <img class="role-figure is-active" src="assets/mascot-role-director-v1.png" alt="" width="768" height="768" loading="lazy">
+        <img class="role-figure" src="assets/mascot-role-musician-v1.png" alt="" width="768" height="768" loading="lazy">
+        <img class="role-figure" src="assets/mascot-role-presenter-v1.png" alt="" width="768" height="768" loading="lazy">
+        <img class="role-figure" src="assets/mascot-role-programmer-v1.png" alt="" width="768" height="768" loading="lazy">
+      </figure>
     </section>
 
     <section class="mac-section" id="mac">
@@ -251,7 +268,7 @@
         <p>打开后可以扫码配对、查看连接状态和管理权限</p>
         <a href="support.html">连接帮助</a>
       </div>
-      <img src="assets/screens/macos-adapter.webp" alt="奶猫妙控 Mac 菜单栏适配器，包含权限、配对二维码与设置" width="944" height="1302" loading="lazy">
+          <img src="assets/screens/macos-adapter.webp" alt="奶猫妙控 Mac 菜单栏适配器，包含权限、配对二维码与设置" width="944" height="1064" loading="lazy">
     </section>
 
     <section class="faq-section" id="faq">

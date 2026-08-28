@@ -12,6 +12,8 @@ Use this guide for the website, releases, and promotional artwork. Poses may cha
 - Action sequence: `assets/mascot-action-v6-frame-01.webp` through `assets/mascot-action-v6-frame-08.webp`
 - Pairing sequence: `assets/mascot-pairing-v4-frame-01.webp` through `assets/mascot-pairing-v4-frame-08.webp`
 - Download sequence: `assets/mascot-download-v2-frame-01.webp` through `assets/mascot-download-v2-frame-08.webp`
+- Connection sequence: `assets/mascot-connection-cowboy-v2-frame-01.png` through `assets/mascot-connection-cowboy-v2-frame-08.png`
+- Scenario roles: `assets/mascot-role-director-v1.png`, `assets/mascot-role-musician-v1.png`, `assets/mascot-role-presenter-v1.png`, and `assets/mascot-role-programmer-v1.png`
 
 Check every reference before creating a new image.
 
@@ -42,8 +44,12 @@ Check every reference before creating a new image.
 - Keep the render crisp with no depth of field, motion blur, bloom, or soft-focus treatment.
 - Keep every frame visually distinct. Do not mirror, duplicate, or reverse a small set of poses to imitate extra frames.
 - Pairing cards stay beside the body and never cover the face or warm ivory chest.
+- The connection sequence keeps the tan cowboy hat, black USB-C cable, silver MacBook, and MacBook position consistent. The plug moves through wind-up, lasso, throw, flight, insertion, green confirmation, and hat-tip poses.
+- Redraw connection frames one at a time from the approved split-frame reference. Keep the cable continuous, show the USB-C plug seated inside the Mac port in the insertion frame, and keep the hat touching the head or the panda's paw.
+- Scenario roles must read from pose and one clear prop: clapperboard for the director, cream guitar for the musician, cream clicker for the presenter, and cream laptop for the programmer.
+- Role accessories must not cover the warm ivory chest. Do not use a dark jacket, vest, guitar strap, or laptop edge as a substitute chest shape.
 - Wide poses use the compact grid safe area. Leave at least 98 source pixels horizontally and 92 source pixels vertically between the full silhouette and every cell edge.
-- Website animation frames are exported at `768 × 768` and displayed no larger than `20rem` so Retina screens do not upscale the artwork.
+- Connection animation frames are exported at `1200 × 1200` and displayed no larger than `26.5rem` so Retina screens do not upscale the artwork.
 - Reject magenta or purple spill on any transparent edge. Chroma cleanup must use boundary-connected background removal, edge color decontamination, and premultiplied-alpha resizing.
 - Every eight-frame loop follows one action arc: anticipation, acceleration, peak, squash or impact, rebound, settle, and a final pose that connects back to frame one.
 
@@ -75,6 +81,6 @@ Check every reference before creating a new image.
 - [ ] No straight cell-edge cuts or neighboring-frame pixels remain after splitting
 - [ ] No purple, magenta, or dark shadow fringe remains on transparent edges
 - [ ] The final frame returns naturally to the first frame without a pose jump
-- [ ] Website frame files are `768 × 768` and rendered at no more than `20rem`
+- [ ] Connection frame files are `1200 × 1200` and rendered at no more than `26.5rem`
 - [ ] Mouse-following pupils stay inside the generated eye whites at every viewport edge
 - [ ] Inline paw shape and pad colors match the approved character
