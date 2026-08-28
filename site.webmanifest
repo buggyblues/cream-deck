@@ -1,7 +1,7 @@
 {
   "name": "奶猫妙控",
   "short_name": "奶猫妙控",
-  "description": "iPhone 和 iPad 都能控制 Mac",
+  "description": "iPhone 和 iPad 上的 Mac 控制台",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f5efe4",
