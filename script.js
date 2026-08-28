@@ -351,19 +351,20 @@ const initMotion = () => {
     }, {
       autoAlpha: 1,
       xPercent: 0,
-      y: -14,
+      y: 0,
       rotation: -2,
       scale: 1,
-      ease: 'none',
-      scrollTrigger: { trigger: '.scenarios-section', start: 'top 82%', end: 'bottom 28%', scrub: .8 }
+      duration: .82,
+      ease: 'back.out(1.45)',
+      scrollTrigger: { trigger: '.scenarios-section', start: 'top 82%', once: true }
     });
 
     const scenarioFrames = gsap.utils.toArray('.scenario-frame');
     if (scenarioFrames.length > 1) {
       const frameLoop = gsap.timeline({ paused: true, repeat: -1, repeatDelay: .9 });
       const keyframes = [
-        ['idle', 0, 0], ['crouch', 1, .32], ['launch', 2, .5], ['contact', 3, .68],
-        ['impact', 4, .84], ['recoil', 5, 1.02], ['followThrough', 6, 1.2], ['landing', 7, 1.42]
+        ['ready', 0, 0], ['crouch', 1, .28], ['launch', 2, .46], ['reach', 3, .63],
+        ['press', 4, .79], ['rebound', 5, .96], ['followThrough', 6, 1.16], ['landing', 7, 1.38]
       ];
       keyframes.forEach(([label, frame, at]) => {
         frameLoop.addLabel(label, at).set(scenarioFrames, { autoAlpha: 0 }, label).set(scenarioFrames[frame], { autoAlpha: 1 }, label);
