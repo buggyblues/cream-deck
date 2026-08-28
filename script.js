@@ -363,46 +363,71 @@ const initMotion = () => {
       const frames = gsap.utils.toArray(frameSelector);
       if (frames.length < 2) return;
       const loop = gsap.timeline({ paused: true, repeat: -1, repeatDelay });
-      keyframes.forEach(([label, frame, at]) => {
+      gsap.set(frames, { transformOrigin: '50% 72%' });
+      keyframes.forEach(([label, frame, at, motion = {}]) => {
         loop.addLabel(label, at).set(frames, { autoAlpha: 0 }, label).set(frames[frame], { autoAlpha: 1 }, label);
+        loop.to(frames, {
+          xPercent: motion.xPercent || 0,
+          yPercent: motion.yPercent || 0,
+          scaleX: motion.scaleX || 1,
+          scaleY: motion.scaleY || 1,
+          rotation: motion.rotation || 0,
+          duration: motion.duration || .14,
+          ease: motion.ease || 'power2.out'
+        }, label);
       });
-      const watcher = ScrollTrigger.create({
+      ScrollTrigger.create({
         trigger,
         start: 'top 85%',
         end: 'bottom 15%',
         onToggle: (self) => self.isActive ? loop.play() : loop.pause()
       });
-      cleanups.push(() => {
-        watcher.kill();
-        loop.kill();
-      });
+      cleanups.push(() => loop.kill());
     };
 
     startSpriteLoop({
       frameSelector: '.pairing-frame',
       trigger: '.how-section',
-      repeatDelay: .82,
+      repeatDelay: .5,
       keyframes: [
-        ['present', 0, 0], ['lift', 1, .38], ['show', 2, .72], ['point', 3, 1.06],
-        ['tilt', 4, 1.4], ['bounce', 5, 1.7], ['wave', 6, 1.98], ['settle', 7, 2.34]
+        ['present', 0, 0, { rotation: 0 }],
+        ['lift', 1, .22, { yPercent: -1.2, rotation: -1.2 }],
+        ['show', 2, .42, { yPercent: -2, rotation: 1 }],
+        ['point', 3, .62, { yPercent: -1, rotation: -1.5 }],
+        ['tiltLeft', 4, .79, { rotation: -4.2, ease: 'back.out(1.5)' }],
+        ['tiltRight', 5, .96, { rotation: 4.2, ease: 'back.out(1.5)' }],
+        ['lower', 6, 1.16, { yPercent: 1, rotation: -1 }],
+        ['settle', 7, 1.38, { yPercent: 0, rotation: 0, duration: .18 }]
       ]
     });
     startSpriteLoop({
       frameSelector: '.scenario-frame',
       trigger: '.scenarios-section',
-      repeatDelay: .58,
+      repeatDelay: .42,
       keyframes: [
-        ['sneak', 0, 0], ['squash', 1, .34], ['starJump', 2, .52], ['dive', 3, .7],
-        ['splat', 4, .88], ['spring', 5, 1.18], ['celebrate', 6, 1.38], ['wobble', 7, 1.62]
+        ['ready', 0, 0, { scaleX: 1, scaleY: 1 }],
+        ['compress', 1, .2, { yPercent: 1.5, scaleX: 1.035, scaleY: .965 }],
+        ['launch', 2, .36, { yPercent: -2.5, scaleX: .98, scaleY: 1.04 }],
+        ['reach', 3, .51, { yPercent: -1.5, rotation: 2.5 }],
+        ['splat', 4, .66, { yPercent: 2.5, scaleX: 1.07, scaleY: .92, duration: .1, ease: 'power3.in' }],
+        ['rebound', 5, .79, { yPercent: -4, scaleX: .96, scaleY: 1.06, duration: .12, ease: 'back.out(2)' }],
+        ['wobble', 6, .96, { yPercent: 0, rotation: -5, duration: .13, ease: 'back.out(2.2)' }],
+        ['reset', 7, 1.15, { rotation: 0, scaleX: 1, scaleY: 1, duration: .16 }]
       ]
     });
     startSpriteLoop({
       frameSelector: '.download-frame',
       trigger: '.download-section',
-      repeatDelay: .78,
+      repeatDelay: .52,
       keyframes: [
-        ['peek', 0, 0], ['pull', 1, .4], ['hug', 2, .76], ['drag', 3, 1.1],
-        ['stand', 4, 1.46], ['wave', 5, 1.78], ['hop', 6, 2.08], ['sit', 7, 2.4]
+        ['grip', 0, 0, { xPercent: 0, rotation: 0 }],
+        ['pull', 1, .23, { xPercent: -1.2, rotation: -1.2 }],
+        ['strain', 2, .44, { xPercent: -2.4, rotation: -2.8 }],
+        ['slip', 3, .63, { xPercent: 1.2, rotation: 2.2, ease: 'back.out(1.8)' }],
+        ['flop', 4, .8, { yPercent: 2, scaleX: 1.05, scaleY: .95, duration: .11 }],
+        ['pop', 5, .94, { yPercent: -4, scaleX: .97, scaleY: 1.05, duration: .13, ease: 'back.out(2.2)' }],
+        ['land', 6, 1.13, { yPercent: 1, rotation: -2, duration: .13 }],
+        ['reset', 7, 1.34, { xPercent: 0, yPercent: 0, rotation: 0, scaleX: 1, scaleY: 1, duration: .18 }]
       ]
     });
 

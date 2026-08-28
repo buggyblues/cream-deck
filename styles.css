@@ -91,7 +91,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .feature-list p { color: var(--muted); font-size: .85rem; }
 
 .how-section { display: grid; grid-template-columns: .78fr 1.22fr; grid-template-areas: "art eyebrow" "art title" "art steps"; grid-template-rows: auto auto auto; column-gap: clamp(2.5rem, 8vw, 6.5rem); align-content: center; background: var(--cream); }
-.pairing-art { grid-area: art; width: min(100%, 23rem); align-self: center; justify-self: center; }
+.pairing-art { grid-area: art; width: min(100%, 20rem); align-self: center; justify-self: center; }
 .how-section > .eyebrow { grid-area: eyebrow; align-self: end; }
 .how-section > h2 { grid-area: title; margin-bottom: 1.65rem; }
 .steps { grid-area: steps; margin: 0; padding: 0; list-style: none; border-top: .0625rem solid var(--line); }
@@ -109,7 +109,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 
 .scenarios-section { display: grid; grid-template-columns: 1.08fr .92fr; grid-template-areas: "title art" "list art"; grid-template-rows: auto 1fr; column-gap: clamp(3rem, 7vw, 6rem); align-content: center; background: var(--lavender); }
 .scenarios-section > h2 { grid-area: title; }
-.scenario-mascot { grid-area: art; width: min(100%, 23rem); align-self: center; justify-self: center; }
+.scenario-mascot { grid-area: art; width: min(100%, 20rem); align-self: center; justify-self: center; }
 .scenario-list { grid-area: list; margin: 2rem 0 0; padding: 0; list-style: none; border-top: .0625rem solid var(--line); }
 .scenario-list li { min-height: 4.3rem; padding: 1rem 0; display: grid; grid-template-columns: minmax(7rem, .38fr) 1fr; gap: 1.5rem; align-items: center; border-bottom: .0625rem solid var(--line); }
 .scenario-list strong { font-size: 1.05rem; }
@@ -202,7 +202,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .quick-screens { margin-top: 2.5rem; }
   .quick-screens img { width: min(100%, 18rem); height: auto; }
   .scenarios-section { grid-template-columns: 1fr; grid-template-areas: "title" "art" "list"; grid-template-rows: auto; }
-  .scenario-mascot { width: min(84vw, 20rem); margin: 2rem auto 0; }
+  .scenario-mascot { width: min(80vw, 18.5rem); margin: 2rem auto 0; }
   .scenario-list li { grid-template-columns: 1fr; gap: .35rem; }
   .software-wall { margin-top: 2.5rem; }
   .mac-section > img { width: min(90vw, 31rem); height: auto; margin: 2rem auto 0; }

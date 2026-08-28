@@ -9,9 +9,9 @@ Use this guide for the website, releases, and promotional artwork. Poses may cha
 - Standing pose and pairing card: `assets/mascot-pairing-v2.webp`
 - Mouse-following pose: `assets/mascot-look-v2.webp`
 - Inline paw glyph: `assets/panda-paw-glyph-v1.webp`
-- Action sequence: `assets/mascot-action-v5-frame-01.webp` through `assets/mascot-action-v5-frame-08.webp`
-- Pairing sequence: `assets/mascot-pairing-v3-frame-01.webp` through `assets/mascot-pairing-v3-frame-08.webp`
-- Download sequence: `assets/mascot-download-v1-frame-01.webp` through `assets/mascot-download-v1-frame-08.webp`
+- Action sequence: `assets/mascot-action-v6-frame-01.webp` through `assets/mascot-action-v6-frame-08.webp`
+- Pairing sequence: `assets/mascot-pairing-v4-frame-01.webp` through `assets/mascot-pairing-v4-frame-08.webp`
+- Download sequence: `assets/mascot-download-v2-frame-01.webp` through `assets/mascot-download-v2-frame-08.webp`
 
 Check every reference before creating a new image.
 
@@ -43,6 +43,9 @@ Check every reference before creating a new image.
 - Keep every frame visually distinct. Do not mirror, duplicate, or reverse a small set of poses to imitate extra frames.
 - Pairing cards stay beside the body and never cover the face or warm ivory chest.
 - Wide poses use the compact grid safe area. Leave at least 98 source pixels horizontally and 92 source pixels vertically between the full silhouette and every cell edge.
+- Website animation frames are exported at `768 × 768` and displayed no larger than `20rem` so Retina screens do not upscale the artwork.
+- Reject magenta or purple spill on any transparent edge. Chroma cleanup must use boundary-connected background removal, edge color decontamination, and premultiplied-alpha resizing.
+- Every eight-frame loop follows one action arc: anticipation, acceleration, peak, squash or impact, rebound, settle, and a final pose that connects back to frame one.
 
 ## Workflow
 
@@ -70,5 +73,8 @@ Check every reference before creating a new image.
 - [ ] Animation frames share one canvas, scale, prop design, and character identity
 - [ ] The full sequence contains eight distinct poses with readable motion between adjacent frames
 - [ ] No straight cell-edge cuts or neighboring-frame pixels remain after splitting
+- [ ] No purple, magenta, or dark shadow fringe remains on transparent edges
+- [ ] The final frame returns naturally to the first frame without a pose jump
+- [ ] Website frame files are `768 × 768` and rendered at no more than `20rem`
 - [ ] Mouse-following pupils stay inside the generated eye whites at every viewport edge
 - [ ] Inline paw shape and pad colors match the approved character
