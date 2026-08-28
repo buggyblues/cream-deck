@@ -153,7 +153,7 @@ footer small { grid-column: 1 / -1; margin-top: 1.25rem; color: rgba(33,31,26,.4
   .brand img { width: 2.375rem; height: 2.375rem; border-radius: .7rem; }
   .hero, .screens-section, .product-section, .how-section, .quick-section, .scenarios-section, .privacy-section, .faq-section, .download-section { padding: 4.9rem 1.25rem; }
   .hero { min-height: calc(100svh - 4rem); gap: 2.25rem; }
-  .hero h1 { font-size: clamp(3rem, 14vw, 4rem); }
+  .hero h1 { font-size: clamp(2.75rem, 12vw, 3.35rem); }
   .hero-lede { font-size: 1.0625rem; }
   .hero-actions { width: 100%; }
   .hero-actions .button { width: 100%; }
