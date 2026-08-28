@@ -1,10 +1,7 @@
-# 奶猫妙控｜公开发布仓库
+# Cream Deck
 
-这里仅用于奶猫妙控的官网和安装包发布，不包含应用源代码。
+Control your Mac from your iPhone.
 
-- 官网：由 Vercel 部署，GitHub Pages 提供备用访问入口
-- 下载：请前往 [Releases](https://github.com/buggyblues/cream-deck/releases)
-- 支持：请使用 [Issues](https://github.com/buggyblues/cream-deck/issues)
-- 形象规范：所有官网插画遵循 [IP 形象制作 SOP](BRAND-IP-SOP.md)
+[Website](https://cream-deck.vercel.app) · [Download](https://github.com/buggyblues/cream-deck/releases) · [Support](https://github.com/buggyblues/cream-deck/issues)
 
-macOS 安装包为 Developer ID 签名、Apple 公证的 Universal DMG，支持 Apple 芯片与 Intel Mac。
+This repository contains the website and releases only.
