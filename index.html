@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0e6">
-  <meta name="description" content="iPhone 和 iPad 上的 Mac 控制台，扫码连接后直接使用">
+  <meta name="description" content="把按键、旋钮、触控板与屏幕预览自由组合成掌上控制台">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="奶猫妙控｜iPhone 和 iPad 上的 Mac 控制台">
-  <meta property="og:description" content="扫码连接后直接控制 Mac">
+  <meta property="og:title" content="奶猫妙控｜自由全能小键盘，跃然掌上">
+  <meta property="og:description" content="自由组合按键、旋钮、触控板与屏幕预览">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <meta property="og:url" content="https://cream-deck.vercel.app/">
   <meta property="og:locale" content="zh_CN">
@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" href="assets/app-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
-  <title>奶猫妙控｜iPhone 和 iPad 上的 Mac 控制台</title>
+  <title>奶猫妙控｜自由全能小键盘，跃然掌上</title>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -27,7 +27,7 @@
       <span>奶猫妙控</span>
     </a>
     <nav aria-label="主导航">
-      <a href="#screens">界面</a>
+      <a href="#screens">功能</a>
       <a href="#how">连接</a>
       <a href="#faq">问题</a>
     </nav>
@@ -37,20 +37,20 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy">
-        <h1>Mac 控制台</h1>
-        <p class="hero-lede">适用于 iPhone 和 iPad</p>
+        <h1><span class="hero-line">自由全能小键盘，</span><span class="hero-line hero-line-accent">跃然掌上</span></h1>
+        <p class="hero-lede">按键、旋钮、触控板与屏幕预览，按需组合</p>
         <div class="hero-actions">
           <a class="button primary" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载</a>
         </div>
         <p class="availability">macOS 13+</p>
       </div>
       <figure class="hero-product">
-        <img src="assets/screens/control-studio.webp" alt="奶猫妙控控制界面" width="1179" height="2556" fetchpriority="high">
+        <img class="hero-screen" src="assets/screens/control-studio.webp" alt="奶猫妙控控制界面" width="1179" height="2556" fetchpriority="high">
       </figure>
     </section>
 
     <section class="screens-section" id="screens">
-      <h2>真实界面</h2>
+      <h2>常用操作，随手就到</h2>
       <div class="screen-gallery">
         <figure>
           <img src="assets/screens/control-studio.webp" alt="奶猫妙控的日常工作控制台" width="1179" height="2556" loading="lazy">
@@ -113,12 +113,16 @@
 
     <section class="scenarios-section">
       <h2>适用场景</h2>
+      <figure class="scenario-mascot" aria-label="无尾熊猫伙伴跃起操作小键盘">
+        <img class="scenario-frame" src="assets/mascot-keyframe-1.webp" alt="无尾熊猫伙伴蓄力准备按下小键盘" width="1260" height="1260" loading="lazy">
+        <img class="scenario-frame" src="assets/mascot-keyframe-2.webp" alt="" width="1260" height="1260" loading="lazy" aria-hidden="true">
+        <img class="scenario-frame" src="assets/mascot-keyframe-3.webp" alt="" width="1260" height="1260" loading="lazy" aria-hidden="true">
+      </figure>
       <ul class="scenario-list">
-        <li><strong>日常办公</strong><span>搜索、截图、复制粘贴、窗口、音量和亮度</span></li>
-        <li><strong>写代码</strong><span>控制 Codex Agent、推理强度、批准、语音和发送</span></li>
-        <li><strong>视频剪辑</strong><span>控制 Resolve、Final Cut Pro 和剪映的播放、切分与时间线</span></li>
-        <li><strong>演示与媒体</strong><span>翻页、黑屏、播放、进度和音量</span></li>
-        <li><strong>音乐与游戏</strong><span>MIDI 键盘、鼓垫和游戏按键</span></li>
+        <li><strong>剪辑</strong><span>时间线、播放、切分、修剪与调色</span></li>
+        <li><strong>音乐</strong><span>MIDI 键盘、鼓垫、播放与音量</span></li>
+        <li><strong>演示</strong><span>翻页、黑屏、计时、播放与音量</span></li>
+        <li><strong>开发</strong><span>Codex Agent、推理强度、批准、语音与发送</span></li>
       </ul>
     </section>
 
@@ -145,15 +149,15 @@
 
     <section class="download-section">
       <img src="assets/app-icon.webp" alt="奶猫妙控 App 图标" width="128" height="128" loading="lazy">
-      <h2>下载</h2>
-      <p>macOS 13+ · Apple 芯片和 Intel</p>
+      <h2>下载 Mac 端，开始连接</h2>
+      <p class="download-copy">安装后从菜单栏打开配对二维码，再用 iPhone 或 iPad 扫码<span>macOS 13+ · Apple 芯片和 Intel</span></p>
       <a class="button dark" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载</a>
     </section>
   </main>
 
   <footer>
     <a class="brand" href="#top"><img src="assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
-    <p>iPhone 和 iPad 上的 Mac 控制台</p>
+    <p>自由全能小键盘，跃然掌上</p>
     <nav aria-label="页脚导航">
       <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
       <a href="support.html">支持</a>
@@ -162,6 +166,8 @@
     <small>© <span data-year></span> 奶猫妙控</small>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

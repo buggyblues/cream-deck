@@ -7,6 +7,7 @@ Use this guide for the website, releases, and promotional artwork. Poses may cha
 - Face and overall style: `assets/app-icon.png`
 - Seated pose and console: `assets/mascot-hero-v3.webp`
 - Standing pose and pairing card: `assets/mascot-pairing-v2.webp`
+- Action sequence: `assets/mascot-keyframe-1.webp`, `assets/mascot-keyframe-2.webp`, and `assets/mascot-keyframe-3.webp`
 
 Check all three references before creating a new image.
 
@@ -28,6 +29,8 @@ Check all three references before creating a new image.
 - Keep the body ratio, face, chest color, and limb colors unchanged.
 - Use a cream console with a black panel, one blue switch, and a small green status light.
 - A pairing card may contain a QR code. It must not cover the face or chest.
+- Keep animation frames on the same canvas, at the same scale, with unchanged props and colors.
+- Use the action sequence in order: anticipation, button press, follow-through, then reverse to rest.
 
 ## Workflow
 
@@ -50,3 +53,4 @@ Check all three references before creating a new image.
 - [ ] Real alpha with no rectangular background
 - [ ] Clean edges on light and dark backgrounds
 - [ ] Original aspect ratio preserved
+- [ ] Animation frames share one canvas, scale, prop design, and character identity
