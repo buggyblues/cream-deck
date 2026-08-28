@@ -9,7 +9,7 @@ Use this guide for the website, releases, and promotional artwork. Poses may cha
 - Standing pose and pairing card: `assets/mascot-pairing-v2.webp`
 - Mouse-following pose: `assets/mascot-look-v2.webp`
 - Inline paw glyph: `assets/panda-paw-glyph-v1.webp`
-- Eight-frame action sequence: `assets/mascot-action-v3-frame-01.webp` through `assets/mascot-action-v3-frame-08.webp`
+- Eight-frame action sequence: `assets/mascot-action-v4-frame-01.webp` through `assets/mascot-action-v4-frame-08.webp`
 
 Check every reference before creating a new image.
 
@@ -35,7 +35,9 @@ Check every reference before creating a new image.
 - A pairing card may contain a QR code. It must not cover the face or chest.
 - Keep animation frames on the same canvas, at the same scale, with unchanged props and colors.
 - Generate the action as one strict `4 × 2` sheet, then split it left to right across the top row and left to right across the bottom row.
-- Use the action sequence in order: ready, crouch, launch, reach, press, rebound, follow-through, and landing.
+- Use the action sequence in order: sneak, squash, star jump, dive, splat, spring, celebrate, and wobble landing.
+- Favor exaggerated squash-and-stretch silhouettes over small pose changes. The action must still read when displayed around `16–19rem` wide.
+- Keep the render crisp with no depth of field, motion blur, bloom, or soft-focus treatment.
 - Keep every frame visually distinct. Do not mirror, duplicate, or reverse a small set of poses to imitate extra frames.
 
 ## Workflow
