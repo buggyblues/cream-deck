@@ -36,7 +36,7 @@ a:focus-visible, summary:focus-visible { outline: .2rem solid var(--purple); out
 .site-header nav a:hover { color: var(--ink); }
 .header-download { justify-self: end; padding: .65rem 1rem; border-radius: .8rem; background: var(--ink); color: white; font-size: .8125rem; font-weight: 720; }
 
-.hero, .screens-section, .product-section, .how-section, .quick-section, .scenarios-section, .privacy-section, .faq-section, .download-section {
+.hero, .screens-section, .product-section, .how-section, .quick-section, .scenarios-section, .software-section, .privacy-section, .faq-section, .download-section {
   padding: clamp(5rem, 10vw, 9rem) max(1.5rem, calc((100vw - var(--max)) / 2));
 }
 .eyebrow { margin-bottom: var(--space-sm); color: var(--purple); font-size: .8125rem; font-weight: 800; letter-spacing: .04em; }
@@ -56,7 +56,7 @@ a:focus-visible, summary:focus-visible { outline: .2rem solid var(--purple); out
 .hero-line, .hero-product, .hero-screen, .scenario-mascot, .scenario-frame { will-change: transform, opacity; }
 
 .screens-section { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; background: var(--paper); }
-.screens-section > h2, .quick-section > h2, .scenarios-section > h2, .faq-section > h2 { max-width: 52rem; font-size: clamp(2.5rem, 4.5vw, 3.75rem); font-weight: 820; }
+.screens-section > h2, .quick-section > h2, .scenarios-section > h2, .software-section > h2, .faq-section > h2 { max-width: 52rem; font-size: clamp(2.5rem, 4.5vw, 3.75rem); font-weight: 820; }
 .screen-gallery { margin-top: 3.5rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
 .screen-gallery figure { min-width: 0; }
 .screen-gallery img, .product-shot > img, .quick-screens img { width: 100%; height: auto; object-fit: contain; border: .1rem solid rgba(33,31,26,.78); background: #171713; box-shadow: 0 1.7rem 3.5rem rgba(48,38,23,.16); }
@@ -100,6 +100,20 @@ a:focus-visible, summary:focus-visible { outline: .2rem solid var(--purple); out
 .scenario-list li { min-height: 5.25rem; padding: 1.35rem 0; display: grid; grid-template-columns: minmax(8rem, .42fr) 1fr; gap: 2rem; align-items: center; border-bottom: .0625rem solid var(--line); }
 .scenario-list strong { font-size: 1.125rem; }
 .scenario-list span { color: var(--muted); }
+
+.software-section { min-height: 72svh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; background: var(--ink); color: white; }
+.software-intro { max-width: 40rem; margin-top: 1.25rem; color: rgba(255,255,255,.68); font-size: 1.0625rem; }
+.software-wall { width: 100vw; margin: 3.5rem calc(50% - 50vw) 0; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, transparent 0, black 5%, black 95%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, black 5%, black 95%, transparent 100%); }
+.software-wall::-webkit-scrollbar { display: none; }
+.software-wall.is-animated { overflow: hidden; }
+.software-track { width: max-content; display: flex; }
+.software-wall.is-animated .software-track { will-change: transform; }
+.software-list { margin: 0; padding: 0 1rem 0 0; display: flex; flex: none; gap: 1rem; list-style: none; }
+.software-list[aria-hidden="true"] { display: none; }
+.software-wall.is-animated .software-list[aria-hidden="true"] { display: flex; }
+.software-item { width: clamp(14rem, 18vw, 17rem); min-height: 10.5rem; padding: 1.5rem; display: grid; grid-template-columns: 4.75rem 1fr; gap: 1.15rem; align-items: center; border: .0625rem solid rgba(255,255,255,.12); border-radius: 2rem; background: rgba(255,255,255,.075); }
+.software-item img { width: 4.75rem; height: 4.75rem; object-fit: contain; }
+.software-item span { font-size: 1.0625rem; font-weight: 740; line-height: 1.25; letter-spacing: -.025em; }
 
 .privacy-section { min-height: 72svh; display: grid; grid-template-columns: 14.5rem 1fr; grid-template-areas: "mark eyebrow" "mark title" "mark copy" "mark link"; column-gap: clamp(2.75rem, 8vw, 6rem); align-content: center; background: var(--paper); }
 .privacy-section img { grid-area: mark; width: 100%; max-height: 14.5rem; object-fit: contain; align-self: center; }
@@ -159,14 +173,14 @@ footer small { grid-column: 1 / -1; margin-top: 1.25rem; color: rgba(33,31,26,.4
   .site-header nav { display: none; }
   .header-download { font-size: .75rem; }
   .brand img { width: 2.375rem; height: 2.375rem; border-radius: .7rem; }
-  .hero, .screens-section, .product-section, .how-section, .quick-section, .scenarios-section, .privacy-section, .faq-section, .download-section { padding: 4.9rem 1.25rem; }
+  .hero, .screens-section, .product-section, .how-section, .quick-section, .scenarios-section, .software-section, .privacy-section, .faq-section, .download-section { padding: 4.9rem 1.25rem; }
   .hero { min-height: 0; padding-top: 4.25rem; padding-bottom: 0; }
   .hero h1 { font-size: clamp(2rem, 9.5vw, 3.1rem); }
   .hero-lede { font-size: 1.0625rem; }
   .hero-actions .button { min-width: 9rem; }
   .hero-product { width: 100%; height: 31rem; margin-top: 3.25rem; }
   .hero-product > img { width: min(76vw, 18.75rem); border-radius: 2.75rem; }
-  .screens-section > h2, .quick-section > h2, .scenarios-section > h2, .faq-section > h2, .product-copy h2, .how-section > h2, .privacy-section h2 { font-size: 2.45rem; }
+  .screens-section > h2, .quick-section > h2, .scenarios-section > h2, .software-section > h2, .faq-section > h2, .product-copy h2, .how-section > h2, .privacy-section h2 { font-size: 2.45rem; }
   .screen-gallery { margin-right: -1.25rem; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: min(82vw, 20rem); gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 1.25rem 1.25rem 0; }
   .screen-gallery figure { scroll-snap-align: start; }
   .feature-list article { grid-template-columns: 1fr; gap: .4rem; }
@@ -176,6 +190,9 @@ footer small { grid-column: 1 / -1; margin-top: 1.25rem; color: rgba(33,31,26,.4
   .quick-screens figure { scroll-snap-align: start; }
   .scenario-mascot { width: min(86vw, 23rem); }
   .scenario-list li { grid-template-columns: 1fr; gap: .4rem; }
+  .software-wall { margin-top: 2.75rem; -webkit-mask-image: linear-gradient(90deg, transparent 0, black 8%, black 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, black 8%, black 92%, transparent 100%); }
+  .software-item { width: 15rem; min-height: 9rem; padding: 1.25rem; grid-template-columns: 4.25rem 1fr; border-radius: 1.65rem; }
+  .software-item img { width: 4.25rem; height: 4.25rem; }
   .privacy-section { grid-template-columns: 1fr; grid-template-areas: "mark" "eyebrow" "title" "copy" "link"; text-align: center; }
   .privacy-section img { width: 9.375rem; margin: 0 auto 2rem; }
   .privacy-section a { margin-left: auto; margin-right: auto; }
@@ -190,4 +207,6 @@ footer small { grid-column: 1 / -1; margin-top: 1.25rem; color: rgba(33,31,26,.4
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
+  .software-wall { -webkit-mask-image: none; mask-image: none; }
+  .software-track { transform: none !important; will-change: auto; }
 }

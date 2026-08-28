@@ -182,6 +182,47 @@ const initMotion = () => {
       });
     }
 
+    const softwareWall = document.querySelector('.software-wall');
+    const softwareTrack = document.querySelector('.software-track');
+    if (softwareWall && softwareTrack) {
+      softwareWall.classList.add('is-animated');
+      const softwareLoop = gsap.to(softwareTrack, {
+        xPercent: -50,
+        duration: desktop ? 34 : 25,
+        ease: 'none',
+        repeat: -1,
+        paused: true
+      });
+      let softwareWallVisible = false;
+      const syncSoftwareLoop = () => {
+        if (softwareWallVisible && !document.hidden) softwareLoop.play();
+        else softwareLoop.pause();
+      };
+      const onVisibilityChange = () => syncSoftwareLoop();
+      document.addEventListener('visibilitychange', onVisibilityChange);
+      cleanups.push(() => {
+        document.removeEventListener('visibilitychange', onVisibilityChange);
+        softwareWall.classList.remove('is-animated');
+      });
+
+      ScrollTrigger.create({
+        trigger: '.software-section',
+        start: 'top bottom',
+        end: 'bottom top',
+        onToggle: (self) => {
+          softwareWallVisible = self.isActive;
+          syncSoftwareLoop();
+        }
+      });
+    }
+
+    gsap.from('.software-section > h2, .software-intro', {
+      ...reveal,
+      y: 28,
+      stagger: .08,
+      scrollTrigger: { trigger: '.software-section', start: 'top 78%', once: true }
+    });
+
     gsap.timeline({
       scrollTrigger: { trigger: '.privacy-section', start: 'top 78%', once: true }
     })
