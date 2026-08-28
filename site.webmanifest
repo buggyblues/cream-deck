@@ -1,7 +1,7 @@
 {
   "name": "奶猫妙控",
   "short_name": "奶猫妙控",
-  "description": "自由组合按键、旋钮、触控板与屏幕预览",
+  "description": "自由组合布局的掌上 Mac 控制台",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f5efe4",

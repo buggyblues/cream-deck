@@ -7,6 +7,8 @@ Use this guide for the website, releases, and promotional artwork. Poses may cha
 - Face and overall style: `assets/app-icon.png`
 - Seated pose and console: `assets/mascot-hero-v3.webp`
 - Standing pose and pairing card: `assets/mascot-pairing-v2.webp`
+- Mouse-following pose: `assets/mascot-look-v2.webp`
+- Inline paw glyph: `assets/panda-paw-glyph-v1.webp`
 - Eight-frame action sequence: `assets/mascot-action-v2-frame-01.webp` through `assets/mascot-action-v2-frame-08.webp`
 
 Check every reference before creating a new image.
@@ -20,6 +22,8 @@ Check every reference before creating a new image.
 - Use black only on the shoulders, arms, body sides, legs, and outer paws.
 - Do not add a black chest band, belt, vest, or white arms.
 - Use warm ivory paw pads.
+- Keep the mouse-following base eyes warm ivory and add only round black pupils in the page layer. Pupils may move or blink, but the eye patches, mouth, cheeks, and head shape must not change.
+- The inline paw uses a black outer paw with warm ivory pads. Do not substitute an emoji or a mismatched paw illustration.
 - Never draw a tail or place a tail-like round object behind the body.
 - Use a soft plastic or ceramic surface. Do not use fur.
 
@@ -43,6 +47,7 @@ Check every reference before creating a new image.
 6. Check the tail, chest, eyes, mouth, pose, edges, and crop.
 7. Keep the original aspect ratio on the website with `height: auto` and `object-fit: contain`.
 8. Save approved artwork with a versioned filename. Do not overwrite a published asset.
+9. Reuse approved iOS character assets when they already match the website pose. Generate a new pose only when the page interaction requires it.
 
 ## Release check
 
@@ -56,3 +61,5 @@ Check every reference before creating a new image.
 - [ ] Original aspect ratio preserved
 - [ ] Animation frames share one canvas, scale, prop design, and character identity
 - [ ] The full sequence contains eight distinct poses with readable motion between adjacent frames
+- [ ] Mouse-following pupils stay inside the generated eye whites at every viewport edge
+- [ ] Inline paw shape and pad colors match the approved character
