@@ -47,8 +47,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .hero { padding-bottom: 0; display: flex; flex-direction: column; align-items: center; overflow: hidden; text-align: center; background: var(--cream); }
 .hero-copy { display: flex; flex-direction: column; align-items: center; min-width: 0; }
 .hero h1 { font-size: clamp(3.3rem, 4.75vw, 4.8rem); }
-.hero-line { display: flex; align-items: center; width: max-content; white-space: nowrap; }
-.hero-line-first { padding-left: .42em; }
+.hero-line { display: flex; align-items: center; justify-content: center; width: 100%; margin-inline: auto; white-space: nowrap; }
+.hero-line-first { padding-left: .3em; }
 .hero-line-first > [data-typewriter] { display: inline-block; min-width: 8em; }
 .hero-line-accent { color: var(--purple); font-family: "ZCOOL KuaiLe", "Noto Sans SC", sans-serif; font-weight: 400; letter-spacing: -.035em; }
 .hero-paw { width: .88em; height: .88em; margin: .04em -.02em -.02em .02em; flex: none; object-fit: contain; }
@@ -184,8 +184,8 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .brand img { width: 2.375rem; height: 2.375rem; border-radius: .7rem; }
   .hero { min-height: calc(100svh - var(--header)); gap: 0; padding-top: 4.25rem; padding-bottom: 0; }
   .hero-copy { text-align: center; }
-  .hero h1 { width: max-content; max-width: 100%; margin: auto; font-size: clamp(2.15rem, 9.7vw, 3.35rem); }
-  .hero-line-first { padding-left: .25em; }
+  .hero h1 { width: 100%; max-width: 100%; margin: auto; font-size: clamp(2.1rem, 9.2vw, 3.2rem); }
+  .hero-line-first { padding-left: .18em; }
   .hero-actions { justify-content: center; }
   .hero-product { width: 100%; height: 28rem; margin-top: 2.75rem; }
   .hero-product > img { width: min(72vw, 18.5rem); height: auto; max-height: none; }
@@ -219,7 +219,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (max-width: 43.75rem) {
   .header-download { font-size: .75rem; }
-  .layout-copy h2, .quick-copy h2, .scenarios-section > h2, .software-section > h2, .faq-section > h2, .product-copy h2, .how-section > h2, .mac-section h2 { font-size: 2.65rem; }
+  .layout-copy h2, .quick-copy h2, .scenarios-section > h2, .software-section > h2, .faq-section > h2, .product-copy h2, .how-section > h2, .mac-section h2 { font-size: clamp(2rem, 9vw, 2.45rem); }
   .quick-screens { margin-right: -1.25rem; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: min(75vw, 18rem); justify-content: start; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 1.25rem 1rem 0; }
   .quick-screens figure { scroll-snap-align: start; }
   .feature-list article { grid-template-columns: 1fr; gap: .35rem; }
