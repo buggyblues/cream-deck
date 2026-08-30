@@ -1,7 +1,7 @@
 {
   "name": "奶猫妙控",
   "short_name": "奶猫妙控",
-  "description": "自由组合的掌上 Mac 小键盘",
+  "description": "看着 Mac 画面，用触控板、键盘和自定义小键盘继续操作",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f5efe4",

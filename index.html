@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0e6">
-  <meta name="description" content="奶猫妙控是一款可以自由组合的掌上 Mac 小键盘，支持快捷键、触控板、旋钮、屏幕预览以及 Codex、DaVinci Resolve、PowerPoint、Apple Music 等专属小键盘">
+  <meta name="description" content="奶猫妙控是一款可以自由组合的掌上 Mac 小键盘，支持实时预览 Mac 画面、触控板、键盘输入、快捷键和常用软件专属小键盘">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="application-name" content="奶猫妙控">
   <meta name="apple-mobile-web-app-title" content="奶猫妙控">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
   <meta property="og:title" content="奶猫妙控｜自由全能小键盘，跃然掌上">
-  <meta property="og:description" content="自由组合的掌上 Mac 小键盘">
+  <meta property="og:description" content="看着 Mac 画面，用触控板、键盘和自定义小键盘继续操作">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <meta property="og:image:alt" content="奶猫妙控熊猫 App 图标">
   <meta property="og:url" content="https://cream-deck.vercel.app/">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="奶猫妙控｜自由全能小键盘，跃然掌上">
-  <meta name="twitter:description" content="自由组合的掌上 Mac 小键盘">
+  <meta name="twitter:description" content="看着 Mac 画面，用触控板、键盘和自定义小键盘继续操作">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <link rel="canonical" href="https://cream-deck.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,10 +40,12 @@
     "image": "https://cream-deck.vercel.app/assets/app-icon.png",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "macOS 13+, iOS 17+, iPadOS 17+",
-    "description": "自由组合的掌上 Mac 小键盘",
+    "description": "自由组合的掌上 Mac 小键盘，支持实时画面、触控板、键盘输入和常用软件专属小键盘",
     "featureList": [
       "自定义按键、旋钮与触控板",
-      "Mac 屏幕预览",
+      "Mac 实时画面与全屏查看",
+      "远程触控板、滚动与键盘输入",
+      "窗口按设备比例适配，不拉伸画面",
       "二维码配对",
       "桌面小组件与长按快捷操作",
       "Codex、DaVinci Resolve、PowerPoint 与 Apple Music 专属小键盘"
@@ -70,6 +72,11 @@
         "@type": "Question",
         "name": "为什么看不到 Mac 画面？",
         "acceptedAnswer": { "@type": "Answer", "text": "屏幕预览需要额外允许屏幕录制，普通按键、旋钮和触控板不受影响" }
+      },
+      {
+        "@type": "Question",
+        "name": "可以远程做什么？",
+        "acceptedAnswer": { "@type": "Answer", "text": "可以查看 Mac 实时画面，用触控板移动光标和滚动，也可以输入文字、使用快捷键。窗口会按设备比例适配，画面不会被拉伸" }
       }
     ]
   }
@@ -85,6 +92,7 @@
     </a>
     <nav aria-label="主导航">
       <a href="#layouts">小键盘</a>
+      <a href="#remote">远程</a>
       <a href="#how">连接</a>
       <a href="#scenarios">场景</a>
       <a href="#faq">问题</a>
@@ -153,6 +161,22 @@
         <img data-layout-image src="assets/screens/control-codex.webp" alt="奶猫妙控 Codex 控制台" width="1179" height="2556" loading="lazy">
         <figcaption><strong data-layout-name>Codex</strong><span data-layout-description>Agent、推理强度、批准、语音和发送</span></figcaption>
       </figure>
+    </section>
+
+    <section class="remote-section" id="remote">
+      <figure class="remote-shot">
+        <img src="assets/screens/control-studio.webp" alt="奶猫妙控显示 Mac 实时画面、触控板、滚轮和键盘入口" width="1179" height="2556" loading="lazy">
+      </figure>
+      <div class="remote-copy">
+        <h2>看着 Mac 画面，直接操作</h2>
+        <p>看实时画面，移动光标、滚动和输入。窗口会自动适配，不会把画面挤扁</p>
+        <div class="remote-features">
+          <article><h3>看画面</h3><p>轻点预览，展开全屏查看</p></article>
+          <article><h3>动光标</h3><p>触控、点按和滚动都能完成</p></article>
+          <article><h3>继续输入</h3><p>输入文字，也能使用常用快捷键</p></article>
+          <article><h3>不拉伸</h3><p>窗口按设备比例适配，文字和图像保持原样</p></article>
+        </div>
+      </div>
     </section>
 
     <section class="product-section" id="control">
@@ -277,6 +301,7 @@
         <details><summary>需要连同一个 Wi‑Fi 吗？</summary><p>需要，手机或平板与 Mac 要连接同一个 Wi‑Fi</p></details>
         <details><summary>Mac 为什么没有反应？</summary><p>在“系统设置 → 隐私与安全性 → 辅助功能”中允许奶猫妙控</p></details>
         <details><summary>为什么看不到 Mac 画面？</summary><p>屏幕预览需要额外允许“屏幕录制”，普通按键、旋钮和触控板不受影响</p></details>
+        <details><summary>可以远程做什么？</summary><p>可以看 Mac 实时画面，移动光标、滚动和输入。窗口会按设备比例适配，画面不会被拉伸</p></details>
         <details><summary>怎么最快打开扫码？</summary><p>长按 App 图标选择“扫码配对”，或点按奶猫妙控小组件</p></details>
         <details><summary>换一台 Mac 怎么配对？</summary><p>打开“设备”，扫描新 Mac 上的二维码</p></details>
         <details><summary>控制内容会上传吗？</summary><p>不会，控制指令只在已经配对的设备之间传输</p></details>

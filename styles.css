@@ -34,7 +34,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .site-header nav a:hover { color: var(--ink); }
 .header-download { justify-self: end; padding: .65rem 1rem; border-radius: .8rem; background: var(--ink); color: white; font-size: .8125rem; font-weight: 800; }
 
-.hero, .layouts-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section, .download-section {
+.hero, .layouts-section, .remote-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section, .download-section {
   min-height: calc(100svh - var(--header));
   padding: clamp(2.5rem, 5.5vh, 4.25rem) max(1.5rem, calc((100vw - var(--max)) / 2));
 }
@@ -95,6 +95,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .layout-preview figcaption { width: min(100%, 24rem); margin-top: .85rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .layout-preview figcaption strong { font-size: .9rem; }
 .layout-preview figcaption span { color: var(--muted); font-size: .75rem; text-align: right; }
+
+.remote-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(3rem, 8vw, 7rem); align-items: center; background: var(--blue-cream); }
+.remote-shot { display: grid; place-items: center; }
+.remote-shot img { width: auto; height: min(68svh, 38rem); max-width: 100%; object-fit: contain; border: .1rem solid rgba(33,31,26,.78); border-radius: clamp(2.3rem, 3.3vw, 3.1rem); background: #171713; box-shadow: 0 1.6rem 3.2rem rgba(48,38,23,.16); }
+.remote-copy h2 { max-width: 42rem; font-size: clamp(2.6rem, 4.1vw, 3.75rem); }
+.remote-copy > p { max-width: 39rem; margin-top: 1.15rem; color: var(--muted); font-size: 1.05rem; }
+.remote-features { margin-top: 1.65rem; border-top: .0625rem solid var(--line); }
+.remote-features article { padding: .95rem 0; display: grid; grid-template-columns: 6.5rem 1fr; gap: 1.2rem; border-bottom: .0625rem solid var(--line); }
+.remote-features h3 { font-size: 1rem; }
+.remote-features p { color: var(--muted); font-size: .85rem; }
 
 .product-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(3rem, 8vw, 7rem); align-items: center; background: var(--sand); }
 .product-shot { display: grid; place-items: center; }
@@ -196,7 +206,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (max-width: 56.25rem) {
   :root { --header: 4rem; }
-  .hero, .layouts-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section, .download-section { min-height: 0; padding: 4.9rem 1.25rem; }
+  .hero, .layouts-section, .remote-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section, .download-section { min-height: 0; padding: 4.9rem 1.25rem; }
   .site-header { min-height: var(--header); padding: .5rem .875rem; grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
   .brand img { width: 2.375rem; height: 2.375rem; border-radius: .7rem; }
@@ -218,13 +228,17 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .hero-trackpad { display: none; }
   .hero-knob { top: 3%; right: 28%; width: 4.3rem; }
   .hero-slider { right: 25%; bottom: 13%; width: 7rem; height: 2rem; }
-  .layouts-section, .product-section, .quick-section, .mac-section { grid-template-columns: 1fr; }
+  .layouts-section, .remote-section, .product-section, .quick-section, .mac-section { grid-template-columns: 1fr; }
   .layouts-section { gap: 2.25rem; padding-top: 3.9rem; padding-bottom: 3.9rem; overflow: hidden; }
   .layout-tabs { width: 100vw; max-width: none; display: flex; margin: 1.5rem calc(50% - 50vw) 0; padding: 0 1.25rem .45rem; gap: .55rem; overflow-x: auto; scroll-padding-inline: 1.25rem; scroll-snap-type: x proximity; }
   .layout-tab { width: max-content; min-width: 9.5rem; min-height: 3.25rem; flex: none; padding: .45rem .65rem; grid-template-columns: 2rem auto; gap: .55rem; scroll-snap-align: start; }
   .layout-tab img { width: 2rem; height: 2rem; border-radius: .55rem; }
   .layout-preview { margin-top: 0; }
   .layout-preview > img { width: auto; height: min(48svh, 27rem); max-width: 72vw; }
+  .remote-section { gap: 2.25rem; }
+  .remote-copy { order: -1; text-align: center; }
+  .remote-copy > p { margin-right: auto; margin-left: auto; }
+  .remote-shot img { width: min(76vw, 18.75rem); height: auto; }
   .product-shot > img { width: min(76vw, 18.75rem); height: auto; }
   .product-shot { order: 2; }
   .how-section { grid-template-columns: 1fr; grid-template-areas: "eyebrow" "title" "art" "steps"; grid-template-rows: auto; }
@@ -253,13 +267,14 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (max-width: 43.75rem) {
   .header-download { font-size: .75rem; }
-  .layout-copy h2, .quick-copy h2, .role-panel h2, .faq-section > h2, .product-copy h2, .how-section > h2, .mac-section h2 { font-size: clamp(2rem, 9vw, 2.45rem); }
+  .layout-copy h2, .quick-copy h2, .role-panel h2, .faq-section > h2, .remote-copy h2, .product-copy h2, .how-section > h2, .mac-section h2 { font-size: clamp(2rem, 9vw, 2.45rem); }
   .hero-key-small { display: none; }
   .hero-key-dark { left: 30%; }
   .hero-slider { right: 28%; bottom: 8%; }
   .quick-screens { margin-right: -1.25rem; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: min(75vw, 18rem); justify-content: start; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 1.25rem 1rem 0; }
   .quick-screens figure { scroll-snap-align: start; }
   .feature-list article { grid-template-columns: 1fr; gap: .35rem; }
+  .remote-features article { grid-template-columns: 1fr; gap: .35rem; text-align: center; }
   .role-tabs { gap: .25rem; padding: .25rem; }
   .role-tabs button { padding: .62rem .2rem; }
   .role-tabs strong { font-size: .82rem; }

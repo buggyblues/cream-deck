@@ -462,6 +462,11 @@ const initMotion = () => {
       .from('.product-copy .eyebrow, .product-copy h2, .product-copy > p', { ...reveal, y: 24, stagger: .07 }, '-=.38')
       .from('.feature-list article', { ...reveal, y: 20, stagger: .075 }, '-=.32');
 
+    gsap.timeline({ scrollTrigger: { trigger: '.remote-section', start: 'top 76%', once: true } })
+      .from('.remote-shot', { ...reveal, x: desktop ? -48 : 0, rotation: -2 })
+      .from('.remote-copy h2, .remote-copy > p', { ...reveal, y: 24, stagger: .07 }, '-=.38')
+      .from('.remote-features article', { ...reveal, y: 20, stagger: .075 }, '-=.32');
+
     gsap.timeline({ scrollTrigger: { trigger: '.how-section', start: 'top 74%', once: true } })
       .from('.connection-art', { ...reveal, x: desktop ? -54 : 0, rotation: -4, scale: .95 })
       .from('.how-section > .eyebrow, .how-section > h2', { ...reveal, y: 24, stagger: .07 }, '-=.4')
