@@ -1,7 +1,7 @@
 {
   "name": "奶猫妙控",
   "short_name": "奶猫妙控",
-  "description": "看着 Mac 画面，用触控板、键盘和自定义小键盘继续操作",
+  "description": "看着 Mac 画面，用触控板、文本键盘、实时键盘和语音继续操作",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f5efe4",

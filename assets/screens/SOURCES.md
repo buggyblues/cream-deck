@@ -1,5 +1,5 @@
 # Screenshot sources
 
-The Mac desktop shown inside the automated remote-control screenshots is a crop of Apple Newsroom's downloadable macOS Sonoma desktop image and is used only as a screenshot-mode placeholder
+The Mac desktop shown inside the automated remote-control screenshots is an equal-ratio crop of Apple's official macOS Tahoe desktop screenshot and is used only as a screenshot-mode placeholder
 
-- [macOS Sonoma is available today](https://www.apple.com/newsroom/2023/09/macos-sonoma-is-available-today/)
+- [Get to know the Mac desktop](https://support.apple.com/guide/mac-help/work-on-the-desktop-mh40612/mac)

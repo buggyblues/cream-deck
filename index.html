@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0e6">
-  <meta name="description" content="奶猫妙控是一款可以自由组合的掌上 Mac 小键盘，支持实时预览 Mac 画面、触控板、键盘输入、快捷键和常用软件专属小键盘">
+  <meta name="description" content="奶猫妙控是一款可以自由组合的掌上 Mac 小键盘，支持实时预览 Mac 画面、触控板、文本键盘、实时键盘、语音输入和常用软件专属小键盘">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="application-name" content="奶猫妙控">
   <meta name="apple-mobile-web-app-title" content="奶猫妙控">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
   <meta property="og:title" content="奶猫妙控｜自由全能小键盘，跃然掌上">
-  <meta property="og:description" content="看着 Mac 画面，用触控板、键盘和自定义小键盘继续操作">
+  <meta property="og:description" content="看着 Mac 画面，用触控板、文本键盘、实时键盘和语音继续操作">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <meta property="og:image:alt" content="奶猫妙控熊猫 App 图标">
   <meta property="og:url" content="https://cream-deck.vercel.app/">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="奶猫妙控｜自由全能小键盘，跃然掌上">
-  <meta name="twitter:description" content="看着 Mac 画面，用触控板、键盘和自定义小键盘继续操作">
+  <meta name="twitter:description" content="看着 Mac 画面，用触控板、文本键盘、实时键盘和语音继续操作">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <link rel="canonical" href="https://cream-deck.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,11 +40,13 @@
     "image": "https://cream-deck.vercel.app/assets/app-icon.png",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "macOS 13+, iOS 17+, iPadOS 17+",
-    "description": "自由组合的掌上 Mac 小键盘，支持实时画面、触控板、键盘输入和常用软件专属小键盘",
+    "description": "自由组合的掌上 Mac 小键盘，支持实时画面、触控板、文本键盘、实时键盘、语音输入和常用软件专属小键盘",
     "featureList": [
       "自定义按键、旋钮与触控板",
       "Mac 实时画面与全屏查看",
-      "远程触控板、滚动与键盘输入",
+      "远程触控板、滚动与实时键盘",
+      "整段文本编辑与语音转文字",
+      "将移动设备麦克风传到 Mac",
       "窗口按设备比例适配，不拉伸画面",
       "二维码配对",
       "桌面小组件与长按快捷操作",
@@ -76,7 +78,12 @@
       {
         "@type": "Question",
         "name": "可以远程做什么？",
-        "acceptedAnswer": { "@type": "Answer", "text": "可以查看 Mac 实时画面，用触控板移动光标和滚动，也可以输入文字、使用快捷键，窗口会按设备比例适配，画面不会被拉伸" }
+        "acceptedAnswer": { "@type": "Answer", "text": "可以查看 Mac 实时画面，用触控板移动光标和滚动，也可以编辑整段文字、使用实时键盘或语音，窗口会按设备比例适配，画面不会被拉伸" }
+      },
+      {
+        "@type": "Question",
+        "name": "语音可以怎么用？",
+        "acceptedAnswer": { "@type": "Answer", "text": "可以在文本键盘里把说话内容转成文字，确认后发送，也可以按住语音组件，将移动设备麦克风传到 Mac" }
       }
     ]
   }
@@ -165,8 +172,8 @@
 
     <section class="remote-section" id="remote">
       <div class="remote-intro">
-        <h2>Mac 画面，就在手边</h2>
-        <p>看实时画面，再点按、滚动或输入，轻点预览就能展开全屏，画面按设备比例显示</p>
+        <h2>看着 Mac，继续操作</h2>
+        <p>移动光标、滚动、输入文字都可以，点开预览就是全屏</p>
       </div>
       <div class="remote-gallery" aria-label="远程控制界面">
         <figure class="remote-card">
@@ -178,8 +185,16 @@
           <figcaption><strong>展开全屏</strong><span>直接移动光标，也能切换窗口</span></figcaption>
         </figure>
         <figure class="remote-card remote-card-keyboard">
+          <img src="assets/screens/remote-text-voice.webp" alt="奶猫妙控文本键盘正在将语音转成可编辑文字" width="1206" height="2622" loading="lazy">
+          <figcaption><strong>文本键盘</strong><span>整段编辑，也能用语音转成文字</span></figcaption>
+        </figure>
+        <figure class="remote-card remote-card-keyboard">
           <img src="assets/screens/remote-keyboard.webp" alt="奶猫妙控实时键盘输入界面" width="1206" height="2622" loading="lazy">
-          <figcaption><strong>继续输入</strong><span>输入文字或使用常用快捷键</span></figcaption>
+          <figcaption><strong>实时键盘</strong><span>每次按键都会立即送到 Mac</span></figcaption>
+        </figure>
+        <figure class="remote-card">
+          <img src="assets/screens/remote-microphone.webp" alt="奶猫妙控将移动设备麦克风实时传到 Mac" width="1206" height="2622" loading="lazy">
+          <figcaption><strong>语音</strong><span>按住说话，把麦克风送到 Mac</span></figcaption>
         </figure>
       </div>
     </section>
@@ -306,7 +321,8 @@
         <details><summary>需要连同一个 Wi‑Fi 吗？</summary><p>需要，手机或平板与 Mac 要连接同一个 Wi‑Fi</p></details>
         <details><summary>Mac 为什么没有反应？</summary><p>在“系统设置 → 隐私与安全性 → 辅助功能”中允许奶猫妙控</p></details>
         <details><summary>为什么看不到 Mac 画面？</summary><p>屏幕预览需要额外允许“屏幕录制”，普通按键、旋钮和触控板不受影响</p></details>
-        <details><summary>可以远程做什么？</summary><p>可以看 Mac 实时画面，移动光标、滚动和输入，窗口会按设备比例适配，画面不会被拉伸</p></details>
+        <details><summary>可以远程做什么？</summary><p>可以看 Mac 实时画面，移动光标、滚动，也可以使用文本键盘、实时键盘和语音</p></details>
+        <details><summary>语音可以怎么用？</summary><p>在文本键盘里点麦克风，可以把说话内容转成文字；按住语音组件，可以把设备麦克风传到 Mac</p></details>
         <details><summary>怎么最快打开扫码？</summary><p>长按 App 图标选择“扫码配对”，或点按奶猫妙控小组件</p></details>
         <details><summary>换一台 Mac 怎么配对？</summary><p>打开“设备”，扫描新 Mac 上的二维码</p></details>
         <details><summary>控制内容会上传吗？</summary><p>不会，控制指令只在已经配对的设备之间传输</p></details>

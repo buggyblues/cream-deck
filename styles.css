@@ -106,9 +106,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .remote-intro { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(18rem, .95fr); gap: clamp(2rem, 7vw, 6rem); align-items: end; }
 .remote-intro h2 { max-width: 42rem; font-size: clamp(2.6rem, 4.1vw, 3.75rem); }
 .remote-intro p { max-width: 35rem; color: var(--muted); font-size: 1rem; }
-.remote-gallery { min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2.5rem); align-items: start; }
+.remote-gallery { min-height: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(.7rem, 1.4vw, 1.25rem); align-items: start; }
 .remote-card { min-width: 0; display: grid; justify-items: center; }
-.remote-card img { width: auto; height: min(54svh, 30rem); max-width: 100%; object-fit: contain; border: .1rem solid rgba(33,31,26,.78); border-radius: clamp(1.8rem, 2.5vw, 2.6rem); background: #171713; box-shadow: 0 1.25rem 2.4rem rgba(48,38,23,.14); }
+.remote-card img { width: auto; height: min(48svh, 27rem); max-width: 100%; object-fit: contain; border: .1rem solid rgba(33,31,26,.78); border-radius: clamp(1.6rem, 2vw, 2.25rem); background: #171713; box-shadow: 0 1.25rem 2.4rem rgba(48,38,23,.14); }
 .remote-card figcaption { margin-top: .7rem; display: grid; gap: .18rem; text-align: center; }
 .remote-card figcaption strong { font-size: .9rem; }
 .remote-card figcaption span { color: var(--muted); font-size: .74rem; }
@@ -209,6 +209,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (min-width: 64rem) and (pointer: fine) {
   .look-panda { display: block; }
+  .remote-gallery { width: calc(100% - 6rem); }
 }
 
 @media (max-width: 56.25rem) {
