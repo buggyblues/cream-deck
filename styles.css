@@ -34,9 +34,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .site-header nav a:hover { color: var(--ink); }
 .header-download { justify-self: end; padding: .65rem 1rem; border-radius: .8rem; background: var(--ink); color: white; font-size: .8125rem; font-weight: 800; }
 
-.hero, .layouts-section, .remote-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section, .download-section {
+.hero, .layouts-section, .remote-section, .product-section {
   min-height: calc(100svh - var(--header));
   padding: clamp(2.5rem, 5.5vh, 4.25rem) max(1.5rem, calc((100vw - var(--max)) / 2));
+}
+.how-section, .quick-section, .scenarios-section, .mac-section, .faq-section {
+  padding: clamp(4rem, 7vw, 6rem) max(1.5rem, calc((100vw - var(--max)) / 2));
+}
+.download-section {
+  padding: clamp(2.25rem, 4vw, 3.25rem) max(1.5rem, calc((100vw - var(--max)) / 2));
 }
 .eyebrow { margin-bottom: .85rem; color: var(--purple); font-size: .8125rem; font-weight: 900; letter-spacing: .04em; }
 .button { min-height: 3.25rem; padding: 0 1.4rem; display: inline-flex; align-items: center; justify-content: center; border: .0625rem solid transparent; border-radius: 1rem; font-weight: 800; transition: background .18s ease; }
@@ -96,15 +102,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .layout-preview figcaption strong { font-size: .9rem; }
 .layout-preview figcaption span { color: var(--muted); font-size: .75rem; text-align: right; }
 
-.remote-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(3rem, 8vw, 7rem); align-items: center; background: var(--blue-cream); }
-.remote-shot { display: grid; place-items: center; }
-.remote-shot img { width: auto; height: min(68svh, 38rem); max-width: 100%; object-fit: contain; border: .1rem solid rgba(33,31,26,.78); border-radius: clamp(2.3rem, 3.3vw, 3.1rem); background: #171713; box-shadow: 0 1.6rem 3.2rem rgba(48,38,23,.16); }
-.remote-copy h2 { max-width: 42rem; font-size: clamp(2.6rem, 4.1vw, 3.75rem); }
-.remote-copy > p { max-width: 39rem; margin-top: 1.15rem; color: var(--muted); font-size: 1.05rem; }
-.remote-features { margin-top: 1.65rem; border-top: .0625rem solid var(--line); }
-.remote-features article { padding: .95rem 0; display: grid; grid-template-columns: 6.5rem 1fr; gap: 1.2rem; border-bottom: .0625rem solid var(--line); }
-.remote-features h3 { font-size: 1rem; }
-.remote-features p { color: var(--muted); font-size: .85rem; }
+.remote-section { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: clamp(1.5rem, 3vh, 2.3rem); align-items: center; overflow: hidden; background: var(--blue-cream); }
+.remote-intro { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(18rem, .95fr); gap: clamp(2rem, 7vw, 6rem); align-items: end; }
+.remote-intro h2 { max-width: 42rem; font-size: clamp(2.6rem, 4.1vw, 3.75rem); }
+.remote-intro p { max-width: 35rem; color: var(--muted); font-size: 1rem; }
+.remote-gallery { min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2.5rem); align-items: start; }
+.remote-card { min-width: 0; display: grid; justify-items: center; }
+.remote-card img { width: auto; height: min(54svh, 30rem); max-width: 100%; object-fit: contain; border: .1rem solid rgba(33,31,26,.78); border-radius: clamp(1.8rem, 2.5vw, 2.6rem); background: #171713; box-shadow: 0 1.25rem 2.4rem rgba(48,38,23,.14); }
+.remote-card figcaption { margin-top: .7rem; display: grid; gap: .18rem; text-align: center; }
+.remote-card figcaption strong { font-size: .9rem; }
+.remote-card figcaption span { color: var(--muted); font-size: .74rem; }
 
 .product-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(3rem, 8vw, 7rem); align-items: center; background: var(--sand); }
 .product-shot { display: grid; place-items: center; }
@@ -167,10 +174,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .faq-list summary { padding: .95rem 2rem .95rem 0; cursor: pointer; font-size: .98rem; font-weight: 800; }
 .faq-list details p { max-width: 42rem; padding: 0 0 .95rem; color: var(--muted); font-size: .88rem; }
 
-.download-section { display: grid; grid-template-columns: 11rem 1fr auto; grid-template-areas: "icon title button" "icon copy button"; column-gap: 2rem; align-content: center; background: var(--purple); color: white; }
-.download-art { grid-area: icon; width: 10.5rem; align-self: center; justify-self: center; }
-.download-section h2 { grid-area: title; max-width: 45rem; }
-.download-section p { grid-area: copy; margin-top: .7rem; color: rgba(255,255,255,.84); }
+.download-section { display: grid; grid-template-columns: 8rem 1fr auto; grid-template-areas: "icon title button" "icon copy button"; column-gap: 1.5rem; align-content: center; background: var(--purple); color: white; }
+.download-art { grid-area: icon; width: 7.5rem; align-self: center; justify-self: center; }
+.download-section h2 { grid-area: title; max-width: 45rem; font-size: clamp(2.25rem, 3.5vw, 3.15rem); }
+.download-section p { grid-area: copy; margin-top: .45rem; color: rgba(255,255,255,.84); }
 .download-copy { max-width: 43rem; }
 .download-copy span { margin-top: .35rem; display: block; color: rgba(255,255,255,.62); font-size: .8125rem; }
 .download-section .button { grid-area: button; align-self: center; }
@@ -206,7 +213,8 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (max-width: 56.25rem) {
   :root { --header: 4rem; }
-  .hero, .layouts-section, .remote-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section, .download-section { min-height: 0; padding: 4.9rem 1.25rem; }
+  .hero, .layouts-section, .remote-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section { min-height: 0; padding: 4.25rem 1.25rem; }
+  .download-section { min-height: 0; padding: 2.8rem 1.25rem; }
   .site-header { min-height: var(--header); padding: .5rem .875rem; grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
   .brand img { width: 2.375rem; height: 2.375rem; border-radius: .7rem; }
@@ -228,17 +236,19 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .hero-trackpad { display: none; }
   .hero-knob { top: 3%; right: 28%; width: 4.3rem; }
   .hero-slider { right: 25%; bottom: 13%; width: 7rem; height: 2rem; }
-  .layouts-section, .remote-section, .product-section, .quick-section, .mac-section { grid-template-columns: 1fr; }
+  .layouts-section, .product-section, .quick-section, .mac-section { grid-template-columns: 1fr; }
   .layouts-section { gap: 2.25rem; padding-top: 3.9rem; padding-bottom: 3.9rem; overflow: hidden; }
   .layout-tabs { width: 100vw; max-width: none; display: flex; margin: 1.5rem calc(50% - 50vw) 0; padding: 0 1.25rem .45rem; gap: .55rem; overflow-x: auto; scroll-padding-inline: 1.25rem; scroll-snap-type: x proximity; }
   .layout-tab { width: max-content; min-width: 9.5rem; min-height: 3.25rem; flex: none; padding: .45rem .65rem; grid-template-columns: 2rem auto; gap: .55rem; scroll-snap-align: start; }
   .layout-tab img { width: 2rem; height: 2rem; border-radius: .55rem; }
   .layout-preview { margin-top: 0; }
   .layout-preview > img { width: auto; height: min(48svh, 27rem); max-width: 72vw; }
-  .remote-section { gap: 2.25rem; }
-  .remote-copy { order: -1; text-align: center; }
-  .remote-copy > p { margin-right: auto; margin-left: auto; }
-  .remote-shot img { width: min(76vw, 18.75rem); height: auto; }
+  .remote-section { gap: 2.25rem; padding-top: 3.9rem; padding-bottom: 3.9rem; }
+  .remote-intro { grid-template-columns: 1fr; gap: .9rem; text-align: center; }
+  .remote-intro p { margin-right: auto; margin-left: auto; }
+  .remote-gallery { width: 100vw; max-width: none; margin: 0 calc(50% - 50vw); padding: 0 1.25rem 1rem; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: min(72vw, 18rem); gap: 1.25rem; overflow-x: auto; scroll-padding-inline: 1.25rem; scroll-snap-type: x mandatory; }
+  .remote-card { scroll-snap-align: center; }
+  .remote-card img { width: auto; height: min(55svh, 29rem); }
   .product-shot > img { width: min(76vw, 18.75rem); height: auto; }
   .product-shot { order: 2; }
   .how-section { grid-template-columns: 1fr; grid-template-areas: "eyebrow" "title" "art" "steps"; grid-template-rows: auto; }
@@ -254,9 +264,9 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .mac-section > img { width: min(90vw, 31rem); height: auto; margin: 2rem auto 0; }
   .faq-section { grid-template-columns: 1fr; grid-template-areas: "title" "list"; }
   .faq-section > h2 { margin-bottom: 2.5rem; }
-  .download-section { grid-template-columns: 9rem 1fr; grid-template-areas: "icon title" "icon copy" "button button"; }
-  .download-art { width: 8.5rem; }
-  .download-section .button { margin-top: 2rem; }
+  .download-section { grid-template-columns: 7rem 1fr; grid-template-areas: "icon title" "icon copy" "button button"; }
+  .download-art { width: 6.5rem; }
+  .download-section .button { margin-top: 1.35rem; }
   .layout-copy, .product-copy, .quick-copy, .mac-copy, .faq-section > h2 { text-align: center; }
   .layout-copy > p, .quick-copy > p:not(.eyebrow), .product-copy > p:not(.eyebrow), .mac-copy > p:not(.eyebrow) { margin-right: auto; margin-left: auto; }
   .product-copy .eyebrow, .quick-copy .eyebrow, .mac-copy .eyebrow { text-align: center; }
@@ -267,14 +277,13 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (max-width: 43.75rem) {
   .header-download { font-size: .75rem; }
-  .layout-copy h2, .quick-copy h2, .role-panel h2, .faq-section > h2, .remote-copy h2, .product-copy h2, .how-section > h2, .mac-section h2 { font-size: clamp(2rem, 9vw, 2.45rem); }
+  .layout-copy h2, .quick-copy h2, .role-panel h2, .faq-section > h2, .remote-intro h2, .product-copy h2, .how-section > h2, .mac-section h2 { font-size: clamp(2rem, 9vw, 2.45rem); }
   .hero-key-small { display: none; }
   .hero-key-dark { left: 30%; }
   .hero-slider { right: 28%; bottom: 8%; }
   .quick-screens { margin-right: -1.25rem; grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: min(75vw, 18rem); justify-content: start; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 1.25rem 1rem 0; }
   .quick-screens figure { scroll-snap-align: start; }
   .feature-list article { grid-template-columns: 1fr; gap: .35rem; }
-  .remote-features article { grid-template-columns: 1fr; gap: .35rem; text-align: center; }
   .role-tabs { gap: .25rem; padding: .25rem; }
   .role-tabs button { padding: .62rem .2rem; }
   .role-tabs strong { font-size: .82rem; }
@@ -284,7 +293,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .role-apps img { width: 1.8rem; height: 1.8rem; }
   .role-apps span { font-size: .72rem; }
   .download-section { grid-template-columns: 1fr; grid-template-areas: "icon" "title" "copy" "button"; text-align: center; }
-  .download-art { width: min(70vw, 11rem); margin: auto; }
+  .download-art { width: min(48vw, 8rem); margin: auto; }
   .download-section .button { width: 100%; }
   footer { padding: 2.9rem 1.25rem; grid-template-columns: 1fr; }
   footer nav { grid-column: auto; grid-row: auto; flex-wrap: wrap; margin-top: .75rem; }

@@ -76,7 +76,7 @@
       {
         "@type": "Question",
         "name": "可以远程做什么？",
-        "acceptedAnswer": { "@type": "Answer", "text": "可以查看 Mac 实时画面，用触控板移动光标和滚动，也可以输入文字、使用快捷键。窗口会按设备比例适配，画面不会被拉伸" }
+        "acceptedAnswer": { "@type": "Answer", "text": "可以查看 Mac 实时画面，用触控板移动光标和滚动，也可以输入文字、使用快捷键，窗口会按设备比例适配，画面不会被拉伸" }
       }
     ]
   }
@@ -164,18 +164,23 @@
     </section>
 
     <section class="remote-section" id="remote">
-      <figure class="remote-shot">
-        <img src="assets/screens/control-studio.webp" alt="奶猫妙控显示 Mac 实时画面、触控板、滚轮和键盘入口" width="1179" height="2556" loading="lazy">
-      </figure>
-      <div class="remote-copy">
-        <h2>看着 Mac 画面，直接操作</h2>
-        <p>看实时画面，移动光标、滚动和输入。窗口会自动适配，不会把画面挤扁</p>
-        <div class="remote-features">
-          <article><h3>看画面</h3><p>轻点预览，展开全屏查看</p></article>
-          <article><h3>动光标</h3><p>触控、点按和滚动都能完成</p></article>
-          <article><h3>继续输入</h3><p>输入文字，也能使用常用快捷键</p></article>
-          <article><h3>不拉伸</h3><p>窗口按设备比例适配，文字和图像保持原样</p></article>
-        </div>
+      <div class="remote-intro">
+        <h2>Mac 画面，就在手边</h2>
+        <p>看实时画面，再点按、滚动或输入，轻点预览就能展开全屏，画面按设备比例显示</p>
+      </div>
+      <div class="remote-gallery" aria-label="远程控制界面">
+        <figure class="remote-card">
+          <img src="assets/screens/control-studio.webp" alt="奶猫妙控在小键盘中显示 Mac 实时画面、触控板与滚动控件" width="1206" height="2622" loading="lazy">
+          <figcaption><strong>边看边控</strong><span>实时画面、触控板和滚动放在同一页</span></figcaption>
+        </figure>
+        <figure class="remote-card">
+          <img src="assets/screens/remote-fullscreen.webp" alt="奶猫妙控全屏显示 Mac 桌面并提供远程控制工具" width="1206" height="2622" loading="lazy">
+          <figcaption><strong>展开全屏</strong><span>直接移动光标，也能切换窗口</span></figcaption>
+        </figure>
+        <figure class="remote-card remote-card-keyboard">
+          <img src="assets/screens/remote-keyboard.webp" alt="奶猫妙控实时键盘输入界面" width="1206" height="2622" loading="lazy">
+          <figcaption><strong>继续输入</strong><span>输入文字或使用常用快捷键</span></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -301,7 +306,7 @@
         <details><summary>需要连同一个 Wi‑Fi 吗？</summary><p>需要，手机或平板与 Mac 要连接同一个 Wi‑Fi</p></details>
         <details><summary>Mac 为什么没有反应？</summary><p>在“系统设置 → 隐私与安全性 → 辅助功能”中允许奶猫妙控</p></details>
         <details><summary>为什么看不到 Mac 画面？</summary><p>屏幕预览需要额外允许“屏幕录制”，普通按键、旋钮和触控板不受影响</p></details>
-        <details><summary>可以远程做什么？</summary><p>可以看 Mac 实时画面，移动光标、滚动和输入。窗口会按设备比例适配，画面不会被拉伸</p></details>
+        <details><summary>可以远程做什么？</summary><p>可以看 Mac 实时画面，移动光标、滚动和输入，窗口会按设备比例适配，画面不会被拉伸</p></details>
         <details><summary>怎么最快打开扫码？</summary><p>长按 App 图标选择“扫码配对”，或点按奶猫妙控小组件</p></details>
         <details><summary>换一台 Mac 怎么配对？</summary><p>打开“设备”，扫描新 Mac 上的二维码</p></details>
         <details><summary>控制内容会上传吗？</summary><p>不会，控制指令只在已经配对的设备之间传输</p></details>
@@ -309,7 +314,7 @@
       </div>
     </section>
 
-    <section class="download-section">
+    <section class="download-section" id="download">
       <figure class="download-art sprite-sequence" aria-label="无尾熊猫伙伴带来下载包">
         <img class="sprite-frame download-frame" src="assets/mascot-download-v2-frame-01.webp" alt="无尾熊猫伙伴带来下载包" width="768" height="768" loading="lazy">
         <img class="sprite-frame download-frame" src="assets/mascot-download-v2-frame-02.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
