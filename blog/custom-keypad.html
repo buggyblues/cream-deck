@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff1df">
-  <meta name="description" content="了解奶猫妙控为什么采用可组合小键盘，以及按键、旋钮、触控板和屏幕预览如何适配剪辑、音乐、演示和开发">
+  <meta name="description" content="了解奶猫妙控自定义小键盘如何组合按键、旋钮、触控板和屏幕预览，适配剪辑、音乐、演示和开发">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="常用操作，值得一块自己的小键盘｜奶猫妙控">
-  <meta property="og:description" content="不同软件需要不同操作，小键盘也应该跟着任务变化">
+  <meta property="og:title" content="给常用操作，留一块自己的小键盘｜奶猫妙控">
+  <meta property="og:description" content="不同软件有不同手感，小键盘也可以跟着任务慢慢长成自己的样子">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/layout-editor.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/custom-keypad">
   <meta property="article:published_time" content="2026-08-31">
@@ -19,13 +19,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>常用操作，值得一块自己的小键盘｜奶猫妙控</title>
+  <title>给常用操作，留一块自己的小键盘｜奶猫妙控</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "常用操作，值得一块自己的小键盘",
-    "description": "奶猫妙控可组合小键盘的功能与设计思路",
+    "headline": "给常用操作，留一块自己的小键盘",
+    "description": "奶猫妙控自定义小键盘的功能与设计思路",
     "datePublished": "2026-08-31",
     "dateModified": "2026-08-31",
     "author": { "@type": "Organization", "name": "VibeKeys" },
@@ -45,34 +45,42 @@
 
   <main id="main" class="article-shell">
     <header class="article-header">
-      <a href="../blog.html">设计思路</a>
-      <h1>常用操作，值得一块自己的小键盘</h1>
-      <p>不同软件需要不同操作，小键盘也应该跟着任务变化</p>
+      <a href="../blog.html">设计手记</a>
+      <h1>给常用操作，留一块自己的小键盘</h1>
+      <p>不同软件有不同手感，小键盘也可以跟着任务慢慢长成自己的样子</p>
     </header>
-    <figure class="article-cover article-cover-phone"><img src="../assets/screens/layout-editor.webp?v=20260831" alt="奶猫妙控小键盘编辑器正在调整组件布局" width="1206" height="2622"></figure>
     <article class="article-body">
-      <p>剪辑时常用时间线和修剪，演示时只关心翻页、黑屏和计时</p>
-      <p>所有操作挤在同一页，只会让真正需要的按钮更难找到</p>
+      <p class="article-lead">剪片时，左手习惯去找播放和修剪，做演示时，翻页和黑屏又成了最重要的几个动作，软件一换，手的路线也会跟着换</p>
+      <p>我不喜欢让所有功能长期挤在同一页，那会让一块工具看起来很全能，用起来却总要多找一会儿</p>
+      <p>所以奶猫妙控采用可组合的小键盘，每次只留下当前任务真正需要的东西</p>
 
-      <h2>小键盘跟着任务变化</h2>
-      <p>奶猫妙控可以为不同软件保存不同小键盘</p>
-      <p>打开 Codex 时使用 Agent、批准和语音，进入 DaVinci Resolve 后换成播放、修剪、标记和时间线</p>
-      <p>PowerPoint、Keynote、Apple Music 和 Final Cut Pro 也有各自的预设</p>
+      <blockquote><p>小键盘不必容纳所有功能，它只要记得你此刻在做什么</p></blockquote>
 
-      <h2>每个组件只做一件事</h2>
-      <p>按键适合明确操作，旋钮适合连续调整，触控板负责光标和滚动，屏幕预览用来确认 Mac 当前状态</p>
-      <p>文本键盘可以先编辑整段内容，实时键盘则立即发送每一次按键</p>
-      <p>组件的职责清楚，小键盘在忙碌时才容易看懂</p>
+      <h2>软件换了，小键盘也换</h2>
+      <p>打开 Codex 时，Agent、批准和语音离手最近，进入 DaVinci Resolve 后，播放、修剪、标记和时间线接过它们的位置</p>
+      <p>PowerPoint、Keynote、Apple Music 和 Final Cut Pro 也有各自的预设，切换软件时，不必重新记住一整套布局</p>
 
-      <h2>预设只是起点</h2>
-      <p>长按组件就能调整位置、大小和外观，再选择它要执行的操作</p>
-      <p>常用按钮可以放大，偶尔使用的操作可以移到另一页，旋钮也能调整到更适合自己的灵敏度</p>
-      <p>已经习惯的软件流程不用改变，小键盘会靠近原来的习惯</p>
+      <figure class="article-figure article-figure-phone"><img src="../assets/screens/layout-switcher.webp?v=20260831" alt="奶猫妙控显示多块软件小键盘" width="1206" height="2622" loading="lazy"><figcaption>每块小键盘都有自己的名字，也保留自己的排列</figcaption></figure>
 
-      <h2>少想一步，操作就快一点</h2>
-      <p>一块好的小键盘不需要展示全部能力</p>
-      <p>它只需要在当前场景里留下最有用的操作，让手指知道下一步该去哪里</p>
-      <p>这也是奶猫妙控选择可组合布局的原因</p>
+      <h2>不同动作，也有不同的手感</h2>
+      <p>明确的操作交给按键，连续变化交给旋钮，光标和滚动交给触控板，需要确认 Mac 状态时再抬头看一眼屏幕预览</p>
+      <p>这些组件各做一件事，忙起来的时候，手才不会在相似的按钮之间犹豫</p>
+
+      <div class="article-gallery" aria-label="不同软件的小键盘">
+        <figure><img src="../assets/screens/control-codex.webp?v=20260831" alt="奶猫妙控 Codex 小键盘" width="1206" height="2622" loading="lazy"><figcaption>写代码时，常用动作留得更近</figcaption></figure>
+        <figure><img src="../assets/screens/control-resolve.webp?v=20260831" alt="奶猫妙控 DaVinci Resolve 小键盘" width="1206" height="2622" loading="lazy"><figcaption>剪辑时，时间线和播放接过位置</figcaption></figure>
+      </div>
+
+      <h2>预设要留一条改动的路</h2>
+      <p>预设可以让人马上开始，但它不该替你决定最后的样子</p>
+      <p>长按组件就能调整位置、大小、外观和动作，常用按钮可以放大，偶尔用到的功能可以移到另一页</p>
+      <p>用得久了，这块小键盘会一点点靠近自己的习惯</p>
+
+      <figure class="article-figure article-figure-phone"><img src="../assets/screens/layout-editor.webp?v=20260831" alt="奶猫妙控小键盘编辑器正在调整组件布局" width="1206" height="2622" loading="lazy"><figcaption>长按组件，再慢慢调成顺手的样子</figcaption></figure>
+
+      <h2>最后留下的，应该是顺手</h2>
+      <p>一块小键盘的价值不在于摆满多少组件，而在于下一次伸手时，熟悉的位置还在那里</p>
+      <p>当手指不再寻找，工具才真正安静地融进正在做的事里</p>
     </article>
     <nav class="article-next" aria-label="继续阅读"><a href="mac-settings.html">了解 Mac 适配器</a><a href="../index.html#layouts">查看软件小键盘</a></nav>
   </main>
