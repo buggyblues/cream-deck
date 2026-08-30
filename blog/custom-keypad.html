@@ -8,8 +8,8 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="给常用操作，留一块自己的小键盘｜奶猫妙控">
-  <meta property="og:description" content="不同软件有不同手感，小键盘也可以跟着任务慢慢长成自己的样子">
+  <meta property="og:title" content="怎样创建自己的小键盘｜奶猫妙控">
+  <meta property="og:description" content="选择按键、旋钮和触控板，为不同软件创建不同的小键盘">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/layout-editor.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/custom-keypad">
   <meta property="article:published_time" content="2026-08-31">
@@ -19,13 +19,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>给常用操作，留一块自己的小键盘｜奶猫妙控</title>
+  <title>怎样创建自己的小键盘｜奶猫妙控</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "给常用操作，留一块自己的小键盘",
-    "description": "奶猫妙控自定义小键盘的功能与设计思路",
+    "headline": "怎样创建自己的小键盘",
+    "description": "奶猫妙控自定义小键盘的功能和使用方法",
     "datePublished": "2026-08-31",
     "dateModified": "2026-08-31",
     "author": { "@type": "Organization", "name": "VibeKeys" },
@@ -45,42 +45,46 @@
 
   <main id="main" class="article-shell">
     <header class="article-header">
-      <a href="../blog.html">设计手记</a>
-      <h1>给常用操作，留一块自己的小键盘</h1>
-      <p>不同软件有不同手感，小键盘也可以跟着任务慢慢长成自己的样子</p>
+      <a href="../blog.html">自定义小键盘</a>
+      <h1>怎样创建自己的小键盘</h1>
+      <p>选择按键、旋钮和触控板，为不同软件创建不同的小键盘</p>
     </header>
     <article class="article-body">
-      <p class="article-lead">剪片时，左手习惯去找播放和修剪，做演示时，翻页和黑屏又成了最重要的几个动作，软件一换，手的路线也会跟着换</p>
-      <p>我不喜欢让所有功能长期挤在同一页，那会让一块工具看起来很全能，用起来却总要多找一会儿</p>
-      <p>所以奶猫妙控采用可组合的小键盘，每次只留下当前任务真正需要的东西</p>
+      <p class="article-lead">奶猫妙控可以为不同软件创建不同的小键盘</p>
+      <p>每块小键盘都可以放置按键、旋钮、触控板、屏幕预览和输入组件</p>
 
-      <blockquote><p>小键盘不必容纳所有功能，它只要记得你此刻在做什么</p></blockquote>
+      <h2>为什么需要多块小键盘</h2>
+      <p>不同软件常用的操作不同</p>
+      <p>剪辑软件需要播放、修剪和时间线控制，演示软件更常用翻页、黑屏和计时</p>
+      <p>分开保存后，每块小键盘只需要显示当前软件常用的操作</p>
 
-      <h2>软件换了，小键盘也换</h2>
-      <p>打开 Codex 时，Agent、批准和语音离手最近，进入 DaVinci Resolve 后，播放、修剪、标记和时间线接过它们的位置</p>
-      <p>PowerPoint、Keynote、Apple Music 和 Final Cut Pro 也有各自的预设，切换软件时，不必重新记住一整套布局</p>
+      <h2>先使用现成预设</h2>
+      <p>奶猫妙控为 Codex、DaVinci Resolve、PowerPoint、Keynote、Apple Music 和 Final Cut Pro 提供了预设</p>
+      <p>选择预设后就能直接使用，也可以继续修改</p>
 
-      <figure class="article-figure article-figure-phone"><img src="../assets/screens/layout-switcher.webp?v=20260831" alt="奶猫妙控显示多块软件小键盘" width="1206" height="2622" loading="lazy"><figcaption>每块小键盘都有自己的名字，也保留自己的排列</figcaption></figure>
+      <figure class="article-figure article-figure-phone"><img src="../assets/screens/layout-switcher.webp?v=20260831" alt="奶猫妙控显示多块软件小键盘" width="1206" height="2622" loading="lazy"><figcaption>不同软件可以使用不同的小键盘</figcaption></figure>
 
-      <h2>不同动作，也有不同的手感</h2>
-      <p>明确的操作交给按键，连续变化交给旋钮，光标和滚动交给触控板，需要确认 Mac 状态时再抬头看一眼屏幕预览</p>
-      <p>这些组件各做一件事，忙起来的时候，手才不会在相似的按钮之间犹豫</p>
+      <h2>选择合适的组件</h2>
+      <p><strong>按键</strong>适合播放、暂停、复制和撤销等固定操作</p>
+      <p><strong>旋钮和滑杆</strong>适合调整音量、亮度和时间线</p>
+      <p><strong>触控板</strong>可以移动光标和滚动页面</p>
+      <p><strong>屏幕预览</strong>可以查看 Mac 当前画面</p>
 
       <div class="article-gallery" aria-label="不同软件的小键盘">
-        <figure><img src="../assets/screens/control-codex.webp?v=20260831" alt="奶猫妙控 Codex 小键盘" width="1206" height="2622" loading="lazy"><figcaption>写代码时，常用动作留得更近</figcaption></figure>
-        <figure><img src="../assets/screens/control-resolve.webp?v=20260831" alt="奶猫妙控 DaVinci Resolve 小键盘" width="1206" height="2622" loading="lazy"><figcaption>剪辑时，时间线和播放接过位置</figcaption></figure>
+        <figure><img src="../assets/screens/control-codex.webp?v=20260831" alt="奶猫妙控 Codex 小键盘" width="1206" height="2622" loading="lazy"><figcaption>Codex 小键盘</figcaption></figure>
+        <figure><img src="../assets/screens/control-resolve.webp?v=20260831" alt="奶猫妙控 DaVinci Resolve 小键盘" width="1206" height="2622" loading="lazy"><figcaption>DaVinci Resolve 小键盘</figcaption></figure>
       </div>
 
-      <h2>预设要留一条改动的路</h2>
-      <p>预设可以让人马上开始，但它不该替你决定最后的样子</p>
-      <p>长按组件就能调整位置、大小、外观和动作，常用按钮可以放大，偶尔用到的功能可以移到另一页</p>
-      <p>用得久了，这块小键盘会一点点靠近自己的习惯</p>
+      <h2>调整自己的布局</h2>
+      <p>长按组件可以调整位置、大小、外观和对应操作</p>
+      <p>常用按钮可以放大，不常用的操作可以放到其他页面</p>
+      <p>修改会保存在当前小键盘中，不会影响其他小键盘</p>
 
-      <figure class="article-figure article-figure-phone"><img src="../assets/screens/layout-editor.webp?v=20260831" alt="奶猫妙控小键盘编辑器正在调整组件布局" width="1206" height="2622" loading="lazy"><figcaption>长按组件，再慢慢调成顺手的样子</figcaption></figure>
+      <figure class="article-figure article-figure-phone"><img src="../assets/screens/layout-editor.webp?v=20260831" alt="奶猫妙控小键盘编辑器正在调整组件布局" width="1206" height="2622" loading="lazy"><figcaption>长按组件可以调整布局和操作</figcaption></figure>
 
-      <h2>最后留下的，应该是顺手</h2>
-      <p>一块小键盘的价值不在于摆满多少组件，而在于下一次伸手时，熟悉的位置还在那里</p>
-      <p>当手指不再寻找，工具才真正安静地融进正在做的事里</p>
+      <h2>从常用操作开始</h2>
+      <p>第一次创建时，不需要放入所有组件</p>
+      <p>先加入每天都会使用的几个操作，用一段时间后再继续调整</p>
     </article>
     <nav class="article-next" aria-label="继续阅读"><a href="mac-settings.html">了解 Mac 适配器</a><a href="../index.html#layouts">查看软件小键盘</a></nav>
   </main>

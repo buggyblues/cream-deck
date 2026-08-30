@@ -254,8 +254,6 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 .article-body p { margin-top: 1.1rem; color: #4e4941; font-size: 1.06rem; line-height: 1.95; }
 .article-body .article-lead { margin-top: 0; color: var(--ink); font-size: clamp(1.2rem, 2.3vw, 1.38rem); line-height: 1.8; font-weight: 600; }
 .article-body h2 { margin-top: 4.25rem; font-size: clamp(1.85rem, 4vw, 2.6rem); }
-.article-body blockquote { margin: 3.5rem 0; padding: .1rem 0 .1rem 1.5rem; border-left: .25rem solid var(--purple); }
-.article-body blockquote p { margin: 0; color: var(--ink); font-size: clamp(1.35rem, 2.6vw, 1.7rem); line-height: 1.7; font-weight: 800; }
 .article-figure, .article-gallery { width: min(calc(100vw - 3rem), 52rem); margin: 3.5rem 0 3.75rem 50%; transform: translateX(-50%); }
 .article-figure { display: grid; place-items: center; }
 .article-figure img, .article-gallery img { display: block; height: auto; border-radius: 1.5rem; box-shadow: 0 1.35rem 3rem rgba(48,38,23,.12); }
@@ -378,7 +376,6 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .article-header h1 { font-size: clamp(2.65rem, 12vw, 3.5rem); }
   .article-gallery { width: calc(100vw - 1.25rem); margin-right: -.625rem; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(78vw, 19rem); justify-content: start; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 .625rem 1rem; }
   .article-gallery figure { scroll-snap-align: center; }
-  .article-body blockquote { margin: 3rem 0; }
   .article-next { flex-direction: column; align-items: center; text-align: center; }
 }
 
