@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="奶猫妙控的使用方法、产品更新和幕后想法">
+  <meta name="description" content="了解奶猫妙控的远程控制、可组合小键盘与 Mac 适配器设计，以及剪辑、音乐、演示和开发中的使用方式">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="博客｜奶猫妙控">
-  <meta property="og:description" content="使用方法、产品更新和幕后想法">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/macos-settings.webp">
+  <meta property="og:title" content="功能与设计｜奶猫妙控博客">
+  <meta property="og:description" content="从远程控制到软件专属小键盘，了解奶猫妙控怎样工作">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/control-studio.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
-  <title>博客｜奶猫妙控</title>
+  <title>功能与设计｜奶猫妙控博客</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "奶猫妙控博客",
+    "description": "奶猫妙控的功能、使用场景与设计思路",
+    "url": "https://cream-deck.vercel.app/blog",
+    "blogPost": [
+      { "@type": "BlogPosting", "headline": "Mac 远程控制，可以这样用", "url": "https://cream-deck.vercel.app/blog/remote-control-mac" },
+      { "@type": "BlogPosting", "headline": "常用操作，值得一块自己的小键盘", "url": "https://cream-deck.vercel.app/blog/custom-keypad" },
+      { "@type": "BlogPosting", "headline": "为什么 Mac 端只做适配器", "url": "https://cream-deck.vercel.app/blog/mac-settings" }
+    ]
+  }
+  </script>
 </head>
 <body class="content-page">
   <a class="skip-link" href="#main">跳到正文</a>
@@ -31,13 +45,21 @@
   <main id="main">
     <section class="content-hero content-hero-blog">
       <p class="eyebrow">奶猫妙控博客</p>
-      <h1>用起来，更明白一点</h1>
-      <p>使用方法、产品更新和一些幕后想法 &gt;w&lt;</p>
+      <h1>从顺手的操作开始</h1>
+      <p>功能、场景和设计思路都在这里 &gt;w&lt;</p>
     </section>
     <section class="post-feed" aria-label="博客文章">
+      <a class="post-card" href="blog/remote-control-mac.html">
+        <figure class="post-card-phone"><img src="assets/screens/control-studio.webp?v=20260831" alt="奶猫妙控显示 Mac 实时画面、触控板和滚动控件" width="1206" height="2622"></figure>
+        <div><p class="post-category">远程控制</p><h2>Mac 远程控制，可以这样用</h2><p>看画面、移动光标、输入文字，也能用语音继续操作</p><span>继续阅读</span></div>
+      </a>
+      <a class="post-card" href="blog/custom-keypad.html">
+        <figure class="post-card-phone"><img src="assets/screens/layout-editor.webp?v=20260831" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy"></figure>
+        <div><p class="post-category">设计思路</p><h2>常用操作，值得一块自己的小键盘</h2><p>不同软件需要不同操作，小键盘也应该跟着任务变化</p><span>继续阅读</span></div>
+      </a>
       <a class="post-card" href="blog/mac-settings.html">
-        <figure><img src="assets/screens/macos-settings.webp" alt="奶猫妙控 Mac 端软件更新设置" width="1264" height="1100"></figure>
-        <div><time datetime="2026-08-30">2026 年 8 月 30 日</time><h2>Mac 端有设置了</h2><p>启动、插件和软件更新都能在一个窗口里调整</p><span>继续阅读</span></div>
+        <figure><img src="assets/screens/macos-adapter.webp?v=20260831" alt="奶猫妙控 Mac 适配器的连接二维码" width="944" height="1196" loading="lazy"></figure>
+        <div><p class="post-category">Mac 适配器</p><h2>为什么 Mac 端只做适配器</h2><p>它负责连接、权限和软件适配，控制界面留在手边</p><span>继续阅读</span></div>
       </a>
     </section>
   </main>

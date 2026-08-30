@@ -4,33 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0e6">
-  <meta name="description" content="奶猫妙控 1.1.20 为 Mac 端加入启动、插件和软件更新设置">
+  <meta name="description" content="奶猫妙控的 Mac 端是一款轻量适配器，负责配对、辅助功能权限、屏幕预览、软件适配和自动更新">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="Mac 端有设置了｜奶猫妙控">
-  <meta property="og:description" content="启动、插件和软件更新都能在一个窗口里调整">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/macos-settings.webp">
+  <meta property="og:title" content="为什么 Mac 端只做适配器｜奶猫妙控">
+  <meta property="og:description" content="它负责连接、权限和软件适配，控制界面留在手边">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/macos-adapter.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/mac-settings">
-  <meta property="article:published_time" content="2026-08-30">
+  <meta property="article:published_time" content="2026-08-31">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/mac-settings">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>Mac 端有设置了｜奶猫妙控</title>
+  <title>为什么 Mac 端只做适配器｜奶猫妙控</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Mac 端有设置了",
-    "description": "启动、插件和软件更新都能在一个窗口里调整",
-    "datePublished": "2026-08-30",
-    "dateModified": "2026-08-30",
+    "headline": "为什么 Mac 端只做适配器",
+    "description": "奶猫妙控 Mac 适配器的职责与设计思路",
+    "datePublished": "2026-08-31",
+    "dateModified": "2026-08-31",
     "author": { "@type": "Organization", "name": "VibeKeys" },
     "publisher": { "@type": "Organization", "name": "奶猫妙控" },
-    "image": "https://cream-deck.vercel.app/assets/screens/macos-settings.webp",
+    "image": "https://cream-deck.vercel.app/assets/screens/macos-adapter.webp",
     "mainEntityOfPage": "https://cream-deck.vercel.app/blog/mac-settings"
   }
   </script>
@@ -45,38 +45,35 @@
 
   <main id="main" class="article-shell">
     <header class="article-header">
-      <a href="../blog.html">博客</a>
-      <h1>Mac 端有设置了</h1>
-      <p>启动、插件和软件更新都能在一个窗口里调整</p>
-      <time datetime="2026-08-30">2026 年 8 月 30 日</time>
+      <a href="../blog.html">Mac 适配器</a>
+      <h1>为什么 Mac 端只做适配器</h1>
+      <p>它负责连接、权限和软件适配，控制界面留在手边</p>
     </header>
-    <figure class="article-cover"><img src="../assets/screens/macos-settings.webp" alt="奶猫妙控 Mac 端软件更新设置" width="1264" height="1100"></figure>
+    <figure class="article-cover"><img src="../assets/screens/macos-adapter.webp?v=20260831" alt="奶猫妙控 Mac 适配器显示配对二维码和连接状态" width="944" height="1196"></figure>
     <article class="article-body">
-      <p>奶猫妙控的 Mac 端一直安静地待在菜单栏里</p>
-      <p>连接和配对很直接，但登录时要不要启动、哪些软件适配要打开、什么时候检查更新，这些选择以前没有一个合适的地方</p>
-      <p>1.1.20 把它们收进了设置</p>
+      <p>奶猫妙控在 Mac 上运行的是适配器，不是移动版 App 的桌面副本</p>
+      <p>它安静地待在菜单栏里，接收已经配对设备发来的操作，再交给当前使用的软件</p>
 
-      <h2>启动后少管一点</h2>
-      <p>经常使用奶猫妙控，可以让 Mac 端登录时自动启动</p>
-      <p>喜欢只在菜单栏里看到它，也可以关闭程序坞图标</p>
-      <p>这些选择随时能改，不需要重新安装</p>
+      <h2>连接从一个二维码开始</h2>
+      <p>Mac 适配器显示配对二维码，移动设备扫码后保存连接</p>
+      <p>两台设备在同一个 Wi‑Fi 下会自动发现彼此，换 Mac 时也可以重新扫码</p>
 
-      <h2>只开需要的软件适配</h2>
-      <p>Codex、剪辑和 DaVinci Resolve 可以分别启用</p>
-      <p>同时装了几款剪辑软件时，可以指定自动模式优先使用哪一款</p>
-      <p>Resolve 的搜索旋钮也能调整灵敏度，让每一格更接近自己的手感</p>
+      <h2>系统权限留在 Mac 上管理</h2>
+      <p>按键、旋钮、鼠标和触控板需要辅助功能权限</p>
+      <p>查看 Mac 实时画面需要屏幕录制权限，权限没有开启时，其他控制仍然可以单独使用</p>
+      <p>适配器会显示当前状态，让缺少的权限容易找到</p>
 
-      <h2>更新不用再找下载页</h2>
-      <p>Mac 端会定期检查新版本，并在有更新时提醒</p>
-      <p>检查频率和自动下载都能在设置里调整，也可以随时点“立即更新…”</p>
-      <p>直接下载 DMG 仍然保留，喜欢手动安装也没问题</p>
+      <h2>软件适配也在这里完成</h2>
+      <p>Codex、剪辑软件和 DaVinci Resolve 的操作会由 Mac 端识别并执行</p>
+      <p>不需要的适配可以关闭，同时安装多款剪辑软件时也能选择常用的一款</p>
+      <p>移动端只需要展示当前小键盘，不必理解每款桌面软件的细节</p>
 
-      <h2>远程画面更稳了</h2>
-      <p>这次也改进了实时画面的恢复方式</p>
-      <p>发送一段文字、切换窗口或连续操作后，画面会主动检查显示状态，需要时重新取回最新一帧</p>
-      <p>语音识别的连续内容也会更稳地接在一起，识别结果修正时不容易重复前面的文字</p>
+      <h2>控制界面跟着人走</h2>
+      <p>Mac 负责稳定连接，移动设备负责触摸和布局</p>
+      <p>这样既能在手边使用触控板和旋钮，也能随时切换剪辑、音乐、演示或开发小键盘</p>
+      <p>控制指令只在已经配对的设备之间传输，不会上传到网站</p>
     </article>
-    <nav class="article-next" aria-label="文章相关链接"><a href="../updates.html">查看 1.1.20 更新日志</a><a href="https://github.com/buggyblues/cream-deck/releases/latest">下载 Mac 端</a></nav>
+    <nav class="article-next" aria-label="继续阅读"><a href="custom-keypad.html">小键盘为什么可以自由组合</a><a href="https://github.com/buggyblues/cream-deck/releases/latest">下载</a></nav>
   </main>
 
   <footer>
