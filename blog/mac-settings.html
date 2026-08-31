@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0e6">
-  <meta name="description" content="了解奶猫妙控 Mac 适配器如何连接移动设备、管理系统权限并执行软件操作">
+  <meta name="description" content="Mac 适配器负责连接设备、检查权限，并把小键盘操作交给 Mac">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="Mac 适配器负责什么｜奶猫妙控">
-  <meta property="og:description" content="了解连接、权限和软件适配在 Mac 上怎样工作">
+  <meta property="og:title" content="Mac 适配器有什么用｜奶猫妙控">
+  <meta property="og:description" content="连接设备、检查权限，并把小键盘操作交给 Mac">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/macos-adapter.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/mac-settings">
   <meta property="article:published_time" content="2026-08-31">
@@ -19,13 +19,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>Mac 适配器负责什么｜奶猫妙控</title>
+  <title>Mac 适配器有什么用｜奶猫妙控</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Mac 适配器负责什么",
-    "description": "奶猫妙控 Mac 适配器的连接、权限和软件适配功能",
+    "headline": "Mac 适配器有什么用",
+    "description": "连接设备、检查权限，并把小键盘操作交给 Mac",
     "datePublished": "2026-08-31",
     "dateModified": "2026-08-31",
     "author": { "@type": "Organization", "name": "VibeKeys" },
@@ -46,44 +46,46 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">Mac 适配器</a>
-      <h1>Mac 适配器负责什么</h1>
-      <p>了解连接、权限和软件适配在 Mac 上怎样工作</p>
+      <h1>Mac 适配器有什么用</h1>
+      <p>连接设备、检查权限，并把小键盘操作交给 Mac</p>
     </header>
     <article class="article-body">
-      <p class="article-lead">使用奶猫妙控前，需要先在 Mac 上安装适配器</p>
-      <p>适配器负责连接移动设备、管理系统权限，并把控制操作交给 Mac 上的软件</p>
+      <p class="article-lead">使用奶猫妙控前，需要在 Mac 上安装一个小程序</p>
+      <p>它叫 Mac 适配器</p>
 
-      <figure class="article-figure article-figure-mac"><img src="../assets/screens/macos-adapter.webp?v=20260831" alt="奶猫妙控 Mac 适配器显示配对二维码和连接状态" width="944" height="1196"><figcaption>Mac 适配器显示连接状态和配对二维码</figcaption></figure>
+      <aside class="article-highlight"><strong>它只做三件事：</strong>连接设备、检查权限、执行操作</aside>
 
-      <h2>连接移动设备</h2>
+      <figure class="article-figure article-figure-mac"><img src="../assets/screens/macos-adapter.webp?v=20260831c" alt="奶猫妙控 Mac 适配器显示配对二维码和连接状态" width="944" height="1196"><figcaption>Mac 适配器显示连接状态和配对二维码</figcaption></figure>
+
+      <h2>扫一次二维码完成配对</h2>
       <p>第一次连接时，Mac 适配器会显示二维码</p>
       <p>移动设备扫描二维码后会保存这台 Mac</p>
-      <p>以后只要设备连接同一个 Wi‑Fi，奶猫妙控就会自动寻找已经配对的 Mac</p>
+      <p>以后只要两台设备在同一个 Wi‑Fi 下，奶猫妙控就会寻找这台 Mac</p>
 
-      <figure class="article-figure article-figure-phone"><img src="../assets/screens/device-pairing.webp?v=20260831" alt="奶猫妙控的设备配对界面" width="1206" height="2622" loading="lazy"><figcaption>移动设备可以扫描二维码连接 Mac</figcaption></figure>
+      <figure class="article-figure article-figure-phone"><img src="../assets/screens/device-pairing.webp?v=20260831c" alt="奶猫妙控的设备配对界面" width="1206" height="2622" loading="lazy"><figcaption>移动设备可以扫描二维码连接 Mac</figcaption></figure>
 
-      <h2>管理系统权限</h2>
+      <h2>告诉你还缺什么权限</h2>
       <p>按键、旋钮、鼠标和触控板需要辅助功能权限</p>
       <p>查看 Mac 实时画面需要屏幕录制权限</p>
-      <p>如果没有开启屏幕录制，其他控制功能仍然可以使用</p>
+      <p>没有开启屏幕录制时，按键和文字输入仍然可以使用</p>
       <p>适配器会显示权限状态，方便检查缺少的权限</p>
 
-      <h2>执行软件操作</h2>
-      <p>Codex、剪辑软件和 DaVinci Resolve 使用不同的控制方式</p>
+      <h2>把操作交给正确的软件</h2>
+      <p>Codex、DaVinci Resolve 和其他软件使用不同的控制方式</p>
       <p>Mac 适配器会识别当前软件，并执行移动设备发送的操作</p>
-      <p>不需要的适配可以关闭，同时安装多款剪辑软件时也可以选择常用软件</p>
+      <p>不需要的软件适配可以关闭</p>
 
-      <h2>调整适配器设置</h2>
+      <h2>在设置里管理设备和更新</h2>
       <p>适配器可以在登录 Mac 时自动启动</p>
-      <p>你也可以选择是否显示程序坞图标、启用哪些软件适配，以及怎样检查更新</p>
+      <p>你也可以管理已连接设备、程序坞图标、软件适配和自动更新</p>
 
-      <figure class="article-figure article-figure-wide"><img src="../assets/screens/macos-settings.webp?v=20260831" alt="奶猫妙控 Mac 适配器的软件更新设置" width="1264" height="1100" loading="lazy"><figcaption>启动、软件适配和更新选项都在设置中</figcaption></figure>
+      <figure class="article-figure article-figure-wide"><img src="../assets/screens/macos-settings.webp?v=20260831c" alt="奶猫妙控 Mac 适配器的软件更新设置" width="1264" height="1100" loading="lazy"><figcaption>启动、软件适配和更新选项都在设置中</figcaption></figure>
 
       <h2>数据怎样传输</h2>
       <p>控制操作只会在已经配对的移动设备和 Mac 之间传输</p>
       <p>奶猫妙控网站不会接收这些控制内容</p>
     </article>
-    <nav class="article-next" aria-label="继续阅读"><a href="custom-keypad.html">了解自定义小键盘</a><a href="https://github.com/buggyblues/cream-deck/releases/latest">下载</a></nav>
+    <nav class="article-next" aria-label="继续阅读"><a href="remote-control-mac.html">在手机或平板上控制 Mac</a><a href="custom-keypad.html">做一块适合自己的小键盘</a></nav>
   </main>
 
   <footer>

@@ -281,6 +281,9 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 .article-body { width: min(100%, 43rem); margin: clamp(3.5rem, 7vw, 5.5rem) auto 0; }
 .article-body p { margin-top: 1.1rem; color: #4e4941; font-size: 1.06rem; line-height: 1.95; }
 .article-body .article-lead { margin-top: 0; color: var(--ink); font-size: clamp(1.2rem, 2.3vw, 1.38rem); line-height: 1.8; font-weight: 600; }
+.article-body strong { color: var(--ink); }
+.article-highlight { margin: 2rem 0 2.75rem; padding: 1.25rem 1.4rem; border-left: .3rem solid var(--purple); border-radius: 0 1rem 1rem 0; background: var(--lavender); color: var(--ink); font-size: 1.05rem; line-height: 1.8; }
+.article-highlight strong { font-weight: 900; }
 .article-body h2 { margin-top: 4.25rem; font-size: clamp(1.85rem, 4vw, 2.6rem); }
 .article-figure, .article-gallery { width: min(calc(100vw - 3rem), 52rem); margin: 3.5rem 0 3.75rem 50%; transform: translateX(-50%); }
 .article-figure { display: grid; place-items: center; }
