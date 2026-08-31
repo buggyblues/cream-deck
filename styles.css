@@ -38,7 +38,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
   min-height: calc(100svh - var(--header));
   padding: clamp(2.5rem, 5.5vh, 4.25rem) max(1.5rem, calc((100vw - var(--max)) / 2));
 }
-.how-section, .quick-section, .scenarios-section, .mac-section, .faq-section {
+.how-section, .quick-section, .scenarios-section, .pro-section, .mac-section, .faq-section {
   padding: clamp(4rem, 7vw, 6rem) max(1.5rem, calc((100vw - var(--max)) / 2));
 }
 .download-section {
@@ -162,6 +162,34 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .role-figure { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transform-origin: 50% 78%; will-change: transform, opacity; }
 .role-figure:not(.is-active) { visibility: hidden; opacity: 0; }
 
+.pro-section { background: linear-gradient(145deg, #f3efff, #fff5e7 68%, #fffdf8); }
+.pro-heading { max-width: 50rem; margin: 0 auto; text-align: center; }
+.pro-heading h2 { font-size: clamp(2.7rem, 5.5vw, 5rem); }
+.pro-heading > p:not(.eyebrow) { max-width: 39rem; margin: 1.2rem auto 0; color: var(--muted); font-size: 1rem; }
+.pro-purchase { max-width: 66rem; margin: clamp(2.5rem, 5vw, 4.5rem) auto 0; display: grid; grid-template-columns: minmax(15rem, .82fr) minmax(0, 1.18fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+.pro-paywall-preview { justify-self: center; width: min(100%, 21rem); }
+.pro-paywall-preview img { display: block; width: 100%; height: auto; border: .4rem solid rgba(255,255,255,.74); border-radius: 2.2rem; box-shadow: 0 1.8rem 4.5rem rgba(53,42,102,.17); }
+.pro-paywall-preview figcaption { margin-top: .9rem; color: var(--muted); font-size: .74rem; line-height: 1.55; text-align: center; }
+.pro-plans { display: grid; gap: .85rem; }
+.pro-plans article { position: relative; padding: 1.35rem 1.45rem; border: .0625rem solid rgba(100,85,223,.16); border-radius: 1.35rem; background: rgba(255,255,255,.68); box-shadow: 0 .85rem 2rem rgba(64,48,110,.06); }
+.pro-plans article.is-recommended { border-color: rgba(100,85,223,.48); background: rgba(255,255,255,.88); box-shadow: 0 1rem 2.8rem rgba(82,64,178,.13); }
+.pro-plans article > span { display: flex; align-items: center; justify-content: space-between; color: var(--purple); font-size: .76rem; font-weight: 900; letter-spacing: .05em; }
+.pro-plans article em { padding: .28rem .55rem; border-radius: 999px; background: rgba(100,85,223,.1); font-size: .64rem; font-style: normal; letter-spacing: .02em; }
+.pro-plans article p { margin-top: .35rem; color: var(--ink); }
+.pro-plans strong { font-size: clamp(2.3rem, 4.5vw, 3.45rem); line-height: 1; }
+.pro-plans small { margin-left: .42rem; color: var(--muted); font-size: .82rem; font-weight: 700; }
+.pro-plans h3 { margin-top: .55rem; color: var(--muted); font-size: .86rem; font-weight: 700; }
+.pro-price-note { margin: .35rem .25rem 0; color: var(--muted); font-size: .72rem; line-height: 1.65; }
+.pro-benefits-title { margin-top: clamp(3.5rem, 7vw, 6rem); text-align: center; font-size: clamp(1.55rem, 3vw, 2.2rem); }
+.pro-grid { margin-top: clamp(2.5rem, 5vw, 4.5rem); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.pro-grid article { min-height: 11rem; padding: 1.35rem; border: .0625rem solid rgba(100,85,223,.14); border-radius: 1.35rem; background: rgba(255,255,255,.64); box-shadow: 0 .85rem 2rem rgba(64,48,110,.06); }
+.pro-grid article.is-planned { border-style: dashed; background: rgba(255,255,255,.42); }
+.pro-grid article > span { color: var(--purple); font-size: .7rem; font-weight: 900; letter-spacing: .08em; }
+.pro-grid h3 { margin-top: .85rem; font-size: 1.12rem; }
+.pro-grid p { margin-top: .55rem; color: var(--muted); font-size: .82rem; }
+.pro-note { max-width: 46rem; margin: 1.6rem auto 0; color: var(--muted); font-size: .78rem; text-align: center; }
+.pro-note a { color: #4f40c4; font-weight: 800; text-decoration: underline; text-underline-offset: .2rem; }
+
 .mac-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(3rem, 8vw, 7rem); align-items: center; overflow: hidden; background: var(--ink); color: white; }
 .mac-copy > p:not(.eyebrow) { max-width: 31rem; margin-top: 1.2rem; color: rgba(255,255,255,.68); font-size: 1rem; }
 .mac-copy > a { display: inline-flex; margin-top: 1.5rem; border-bottom: .0625rem solid currentColor; font-weight: 800; }
@@ -273,7 +301,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (max-width: 56.25rem) {
   :root { --header: 4rem; }
-  .hero, .layouts-section, .remote-section, .product-section, .how-section, .quick-section, .scenarios-section, .mac-section, .faq-section { min-height: 0; padding: 4.25rem 1.25rem; }
+  .hero, .layouts-section, .remote-section, .product-section, .how-section, .quick-section, .scenarios-section, .pro-section, .mac-section, .faq-section { min-height: 0; padding: 4.25rem 1.25rem; }
   .download-section { min-height: 0; padding: 2.8rem 1.25rem; }
   .site-header { min-height: var(--header); padding: .5rem .875rem; grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
@@ -321,6 +349,8 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .role-panel > p:not(.role-name) { margin-right: auto; margin-left: auto; }
   .role-apps { justify-content: center; }
   .role-stage { width: min(72vw, 19rem); }
+  .pro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pro-purchase { grid-template-columns: minmax(14rem, .8fr) minmax(0, 1.2fr); }
   .mac-section > img { width: min(90vw, 31rem); height: auto; margin: 2rem auto 0; }
   .faq-section { grid-template-columns: 1fr; grid-template-areas: "title" "list"; }
   .faq-section > h2 { margin-bottom: 2.5rem; }
@@ -349,7 +379,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 
 @media (max-width: 43.75rem) {
   .header-download { font-size: .75rem; }
-  .layout-copy h2, .quick-copy h2, .role-panel h2, .faq-section > h2, .remote-intro h2, .product-copy h2, .how-section > h2, .mac-section h2 { font-size: clamp(2rem, 9vw, 2.45rem); }
+  .layout-copy h2, .quick-copy h2, .role-panel h2, .faq-section > h2, .remote-intro h2, .product-copy h2, .how-section > h2, .pro-heading h2, .mac-section h2 { font-size: clamp(2rem, 9vw, 2.45rem); }
   .hero-key-small { display: none; }
   .hero-key-dark { left: 30%; }
   .hero-slider { right: 28%; bottom: 8%; }
@@ -364,6 +394,10 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .role-apps li { min-height: 2.75rem; padding: .42rem .58rem; }
   .role-apps img { width: 1.8rem; height: 1.8rem; }
   .role-apps span { font-size: .72rem; }
+  .pro-grid { grid-template-columns: 1fr; }
+  .pro-grid article { min-height: 0; }
+  .pro-purchase { grid-template-columns: 1fr; }
+  .pro-paywall-preview { width: min(76vw, 20rem); }
   .download-section { grid-template-columns: 1fr; grid-template-areas: "icon" "title" "copy" "button"; text-align: center; }
   .download-art { width: min(48vw, 8rem); margin: auto; }
   .download-section .button { width: 100%; }
