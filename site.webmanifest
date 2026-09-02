@@ -1,7 +1,7 @@
 {
   "name": "奶猫妙控",
   "short_name": "奶猫妙控",
-  "description": "看着 Mac 画面，用触控板、文本键盘、实时键盘和语音继续操作",
+  "description": "自由全能的掌上 Mac 控制中心与小键盘，支持实时桌面串流、触控板、文本键盘、实时键盘与语音控制",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f5efe4",
