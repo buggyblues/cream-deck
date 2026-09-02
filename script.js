@@ -460,7 +460,7 @@ const initMotion = () => {
     gsap.timeline({ scrollTrigger: { trigger: '.product-section', start: 'top 76%', once: true } })
       .from('.product-shot', { ...reveal, x: desktop ? -48 : 0, rotation: -2 })
       .from('.product-copy .eyebrow, .product-copy h2, .product-copy > p', { ...reveal, y: 24, stagger: .07 }, '-=.38')
-      .from('.feature-list article', { ...reveal, y: 20, stagger: .075 }, '-=.32');
+      .from('.feature-card', { ...reveal, y: 20, stagger: .075 }, '-=.32');
 
     gsap.timeline({ scrollTrigger: { trigger: '.remote-section', start: 'top 76%', once: true } })
       .from('.remote-intro > *', { ...reveal, y: 24, stagger: .07 })
