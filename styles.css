@@ -412,16 +412,16 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
 .post-card img { width: 100%; height: auto; }
 .post-card-phone { min-height: 0; display: grid; place-items: center; background: transparent !important; border-radius: 0 !important; box-shadow: none !important; }
 .post-card-phone img { width: min(100%, 19.5rem); border-radius: 1.25rem; border: .0625rem solid rgba(33,31,26,.08); box-shadow: 0 1.25rem 3rem rgba(48,38,23,.1); }
-.post-category { color: var(--purple) !important; font-size: .8rem; font-weight: 900; }
-.post-card h2 { margin-top: .7rem; font-size: clamp(2.2rem, 4vw, 3.7rem); }
-.post-card p { margin-top: 1rem; color: var(--muted); }
-.post-card span { margin-top: 1.5rem; display: inline-flex; font-size: .88rem; font-weight: 800; }
-.article-shell { width: min(calc(100% - 3rem), 66rem); margin: 0 auto; padding: clamp(4rem, 8vw, 7rem) 0; }
-.article-header { max-width: 50rem; margin: 0 auto; text-align: center; }
+.post-category { color: var(--purple) !important; font-size: .8rem; font-weight: 900; letter-spacing: .02em; }
+.post-card h2 { margin-top: .65rem; font-size: clamp(1.4rem, 2.4vw, 1.85rem); line-height: 1.35; letter-spacing: -.02em; color: var(--ink); }
+.post-card p { margin-top: .75rem; color: var(--muted); font-size: .95rem; line-height: 1.6; }
+.post-card span { margin-top: 1.25rem; display: inline-flex; font-size: .88rem; font-weight: 800; }
+.article-shell { width: min(calc(100% - 3rem), 66rem); margin: 0 auto; padding: clamp(3.5rem, 6vw, 5.5rem) 0; }
+.article-header { max-width: 46rem; margin: 0 auto; text-align: center; }
 .article-header > a { color: var(--purple); font-size: .85rem; font-weight: 900; }
-.article-header h1 { margin-top: 1rem; font-size: clamp(3rem, 7vw, 5.75rem); }
-.article-header p { max-width: 38rem; margin: 1.2rem auto .9rem; color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); }
-.article-cover { margin: clamp(3rem, 7vw, 5.5rem) auto; overflow: hidden; border-radius: 1.35rem; background: transparent; }
+.article-header h1 { margin-top: .85rem; font-size: clamp(1.85rem, 3.8vw, 2.75rem); line-height: 1.28; letter-spacing: -.025em; color: var(--ink); }
+.article-header p { max-width: 38rem; margin: 1rem auto 0; color: var(--muted); font-size: clamp(.95rem, 1.6vw, 1.1rem); line-height: 1.65; }
+.article-cover { margin: clamp(2.5rem, 5vw, 4rem) auto; overflow: hidden; border-radius: 1.35rem; background: transparent; }
 .article-cover img { width: 100%; height: auto; }
 .article-cover-phone { display: grid; place-items: center; padding: clamp(1rem, 4vw, 2.5rem); background: transparent; border-radius: 0; box-shadow: none; }
 .article-cover-phone img { width: min(100%, 22rem); border-radius: 1.35rem; border: .0625rem solid rgba(33,31,26,.08); box-shadow: 0 1.5rem 3.5rem rgba(48,38,23,.12); }

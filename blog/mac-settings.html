@@ -8,8 +8,8 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="macOS 辅助功能与屏幕录制权限全景排查与安全架构指南｜奶猫妙控">
-  <meta property="og:description" content="扫码快速配对、系统权限设置步骤、软件智能识别与本地 P2P 局域网加密传输解析">
+  <meta property="og:title" content="macOS 权限配置与安全连接指南｜奶猫妙控">
+  <meta property="og:description" content="辅助功能与屏幕录制授权排查，以及局域网本地加密通信解析">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/macos-adapter.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/mac-settings">
   <meta property="article:published_time" content="2026-08-31">
@@ -19,12 +19,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>macOS 辅助功能与屏幕录制权限全景排查与安全架构指南｜奶猫妙控</title>
+  <title>macOS 权限配置与安全连接指南｜奶猫妙控</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "macOS 辅助功能与屏幕录制权限全景排查与安全架构指南",
+    "headline": "macOS 权限配置与安全连接指南",
     "description": "深入了解奶猫妙控 Mac 端的扫码配对、权限诊断、软件识别与设置管理，排查权限丢失与网络连接异常",
     "datePublished": "2026-08-31",
     "dateModified": "2026-08-31",
@@ -69,8 +69,8 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">系统权限与安全</a>
-      <h1>macOS 辅助功能与屏幕录制权限全景排查与安全架构指南</h1>
-      <p>扫码快速配对、系统权限设置步骤、软件智能识别与本地 P2P 局域网加密传输解析 · 阅读约 6 分钟</p>
+      <h1>macOS 权限配置与安全连接指南</h1>
+      <p>辅助功能与屏幕录制授权排查，以及局域网本地加密通信解析 · 阅读约 6 分钟</p>
     </header>
 
     <figure class="article-cover article-cover-mac">
@@ -78,32 +78,24 @@
     </figure>
 
     <article class="article-body">
-      <p class="article-lead">奶猫妙控 Mac 端作为轻量常驻菜单栏的桌面核心桥梁，负责局域网握手发现、系统权限调度、前台软件智能识别以及超低延迟的控制指令分发。</p>
-      <p>无需额外购置任何专用的硬件接收器或转接线，通过纯软件原生桥接即可将手机/平板与 Mac 紧密结合。本文将深度解析 Mac 端的权限配置要点、异常排查流程与本地零云端安全架构。</p>
+      <p class="article-lead">奶猫妙控作为一款强大的 Mac 辅助控制与远程串流工具，需要获取 macOS 系统的部分高级系统权限才能实现按键映射、触控板模拟与低延迟画面回传。很多初次使用的用户在升级系统或重新配置时容易遇到权限丢失导致无法控制的问题。</p>
+      <p>本文将为你全景梳理所需系统权限、详细设置步骤与故障排查技巧，并深度剖析奶猫妙控采用的本地 P2P 局域网传输安全架构。</p>
 
-      <aside class="article-highlight">
-        <strong>顺畅连接三大基石：</strong>① 处于同一局域网 Wi-Fi；② 手机扫码配对一次；③ 开启 macOS“辅助功能”与“屏幕录制”权限。
-      </aside>
-
-      <h2>一、macOS 核心权限原理解析：为什么需要这些授权？</h2>
-      <p>macOS 拥有严格的沙盒与安全沙箱机制，任何跨应用交互都需要用户显式授权：</p>
+      <h2>一、所需核心系统权限清单</h2>
+      <p>为了保障系统的安全与正常运作，奶猫妙控仅申请以下必要权限：</p>
       <ul>
-        <li><strong>辅助功能（Accessibility）权限：</strong>
-          用于向前台活跃的剪辑、编程或演示软件分发全局热键、模拟鼠标单击与滚轮微调事件。如果此权限未开启，小键盘按键将无法发送指令。</li>
-        <li><strong>屏幕录制（Screen Recording）权限：</strong>
-          用于在手机/平板端实现“Studio View 桌面串流”与“实时画中画监看”。奶猫妙控利用 Metal 硬件加速捕获桌面帧画面，并在本地局域网内直接推流。</li>
-        <li><strong>麦克风（Microphone）与蓝牙（可选）：</strong>
-          仅在开启“无线麦克风模式”或启用低功耗蓝牙广播自动寻址时按需申请。</li>
+        <li><strong>辅助功能（Accessibility）：</strong>用于接收移动端发送的模拟按键、滚轮、组合快捷键以及鼠标光标手势控制指令。</li>
+        <li><strong>屏幕录制（Screen Recording）：</strong>仅用于在“展开全屏”与“边看边控”模式下，通过 Metal 图形管线捕获 Mac 实时桌面画面并流式传输至手机。</li>
+        <li><strong>本地网络（Local Network）：</strong>用于在同一个 Wi-Fi 或局域网内广播并发现 Mac 端服务，建立高速 P2P 传输通道。</li>
       </ul>
 
-      <h2>二、图文操作步骤：如何在 macOS 中开启权限</h2>
-      <p>在 macOS 13+ (Ventura / Sonoma / Sequoia) 中配置步骤如下：</p>
+      <h2>二、macOS 权限配置完整步骤</h2>
+      <p>以 macOS Ventura / Sonoma / Sequoia 为例，首次启动奶猫妙控 Mac 端后请按照以下步骤检查并授权：</p>
       <ol class="article-steps-list">
-        <li>点击左上角苹果菜单  → 打开<strong>“系统设置” (System Settings)</strong>；</li>
-        <li>在左侧边栏找到并点击<strong>“隐私与安全性” (Privacy &amp; Security)</strong>；</li>
-        <li>点击<strong>“辅助功能”</strong>，在列表中找到“奶猫妙控 (Cream Deck)”，将其右侧开关置为<strong>开启状态</strong>（若列表为空，点击下方 <code>+</code> 号手动将“应用程序”中的奶猫妙控添加进来）；</li>
-        <li>返回上一层，点击<strong>“屏幕录制”</strong>，同样将“奶猫妙控”开关置为开启；</li>
-        <li>系统若提示“退出并重新打开”，点击确认即可使新权限生效。</li>
+        <li>点击 Mac 屏幕左上角苹果图标 ，进入<strong>“系统设置”（System Settings）</strong>。</li>
+        <li>在左侧边栏找到并选择<strong>“隐私与安全性”（Privacy &amp; Security）</strong>。</li>
+        <li>点击<strong>“辅助功能”（Accessibility）</strong>，在列表中找到“奶猫妙控”（Cream Deck），将其右侧开关开启为允许状态。</li>
+        <li>返回上一层，点击<strong>“屏幕与系统音频录制”（Screen &amp; System Audio Recording）</strong>，确保列表中“奶猫妙控”开关已开启。</li>
       </ol>
 
       <figure class="article-figure article-figure-mac">
@@ -131,8 +123,8 @@
       </ul>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="remote-control-mac.html">← 局域网超低延迟远程控制 Mac 详解</a>
-      <a href="editing-keypad.html">剪辑师的终极掌上控制台 →</a>
+      <a href="remote-control-mac.html">← 超低延迟串流：掌中接管 Mac 桌面</a>
+      <a href="editing-keypad.html">剪辑师的掌上副控：从 DaVinci 到剪映 →</a>
     </nav>
   </main>
 
