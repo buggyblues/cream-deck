@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="从预置模板开始，按需组合按键、旋钮、触控板与 Mac 画面预览，打造专属于你的掌上小键盘">
+  <meta name="description" content="从预置模板开始，按需组合按键、旋钮、触控板与 Mac 画面预览，打造专属于你的掌上小键盘与副控工作台">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="打造专属于你的高效掌上小键盘｜奶猫妙控">
-  <meta property="og:description" content="从专业模板出发，按个人习惯自由定制按键、旋钮与触控组件">
+  <meta property="og:title" content="从零构建专属掌上小键盘：自由网格、无级旋钮与快捷宏定制全指南｜奶猫妙控">
+  <meta property="og:description" content="从专业模板出发，按个人操作习惯自由定制按键尺寸、旋钮步长、触控板手势与应用智能联动">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/layout-editor.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/custom-keypad">
   <meta property="article:published_time" content="2026-08-31">
@@ -19,13 +19,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>打造专属于你的高效掌上小键盘｜奶猫妙控</title>
+  <title>从零构建专属掌上小键盘：自由网格、无级旋钮与快捷宏定制全指南｜奶猫妙控</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "打造专属于你的高效掌上小键盘",
-    "description": "从现成模板起步，自由组合按键、旋钮、触控板与实时桌面串流画面",
+    "headline": "从零构建专属掌上小键盘：自由网格、无级旋钮与快捷宏定制全指南",
+    "description": "从现成模板起步，自由组合按键、旋钮、触控板与实时桌面串流画面，构建契合个人肌肉记忆的终极副控",
     "datePublished": "2026-08-31",
     "dateModified": "2026-08-31",
     "author": { "@type": "Organization", "name": "奶猫妙控" },
@@ -38,16 +38,43 @@
 <body class="content-page article-page">
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="../index.html" aria-label="奶猫妙控首页"><img src="../assets/app-icon.webp" alt="" width="42" height="42"><span>奶猫妙控</span></a>
-    <nav aria-label="主导航"><a href="../index.html">首页</a><a href="../updates.html">更新</a><a href="../blog.html" aria-current="page">博客</a><a href="../support.html">支持</a></nav>
-    <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载</a>
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能特性</a>
+      <a href="../index.html#pro">PRO 会员</a>
+      <a href="../index.html#how">使用指南</a>
+      <a href="../blog.html" aria-current="page">文章专栏</a>
+      <a href="../updates.html">更新日志</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
   </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能特性</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>PRO 会员</a></li>
+      <li><a href="../index.html#how" data-mobile-nav-link>使用指南</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>文章专栏</a></li>
+      <li><a href="../updates.html" data-mobile-nav-link>更新日志</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
 
   <main id="main" class="article-shell">
     <header class="article-header">
-      <a href="../blog.html">自定义小键盘</a>
-      <h1>打造专属于你的高效掌上小键盘</h1>
-      <p>从专业模板出发，按个人习惯自由定制按键、旋钮与触控组件</p>
+      <a href="../blog.html">自定义副控</a>
+      <h1>从零构建专属掌上小键盘：自由网格、无级旋钮与快捷宏定制全指南</h1>
+      <p>从专业模板出发，按个人操作习惯自由定制按键尺寸、旋钮步长、触控板手势与应用智能联动 · 阅读约 6 分钟</p>
     </header>
 
     <figure class="article-cover article-cover-phone">
@@ -55,41 +82,85 @@
     </figure>
 
     <article class="article-body">
-      <p class="article-lead">最顺手的工具，永远是契合自己肌肉记忆的工具。在奶猫妙控中，每一块“小键盘”都是一页可以自由定义的定制画布。</p>
-      <p>你可以将按键、微调旋钮、阻尼滑块、触控板手势以及 Mac 实时画面预览随心组合，打造只属于你的物理级掌上控制器。</p>
+      <p class="article-lead">最顺手的工具，永远是契合自己肌肉记忆的工具。在奶猫妙控中，每一块“小键盘”都不是写死的固定模版，而是一页可以自由定义的无级物理网格画布。</p>
+      <p>你可以像拼积木一样将触控按键、高精度旋钮、阻尼滑块、多点触控板以及 Mac 实时画面预览随心组合，打造完全属于你个人双手操作习惯的终极副控控制台。</p>
 
-      <aside class="article-highlight"><mark>从预置模板开始</mark>，删减冗余、放大高频，比从零搭建更高效</aside>
+      <aside class="article-highlight">
+        <strong>核心原则：</strong>从官方成熟模板出发，做减法提炼核心操作，将高频按键放大至拇指黄金区，再利用“多桌面分页”收纳次要动作，比从零搭建效率提升 3 倍以上。
+      </aside>
 
-      <h2>从现成专业模板起步</h2>
-      <p>奶猫妙控内置了 Codex 编程、DaVinci Resolve 剪辑、Keynote / PowerPoint 演示以及 Apple Music 等精调布局。</p>
-      <p>直接基于成熟模板修改，你可以省去繁杂的基础设置，开箱即用并快速进入定制状态。</p>
+      <h2>一、为什么物理小键盘往往不如“智能触控小键盘”？</h2>
+      <p>许多创作者和程序员都曾尝试过购买桌面物理宏按键硬件（Macro Pad / Stream Deck），但在实际使用中常常遇到三大痛点：</p>
+      <ul>
+        <li><strong>按键功能固定，跨软件切换繁琐：</strong>物理按键无法随当前活跃的 Mac 窗口动态自适应变化，切到剪辑软件时按键标签依然停留在日常浏览器操作。</li>
+        <li><strong>组件形态单一：</strong>绝大多数硬件仅有方形按键，缺乏微调时间线所需的无级旋钮、滚轮以及支持惯性滚动的精准触控板。</li>
+        <li><strong>缺乏视觉监看反馈：</strong>无法实时将 Mac 屏幕焦点的渲染进度、Agent 状态或画中画画面嵌入小键盘中。</li>
+      </ul>
+      <p>奶猫妙控将你的 iPhone 或 iPad 直接变为全功能动态智能副控，不仅支持毫秒级无线低延迟直连，更能随 Mac 活动窗口自动载入专属方案。</p>
+
+      <h2>二、从现成专业模板起步</h2>
+      <p>为了让新用户无需从白纸开始摸索，奶猫妙控内置了经过深度人机工学测试的成熟预置布局：</p>
+      <ul>
+        <li><strong>Codex 智能编程控制台：</strong>实时键盘、轨迹球光标、上下文模型切换、思考深度与一键快速审批。</li>
+        <li><strong>DaVinci Resolve 调色剪辑台：</strong>时间线无级穿梭旋钮、波纹剪切、素材标记打点与调色轮盘联动。</li>
+        <li><strong>Keynote / PowerPoint 演说总控：</strong>幻灯片前进后退、一键黑屏、体感激光笔与智能提词器。</li>
+        <li><strong>Apple Music / Spotify 媒体播控：</strong>大尺寸播放暂停、曲目穿梭、红心收藏与无级音量滑块。</li>
+      </ul>
+      <p>进入应用后，长按任意预置布局即可选择“复制并自定”，在此基础上删减冗余、增加个人专属动作，几分钟内即可完成定制。</p>
 
       <figure class="article-figure article-figure-phone">
         <img src="../assets/screens/layout-switcher.webp?v=20260831d" alt="奶猫妙控显示多块软件小键盘" width="1206" height="2622" loading="lazy">
+        <figcaption>长按屏幕并水平轻扫，在不同软件的专属控制台间毫秒级切换</figcaption>
       </figure>
 
-      <h2>合理选配控件类型</h2>
-      <p><mark>轻触按键</mark>：适合播放/暂停、代码格式化、复制粘贴与撤销重做等瞬态触发操作。</p>
-      <p><mark>旋钮与滑块</mark>：适合时间线穿梭、音量调节、画笔粗细与色彩饱和度等连续渐变控制。</p>
-      <p><mark>虚拟触控板</mark>：支持精准光标移动、双指惯性滚动与页面翻页。</p>
-      <p><mark>画面预览</mark>：实时嵌入 Mac 桌面焦点区域，监控任务执行状态与渲染进度。</p>
+      <h2>三、四大核心控件体系与排布技巧</h2>
+      <p>在编辑器中长按画布即可调出控件库，合理选配不同形态的组件是提升操作流畅度的关键：</p>
+      
+      <h3>1. 触控按键（Buttons）—— 瞬态触发与组合热键</h3>
+      <p>支持 1×1 到 4×4 自由尺寸拉伸。建议将“播放/暂停”、“保存 (Cmd+S)”、“导出”等最关键命令设为 2×2 大按键并放置于屏幕下半部的拇指热区，实现盲操触达；而将撤销、重做、格式化等辅助命令设为 1×1 紧凑排列在顶部。</p>
 
-      <h2>视觉层级定制与多页布局</h2>
-      <p>长按任意控件进入编辑模式，可自由拖拽改变坐标、缩放组件尺寸、调整配色主题与绑定指令。</p>
-      <p>将每天高频使用的核心按钮放大至两倍尺寸，易于盲操触达；而将次高频操作归纳至“多桌面”下一页，保持界面清爽克制。</p>
+      <h3>2. 多向旋钮与无级滑块（Knobs &amp; Sliders）—— 连续微调操作</h3>
+      <p>为连续参数调节而生。支持自定义“单圈步长”与“阻尼灵敏度”。非常适合绑定时间线逐帧前进/后退、音量增益、画笔粗细调节、图层透明度与色彩饱和度微调。</p>
 
-      <h2>渐进式迭代你的工作流</h2>
-      <p>不必一开始就追求完美布局。先保留最核心的几个按键，在实际使用几天后再按需添加新操作。</p>
-      <p>经过实践打磨的小键盘会与你的双手形成默契，真正实现生产力跃升。</p>
+      <h3>3. 虚拟触控板（Trackpad）—— 远距离精准控制</h3>
+      <p>集成了光标精准定位、双指上下惯性平滑滚动与双击拖拽手势。在 iPad 或大屏 iPhone 上排布一块触控板，可以让你的左手随时接管光标微调与页面滚动。</p>
+
+      <h3>4. 实时画中画监看（Screen Stream Preview）—— 状态监控</h3>
+      <p>可将 Mac 屏幕的特定区域（如终端运行日志、渲染输出窗口、AI Agent 执行进度）以 Retina 画质实时串流至小键盘局部，无需抬头即可掌控全局。</p>
+
+      <h2>四、快捷宏与自动化脚本绑定实战</h2>
+      <p>每一个按键不仅能发送单个基础快捷键，还能绑定强大的复合指令：</p>
+      <ul>
+        <li><strong>全局系统热键：</strong>如 <code>Cmd + Shift + 4</code>（区域截图）、<code>Cmd + Option + Esc</code>（强制退出）、<code>Cmd + Space</code>（呼出 Spotlight/Raycast）。</li>
+        <li><strong>多媒体与硬件指令：</strong>静音切换、显示器亮度增减、切歌、锁屏与睡眠。</li>
+        <li><strong>脚本与多步骤宏：</strong>触发 Mac 端 AppleScript 自动化脚本、执行终端 Shell 指令或连续模拟键盘宏操作。</li>
+      </ul>
+
+      <h2>五、多桌面管理与智能感知自动加载</h2>
+      <p>如果单屏控件过多导致拥挤，可以点击右上角“添加页面”创建多桌面。例如为 DaVinci Resolve 创建“剪辑页”、“调色页”与“导出页”，通过边缘轻扫即可平滑翻页。</p>
+      <p>更棒的是，只要在 Mac 端开启辅助功能权限，当你在 Mac 上从 VSCode 切换到 Final Cut Pro 时，奶猫妙控将在 16ms 内自动为你换上对应的专属小键盘，完全无需手动干预。</p>
+
+      <h2>六、结语：打造属于你的肌肉记忆</h2>
+      <p>搭建一套顺手的控制台是一个渐进的过程。建议先从最常用的 3 到 5 个核心按键起步，在日常实际使用中发现卡点并随时微调位置与尺寸。随着使用时间的推移，这块屏幕将成为你双手最自然的延伸。</p>
     </article>
-    <nav class="article-next" aria-label="继续阅读"><a href="editing-keypad.html">一套小键盘怎样掌控四大主流剪辑软件</a><a href="remote-control-mac.html">如何在手机或平板上深度控制 Mac</a></nav>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="editing-keypad.html">← 一套小键盘掌控四大主流剪辑软件</a>
+      <a href="remote-control-mac.html">深度解析手机低延迟远程控制 Mac →</a>
+    </nav>
   </main>
 
   <footer>
     <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
     <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
-    <nav aria-label="页脚导航"><a href="../updates.html">更新</a><a href="../blog.html">博客</a><a href="../support.html">支持</a><a href="../privacy.html">隐私</a></nav>
-    <small>© <span data-year></span> 奶猫妙控</small>
+    <nav aria-label="页脚导航">
+      <a href="../index.html#layouts">功能特性</a>
+      <a href="../index.html#pro">PRO 会员</a>
+      <a href="../updates.html">更新日志</a>
+      <a href="../blog.html">文章专栏</a>
+      <a href="../support.html">支持指南</a>
+      <a href="../privacy.html">隐私政策</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控 · 自由副控与远程控制工作台</small>
   </footer>
   <script src="../script.js" defer></script>
 </body>

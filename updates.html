@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
   <meta property="og:title" content="更新日志｜奶猫妙控">
-  <meta property="og:description" content="查看奶猫妙控每个版本的新功能与体验改进">
+  <meta property="og:description" content="查看奶猫妙控每个版本的新功能、性能改进与问题修复">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/app-icon.png">
   <meta property="og:url" content="https://cream-deck.vercel.app/updates">
   <link rel="canonical" href="https://cream-deck.vercel.app/updates">
@@ -23,73 +23,95 @@
 <body class="content-page">
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="奶猫妙控首页"><img src="assets/app-icon.webp" alt="" width="42" height="42"><span>奶猫妙控</span></a>
+    <a class="brand" href="index.html" aria-label="奶猫妙控首页">
+      <img src="assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
     <nav aria-label="主导航">
-      <a href="index.html">首页</a>
-      <a href="updates.html" aria-current="page">更新</a>
-      <a href="blog.html">博客</a>
-      <a href="support.html">支持</a>
+      <a href="index.html#layouts">功能特性</a>
+      <a href="index.html#pro">PRO 会员</a>
+      <a href="index.html#how">使用指南</a>
+      <a href="blog.html">文章专栏</a>
+      <a href="updates.html" aria-current="page">更新日志</a>
+      <a href="index.html#faq">常见问题</a>
     </nav>
-    <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载</a>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
   </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="index.html#layouts" data-mobile-nav-link>功能特性</a></li>
+      <li><a href="index.html#pro" data-mobile-nav-link>PRO 会员</a></li>
+      <li><a href="index.html#how" data-mobile-nav-link>使用指南</a></li>
+      <li><a href="blog.html" data-mobile-nav-link>文章专栏</a></li>
+      <li><a href="updates.html" data-mobile-nav-link>更新日志</a></li>
+      <li><a href="index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
 
   <main id="main">
     <section class="content-hero">
-      <p class="eyebrow">&gt;w&lt; 更新日志</p>
+      <p class="eyebrow">&gt;w&lt; 版本迭代历史</p>
       <h1>每次迭代，都更趁手</h1>
-      <p>新特性发布、体验细节打磨与问题修复历史</p>
+      <p>新功能发布、性能细节调优与问题修复全记录</p>
     </section>
 
     <section class="updates-feed" aria-label="版本更新">
       <article class="release-entry release-entry-latest">
         <header>
-          <div><p class="release-version">1.1.23</p><h2>小键盘随软件自适应切换</h2></div>
+          <div><p class="release-version">1.1.23</p><h2>小键盘随软件自适应切换与剪辑创作工作台</h2></div>
           <time datetime="2026-08-31">2026 年 8 月 31 日</time>
         </header>
         <div class="release-columns">
           <section><h3>新功能</h3><ul>
-            <li>全新推出“一体创作工作台”，智能联动 DaVinci Resolve、Adobe Premiere Pro、Final Cut Pro 与剪映专业版</li>
-            <li>Codex 小键盘新增低延迟实时键盘、虚拟轨迹球、滚轮与侧边栏快捷控制</li>
-            <li>演示辅助工具新增掌声、欢呼、笑声与自定义音效导入</li>
-            <li>鼠标圈选聚焦支持 4 种尺寸调节，互动表情与弹幕支持左右滑选手势</li>
+            <li><strong>一体创作工作台：</strong>智能联动 DaVinci Resolve Studio、Adobe Premiere Pro、Final Cut Pro 与剪映专业版，同一套物理旋钮与按键随前台软件无缝转译指令。</li>
+            <li><strong>Codex 智能编程小键盘：</strong>新增超低延迟实时键盘、虚拟轨迹球、滚轮与模型思考深度旋钮。</li>
+            <li><strong>演说氛围音效库：</strong>新增热烈掌声、喝彩欢呼、幽默笑声与自定义 MP3 音频导入支持。</li>
+            <li><strong>聚光灯尺寸滑选手势：</strong>焦点圈选支持 4 档半径微调，互动表情与弹幕支持滑动预览。</li>
           </ul></section>
           <section><h3>优化改进</h3><ul>
-            <li>Codex 控制台的模型选择、思考深度、快速模式与审批流状态与当前任务实时同步</li>
-            <li>智能提词器支持根据句子长短自适应调整单行驻留时间</li>
-            <li>体感激光笔算法平滑度提升，慢速瞄准时更容易停驻在细小目标上</li>
-            <li>剪辑调色旋钮加入上下文操作锁定，切换窗口或焦点时自动平滑停止</li>
+            <li>Codex 控制台的模型选择、思考深度、快速模式与审批流状态与当前任务 16ms 内实时双向同步。</li>
+            <li>智能提词器升级为“句长自适应算法”，短句利落滑过，包含核心论点的长句自动平滑多驻留 3~5 秒。</li>
+            <li>体感激光笔算法平滑度提升，微动滤波更稳健，慢速瞄准时更容易停驻在细小图表上。</li>
+            <li>剪辑调色旋钮加入上下文操作锁定（Context Lock），切换窗口或焦点时自动平滑挂起，杜绝误触。</li>
           </ul></section>
           <section><h3>问题修复</h3><ul>
-            <li>重构底层通信架构，移除 Codex 虚拟设备驱动依赖，降低系统权限门槛</li>
-            <li>修复个别紧凑型控件加载后引起视图高度微小抖动的问题</li>
-            <li>修复连续高频控制时极少数情况下指令分发到后台窗口的问题</li>
+            <li>重构底层通信架构，移除 Codex 虚拟设备驱动依赖，大幅降低 macOS 系统权限申请门槛。</li>
+            <li>修复个别紧凑型控件加载后引起小键盘视图高度微小抖动的问题。</li>
+            <li>修复连续高频控制时极少数情况下指令分发到后台窗口的问题。</li>
           </ul></section>
         </div>
-        <div class="release-links"><a href="blog/editing-keypad.html">阅读剪辑小键盘详解</a><a href="blog/presentation-tools.html">阅读演示工具指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.23">下载此版本</a></div>
+        <div class="release-links"><a href="blog/editing-keypad.html">阅读剪辑小键盘详解</a><a href="blog/presentation-tools.html">阅读演示工具指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.23">下载此版本 DMG</a></div>
       </article>
 
       <article class="release-entry">
         <header>
-          <div><p class="release-version">1.1.22</p><h2>语音编辑、演示互动与 Codex 深度升级</h2></div>
+          <div><p class="release-version">1.1.22</p><h2>语音预编辑、演示互动与 Codex 深度升级</h2></div>
           <time datetime="2026-08-31">2026 年 8 月 31 日</time>
         </header>
         <div class="release-columns">
           <section><h3>新功能</h3><ul>
-            <li>演示工具新增智能提词器、屏幕投射表情与互动弹幕组件</li>
-            <li>Codex 控制台重构为原生系统事件直连，操作响应速度大幅提升</li>
-            <li>iOS 端采用全新流式语音转写架构，旧系统自动平滑兼容</li>
+            <li>演示工具新增智能提词器、屏幕投射表情与互动弹幕组件。</li>
+            <li>Codex 控制台重构为原生系统事件直连，操作响应速度大幅提升至 15ms。</li>
+            <li>iOS 端采用全新流式语音转写架构，旧系统自动平滑兼容。</li>
           </ul></section>
           <section><h3>优化改进</h3><ul>
-            <li>文本键盘支持“边口述、边手动修饰、再继续口述”，已修改词句不会被重置</li>
-            <li>优化 Codex 控制台中新任务、麦克风与发送按键的触控靶区尺寸</li>
-            <li>提升激光笔、屏幕放大镜与画板笔触在高清外接屏上的移动帧率</li>
+            <li>文本键盘支持“边口述、边手动修饰、再继续口述”，已修改词句不会被重置或覆盖。</li>
+            <li>优化 Codex 控制台中新任务、麦克风与发送按键的触控靶区尺寸与防误触判定。</li>
+            <li>提升激光笔、屏幕放大镜与画板笔触在 4K/5K 高清外接显示屏上的移动刷新率。</li>
           </ul></section>
           <section><h3>问题修复</h3><ul>
-            <li>修复语音录入暂停或修正时光标位置偶尔跳变、重复或清空文字的问题</li>
-            <li>修复少数场景下辅助功能权限缺失导致 Codex 按钮置灰的问题</li>
+            <li>修复语音录入暂停或修正时光标位置偶尔跳变、重复或清空文字的问题。</li>
+            <li>修复少数场景下辅助功能权限缺失导致 Codex 按钮置灰的问题。</li>
           </ul></section>
         </div>
-        <div class="release-links"><a href="blog/voice-text-input.html">阅读语音输入指南</a><a href="blog/presentation-tools.html">阅读演示工具指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.22">下载此版本</a></div>
+        <div class="release-links"><a href="blog/voice-text-input.html">阅读语音输入指南</a><a href="blog/presentation-tools.html">阅读演示工具指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.22">下载此版本 DMG</a></div>
       </article>
 
       <article class="release-entry">
@@ -99,20 +121,20 @@
         </header>
         <div class="release-columns">
           <section><h3>新功能</h3><ul>
-            <li>正式推出奶猫妙控 Pro 会员，支持按周、按年订阅及一次性买断</li>
-            <li>新增触控与体感双模激光笔、局部放大镜、涂鸦画板与无线画中画摄像头</li>
-            <li>涂鸦画板全面支持多步撤销与重做操作</li>
-            <li>Codex 小键盘新增 Token 额度监控、模型切换与思考深度旋钮</li>
-            <li>文本键盘支持搜索历史草稿与隔空发送照片/附件</li>
-            <li>Mac 端新增已配对设备管理与演示辅助偏好设置</li>
+            <li>正式推出奶猫妙控 Pro 会员，支持周度订阅、年度订阅与一次性永久买断。</li>
+            <li>新增触控与体感双模激光笔、局部放大镜、无线涂鸦画板与画中画摄像头。</li>
+            <li>涂鸦画板全面支持多步撤销（Undo）与重做（Redo）操作。</li>
+            <li>Codex 小键盘新增 Token 额度监控、模型切换与思考深度旋钮。</li>
+            <li>文本键盘支持搜索历史草稿与隔空发送照片/附件至 Mac。</li>
+            <li>Mac 端新增已配对设备管理与演示辅助偏好设置面板。</li>
           </ul></section>
           <section><h3>优化改进</h3><ul>
-            <li>Retina 超清画质串流引擎上线，Mac 桌面细小文字呈现更锐利</li>
-            <li>iOS 灵动岛支持多任务实时状态追踪，构建完成即刻突出反馈</li>
-            <li>增强多设备局域网自动重连稳定性与媒体控制响应速度</li>
+            <li>Retina 超清画质串流引擎上线，Mac 桌面细小文字与代码呈现更锐利清晰。</li>
+            <li>iOS 灵动岛支持多任务实时状态追踪，代码构建与渲染完成即刻弹出动态岛通知。</li>
+            <li>增强多设备局域网自动重连稳定性与媒体控制响应速度。</li>
           </ul></section>
         </div>
-        <div class="release-links"><a href="blog/presentation-tools.html">阅读演示工具指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.21">下载此版本</a></div>
+        <div class="release-links"><a href="blog/presentation-tools.html">阅读演示工具指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.21">下载此版本 DMG</a></div>
       </article>
 
       <article class="release-entry">
@@ -122,46 +144,78 @@
         </header>
         <div class="release-columns">
           <section><h3>新功能</h3><ul>
-            <li>Mac 端新增偏好设置面板，支持开机自启、程序坞常驻显示及自动检查更新</li>
-            <li>支持一键检测并静默下载 Mac 端最新稳定版本</li>
-            <li>支持针对 Codex、剪辑工作台与第三方插件单独开启/停用并调节旋钮灵敏度</li>
+            <li>Mac 端新增偏好设置面板，支持开机自启、程序坞常驻显示及自动检查更新。</li>
+            <li>支持一键检测并静默下载 Mac 端最新稳定版本。</li>
+            <li>支持针对 Codex、剪辑工作台与第三方插件单独开启/停用并调节旋钮灵敏度。</li>
           </ul></section>
           <section><h3>优化改进</h3><ul>
-            <li>发送长篇文本或执行重度快捷键后，Mac 桌面实时串流恢复速度提升 40%</li>
-            <li>优化连续语音听写的降噪与断句逻辑，减少重复词产生</li>
-            <li>优化局域网网络波动下的自动重试握手机制，断网重连更迅速</li>
+            <li>发送长篇文本或执行重度快捷键后，Mac 桌面实时串流恢复速度提升 40%。</li>
+            <li>优化连续语音听写的降噪与断句逻辑，减少重复词产生。</li>
+            <li>优化局域网网络波动下的自动重试握手机制，断网重连更迅速。</li>
           </ul></section>
           <section><h3>问题修复</h3><ul>
-            <li>修复特定多显示器环境下窗口控制偶发无响应的问题</li>
-            <li>修复停用特定应用插件后仍可能残留后台事件监听的问题</li>
-            <li>修复同一移动设备重置配对后未清理旧会话记录的问题</li>
+            <li>修复特定多显示器环境下窗口控制偶发无响应的问题。</li>
+            <li>修复停用特定应用插件后仍可能残留后台事件监听的问题。</li>
+            <li>修复同一移动设备重置配对后未清理旧会话记录的问题。</li>
           </ul></section>
         </div>
-        <div class="release-links"><a href="blog/mac-settings.html">阅读 Mac 端指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.20">下载此版本</a></div>
+        <div class="release-links"><a href="blog/mac-settings.html">阅读 Mac 端指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.20">下载此版本 DMG</a></div>
       </article>
 
       <article class="release-entry">
         <header>
-          <div><p class="release-version">1.1.19</p><h2>文本输入稳定性与超清串流画质优化</h2></div>
+          <div><p class="release-version">1.1.18</p><h2>文本输入稳定性与超清串流画质优化</h2></div>
           <time datetime="2026-08-30">2026 年 8 月 30 日</time>
         </header>
-        <ul class="release-summary">
-          <li>大幅提升文本键盘长篇草稿编辑与连续语音转写的流畅度</li>
-          <li>优化远程桌面画面帧率调度，降低局域网带宽占用与操作延迟</li>
-          <li>更新全站控制台截图与移动端真机演示图集</li>
-        </ul>
-        <div class="release-links"><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.19">下载此版本</a></div>
+        <div class="release-columns">
+          <section><h3>优化改进</h3><ul>
+            <li>大幅提升文本键盘长篇草稿编辑与连续语音转写的流畅度。</li>
+            <li>优化远程桌面画面帧率调度，降低局域网带宽占用与操作延迟。</li>
+            <li>更新全站控制台截图与移动端真机演示图集。</li>
+          </ul></section>
+          <section><h3>问题修复</h3><ul>
+            <li>修复在某些高分辨率外接显示器上光标缩放不匹配的显示问题。</li>
+            <li>修复低电量模式下后台串流偶发暂停的问题。</li>
+          </ul></section>
+        </div>
+        <div class="release-links"><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.18">下载此版本 DMG</a></div>
       </article>
 
-      <a class="older-releases" href="https://github.com/buggyblues/cream-deck/releases">查看更早版本历史</a>
+      <article class="release-entry">
+        <header>
+          <div><p class="release-version">1.1.0</p><h2>自由副控画布、多桌面管理与智能宏</h2></div>
+          <time datetime="2026-08-20">2026 年 8 月 20 日</time>
+        </header>
+        <div class="release-columns">
+          <section><h3>新功能</h3><ul>
+            <li>全面上线“自由画布小键盘编辑器”，支持 1×1 到 4×4 网格拖拽、缩放与颜色主题定制。</li>
+            <li>新增多桌面分页管理功能，支持左右轻扫快速翻页。</li>
+            <li>新增多步骤快捷宏（Macro Actions）与 AppleScript 自动化脚本绑定。</li>
+          </ul></section>
+          <section><h3>优化改进</h3><ul>
+            <li>底层网络协议升级为 UDP/P2P 直连，往返延迟降低 60%。</li>
+            <li>新增 DaVinci Resolve、Final Cut Pro 与 VSCode 官方精选模板。</li>
+          </ul></section>
+        </div>
+        <div class="release-links"><a href="blog/custom-keypad.html">阅读小键盘定制指南</a><a href="https://github.com/buggyblues/cream-deck/releases/tag/v1.1.0">下载此版本 DMG</a></div>
+      </article>
+
+      <a class="older-releases" href="https://github.com/buggyblues/cream-deck/releases">在 GitHub Releases 查看更早版本历史 →</a>
     </section>
   </main>
 
   <footer>
     <a class="brand" href="index.html"><img src="assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
     <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
-    <nav aria-label="页脚导航"><a href="updates.html">更新</a><a href="blog.html">博客</a><a href="support.html">支持</a><a href="privacy.html">隐私</a></nav>
-    <small>© <span data-year></span> 奶猫妙控</small>
+    <nav aria-label="页脚导航">
+      <a href="index.html#layouts">功能特性</a>
+      <a href="index.html#pro">PRO 会员</a>
+      <a href="updates.html">更新日志</a>
+      <a href="blog.html">文章专栏</a>
+      <a href="support.html">支持指南</a>
+      <a href="privacy.html">隐私政策</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控 · 自由副控与远程控制工作台</small>
   </footer>
   <script src="script.js" defer></script>
 </body>

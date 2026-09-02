@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="奶猫妙控官方博客：深入了解剪辑小键盘、Mac 远程控制、语音与文本输入、演示辅助及个性化控制台的设计与使用指南">
+  <meta name="description" content="奶猫妙控官方专栏：深入了解剪辑小键盘、Mac 远程控制、语音与文本输入、演示辅助及个性化控制台的设计与使用指南">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="功能与设计专栏｜奶猫妙控博客">
+  <meta property="og:title" content="文章专栏｜奶猫妙控">
   <meta property="og:description" content="探索剪辑创作、远程控制、语音输入与演示辅助的设计灵感与实用指南">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/control-studio.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog">
@@ -18,21 +18,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
-  <title>功能与设计专栏｜奶猫妙控博客</title>
+  <title>文章专栏｜奶猫妙控</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "奶猫妙控博客",
+    "name": "奶猫妙控专栏",
     "description": "奶猫妙控的功能详解、使用场景与产品设计思路",
     "url": "https://cream-deck.vercel.app/blog",
     "blogPost": [
-      { "@type": "BlogPosting", "headline": "一套小键盘怎样掌控四大主流剪辑软件", "url": "https://cream-deck.vercel.app/blog/editing-keypad" },
-      { "@type": "BlogPosting", "headline": "用语音在 Mac 上高效输入文字", "url": "https://cream-deck.vercel.app/blog/voice-text-input" },
-      { "@type": "BlogPosting", "headline": "用手机掌控全场演示：翻页、体感激光笔与智能提词器", "url": "https://cream-deck.vercel.app/blog/presentation-tools" },
-      { "@type": "BlogPosting", "headline": "如何在手机或平板上深度控制 Mac", "url": "https://cream-deck.vercel.app/blog/remote-control-mac" },
-      { "@type": "BlogPosting", "headline": "打造专属于你的高效掌上小键盘", "url": "https://cream-deck.vercel.app/blog/custom-keypad" },
-      { "@type": "BlogPosting", "headline": "Mac 端如何与手机实现无缝连接", "url": "https://cream-deck.vercel.app/blog/mac-settings" }
+      { "@type": "BlogPosting", "headline": "剪辑师的终极掌上控制台：一键接管 DaVinci、PR、Final Cut 与剪映", "url": "https://cream-deck.vercel.app/blog/editing-keypad" },
+      { "@type": "BlogPosting", "headline": "文字工作者的高效秘籍：长文本预编辑与高精度语音速记实战", "url": "https://cream-deck.vercel.app/blog/voice-text-input" },
+      { "@type": "BlogPosting", "headline": "告别传统翻页笔：用手机变身激光笔、智能提词器与现场互动总控", "url": "https://cream-deck.vercel.app/blog/presentation-tools" },
+      { "@type": "BlogPosting", "headline": "局域网超低延迟串流：在掌中完全接管 Mac 桌面与多任务", "url": "https://cream-deck.vercel.app/blog/remote-control-mac" },
+      { "@type": "BlogPosting", "headline": "从零构建专属掌上小键盘：自由网格、无级旋钮与快捷宏定制全指南", "url": "https://cream-deck.vercel.app/blog/custom-keypad" },
+      { "@type": "BlogPosting", "headline": "macOS 辅助功能与屏幕录制权限全景排查与安全架构指南", "url": "https://cream-deck.vercel.app/blog/mac-settings" }
     ]
   }
   </script>
@@ -40,41 +40,68 @@
 <body class="content-page">
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="奶猫妙控首页"><img src="assets/app-icon.webp" alt="" width="42" height="42"><span>奶猫妙控</span></a>
-    <nav aria-label="主导航"><a href="index.html">首页</a><a href="updates.html">更新</a><a href="blog.html" aria-current="page">博客</a><a href="support.html">支持</a></nav>
-    <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载</a>
+    <a class="brand" href="index.html" aria-label="奶猫妙控首页">
+      <img src="assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="index.html#layouts">功能特性</a>
+      <a href="index.html#pro">PRO 会员</a>
+      <a href="index.html#how">使用指南</a>
+      <a href="blog.html" aria-current="page">文章专栏</a>
+      <a href="updates.html">更新日志</a>
+      <a href="index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
   </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="index.html#layouts" data-mobile-nav-link>功能特性</a></li>
+      <li><a href="index.html#pro" data-mobile-nav-link>PRO 会员</a></li>
+      <li><a href="index.html#how" data-mobile-nav-link>使用指南</a></li>
+      <li><a href="blog.html" data-mobile-nav-link>文章专栏</a></li>
+      <li><a href="updates.html" data-mobile-nav-link>更新日志</a></li>
+      <li><a href="index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
 
   <main id="main">
     <section class="content-hero content-hero-blog">
-      <p class="eyebrow">奶猫妙控专栏</p>
+      <p class="eyebrow">&gt;w&lt; 深度专栏与使用指南</p>
       <h1>探索奶猫妙控</h1>
-      <p>功能详解、高效技巧与设计思考 &gt;w&lt;</p>
+      <p>创作流进阶、远程控制手感调优与产品设计思考</p>
     </section>
     <section class="post-feed" aria-label="博客文章">
       <a class="post-card" href="blog/editing-keypad.html">
         <figure class="post-card-phone"><img src="assets/screens/control-resolve.webp?v=20260831d" alt="奶猫妙控的 DaVinci Resolve 剪辑小键盘" width="1206" height="2622"></figure>
-        <div><p class="post-category">剪辑小键盘</p><h2>一套小键盘怎样掌控四大主流剪辑软件</h2><p>支持 DaVinci Resolve、Premiere Pro、Final Cut Pro 与剪映专业版</p><span>阅读文章</span></div>
+        <div><p class="post-category">剪辑调色工作流</p><h2>剪辑师的终极掌上控制台：一键接管 DaVinci、PR、Final Cut 与剪映</h2><p>同一套物理手感按键与无级旋钮，随当前前台剪辑软件与工作区上下文智能联动</p><span>阅读全文 →</span></div>
       </a>
       <a class="post-card" href="blog/voice-text-input.html">
         <figure class="post-card-phone"><img src="assets/screens/remote-text-voice.webp?v=20260831d" alt="奶猫妙控文本键盘正在把语音变成可以修改的文字" width="1206" height="2622"></figure>
-        <div><p class="post-category">语音输入</p><h2>用语音在 Mac 上高效输入文字</h2><p>先语音转文字，在手机上精细修饰，再一键发送至 Mac</p><span>阅读文章</span></div>
+        <div><p class="post-category">文本与语音生产力</p><h2>文字工作者的高效秘籍：长文本预编辑与高精度语音速记实战</h2><p>先口述转写，在掌上自由修饰，再将整段文字一键安全发送至 Mac 目标光标</p><span>阅读全文 →</span></div>
       </a>
       <a class="post-card" href="blog/presentation-tools.html">
         <figure class="post-card-phone"><img src="assets/screens/control-presentation-assist.webp?v=20260831d" alt="奶猫妙控演示辅助小键盘，包含激光笔、提词器、音效、表情和弹幕" width="1206" height="2622"></figure>
-        <div><p class="post-category">演示工具</p><h2>用手机掌控全场演示：翻页、体感激光笔与智能提词器</h2><p>轻松翻页、圈选重点、跟读提词，支持互动音效与屏幕弹幕</p><span>阅读文章</span></div>
+        <div><p class="post-category">演讲与汇报指南</p><h2>告别传统翻页笔：用手机变身激光笔、智能提词器与现场互动总控</h2><p>走下讲台也能从容翻页、圈点重点、看提词，更支持趣味音效与屏幕互动</p><span>阅读全文 →</span></div>
       </a>
       <a class="post-card" href="blog/remote-control-mac.html">
         <figure class="post-card-phone"><img src="assets/screens/control-studio.webp?v=20260831d" alt="奶猫妙控显示 Mac 画面、触控板和滚动控件" width="1206" height="2622"></figure>
-        <div><p class="post-category">远程控制</p><h2>如何在手机或平板上深度控制 Mac</h2><p>超清画面串流、触控板手势、精准滚动与多种输入模式详解</p><span>阅读文章</span></div>
+        <div><p class="post-category">远程桌面串流</p><h2>局域网超低延迟串流：在掌中完全接管 Mac 桌面与多任务</h2><p>超清画面串流、虚拟触控板手势、精准惯性滚动与双模键盘架构深度解析</p><span>阅读全文 →</span></div>
       </a>
       <a class="post-card" href="blog/custom-keypad.html">
         <figure class="post-card-phone"><img src="assets/screens/layout-editor.webp?v=20260831d" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy"></figure>
-        <div><p class="post-category">自定义小键盘</p><h2>打造专属于你的高效掌上小键盘</h2><p>从专业模板出发，按个人习惯自由定制按键、旋钮与触控组件</p><span>阅读文章</span></div>
+        <div><p class="post-category">自定义副控</p><h2>从零构建专属掌上小键盘：自由网格、无级旋钮与快捷宏定制全指南</h2><p>从专业模板出发，按个人操作习惯自由定制按键尺寸、旋钮步长与快捷宏绑定</p><span>阅读全文 →</span></div>
       </a>
       <a class="post-card" href="blog/mac-settings.html">
         <figure><img src="assets/screens/macos-adapter.webp?v=20260831d" alt="奶猫妙控 Mac 端的连接二维码" width="944" height="1196" loading="lazy"></figure>
-        <div><p class="post-category">Mac 端指南</p><h2>Mac 端如何与手机实现无缝连接</h2><p>扫码快速配对、系统权限设置、软件智能识别与状态管理</p><span>阅读文章</span></div>
+        <div><p class="post-category">系统权限与安全</p><h2>macOS 辅助功能与屏幕录制权限全景排查与安全架构指南</h2><p>扫码快速配对、系统权限设置步骤、软件智能识别与本地 P2P 局域网加密传输解析</p><span>阅读全文 →</span></div>
       </a>
     </section>
   </main>
@@ -82,8 +109,15 @@
   <footer>
     <a class="brand" href="index.html"><img src="assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
     <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
-    <nav aria-label="页脚导航"><a href="updates.html">更新</a><a href="blog.html">博客</a><a href="support.html">支持</a><a href="privacy.html">隐私</a></nav>
-    <small>© <span data-year></span> 奶猫妙控</small>
+    <nav aria-label="页脚导航">
+      <a href="index.html#layouts">功能特性</a>
+      <a href="index.html#pro">PRO 会员</a>
+      <a href="updates.html">更新日志</a>
+      <a href="blog.html">文章专栏</a>
+      <a href="support.html">支持指南</a>
+      <a href="privacy.html">隐私政策</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控 · 自由副控与远程控制工作台</small>
   </footer>
   <script src="script.js" defer></script>
 </body>

@@ -19,6 +19,29 @@ fetch('https://api.github.com/repos/buggyblues/cream-deck/releases/latest', {
     });
   });
 
+const initMobileNav = () => {
+  const toggle = document.querySelector('[data-mobile-nav-toggle]');
+  const drawer = document.querySelector('[data-mobile-drawer]');
+  const links = document.querySelectorAll('[data-mobile-nav-link]');
+  if (!toggle || !drawer) return;
+
+  const setOpen = (open) => {
+    document.body.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    drawer.setAttribute('aria-hidden', String(!open));
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = document.body.classList.contains('nav-open');
+    setOpen(!isOpen);
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+};
+initMobileNav();
+
 const initLayoutTabs = () => {
   const tabs = Array.from(document.querySelectorAll('[role="tab"][data-image]'));
   const panel = document.querySelector('#layout-panel');
