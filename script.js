@@ -480,6 +480,23 @@ const initMotion = () => {
       .from('.role-panel.is-active > *', { ...reveal, y: 23, stagger: .07 }, '-=.34')
       .from('.role-stage', { autoAlpha: 0, xPercent: desktop ? 12 : 0, y: 38, rotation: 5, scale: .9, duration: .72, ease: 'back.out(1.45)' }, '-=.48');
 
+    gsap.timeline({ scrollTrigger: { trigger: '.pro-section', start: 'top 76%', once: true } })
+      .from('.pro-heading .eyebrow, .pro-heading h2, .pro-heading > p', { ...reveal, y: 26, stagger: .07 })
+      .from('.pro-paywall-preview', { ...reveal, x: desktop ? -36 : 0, rotation: desktop ? -2 : 0, scale: .96, duration: .72, ease: 'back.out(1.2)' }, '-=.35')
+      .from('.pro-plan-card', { ...reveal, y: 28, scale: .97, stagger: .09, duration: .55, ease: 'back.out(1.25)' }, '-=.48')
+      .from('.pro-trust-badges span', { autoAlpha: 0, y: 12, stagger: .06, duration: .4 }, '-=.2');
+
+    gsap.timeline({ scrollTrigger: { trigger: '.pro-benefits-header', start: 'top 78%', once: true } })
+      .from('.pro-benefits-header > *', { ...reveal, y: 22, stagger: .07 })
+      .from('.benefit-card', {
+        ...reveal,
+        y: 32,
+        scale: .94,
+        stagger: .045,
+        duration: .55,
+        ease: 'back.out(1.3)'
+      }, '-=.32');
+
     const startSpriteLoop = ({ frameSelector, keyframes, repeatDelay, trigger }) => {
       const frames = gsap.utils.toArray(frameSelector);
       if (frames.length < 2) return;
@@ -556,6 +573,34 @@ const initMotion = () => {
         target.removeEventListener('pointerleave', onLeave);
       });
     });
+
+    if (finePointer) {
+      gsap.utils.toArray('.benefit-card').forEach((card, index) => {
+        const icon = card.querySelector('.benefit-icon');
+        if (!icon) return;
+        const onEnter = () => gsap.to(icon, { scale: 1.15, rotation: index % 2 ? -4 : 4, duration: .28, ease: 'back.out(2.2)', overwrite: 'auto' });
+        const onLeave = () => gsap.to(icon, { scale: 1, rotation: 0, duration: .24, ease: 'power2.out', overwrite: 'auto' });
+        card.addEventListener('pointerenter', onEnter);
+        card.addEventListener('pointerleave', onLeave);
+        cleanups.push(() => {
+          card.removeEventListener('pointerenter', onEnter);
+          card.removeEventListener('pointerleave', onLeave);
+        });
+      });
+
+      gsap.utils.toArray('.remote-card').forEach((card) => {
+        const img = card.querySelector('img');
+        if (!img) return;
+        const onEnter = () => gsap.to(img, { y: -8, scale: 1.03, duration: .25, ease: 'power2.out', overwrite: 'auto' });
+        const onLeave = () => gsap.to(img, { y: 0, scale: 1, duration: .3, ease: 'power2.out', overwrite: 'auto' });
+        card.addEventListener('pointerenter', onEnter);
+        card.addEventListener('pointerleave', onLeave);
+        cleanups.push(() => {
+          card.removeEventListener('pointerenter', onEnter);
+          card.removeEventListener('pointerleave', onLeave);
+        });
+      });
+    }
 
     return () => cleanups.forEach((cleanup) => cleanup());
   });
