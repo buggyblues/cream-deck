@@ -34,16 +34,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  width: min(calc(100% - 2.5rem), 56rem);
-  height: 3.65rem;
-  padding: .35rem .55rem .35rem 1.15rem;
+  width: min(calc(100% - 2.5rem), 39rem);
+  height: 3.5rem;
+  padding: .35rem .5rem .35rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: .85rem;
+  gap: 1rem;
   border-radius: 999px;
   border: .0625rem solid rgba(255, 255, 255, 0.88);
-  background: rgba(255, 253, 248, 0.85);
+  background: rgba(255, 253, 248, 0.86);
   backdrop-filter: blur(1.5rem) saturate(190%);
   -webkit-backdrop-filter: blur(1.5rem) saturate(190%);
   box-shadow: 0 .8rem 2.5rem rgba(48, 38, 23, 0.08), 0 .15rem .45rem rgba(0, 0, 0, 0.04), inset 0 0 0 .0625rem rgba(255, 255, 255, 0.6);
@@ -52,10 +52,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .brand { display: inline-flex; align-items: center; gap: .55rem; font-weight: 900; letter-spacing: -.02em; font-size: .95rem; flex-shrink: 0; }
 .brand img { width: 2.15rem; height: 2.15rem; aspect-ratio: 1; object-fit: contain; border-radius: .58rem; flex-shrink: 0; transition: transform .32s cubic-bezier(0.34, 1.56, 0.64, 1); }
 .brand:hover img { transform: rotate(-8deg) scale(1.1); }
-.site-header nav { display: flex; align-items: center; gap: .15rem; background: rgba(33, 31, 26, 0.04); padding: .25rem .35rem; border-radius: 999px; }
-.site-header nav a { padding: .32rem .65rem; border-radius: 999px; color: var(--muted); font-size: .82rem; font-weight: 700; white-space: nowrap; transition: color .18s ease, background-color .18s ease; }
+.site-header nav { display: flex; align-items: center; gap: .2rem; background: rgba(33, 31, 26, 0.04); padding: .25rem .35rem; border-radius: 999px; }
+.site-header nav a { padding: .35rem .8rem; border-radius: 999px; color: var(--muted); font-size: .84rem; font-weight: 700; white-space: nowrap; transition: color .18s ease, background-color .18s ease; }
 .site-header nav a:hover { color: var(--ink); background: rgba(255, 255, 255, 0.9); }
-.header-download { padding: .5rem 1.15rem; border-radius: 999px; background: var(--ink); color: white; font-size: .8rem; font-weight: 800; display: inline-flex; align-items: center; gap: .35rem; flex-shrink: 0; transition: transform .2s cubic-bezier(0.16, 1, 0.3, 1), background-color .2s ease, box-shadow .2s ease; }
+.header-download { padding: .48rem 1.15rem; border-radius: 999px; background: var(--ink); color: white; font-size: .8rem; font-weight: 800; display: inline-flex; align-items: center; gap: .35rem; flex-shrink: 0; transition: transform .2s cubic-bezier(0.16, 1, 0.3, 1), background-color .2s ease, box-shadow .2s ease; }
 .header-download:hover { background: var(--purple); transform: translateY(-.1rem); box-shadow: 0 .35rem 1rem rgba(100, 85, 223, 0.3); }
 
 section[id], section {
