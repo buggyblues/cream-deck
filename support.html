@@ -3,44 +3,203 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="奶猫妙控安装指南、局域网连接帮助与常见问题排查">
-  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#dbeafe">
+  <meta name="description" content="奶猫妙控使用帮助与支持中心：快速上手指南、系统权限排查、状态指示与常见问题解答">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="帮助与支持中心｜奶猫妙控">
+  <meta property="og:description" content="快速上手指南、系统权限排查与常见问题解答">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/macos-adapter.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/support">
   <link rel="canonical" href="https://cream-deck.vercel.app/support">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
-  <title>使用与连接支持｜奶猫妙控</title>
+  <title>帮助与支持中心｜奶猫妙控</title>
 </head>
-<body class="legal-page">
-  <main class="legal-shell">
-    <a class="brand" href="./">
-      <img src="assets/app-icon.webp" alt="" width="44" height="44">
+<body class="content-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="奶猫妙控首页">
+      <img src="assets/app-icon.webp" alt="" width="42" height="42">
       <span>奶猫妙控</span>
     </a>
-    <p class="kicker">Support</p>
-    <h1>使用帮助与连接指南</h1>
-    <p class="legal-meta">适用于 macOS 13+ 与 iOS 17+ / iPadOS 17+</p>
+    <nav aria-label="主导航">
+      <a href="index.html#layouts">功能</a>
+      <a href="index.html#pro">价格</a>
+      <a href="blog.html">博客</a>
+      <a href="index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
 
-    <h2>1. 安装 Mac 端</h2>
-    <p>从 <a href="https://github.com/buggyblues/cream-deck/releases/latest">GitHub Releases</a> 下载 Universal DMG 安装包，打开后将“奶猫妙控”拖入“应用程序”文件夹。首次运行时请按系统提示完成安全性验证。</p>
+  <main id="main">
+    <section class="content-hero content-hero-support">
+      <p class="eyebrow">&gt;w&lt; 帮助与支持</p>
+      <h1>帮助与支持中心</h1>
+      <p>快速上手指南、系统权限排查与常见问题解答</p>
+    </section>
 
-    <h2>2. 授予辅助功能权限</h2>
-    <p>打开 Mac 的“系统设置 → 隐私与安全性 → 辅助功能”，勾选并允许“奶猫妙控”。当菜单栏图标显示颜文字 <strong>^w^</strong> 时，即代表辅助权限就绪且设备已成功连接。</p>
+    <div class="support-shell">
+      <!-- 4 Category Cards -->
+      <nav class="support-categories" aria-label="支持主题分类">
+        <a class="support-cat-card" href="#pairing">
+          <div class="support-cat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <h3>连接与配对</h3>
+          <p>扫码配对、局域网 Wi-Fi 检测与多设备快速切换。</p>
+        </a>
 
-    <h2>3. 扫描配对二维码</h2>
-    <p>确保 Mac 与 iPhone 或 iPad 连接到同一个 Wi-Fi 局域网。点击 Mac 菜单栏中的奶猫妙控图标展示二维码，在手机端打开“设备与配对”页面扫描即可；亦可在手机桌面长按 App 图标快速选择“扫码配对”。</p>
+        <a class="support-cat-card" href="#permissions">
+          <div class="support-cat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
+          </div>
+          <h3>系统权限配置</h3>
+          <p>macOS 辅助功能与屏幕录制授权步骤与异常排查。</p>
+        </a>
 
-    <h2>4. 开启屏幕画面串流权限</h2>
-    <p>若需使用低延迟屏幕实时预览，请在 Mac 的“系统设置 → 隐私与安全性 → 屏幕录制”中为奶猫妙控授权。常规按键、旋钮、触控板与快捷键不受此权限影响。</p>
+        <a class="support-cat-card" href="#membership">
+          <div class="support-cat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>PRO 会员订阅</h3>
+          <p>订阅方案、App Store 安全扣费与多设备恢复购买。</p>
+        </a>
 
-    <h2>5. 购买与恢复 Pro 会员</h2>
-    <p>请在 iPhone 或 iPad 端进入“设置 → 奶猫妙控 Pro”选择套餐购买或点击“恢复购买”。所有交易与订阅均由 Apple App Store 托管，Mac 端仅作状态展示，绝不重复收费。</p>
+        <a class="support-cat-card" href="#feedback">
+          <div class="support-cat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>反馈与社区</h3>
+          <p>GitHub Issues 提单、日志排查与功能建议提交。</p>
+        </a>
+      </nav>
 
-    <h2>6. 获取更多协助与反馈</h2>
-    <p>如遇其他问题，欢迎前往 <a href="https://github.com/buggyblues/cream-deck/issues/new">GitHub Issues</a> 提交反馈。建议附上你的 macOS 与 iOS 版本、菜单栏状态及复现步骤（请勿公开粘贴敏感配对信息）。</p>
-    <a class="legal-back" href="./">← 返回首页</a>
+      <!-- Status Indicator Block -->
+      <section class="support-block" id="status">
+        <header class="support-block-header">
+          <h2>Mac 菜单栏颜文字状态说明</h2>
+          <p>奶猫妙控在顶部状态栏通过可爱的颜文字状态一目了然提示连接情况</p>
+        </header>
+        <div class="status-guide-grid">
+          <div class="status-card status-ready">
+            <div class="status-emoji">^w^</div>
+            <strong>连接就绪</strong>
+            <p>辅助功能权限正常，移动设备已成功连接，可随时发送控制指令与画面。</p>
+          </div>
+          <div class="status-card status-waiting">
+            <div class="status-emoji">-w-</div>
+            <strong>等待连接</strong>
+            <p>Mac 端服务已正常运行，正在等待 iPhone 或 iPad 扫码建立连接。</p>
+          </div>
+          <div class="status-card status-error">
+            <div class="status-emoji">!w!</div>
+            <strong>缺少必要权限</strong>
+            <p>辅助功能或屏幕录制未授权，点击菜单栏图标即可一键唤起系统设置。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps Block -->
+      <section class="support-block" id="pairing">
+        <header class="support-block-header">
+          <h2>从安装到连接，只需三步</h2>
+          <p>无需复杂的网络配置，处于同一局域网 Wi-Fi 下一扫即连</p>
+        </header>
+        <div class="support-steps-grid">
+          <div class="support-step-item">
+            <span class="support-step-num">STEP 01</span>
+            <h3>安装 Mac 端</h3>
+            <p>从官方 Releases 下载 DMG 镜像，将“奶猫妙控”拖入“应用程序”文件夹并启动运行。</p>
+          </div>
+          <div class="support-step-item" id="permissions">
+            <span class="support-step-num">STEP 02</span>
+            <h3>开启系统权限</h3>
+            <p>在“系统设置 → 隐私与安全性”中开启“辅助功能”权限；若需桌面画面预览再开启“屏幕录制”权限。</p>
+          </div>
+          <div class="support-step-item">
+            <span class="support-step-num">STEP 03</span>
+            <h3>扫码一键连接</h3>
+            <p>确保 iPhone/iPad 与 Mac 连接同一 Wi-Fi，打开移动端扫码即可秒速配对成功。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="support-block" id="membership">
+        <header class="support-block-header">
+          <h2>常见支持问题手册</h2>
+          <p>解答关于网络连接、权限排查、会员订阅及隐私安全的常见疑问</p>
+        </header>
+        <div class="support-faq-list">
+          <details>
+            <summary>为什么手机扫描 Mac 上的二维码提示超时？</summary>
+            <p>请首先确认手机与 Mac 处于<strong>同一个 Wi-Fi 网络</strong>（不要一个连 5G Wi-Fi 一个连访客 Wi-Fi），且路由器未开启“AP 隔离”功能。若网络正常仍无法连接，可在 Mac 菜单栏右键彻底退出后重新打开尝试。</p>
+          </details>
+          <details>
+            <summary>macOS 系统升级后按键突然失灵怎么排查？</summary>
+            <p>macOS 大版本更新后可能残留旧签名的辅助功能权限。请前往“系统设置 → 隐私与安全性 → 辅助功能”，选中“奶猫妙控”点击下方减号 <code>-</code> 删除，再点击加号 <code>+</code> 重新添加即可恢复正常。</p>
+          </details>
+          <details>
+            <summary>为什么手机端看不到 Mac 桌面实时画面？</summary>
+            <p>桌面画面实时预览需要单独授予<strong>“屏幕录制”权限</strong>。请在“系统设置 → 隐私与安全性 → 屏幕录制”中开启奶猫妙控。常规按键、旋钮和触控板不受此权限影响。</p>
+          </details>
+          <details>
+            <summary>更换新手机或重装后如何恢复 Pro 会员？</summary>
+            <p>在 iPhone 或 iPad 端进入“设置 → 奶猫妙控 Pro”，点击<strong>“恢复购买”</strong>即可。所有订阅与购买均由 Apple App Store 托管，只要登录同一个 Apple ID 即可无缝恢复，Mac 端无需二次购买。</p>
+          </details>
+          <details>
+            <summary>操作数据与画面会被上传到云端吗？</summary>
+            <p>绝不上传。所有的按键指令、文字输入内容与屏幕实时图像，<strong>100% 仅在本地局域网 Wi-Fi 内部点对点直连传输</strong>，官方服务器不中继也不存储任何操作数据，充分保障隐私与工程安全。</p>
+          </details>
+          <details>
+            <summary>支持哪些 Mac 硬件与 macOS 系统版本？</summary>
+            <p>支持运行 macOS 13 (Ventura) 及更高版本的所有 Mac 电脑，Universal 通用架构原生适配 Apple Silicon (M1/M2/M3/M4 系列芯片) 与 Intel 处理器。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Feedback CTA Block -->
+      <section class="feedback-card" id="feedback">
+        <h2>仍需进一步协助？</h2>
+        <p>遇到异常 Bug 或有新功能建议？欢迎在 GitHub Issues 提交工单，建议附带你的 macOS 与 iOS 版本以及复现步骤。</p>
+        <a class="button dark" href="https://github.com/buggyblues/cream-deck/issues/new" target="_blank" rel="noopener">前往 GitHub Issues 提单 →</a>
+      </section>
+    </div>
   </main>
+
+  <footer>
+    <a class="brand" href="index.html"><img src="assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="index.html#layouts">功能特性</a>
+      <a href="index.html#pro">PRO 会员</a>
+      <a href="updates.html">更新日志</a>
+      <a href="blog.html">文章专栏</a>
+      <a href="support.html">支持指南</a>
+      <a href="privacy.html">隐私政策</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控 · 自由副控与远程控制工作台</small>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

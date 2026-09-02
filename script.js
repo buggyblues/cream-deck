@@ -754,6 +754,30 @@ const initMotion = () => {
 
 };
 
+const initBlogFilter = () => {
+  const buttons = document.querySelectorAll('[data-blog-filter]');
+  const items = document.querySelectorAll('[data-blog-item]');
+  if (!buttons.length || !items.length) return;
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.blogFilter;
+      buttons.forEach((b) => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      items.forEach((item) => {
+        const cat = item.dataset.blogCat;
+        if (filter === 'all' || cat === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+};
+
 initLayoutTabs();
 initRemoteShowcase();
 initMotion();
+initBlogFilter();

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="奶猫妙控官方专栏：深入了解剪辑小键盘、Mac 远程控制、语音与文本输入、演示辅助及个性化控制台的设计与使用指南">
+  <meta name="description" content="奶猫妙控文章专栏：深入了解剪辑小键盘、Mac 远程控制、语音与文本输入、演示辅助及个性化控制台的使用技巧与指南">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
@@ -24,15 +24,15 @@
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "奶猫妙控专栏",
-    "description": "奶猫妙控的功能详解、使用场景与产品设计思路",
+    "description": "奶猫妙控的功能详解、使用场景与产品使用技巧",
     "url": "https://cream-deck.vercel.app/blog",
     "blogPost": [
-      { "@type": "BlogPosting", "headline": "剪辑师的终极掌上控制台：一键接管 DaVinci、PR、Final Cut 与剪映", "url": "https://cream-deck.vercel.app/blog/editing-keypad" },
-      { "@type": "BlogPosting", "headline": "文字工作者的高效秘籍：长文本预编辑与高精度语音速记实战", "url": "https://cream-deck.vercel.app/blog/voice-text-input" },
-      { "@type": "BlogPosting", "headline": "告别传统翻页笔：用手机变身激光笔、智能提词器与现场互动总控", "url": "https://cream-deck.vercel.app/blog/presentation-tools" },
-      { "@type": "BlogPosting", "headline": "局域网超低延迟串流：在掌中完全接管 Mac 桌面与多任务", "url": "https://cream-deck.vercel.app/blog/remote-control-mac" },
-      { "@type": "BlogPosting", "headline": "从零构建专属掌上小键盘：自由网格、无级旋钮与快捷宏定制全指南", "url": "https://cream-deck.vercel.app/blog/custom-keypad" },
-      { "@type": "BlogPosting", "headline": "macOS 辅助功能与屏幕录制权限全景排查与安全架构指南", "url": "https://cream-deck.vercel.app/blog/mac-settings" }
+      { "@type": "BlogPosting", "headline": "剪辑师的掌上副控：从 DaVinci 到剪映", "url": "https://cream-deck.vercel.app/blog/editing-keypad" },
+      { "@type": "BlogPosting", "headline": "文本预编辑与语音速记实战", "url": "https://cream-deck.vercel.app/blog/voice-text-input" },
+      { "@type": "BlogPosting", "headline": "告别翻页笔：手机变身智能演说总控", "url": "https://cream-deck.vercel.app/blog/presentation-tools" },
+      { "@type": "BlogPosting", "headline": "超低延迟串流：掌中接管 Mac 桌面", "url": "https://cream-deck.vercel.app/blog/remote-control-mac" },
+      { "@type": "BlogPosting", "headline": "从零定制你的专属副控小键盘", "url": "https://cream-deck.vercel.app/blog/custom-keypad" },
+      { "@type": "BlogPosting", "headline": "macOS 权限配置与安全连接指南", "url": "https://cream-deck.vercel.app/blog/mac-settings" }
     ]
   }
   </script>
@@ -71,65 +71,106 @@
   <main id="main">
     <section class="content-hero content-hero-blog">
       <p class="eyebrow">&gt;w&lt; 深度专栏与使用指南</p>
-      <h1>探索奶猫妙控</h1>
-      <p>创作流进阶、远程控制手感调优与产品设计思考</p>
+      <h1>文章专栏</h1>
+      <p>探索剪辑创作、远程控制、语音输入与演说总控的实用技巧与深度指南</p>
     </section>
-    <section class="post-feed" aria-label="博客文章">
-      <a class="post-card" href="blog/editing-keypad.html">
-        <figure class="post-card-phone"><img src="assets/screens/control-resolve.webp?v=20260831d" alt="奶猫妙控的 DaVinci Resolve 剪辑小键盘" width="1206" height="2622"></figure>
-        <div>
-          <p class="post-category">剪辑调色工作流</p>
+
+    <div class="blog-shell">
+      <nav class="blog-categories" aria-label="文章分类">
+        <button class="blog-category-tag is-active" type="button" data-blog-filter="all">全部文章</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="edit">剪辑调色</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="input">效率输入</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="presentation">演讲汇报</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="remote">远程控制</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="settings">系统指南</button>
+      </nav>
+
+      <!-- Featured Article -->
+      <a class="blog-featured" href="blog/editing-keypad.html" data-blog-item data-blog-cat="edit">
+        <figure class="blog-featured-img">
+          <img src="assets/screens/control-resolve.webp?v=20260831d" alt="奶猫妙控 DaVinci Resolve 剪辑小键盘" width="1206" height="2622">
+        </figure>
+        <div class="blog-featured-content">
+          <span class="blog-featured-badge">⭐ 推荐阅读 · 剪辑调色</span>
           <h2>剪辑师的掌上副控：从 DaVinci 到剪映</h2>
-          <p>同一套实体触感按键与无级旋钮，随前台剪辑软件与工作区智能联动。</p>
-          <span>阅读全文 →</span>
+          <p>同一套实体触感按键与无级旋钮，随前台剪辑软件与工作区智能联动。轻松穿梭时间线、标记打点与参数微调，大幅提升后期剪辑效率。</p>
+          <div class="blog-meta">
+            <time datetime="2026-08-31">2026 年 8 月 31 日</time>
+            <span>·</span>
+            <span>阅读约 5 分钟</span>
+          </div>
+          <span class="blog-read-btn">阅读全文 →</span>
         </div>
       </a>
-      <a class="post-card" href="blog/voice-text-input.html">
-        <figure class="post-card-phone"><img src="assets/screens/remote-text-voice.webp?v=20260831d" alt="奶猫妙控文本键盘正在把语音变成可以修改的文字" width="1206" height="2622"></figure>
-        <div>
-          <p class="post-category">文本与语音生产力</p>
-          <h2>文本预编辑与语音速记实战</h2>
-          <p>先口述转写、自由润色，再将整段文字原子化注入 Mac 当前光标。</p>
-          <span>阅读全文 →</span>
-        </div>
-      </a>
-      <a class="post-card" href="blog/presentation-tools.html">
-        <figure class="post-card-phone"><img src="assets/screens/control-presentation-assist.webp?v=20260831d" alt="奶猫妙控演示辅助小键盘，包含激光笔、提词器、音效、表情和弹幕" width="1206" height="2622"></figure>
-        <div>
-          <p class="post-category">演讲与汇报指南</p>
-          <h2>告别翻页笔：手机变身智能演说总控</h2>
-          <p>陀螺仪虚拟激光笔、智能提词器与现场音效互动一触即发。</p>
-          <span>阅读全文 →</span>
-        </div>
-      </a>
-      <a class="post-card" href="blog/remote-control-mac.html">
-        <figure class="post-card-phone"><img src="assets/screens/control-studio.webp?v=20260831d" alt="奶猫妙控显示 Mac 画面、触控板和滚动控件" width="1206" height="2622"></figure>
-        <div>
-          <p class="post-category">远程桌面串流</p>
-          <h2>超低延迟串流：掌中接管 Mac 桌面</h2>
-          <p>Metal 直通帧捕获、多点触控手势与无损原画串流深度解析。</p>
-          <span>阅读全文 →</span>
-        </div>
-      </a>
-      <a class="post-card" href="blog/custom-keypad.html">
-        <figure class="post-card-phone"><img src="assets/screens/layout-editor.webp?v=20260831d" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy"></figure>
-        <div>
-          <p class="post-category">自定义副控</p>
-          <h2>从零定制你的专属副控小键盘</h2>
-          <p>自由物理网格、无级旋钮阻尼与 AppleScript 快捷宏配置指南。</p>
-          <span>阅读全文 →</span>
-        </div>
-      </a>
-      <a class="post-card" href="blog/mac-settings.html">
-        <figure><img src="assets/screens/macos-adapter.webp?v=20260831d" alt="奶猫妙控 Mac 端的连接二维码" width="944" height="1196" loading="lazy"></figure>
-        <div>
-          <p class="post-category">系统权限与安全</p>
-          <h2>macOS 权限配置与安全连接指南</h2>
-          <p>辅助功能与屏幕录制授权排查，以及局域网本地加密通信解析。</p>
-          <span>阅读全文 →</span>
-        </div>
-      </a>
-    </section>
+
+      <!-- Article Grid -->
+      <div class="blog-grid" aria-label="更多文章">
+        <a class="blog-card" href="blog/voice-text-input.html" data-blog-item data-blog-cat="input">
+          <figure class="blog-card-thumb">
+            <img src="assets/screens/remote-text-voice.webp?v=20260831d" alt="奶猫妙控文本与语音输入" width="1206" height="2622" loading="lazy">
+          </figure>
+          <span class="blog-card-tag">效率输入</span>
+          <h3>文本预编辑与语音速记实战</h3>
+          <p>在手机上口述转写与自由修饰错别字，再整段投送至 Mac 目标光标，避免反复修改。</p>
+          <div class="blog-card-footer">
+            <time datetime="2026-08-31">2026-08-31</time>
+            <span>阅读约 4 分钟 →</span>
+          </div>
+        </a>
+
+        <a class="blog-card" href="blog/presentation-tools.html" data-blog-item data-blog-cat="presentation">
+          <figure class="blog-card-thumb">
+            <img src="assets/screens/control-presentation-assist.webp?v=20260831d" alt="奶猫妙控演示辅助小键盘" width="1206" height="2622" loading="lazy">
+          </figure>
+          <span class="blog-card-tag">演讲汇报</span>
+          <h3>告别翻页笔：手机变身智能演说总控</h3>
+          <p>虚拟激光笔、自适应提词器与现场氛围音效，走下讲台依然自如掌控演示放映。</p>
+          <div class="blog-card-footer">
+            <time datetime="2026-08-31">2026-08-31</time>
+            <span>阅读约 5 分钟 →</span>
+          </div>
+        </a>
+
+        <a class="blog-card" href="blog/remote-control-mac.html" data-blog-item data-blog-cat="remote">
+          <figure class="blog-card-thumb">
+            <img src="assets/screens/control-studio.webp?v=20260831d" alt="奶猫妙控远程桌面串流" width="1206" height="2622" loading="lazy">
+          </figure>
+          <span class="blog-card-tag">远程控制</span>
+          <h3>超低延迟串流：掌中接管 Mac 桌面</h3>
+          <p>低延迟桌面原画串流、虚拟触控板与多任务窗口漫游，在手机上轻松操控 Mac。</p>
+          <div class="blog-card-footer">
+            <time datetime="2026-08-31">2026-08-31</time>
+            <span>阅读约 6 分钟 →</span>
+          </div>
+        </a>
+
+        <a class="blog-card" href="blog/custom-keypad.html" data-blog-item data-blog-cat="edit">
+          <figure class="blog-card-thumb">
+            <img src="assets/screens/layout-editor.webp?v=20260831d" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy">
+          </figure>
+          <span class="blog-card-tag">自定义副控</span>
+          <h3>从零定制你的专属副控小键盘</h3>
+          <p>自由网格排布、无级旋钮阻尼调节与快捷动作绑定，打造契合习惯的专属小键盘。</p>
+          <div class="blog-card-footer">
+            <time datetime="2026-08-31">2026-08-31</time>
+            <span>阅读约 6 分钟 →</span>
+          </div>
+        </a>
+
+        <a class="blog-card" href="blog/mac-settings.html" data-blog-item data-blog-cat="settings">
+          <figure class="blog-card-thumb mac-thumb">
+            <img src="assets/screens/macos-adapter.webp?v=20260831d" alt="奶猫妙控 Mac 端连接二维码" width="944" height="1196" loading="lazy">
+          </figure>
+          <span class="blog-card-tag">系统指南</span>
+          <h3>macOS 权限配置与安全连接指南</h3>
+          <p>辅助功能与屏幕录制授权排查，以及局域网本地点对点通信安全架构解析。</p>
+          <div class="blog-card-footer">
+            <time datetime="2026-08-31">2026-08-31</time>
+            <span>阅读约 5 分钟 →</span>
+          </div>
+        </a>
+      </div>
+    </div>
   </main>
 
   <footer>
