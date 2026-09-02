@@ -468,7 +468,7 @@ const initMotion = () => {
 
     gsap.timeline({ scrollTrigger: { trigger: '.how-section', start: 'top 74%', once: true } })
       .from('.connection-art', { ...reveal, x: desktop ? -54 : 0, rotation: -4, scale: .95 })
-      .from('.how-section > .eyebrow, .how-section > h2', { ...reveal, y: 24, stagger: .07 }, '-=.4')
+      .from('.how-copy > *', { ...reveal, y: 24, stagger: .07 }, '-=.4')
       .from('.steps li', { ...reveal, y: 19, stagger: .08 }, '-=.32');
 
     gsap.timeline({ scrollTrigger: { trigger: '.quick-section', start: 'top 76%', once: true } })
@@ -497,30 +497,85 @@ const initMotion = () => {
         ease: 'back.out(1.3)'
       }, '-=.32');
 
-    const startSpriteLoop = ({ frameSelector, keyframes, repeatDelay, trigger }) => {
+    const startSpriteLoop = ({ frameSelector, keyframes, repeatDelay = 0.8, trigger }) => {
       const frames = gsap.utils.toArray(frameSelector);
       if (frames.length < 2) return;
-      const loop = gsap.timeline({ paused: true, repeat: -1, repeatDelay });
-      gsap.set(frames, { transformOrigin: '50% 72%' });
-      keyframes.forEach(([label, frame, at, motion = {}]) => {
-        loop.addLabel(label, at).set(frames, { autoAlpha: 0 }, label).set(frames[frame], { autoAlpha: 1 }, label);
-        loop.to(frames, {
-          xPercent: motion.xPercent || 0,
-          yPercent: motion.yPercent || 0,
-          scaleX: motion.scaleX || 1,
-          scaleY: motion.scaleY || 1,
-          rotation: motion.rotation || 0,
-          duration: motion.duration || .14,
-          ease: motion.ease || 'power2.out'
-        }, label);
-      });
-      ScrollTrigger.create({
-        trigger,
-        start: 'top 85%',
-        end: 'bottom 15%',
-        onToggle: (self) => self.isActive ? loop.play() : loop.pause()
-      });
-      cleanups.push(() => loop.kill());
+      const container = frames[0].parentElement;
+      let isPlaying = false;
+      let timer = null;
+
+      const setFrame = (index) => {
+        frames.forEach((f, i) => {
+          f.style.visibility = (i === index) ? 'visible' : 'hidden';
+          f.style.opacity = (i === index) ? '1' : '0';
+        });
+      };
+
+      setFrame(0);
+
+      let stepIndex = 0;
+      const tick = () => {
+        if (!isPlaying) return;
+        const currentKeyframe = keyframes[stepIndex];
+        const nextStepIndex = (stepIndex + 1) % keyframes.length;
+        const nextKeyframe = keyframes[nextStepIndex];
+
+        const frameNum = currentKeyframe[1];
+        const motion = currentKeyframe[3] || {};
+        setFrame(frameNum);
+
+        if (container) {
+          gsap.to(container, {
+            xPercent: motion.xPercent || 0,
+            yPercent: motion.yPercent || 0,
+            scaleX: motion.scaleX || 1,
+            scaleY: motion.scaleY || 1,
+            rotation: motion.rotation || 0,
+            duration: motion.duration || 0.16,
+            ease: motion.ease || 'power2.out',
+            overwrite: 'auto'
+          });
+        }
+
+        const delay = (nextStepIndex === 0)
+          ? (repeatDelay * 1000)
+          : Math.max(80, ((nextKeyframe[2] - currentKeyframe[2]) * 1000) || 160);
+
+        stepIndex = nextStepIndex;
+        timer = setTimeout(tick, delay);
+      };
+
+      const start = () => {
+        if (isPlaying) return;
+        isPlaying = true;
+        tick();
+      };
+
+      const stop = () => {
+        isPlaying = false;
+        if (timer) clearTimeout(timer);
+      };
+
+      const triggerEl = document.querySelector(trigger);
+      if (triggerEl && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              start();
+            } else {
+              stop();
+            }
+          });
+        }, { threshold: 0.05 });
+        observer.observe(triggerEl);
+        cleanups.push(() => {
+          stop();
+          observer.disconnect();
+        });
+      } else {
+        start();
+        cleanups.push(() => stop());
+      }
     };
 
     startSpriteLoop({

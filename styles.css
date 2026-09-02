@@ -168,13 +168,42 @@ section[id], section {
 .feature-card h3 { margin: 0; font-size: 1.05rem; font-weight: 800; color: var(--ink); }
 .feature-card p { margin-top: .35rem; color: var(--muted); font-size: .84rem; line-height: 1.55; }
 
-.how-section { display: grid; grid-template-columns: .78fr 1.22fr; grid-template-areas: "art eyebrow" "art title" "art steps"; grid-template-rows: auto auto auto; column-gap: clamp(2.5rem, 8vw, 6.5rem); align-content: center; background: var(--cream); }
-.connection-art { grid-area: art; width: min(100%, 26.5rem); align-self: center; justify-self: center; }
-.how-section > .eyebrow { grid-area: eyebrow; align-self: end; }
-.how-section > h2 { grid-area: title; margin-bottom: 1.65rem; }
-.steps { grid-area: steps; margin: 0; padding: 0; list-style: none; border-top: .0625rem solid var(--line); }
-.steps li { min-height: 5.5rem; padding: 1rem 0; display: grid; grid-template-columns: 2.7rem 1fr; gap: 1rem; align-items: start; border-bottom: .0625rem solid var(--line); }
-.steps li > span { padding-top: .1rem; color: var(--purple); font: 700 .8125rem ui-monospace, "SFMono-Regular", monospace; }
+.how-section {
+  display: grid;
+  grid-template-columns: minmax(18rem, .8fr) minmax(0, 1.2fr);
+  gap: clamp(3rem, 7vw, 6.5rem);
+  align-items: center;
+  background: var(--cream);
+}
+.connection-art {
+  width: min(100%, 25rem);
+  aspect-ratio: 1;
+  position: relative;
+  align-self: center;
+  justify-self: center;
+}
+.how-copy { min-width: 0; }
+.how-copy h2 { font-size: clamp(2.6rem, 4.1vw, 3.75rem); }
+.steps {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: .0625rem solid var(--line);
+}
+.steps li {
+  min-height: 5.2rem;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 2.7rem 1fr;
+  gap: 1rem;
+  align-items: start;
+  border-bottom: .0625rem solid var(--line);
+}
+.steps li > span {
+  padding-top: .1rem;
+  color: var(--purple);
+  font: 700 .8125rem ui-monospace, "SFMono-Regular", monospace;
+}
 .steps h3 { font-size: 1.15rem; }
 .steps p { margin-top: .35rem; color: var(--muted); font-size: .84rem; }
 
