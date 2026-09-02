@@ -205,39 +205,59 @@ const initTypewriter = (gsap) => {
   const caret = document.querySelector('.type-caret');
   if (!target) return;
 
-  const characters = Array.from(target.dataset.text || target.textContent || '');
+  const phrases = [
+    '自由全能小键盘，',
+    '剪辑调色自适应，',
+    '桌面镜像低延迟，',
+    '语音文字速输入，',
+    '手势组件随心设，'
+  ];
+
   if (prefersReducedMotion) {
-    if (caret) caret.classList.add('is-done');
+    target.textContent = phrases[0];
+    if (caret) caret.style.display = 'none';
     return;
   }
 
-  target.textContent = '';
-  const progress = { value: 0 };
-  const blink = caret ? gsap.to(caret, {
-    autoAlpha: .12,
-    duration: .38,
-    ease: 'steps(1)',
-    repeat: -1,
-    yoyo: true
-  }) : null;
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
 
-  gsap.to(progress, {
-    value: characters.length,
-    delay: .34,
-    duration: 1.08,
-    ease: 'none',
-    snap: { value: 1 },
-    onUpdate: () => {
-      target.textContent = characters.slice(0, progress.value).join('');
-    },
-    onComplete: () => {
-      target.textContent = characters.join('');
-      gsap.delayedCall(.7, () => {
-        blink?.kill();
-        if (caret) gsap.to(caret, { autoAlpha: 0, duration: .25 });
-      });
+  if (caret) {
+    gsap.to(caret, {
+      autoAlpha: .08,
+      duration: .42,
+      ease: 'steps(1)',
+      repeat: -1,
+      yoyo: true
+    });
+  }
+
+  const tick = () => {
+    const current = phrases[phraseIndex];
+    if (isDeleting) {
+      charIndex--;
+      target.textContent = current.substring(0, charIndex);
+    } else {
+      charIndex++;
+      target.textContent = current.substring(0, charIndex);
     }
-  });
+
+    let speed = isDeleting ? 42 : 90;
+
+    if (!isDeleting && charIndex === current.length) {
+      speed = 2200;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      speed = 380;
+    }
+
+    setTimeout(tick, speed);
+  };
+
+  setTimeout(tick, 350);
 };
 
 const initLookingPanda = (gsap) => {
