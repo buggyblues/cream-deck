@@ -232,31 +232,94 @@
         <h2>掌控 Mac 画面，触手可及</h2>
         <p>毫秒级超低延迟画面串流、多点精准手势触控、全功能外置输入板与无线麦克风，在掌中完全接管你的 Mac。</p>
       </div>
-      <div class="remote-gallery" aria-label="远程控制界面">
-        <figure class="remote-card">
-          <div class="remote-card-pill">画中画集成</div>
-          <img src="assets/screens/control-studio.webp?v=20260831d" alt="奶猫妙控在小键盘中显示 Mac 实时画面、触控板与滚动控件" width="1206" height="2622" loading="lazy">
-          <figcaption><strong>边看边控</strong><span>实时画面、精准触控板与滚动条集成在同一工作台</span></figcaption>
-        </figure>
-        <figure class="remote-card">
-          <div class="remote-card-pill highlight">Retina 60FPS</div>
-          <img src="assets/screens/remote-fullscreen.webp?v=20260831d" alt="奶猫妙控全屏显示 Mac 桌面并提供远程控制工具" width="1206" height="2622" loading="lazy">
-          <figcaption><strong>展开全屏</strong><span>低延迟无损原画串流，多任务窗口自由缩放切换</span></figcaption>
-        </figure>
-        <figure class="remote-card remote-card-keyboard">
-          <div class="remote-card-pill">语音速记</div>
-          <img src="assets/screens/remote-text-voice.webp?v=20260831d" alt="奶猫妙控文本键盘正在将语音转成可编辑文字" width="1206" height="2622" loading="lazy">
-          <figcaption><strong>文本键盘</strong><span>长文本暂存预编辑，支持精准高保真语音转文字</span></figcaption>
-        </figure>
-        <figure class="remote-card remote-card-keyboard">
-          <div class="remote-card-pill">极速响应</div>
-          <img src="assets/screens/remote-keyboard.webp?v=20260831d" alt="奶猫妙控实时键盘输入界面" width="1206" height="2622" loading="lazy">
-          <figcaption><strong>实时键盘</strong><span>按键即时响应无缓冲，专为终端与组合快捷键打造</span></figcaption>
-        </figure>
-        <figure class="remote-card">
-          <div class="remote-card-pill">高保真音频</div>
-          <img src="assets/screens/remote-microphone.webp?v=20260831d" alt="奶猫妙控将移动设备麦克风实时传到 Mac" width="1206" height="2622" loading="lazy">
-          <figcaption><strong>无线麦克风</strong><span>按住即说，将手机麦克风音频极速回传至 Mac 系统</span></figcaption>
+
+      <div class="remote-showcase">
+        <div class="remote-nav" role="tablist" aria-label="远程控制模式切换">
+          <button class="remote-nav-item is-active" type="button" role="tab" aria-selected="true" aria-controls="remote-panel" id="remote-tab-studio"
+            data-remote-img="assets/screens/control-studio.webp?v=20260831d"
+            data-remote-tag="一体化工作台"
+            data-remote-title="边看边控 · Studio View"
+            data-remote-desc="将 Mac 实时超清画面、全功能虚拟触控板与惯性滚动条融为一体。无需抬头看屏幕，躺在沙发上也能精准指点操作。">
+            <div class="remote-nav-header">
+              <div class="remote-nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <strong>边看边控 (Studio View)</strong>
+              <span class="remote-nav-badge">推荐</span>
+            </div>
+            <p>Mac 实时画面 + 触控板与惯性滚轮一体化集成</p>
+          </button>
+
+          <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-fullscreen"
+            data-remote-img="assets/screens/remote-fullscreen.webp?v=20260831d"
+            data-remote-tag="Retina 60 FPS"
+            data-remote-title="展开全屏 · Retina 串流"
+            data-remote-desc="采用 Metal 硬件直通帧捕获与自适应动态码率编码，支持双指缩放、平移与全局漫游，呈现如丝般顺滑的原生桌面质感。">
+            <div class="remote-nav-header">
+              <div class="remote-nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              </div>
+              <strong>展开全屏桌面</strong>
+              <span class="remote-nav-badge highlight">超清</span>
+            </div>
+            <p>低延迟无损原画串流，多任务窗口自由漫游缩放</p>
+          </button>
+
+          <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-voice"
+            data-remote-img="assets/screens/remote-text-voice.webp?v=20260831d"
+            data-remote-tag="原子化注入"
+            data-remote-title="文本键盘 · 语音暂存预编辑"
+            data-remote-desc="告别直接语音上屏带来的频繁退格。在掌上从容口述、精修错别字，点击发送瞬间完整注入 Mac 当前光标。">
+            <div class="remote-nav-header">
+              <div class="remote-nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </div>
+              <strong>文本与语音速记</strong>
+              <span class="remote-nav-badge">高效</span>
+            </div>
+            <p>先口述转写、自由修饰，再整段投送至 Mac 目标光标</p>
+          </button>
+
+          <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-keyboard"
+            data-remote-img="assets/screens/remote-keyboard.webp?v=20260831d"
+            data-remote-tag="无缓冲零延迟"
+            data-remote-title="实时键盘 · 极速敲击"
+            data-remote-desc="针对代码调试、命令行终端与复杂系统快捷键深度优化。Command、Option、Control 等修饰键状态实时同步。">
+            <div class="remote-nav-header">
+              <div class="remote-nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="6" y2="8"/><line x1="10" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="14" y2="8"/><line x1="18" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="18" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/></svg>
+              </div>
+              <strong>超低延迟实时键盘</strong>
+              <span class="remote-nav-badge">原生</span>
+            </div>
+            <p>按键即刻生效，专为终端交互与组合快捷键打造</p>
+          </button>
+
+          <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-mic"
+            data-remote-img="assets/screens/remote-microphone.webp?v=20260831d"
+            data-remote-tag="48kHz CoreAudio"
+            data-remote-title="无线麦克风 · 外置声卡"
+            data-remote-desc="将 iPhone 多阵列高清麦克风音频流以 48kHz 无损无线传输至 Mac 系统 CoreAudio 总线，远程会议通话更清晰。">
+            <div class="remote-nav-header">
+              <div class="remote-nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+              </div>
+              <strong>无线高保真麦克风</strong>
+              <span class="remote-nav-badge">无损</span>
+            </div>
+            <p>长按即连，将手机高清麦克风无线直通 Mac 音频总线</p>
+          </button>
+        </div>
+
+        <figure class="remote-display" id="remote-panel" role="tabpanel" aria-labelledby="remote-tab-studio" tabindex="0">
+          <div class="remote-display-stage">
+            <img class="remote-display-img" data-remote-display-img src="assets/screens/control-studio.webp?v=20260831d" alt="奶猫妙控 Studio View 边看边控" width="1206" height="2622">
+          </div>
+          <figcaption class="remote-display-caption">
+            <div class="remote-display-tag" data-remote-display-tag><span class="badge-dot"></span> 一体化工作台</div>
+            <strong data-remote-display-title>边看边控 · Studio View</strong>
+            <p data-remote-display-desc>将 Mac 实时超清画面、全功能虚拟触控板与惯性滚动条融为一体。无需抬头看屏幕，躺在沙发上也能精准指点操作。</p>
+          </figcaption>
         </figure>
       </div>
     </section>

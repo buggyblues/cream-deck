@@ -120,6 +120,86 @@ const initLayoutTabs = () => {
   });
 };
 
+const initRemoteShowcase = () => {
+  const tabs = Array.from(document.querySelectorAll('.remote-nav-item'));
+  const panel = document.querySelector('#remote-panel');
+  const img = document.querySelector('[data-remote-display-img]');
+  const tag = document.querySelector('[data-remote-display-tag]');
+  const title = document.querySelector('[data-remote-display-title]');
+  const desc = document.querySelector('[data-remote-display-desc]');
+  if (!tabs.length || !panel || !img || !title || !desc) return;
+
+  const preload = () => {
+    tabs.forEach((tab) => {
+      const src = tab.dataset.remoteImg;
+      if (src) {
+        const image = new Image();
+        image.src = src;
+      }
+    });
+  };
+  if ('requestIdleCallback' in window) window.requestIdleCallback(preload);
+  else window.setTimeout(preload, 500);
+
+  const selectTab = (tab) => {
+    if (!tab) return;
+    tabs.forEach((t) => {
+      const isCurrent = t === tab;
+      t.classList.toggle('is-active', isCurrent);
+      t.setAttribute('aria-selected', String(isCurrent));
+      t.tabIndex = isCurrent ? 0 : -1;
+    });
+
+    if (!window.gsap || prefersReducedMotion) {
+      img.src = tab.dataset.remoteImg;
+      img.alt = tab.dataset.remoteTitle || '';
+      if (tag) tag.innerHTML = `<span class="badge-dot"></span> ${tab.dataset.remoteTag || ''}`;
+      title.textContent = tab.dataset.remoteTitle || '';
+      desc.textContent = tab.dataset.remoteDesc || '';
+      panel.setAttribute('aria-labelledby', tab.id);
+      return;
+    }
+
+    window.gsap.killTweensOf([img, title, desc]);
+    window.gsap.to([img, title, desc], {
+      autoAlpha: 0,
+      scale: 0.98,
+      duration: 0.14,
+      ease: 'power2.in',
+      onComplete: () => {
+        img.src = tab.dataset.remoteImg;
+        img.alt = tab.dataset.remoteTitle || '';
+        if (tag) tag.innerHTML = `<span class="badge-dot"></span> ${tab.dataset.remoteTag || ''}`;
+        title.textContent = tab.dataset.remoteTitle || '';
+        desc.textContent = tab.dataset.remoteDesc || '';
+        panel.setAttribute('aria-labelledby', tab.id);
+
+        window.gsap.to([img, title, desc], {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.22,
+          ease: 'power2.out'
+        });
+      }
+    });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', (event) => {
+      let nextIndex = index;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') nextIndex = 0;
+      else if (event.key === 'End') nextIndex = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      tabs[nextIndex].focus();
+      selectTab(tabs[nextIndex]);
+    });
+  });
+};
+
 const initTypewriter = (gsap) => {
   const target = document.querySelector('[data-typewriter]');
   const caret = document.querySelector('.type-caret');
@@ -487,7 +567,8 @@ const initMotion = () => {
 
     gsap.timeline({ scrollTrigger: { trigger: '.remote-section', start: 'top 76%', once: true } })
       .from('.remote-intro > *', { ...reveal, y: 24, stagger: .07 })
-      .from('.remote-card', { ...reveal, y: 42, rotation: (index) => index === 1 ? 0 : index ? 1.5 : -1.5, stagger: .1 }, '-=.34');
+      .from('.remote-nav-item', { ...reveal, x: desktop ? -32 : 0, y: desktop ? 0 : 20, stagger: .06 }, '-=.34')
+      .from('.remote-display', { ...reveal, x: desktop ? 42 : 0, scale: .96, rotation: desktop ? 1.5 : 0 }, '-=.45');
 
     gsap.timeline({ scrollTrigger: { trigger: '.how-section', start: 'top 74%', once: true } })
       .from('.connection-art', { ...reveal, x: desktop ? -54 : 0, rotation: -4, scale: .95 })
@@ -666,18 +747,6 @@ const initMotion = () => {
         });
       });
 
-      gsap.utils.toArray('.remote-card').forEach((card) => {
-        const img = card.querySelector('img');
-        if (!img) return;
-        const onEnter = () => gsap.to(img, { y: -8, scale: 1.03, duration: .25, ease: 'power2.out', overwrite: 'auto' });
-        const onLeave = () => gsap.to(img, { y: 0, scale: 1, duration: .3, ease: 'power2.out', overwrite: 'auto' });
-        card.addEventListener('pointerenter', onEnter);
-        card.addEventListener('pointerleave', onLeave);
-        cleanups.push(() => {
-          card.removeEventListener('pointerenter', onEnter);
-          card.removeEventListener('pointerleave', onLeave);
-        });
-      });
     }
 
     return () => cleanups.forEach((cleanup) => cleanup());
@@ -686,4 +755,5 @@ const initMotion = () => {
 };
 
 initLayoutTabs();
+initRemoteShowcase();
 initMotion();
