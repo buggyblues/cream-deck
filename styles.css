@@ -465,8 +465,8 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .support-categories { grid-template-columns: 1fr; }
 }
 .article-shell { width: min(calc(100% - 3rem), 66rem); margin: 0 auto; padding: clamp(3.5rem, 6vw, 5.5rem) 0; }
-.article-header { max-width: 46rem; margin: 0 auto; text-align: center; }
-.article-header > a { color: var(--purple); font-size: .85rem; font-weight: 900; }
+.article-header > a, .article-breadcrumb { display: inline-flex; align-items: center; gap: .35rem; color: var(--purple); font-size: .84rem; font-weight: 850; text-decoration: none; padding: .26rem .75rem; border-radius: 999px; background: rgba(100,85,223,.08); border: .0625rem solid rgba(100,85,223,.14); transition: all .18s ease; }
+.article-header > a:hover, .article-breadcrumb:hover { background: rgba(100,85,223,.16); color: #4338ca; transform: translateX(-.15rem); }
 .article-header h1 { margin-top: .85rem; font-size: clamp(1.85rem, 3.8vw, 2.75rem); line-height: 1.28; letter-spacing: -.025em; color: var(--ink); }
 .article-header p { max-width: 38rem; margin: 1rem auto 0; color: var(--muted); font-size: clamp(.95rem, 1.6vw, 1.1rem); line-height: 1.65; }
 .article-cover { margin: clamp(2.5rem, 5vw, 4rem) auto; overflow: hidden; border-radius: 1.35rem; background: transparent; }
