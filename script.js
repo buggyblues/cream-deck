@@ -48,6 +48,7 @@ const initLayoutTabs = () => {
   const preview = document.querySelector('[data-layout-image]');
   const name = document.querySelector('[data-layout-name]');
   const description = document.querySelector('[data-layout-description]');
+  const tutorialLinks = document.querySelectorAll('[data-layout-guide]');
   const caption = preview?.nextElementSibling;
   if (!tabs.length || !panel || !preview || !name || !description) return;
 
@@ -76,6 +77,13 @@ const initLayoutTabs = () => {
       item.tabIndex = selected ? 0 : -1;
     });
     if (moveFocus) tab.focus();
+    tutorialLinks.forEach((link) => {
+      link.href = tab.dataset.blogHref;
+      link.setAttribute('aria-label', `阅读${tab.dataset.name}布局教程`);
+      if (link.hasAttribute('data-layout-guide-label')) {
+        link.textContent = `阅读${tab.dataset.name}布局教程 →`;
+      }
+    });
 
     if (!window.gsap || prefersReducedMotion) {
       commit(tab);
@@ -782,8 +790,11 @@ const initBlogFilter = () => {
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.blogFilter;
-      buttons.forEach((b) => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
+      buttons.forEach((b) => {
+        const selected = b === btn;
+        b.classList.toggle('is-active', selected);
+        b.setAttribute('aria-pressed', String(selected));
+      });
 
       items.forEach((item) => {
         const cat = item.dataset.blogCat;

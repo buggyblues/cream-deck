@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="奶猫妙控文章专栏：深入了解剪辑小键盘、Mac 远程控制、语音与文本输入、演示辅助及个性化控制台的使用技巧与指南">
+  <meta name="description" content="按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。">
   <meta name="keywords" content="奶猫妙控博客,Mac小键盘指南,DaVinci剪辑小键盘,Mac远程桌面,语音输入转文字,智能提词器,自定义副控">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="buggyblues">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
   <meta property="og:title" content="文章专栏｜奶猫妙控">
-  <meta property="og:description" content="探索剪辑创作、远程控制、语音输入与演示辅助的设计灵感与实用指南">
+  <meta property="og:description" content="按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="文章专栏｜奶猫妙控">
-  <meta name="twitter:description" content="探索剪辑创作、远程控制、语音输入与演示辅助的设计灵感与实用指南">
+  <meta name="twitter:description" content="按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,21 +27,120 @@
   <link rel="stylesheet" href="styles.css">
   <title>文章专栏｜奶猫妙控</title>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "奶猫妙控专栏",
-    "description": "奶猫妙控的功能详解、使用场景与产品使用技巧",
-    "url": "https://cream-deck.vercel.app/blog",
-    "blogPost": [
-      { "@type": "BlogPosting", "headline": "剪辑师的掌上副控：从 DaVinci 到剪映", "url": "https://cream-deck.vercel.app/blog/editing-keypad" },
-      { "@type": "BlogPosting", "headline": "文本预编辑与语音速记实战", "url": "https://cream-deck.vercel.app/blog/voice-text-input" },
-      { "@type": "BlogPosting", "headline": "告别翻页笔：手机变身智能演说总控", "url": "https://cream-deck.vercel.app/blog/presentation-tools" },
-      { "@type": "BlogPosting", "headline": "超低延迟串流：掌中接管 Mac 桌面", "url": "https://cream-deck.vercel.app/blog/remote-control-mac" },
-      { "@type": "BlogPosting", "headline": "从零定制你的专属副控小键盘", "url": "https://cream-deck.vercel.app/blog/custom-keypad" },
-      { "@type": "BlogPosting", "headline": "macOS 权限配置与安全连接指南", "url": "https://cream-deck.vercel.app/blog/mac-settings" }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "奶猫妙控专栏",
+  "description": "按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。",
+  "url": "https://cream-deck.vercel.app/blog",
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "工作布局教程：打开键盘、输入文字，再检查撤销与重做",
+      "url": "https://cream-deck.vercel.app/blog/layout-work"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "启动器布局教程：添加一个 Mac App，再更换已有按钮",
+      "url": "https://cream-deck.vercel.app/blog/layout-launcher"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "浏览器布局教程：输入网址、切换标签页，设置启动浏览器",
+      "url": "https://cream-deck.vercel.app/blog/layout-browser"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "财务布局教程：计算 0.1＋0.2，再一步步生成 SUMIFS 公式",
+      "url": "https://cream-deck.vercel.app/blog/layout-finance"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "文本预编辑与语音速记实战",
+      "url": "https://cream-deck.vercel.app/blog/voice-text-input"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "超低延迟串流：掌中接管 Mac 桌面",
+      "url": "https://cream-deck.vercel.app/blog/remote-control-mac"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "从零定制你的专属副控小键盘",
+      "url": "https://cream-deck.vercel.app/blog/custom-keypad"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "氛围编程布局教程：选任务、打开输入，再检查模型与额度",
+      "url": "https://cream-deck.vercel.app/blog/layout-codex"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "终端布局教程：新建会话、改名、打开全屏，再安全结束",
+      "url": "https://cream-deck.vercel.app/blog/layout-terminal"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "写作布局教程：按段移动、查找正文，再切到格式桌面",
+      "url": "https://cream-deck.vercel.app/blog/layout-writing"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "调研布局教程：把原文与笔记分开保存，再找回这条剪藏",
+      "url": "https://cream-deck.vercel.app/blog/layout-research"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "阅读布局教程：翻页、搜索目录，再跳到指定页",
+      "url": "https://cream-deck.vercel.app/blog/layout-reading"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "应用创作台教程：用 Blender 检查适配、选择与视角控制",
+      "url": "https://cream-deck.vercel.app/blog/layout-creative"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "演示布局教程：设置摄像头浮窗，用计时器记录分段",
+      "url": "https://cream-deck.vercel.app/blog/layout-presentation"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "剪辑师的掌上副控：从 DaVinci 到剪映",
+      "url": "https://cream-deck.vercel.app/blog/editing-keypad"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "告别翻页笔：手机变身智能演说总控",
+      "url": "https://cream-deck.vercel.app/blog/presentation-tools"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "媒体布局教程：从正在播放进入菜单，调整进度与播放模式",
+      "url": "https://cream-deck.vercel.app/blog/layout-media"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "采样布局教程：载入示例声音，试听并调整声音衔接",
+      "url": "https://cream-deck.vercel.app/blog/layout-sampler"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "街机布局教程：进入大厅、认领手柄，再打开游戏菜单",
+      "url": "https://cream-deck.vercel.app/blog/layout-arcade"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读",
+      "url": "https://cream-deck.vercel.app/blog/layout-smart-home"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "macOS 权限配置与安全连接指南",
+      "url": "https://cream-deck.vercel.app/blog/mac-settings"
+    }
+  ]
+}
   </script>
 </head>
 <body class="content-page">
@@ -79,223 +178,193 @@
     <section class="content-hero content-hero-blog">
       <p class="eyebrow">&gt;w&lt; 深度专栏与使用指南</p>
       <h1>文章专栏</h1>
-      <p>探索剪辑创作、远程控制、语音输入与演说总控的实用技巧与深度指南</p>
+      <p>按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。</p>
     </section>
 
     <div class="blog-shell">
       <nav class="blog-categories" aria-label="文章分类">
-        <button class="blog-category-tag is-active" type="button" data-blog-filter="all">全部文章</button>
-        <button class="blog-category-tag" type="button" data-blog-filter="edit">剪辑调色</button>
-        <button class="blog-category-tag" type="button" data-blog-filter="input">效率输入</button>
-        <button class="blog-category-tag" type="button" data-blog-filter="presentation">演讲汇报</button>
-        <button class="blog-category-tag" type="button" data-blog-filter="remote">远程控制</button>
-        <button class="blog-category-tag" type="button" data-blog-filter="settings">系统指南</button>
+        <button class="blog-category-tag is-active" type="button" data-blog-filter="all" aria-pressed="true">全部文章</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="daily" aria-pressed="false">日常效率</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="development" aria-pressed="false">开发工具</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="reading" aria-pressed="false">阅读与写作</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="creative" aria-pressed="false">创作与演讲</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="audio" aria-pressed="false">声音与娱乐</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="home" aria-pressed="false">家居生活</button>
+        <button class="blog-category-tag" type="button" data-blog-filter="settings" aria-pressed="false">连接与设置</button>
       </nav>
 
       <!-- Featured Article -->
-      <a class="blog-featured" href="blog/editing-keypad.html" data-blog-item data-blog-cat="edit">
-        <figure class="blog-featured-img">
-          <img src="assets/screens/v1.2.0/control-davinci.webp" alt="奶猫妙控 DaVinci Resolve 剪辑小键盘" width="1206" height="2622">
-        </figure>
+      <a class="blog-featured" href="blog/layout-work.html" data-blog-item data-blog-cat="daily">
+        <figure class="blog-featured-img"><img src="assets/screens/tutorials-1.2.0-r1/work-01.webp" alt="工作桌面：本次使用演示连接；练习时先在 Mac 文档中放好光标。" width="1206" height="2622"></figure>
         <div class="blog-featured-content">
-          <span class="blog-featured-badge">⭐ 推荐阅读 · 剪辑调色</span>
-          <h2>剪辑师的掌上副控：从 DaVinci 到剪映</h2>
-          <p>同一套实体触感按键与无级旋钮，随前台剪辑软件与工作区智能联动。轻松穿梭时间线、标记打点与参数微调，大幅提升后期剪辑效率。</p>
-          <div class="blog-meta">
-            <time datetime="2026-08-31">2026 年 8 月 31 日</time>
-            <span>·</span>
-            <span>阅读约 5 分钟</span>
-          </div>
+          <span class="blog-featured-badge">⭐ 从这里开始 · 日常效率</span>
+          <h2>工作布局教程：打开键盘、输入文字，再检查撤销与重做</h2>
+          <p>从工作桌面进入实时键盘，练习文本输入、撤销与重做，并找到编辑当前桌面的入口。</p>
+          <div class="blog-meta"><time datetime="2026-09-10">2026-09-10</time><span>·</span><span>阅读约 5 分钟</span></div>
           <span class="blog-read-btn">阅读全文 →</span>
         </div>
       </a>
 
       <!-- Article Grid -->
       <div class="blog-grid" aria-label="更多文章">
-<!-- release-1.2.0-articles:start -->
-        <a class="blog-card" href="blog/layout-work.html" data-blog-item data-blog-cat="remote">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/work-01.webp" alt="奶猫妙控工作布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">远程控制</span>
-          <h3>工作布局教程：打开键盘、输入文字，再检查撤销与重做</h3>
-          <p>从工作桌面进入实时键盘，练习文本输入、撤销与重做，并找到编辑当前桌面的入口。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-launcher.html" data-blog-item data-blog-cat="remote">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/launcher-01.webp" alt="奶猫妙控启动器布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">远程控制</span>
+        <a class="blog-card" href="blog/layout-launcher.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/launcher-01.webp" alt="启动器中的系统应用演示目录；用户设备会同步自己的应用列表。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
           <h3>启动器布局教程：添加一个 Mac App，再更换已有按钮</h3>
           <p>从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
 
-        <a class="blog-card" href="blog/layout-browser.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/browser-01.webp" alt="奶猫妙控浏览器布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">效率输入</span>
+        <a class="blog-card" href="blog/layout-browser.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/browser-01.webp" alt="浏览器桌面包含网址输入、新建标签页、页内搜索和标签页控制。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
           <h3>浏览器布局教程：输入网址、切换标签页，设置启动浏览器</h3>
           <p>演示网址输入面板、标签页操作和“切换后动作”，区分默认浏览器与指定 App。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
 
-        <a class="blog-card" href="blog/layout-media.html" data-blog-item data-blog-cat="remote">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/media-01.webp" alt="奶猫妙控媒体布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">远程控制</span>
-          <h3>媒体布局教程：从正在播放进入菜单，调整进度与播放模式</h3>
-          <p>认识点击轮、MENU、播放模式与进度页，按 Mac 播放器实际支持的能力操作。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-presentation.html" data-blog-item data-blog-cat="presentation">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/presentation-01.webp" alt="奶猫妙控演示布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">演讲汇报</span>
-          <h3>演示布局教程：设置摄像头浮窗，用计时器记录分段</h3>
-          <p>长按进入摄像头与投屏设置，再到演讲计时桌面开始计时、打点和暂停。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-codex.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/codex-01.webp" alt="奶猫妙控氛围编程布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">效率输入</span>
-          <h3>氛围编程布局教程：选任务、打开输入，再检查模型与额度</h3>
-          <p>认识任务键的单击与双击，打开实时键盘，并核对当前任务的模型、推理强度和额度。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-terminal.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/terminal-01.webp" alt="奶猫妙控终端布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">效率输入</span>
-          <h3>终端布局教程：新建会话、改名、打开全屏，再安全结束</h3>
-          <p>从终端桌面操作会话标签、命名与全屏键盘，用只读命令检查真实 Mac shell。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-writing.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/writing-01.webp" alt="奶猫妙控写作布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">效率输入</span>
-          <h3>写作布局教程：按段移动、查找正文，再切到格式桌面</h3>
-          <p>用一份短文练习字词句段范围、文内查找和格式页，按编辑器实际能力核对结果。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-research.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/research-01.webp" alt="奶猫妙控科研布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">效率输入</span>
-          <h3>调研布局教程：把原文与笔记分开保存，再找回这条剪藏</h3>
-          <p>从当前选中文字到手机剪藏夹，演示添加原文、补充笔记、保存和查看详情。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-reading.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/reading-01.webp" alt="奶猫妙控阅读布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">效率输入</span>
-          <h3>阅读布局教程：翻页、搜索目录，再跳到指定页</h3>
-          <p>以 Mac 上的 PDF 为例，逐步打开章节目录、筛选章节和页码跳转面板。</p>
-          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
-        </a>
-
-        <a class="blog-card" href="blog/layout-finance.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/finance-01-calculator.webp" alt="奶猫妙控财务布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">效率输入</span>
+        <a class="blog-card" href="blog/layout-finance.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/finance-01-calculator.webp" alt="依次输入 0.1＋0.2＝，小屏显示 0.3；复制后可在手机其他 App 中使用。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
           <h3>财务布局教程：计算 0.1＋0.2，再一步步生成 SUMIFS 公式</h3>
           <p>从本地计算器到公式参数面板，填写范围、核对生成文本，并区分复制与发送。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
 
-        <a class="blog-card" href="blog/layout-creative.html" data-blog-item data-blog-cat="edit">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/creative-01.webp" alt="奶猫妙控应用创作台布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">剪辑调色</span>
+        <a class="blog-card" href="blog/voice-text-input.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/v1.2.0/remote-text-voice.webp" alt="奶猫妙控文本键盘与语音输入界面" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
+          <h3>文本预编辑与语音速记实战</h3>
+          <p>用奶猫妙控在手机或平板上语音听写，随时修饰草稿，再将整段文字精准发送至 Mac</p>
+          <div class="blog-card-footer"><time datetime="2026-08-31">2026-08-31</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/remote-control-mac.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/v1.2.0/control-studio.webp" alt="奶猫妙控显示 Mac 画面、触控板和滚动控件" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
+          <h3>超低延迟串流：掌中接管 Mac 桌面</h3>
+          <p>用手机或平板低延迟查看 Mac 桌面、操作虚拟触控板、双向惯性滚动，并灵活运用多种输入模式</p>
+          <div class="blog-card-footer"><time datetime="2026-08-31">2026-08-31</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/custom-keypad.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/v1.2.0/layout-editor.webp" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
+          <h3>从零定制你的专属副控小键盘</h3>
+          <p>从预置模板开始，按需组合按键、旋钮、触控板与 Mac 画面预览，打造专属于你的掌上小键盘与副控工作台</p>
+          <div class="blog-card-footer"><time datetime="2026-08-31">2026-08-31</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-codex.html" data-blog-item data-blog-cat="development">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/codex-01.webp" alt="氛围编程桌面，任务名称、状态与额度均为演示数据。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">开发工具</span>
+          <h3>氛围编程布局教程：选任务、打开输入，再检查模型与额度</h3>
+          <p>认识任务键的单击与双击，打开实时键盘，并核对当前任务的模型、推理强度和额度。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-terminal.html" data-blog-item data-blog-cat="development">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/terminal-01.webp" alt="终端紧凑界面：会话与输出均为明确的预览数据。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">开发工具</span>
+          <h3>终端布局教程：新建会话、改名、打开全屏，再安全结束</h3>
+          <p>从终端桌面操作会话标签、命名与全屏键盘，用只读命令检查真实 Mac shell。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-writing.html" data-blog-item data-blog-cat="reading">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/writing-01.webp" alt="写作桌面，文本统计来自演示状态。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">阅读与写作</span>
+          <h3>写作布局教程：按段移动、查找正文，再切到格式桌面</h3>
+          <p>用一份短文练习字词句段范围、文内查找和格式页，按编辑器实际能力核对结果。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-research.html" data-blog-item data-blog-cat="reading">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/research-01.webp" alt="调研桌面的选区和来源预览；图中为明确的演示内容。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">阅读与写作</span>
+          <h3>调研布局教程：把原文与笔记分开保存，再找回这条剪藏</h3>
+          <p>从当前选中文字到手机剪藏夹，演示添加原文、补充笔记、保存和查看详情。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-reading.html" data-blog-item data-blog-cat="reading">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/reading-01.webp" alt="阅读桌面显示预览 App 的演示 PDF 与当前位置。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">阅读与写作</span>
+          <h3>阅读布局教程：翻页、搜索目录，再跳到指定页</h3>
+          <p>以 Mac 上的 PDF 为例，逐步打开章节目录、筛选章节和页码跳转面板。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-creative.html" data-blog-item data-blog-cat="creative">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/creative-01.webp" alt="Blender 演示状态下的应用创作台，控制名称对应建模场景。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">创作与演讲</span>
           <h3>应用创作台教程：用 Blender 检查适配、选择与视角控制</h3>
           <p>先确认前台软件与控制名称，再用 Blender 默认键位做选择、模式和视角练习。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
 
-        <a class="blog-card" href="blog/layout-sampler.html" data-blog-item data-blog-cat="edit">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/sampler-01.webp" alt="奶猫妙控采样布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">剪辑调色</span>
+        <a class="blog-card" href="blog/layout-presentation.html" data-blog-item data-blog-cat="creative">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/presentation-01.webp" alt="演讲辅助桌面，摄像头与手机投屏按钮相邻。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">创作与演讲</span>
+          <h3>演示布局教程：设置摄像头浮窗，用计时器记录分段</h3>
+          <p>长按进入摄像头与投屏设置，再到演讲计时桌面开始计时、打点和暂停。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/editing-keypad.html" data-blog-item data-blog-cat="creative">
+          <figure class="blog-card-thumb"><img src="assets/screens/v1.2.0/control-davinci.webp" alt="奶猫妙控的 DaVinci Resolve 剪辑小键盘" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">创作与演讲</span>
+          <h3>剪辑师的掌上副控：从 DaVinci 到剪映</h3>
+          <p>深入了解奶猫妙控一体创作工作台：一套小键盘智能联动 DaVinci Resolve、Adobe Premiere Pro、Final Cut Pro 与剪映专业版</p>
+          <div class="blog-card-footer"><time datetime="2026-08-31">2026-08-31</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/presentation-tools.html" data-blog-item data-blog-cat="creative">
+          <figure class="blog-card-thumb"><img src="assets/screens/v1.2.0/control-presentation-assist.webp" alt="奶猫妙控演示辅助小键盘，包含激光笔、提词器、音效、表情和弹幕" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">创作与演讲</span>
+          <h3>告别翻页笔：手机变身智能演说总控</h3>
+          <p>用手机掌控 Mac 演示全流程：无线翻页、体感激光笔、屏幕放大镜、智能提词器、现场音效与互动弹幕</p>
+          <div class="blog-card-footer"><time datetime="2026-08-31">2026-08-31</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-media.html" data-blog-item data-blog-cat="audio">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/media-01.webp" alt="媒体桌面显示演示曲目“午后练习”，本次没有连接真实播放器。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">声音与娱乐</span>
+          <h3>媒体布局教程：从正在播放进入菜单，调整进度与播放模式</h3>
+          <p>认识点击轮、MENU、播放模式与进度页，按 Mac 播放器实际支持的能力操作。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/layout-sampler.html" data-blog-item data-blog-cat="audio">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/sampler-01.webp" alt="奶猫妙控 1.2.0 的采样操作界面；截图来自 App 的本机采样器，使用可播放的合成示例鼓声。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">声音与娱乐</span>
           <h3>采样布局教程：载入示例声音，试听并调整声音衔接</h3>
           <p>从声音库开始，认识鼓垫与采样菜单，再打开声音编辑页检查音量、衔接和细调。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
 
-        <a class="blog-card" href="blog/layout-arcade.html" data-blog-item data-blog-cat="remote">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/arcade-01.webp" alt="奶猫妙控游戏布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">远程控制</span>
+        <a class="blog-card" href="blog/layout-arcade.html" data-blog-item data-blog-cat="audio">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/arcade-01.webp" alt="足球演示会话中的 P1 原生手柄与动作标签。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">声音与娱乐</span>
           <h3>街机布局教程：进入大厅、认领手柄，再打开游戏菜单</h3>
           <p>说明 Mac 游戏大厅、手机玩家编号与 LED 菜单的使用流程，区分街机手柄与系统虚拟手柄。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
 
-        <a class="blog-card" href="blog/layout-smart-home.html" data-blog-item data-blog-cat="settings">
-          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/smart-home-01.webp" alt="奶猫妙控智能家居布局" width="1206" height="2622" loading="lazy"></figure>
-          <span class="blog-card-tag">系统指南</span>
+        <a class="blog-card" href="blog/layout-smart-home.html" data-blog-item data-blog-cat="home">
+          <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/smart-home-01.webp" alt="奶猫妙控 1.2.0 的智能家居操作界面；截图中的书桌灯、窗帘等由本地交互式演示服务提供。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">家居生活</span>
           <h3>智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读</h3>
           <p>从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
-<!-- release-1.2.0-articles:end -->
-        <a class="blog-card" href="blog/voice-text-input.html" data-blog-item data-blog-cat="input">
-          <figure class="blog-card-thumb">
-            <img src="assets/screens/v1.2.0/remote-text-voice.webp" alt="奶猫妙控文本与语音输入" width="1206" height="2622" loading="lazy">
-          </figure>
-          <span class="blog-card-tag">效率输入</span>
-          <h3>文本预编辑与语音速记实战</h3>
-          <p>在手机上口述转写与自由修饰错别字，再整段投送至 Mac 目标光标，避免反复修改。</p>
-          <div class="blog-card-footer">
-            <time datetime="2026-08-31">2026-08-31</time>
-            <span>阅读约 4 分钟 →</span>
-          </div>
-        </a>
-
-        <a class="blog-card" href="blog/presentation-tools.html" data-blog-item data-blog-cat="presentation">
-          <figure class="blog-card-thumb">
-            <img src="assets/screens/v1.2.0/control-presentation-assist.webp" alt="奶猫妙控演示辅助小键盘" width="1206" height="2622" loading="lazy">
-          </figure>
-          <span class="blog-card-tag">演讲汇报</span>
-          <h3>告别翻页笔：手机变身智能演说总控</h3>
-          <p>虚拟激光笔、自适应提词器与现场氛围音效，走下讲台依然自如掌控演示放映。</p>
-          <div class="blog-card-footer">
-            <time datetime="2026-08-31">2026-08-31</time>
-            <span>阅读约 5 分钟 →</span>
-          </div>
-        </a>
-
-        <a class="blog-card" href="blog/remote-control-mac.html" data-blog-item data-blog-cat="remote">
-          <figure class="blog-card-thumb">
-            <img src="assets/screens/v1.2.0/control-studio.webp" alt="奶猫妙控远程桌面串流" width="1206" height="2622" loading="lazy">
-          </figure>
-          <span class="blog-card-tag">远程控制</span>
-          <h3>超低延迟串流：掌中接管 Mac 桌面</h3>
-          <p>低延迟桌面原画串流、虚拟触控板与多任务窗口漫游，在手机上轻松操控 Mac。</p>
-          <div class="blog-card-footer">
-            <time datetime="2026-08-31">2026-08-31</time>
-            <span>阅读约 6 分钟 →</span>
-          </div>
-        </a>
-
-        <a class="blog-card" href="blog/custom-keypad.html" data-blog-item data-blog-cat="edit">
-          <figure class="blog-card-thumb">
-            <img src="assets/screens/v1.2.0/layout-editor.webp" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy">
-          </figure>
-          <span class="blog-card-tag">自定义副控</span>
-          <h3>从零定制你的专属副控小键盘</h3>
-          <p>自由网格排布、无级旋钮阻尼调节与快捷动作绑定，打造契合习惯的专属小键盘。</p>
-          <div class="blog-card-footer">
-            <time datetime="2026-08-31">2026-08-31</time>
-            <span>阅读约 6 分钟 →</span>
-          </div>
-        </a>
 
         <a class="blog-card" href="blog/mac-settings.html" data-blog-item data-blog-cat="settings">
-          <figure class="blog-card-thumb mac-thumb">
-            <img src="assets/screens/macos-adapter.webp?v=20260831d" alt="奶猫妙控 Mac 端连接二维码" width="944" height="1196" loading="lazy">
-          </figure>
-          <span class="blog-card-tag">系统指南</span>
+          <figure class="blog-card-thumb"><img src="assets/screens/macos-adapter.webp?v=20260831d" alt="奶猫妙控 Mac 端显示配对二维码和连接状态" width="944" height="1196" loading="lazy"></figure>
+          <span class="blog-card-tag">连接与设置</span>
           <h3>macOS 权限配置与安全连接指南</h3>
-          <p>辅助功能与屏幕录制授权排查，以及局域网本地点对点通信安全架构解析。</p>
-          <div class="blog-card-footer">
-            <time datetime="2026-08-31">2026-08-31</time>
-            <span>阅读约 5 分钟 →</span>
-          </div>
+          <p>深入了解奶猫妙控 Mac 端的扫码配对、系统权限设置、专业软件智能识别与状态管理</p>
+          <div class="blog-card-footer"><time datetime="2026-08-31">2026-08-31</time><span>阅读约 5 分钟 →</span></div>
         </a>
       </div>
     </div>
