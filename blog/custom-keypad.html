@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="从预置模板开始，按需组合按键、旋钮、触控板与 Mac 画面预览，打造专属于你的掌上小键盘与副控工作台">
+  <meta name="description" content="从工作布局进入编辑器，添加按键、绑定操作、调整尺寸与外观，再连接 Mac 试用，逐步做出适合自己的桌面。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="从零定制你的专属副控小键盘｜奶猫妙控">
+  <meta property="og:title" content="从一颗按键开始，定制你的 Mac 副控｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/custom-keypad">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-08-31">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="从零定制你的专属副控小键盘｜奶猫妙控">
-  <meta name="twitter:description" content="自由网格排布、无级旋钮阻尼调节与快捷动作绑定，打造契合习惯的专属小键盘">
+  <meta name="twitter:title" content="从一颗按键开始，定制你的 Mac 副控｜奶猫妙控">
+  <meta name="twitter:description" content="从工作布局进入编辑器，添加按键、绑定操作、调整尺寸与外观，再连接 Mac 试用，逐步做出适合自己的桌面。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp">
+  <meta property="og:description" content="从工作布局进入编辑器，添加按键、绑定操作、调整尺寸与外观，再连接 Mac 试用，逐步做出适合自己的桌面。">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/custom-keypad">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +25,26 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>从零定制你的专属副控小键盘｜奶猫妙控</title>
+  <title>从一颗按键开始，定制你的 Mac 副控｜奶猫妙控</title>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "从零定制你的专属副控小键盘",
-    "description": "从现成模板起步，自由组合按键、旋钮、触控板与实时桌面串流画面，构建契合个人肌肉记忆的终极副控",
-    "datePublished": "2026-08-31",
-    "dateModified": "2026-08-31",
-    "author": { "@type": "Organization", "name": "奶猫妙控" },
-    "publisher": { "@type": "Organization", "name": "奶猫妙控" },
-    "image": "https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp",
-    "mainEntityOfPage": "https://cream-deck.vercel.app/blog/custom-keypad"
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "从一颗按键开始，定制你的 Mac 副控",
+  "description": "从工作布局进入编辑器，添加按键、绑定操作、调整尺寸与外观，再连接 Mac 试用，逐步做出适合自己的桌面。",
+  "datePublished": "2026-08-31",
+  "dateModified": "2026-09-10",
+  "author": {
+    "@type": "Organization",
+    "name": "奶猫妙控"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "奶猫妙控"
+  },
+  "image": "https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp",
+  "mainEntityOfPage": "https://cream-deck.vercel.app/blog/custom-keypad"
+}
   </script>
 </head>
 <body class="content-page article-page">
@@ -73,9 +80,9 @@
 
   <main id="main" class="article-shell">
     <header class="article-header">
-      <a href="../blog.html">← 博客专栏 / 自定义副控小键盘</a>
-      <h1>从零定制你的专属副控小键盘</h1>
-      <p>自由物理网格、无级旋钮阻尼与 AppleScript 快捷宏配置指南 · 阅读约 6 分钟</p>
+      <a href="../blog.html">← 博客专栏 / 基础定制</a>
+      <h1>从一颗按键开始，定制你的 Mac 副控</h1>
+      <p>从预设布局开始，掌握网格尺寸、操作绑定与外观调节 · 阅读约 6 分钟</p>
     </header>
 
     <figure class="article-cover article-cover-phone">
@@ -83,70 +90,61 @@
     </figure>
 
     <article class="article-body">
-      <p class="article-lead">最顺手的工具，永远是契合自己肌肉记忆的工具。在奶猫妙控中，每一块“小键盘”都不是写死的固定模版，而是一页可以自由定义的无级物理网格画布。</p>
-      <p>你可以像拼积木一样将触控按键、高精度旋钮、阻尼滑块、多点触控板以及 Mac 实时画面预览随心组合，打造完全属于你个人双手操作习惯的终极副控控制台。</p>
+      <p class="article-lead">奶猫妙控允许你将闲置的 iPhone 或 iPad 打造为趁手的 Mac 专属副控台。无论你需要快速发送常用文案、一键触发高频快捷键，还是通过“应用创作台”适配专业软件，都可以通过可视化的桌面编辑器自由定制。</p>
+      <p>本文将带你从一个基础预设出发，逐步掌握进入编辑模式、添加按键、配置宽高尺寸、绑定具体动作以及调整外观样式的完整流程。</p>
 
       <aside class="article-highlight">
-        <strong>核心原则：</strong>从官方成熟模板出发，做减法提炼核心操作，将高频按键放大至拇指黄金区，再利用“多桌面分页”收纳次要动作，比从零搭建效率提升 3 倍以上。
+        <strong>新手建议：</strong>初次使用时，建议先从内置的“工作”或“启动器”等预设布局开始体验，熟悉基础交互后再按需增删按键。
       </aside>
 
-      <h2>一、为什么物理小键盘往往不如“智能触控小键盘”？</h2>
-      <p>许多创作者和程序员都曾尝试过购买桌面物理宏按键硬件（Macro Pad / Stream Deck），但在实际使用中常常遇到三大痛点：</p>
-      <ul>
-        <li><strong>按键功能固定，跨软件切换繁琐：</strong>物理按键无法随当前活跃的 Mac 窗口动态自适应变化，切到剪辑软件时按键标签依然停留在日常浏览器操作。</li>
-        <li><strong>组件形态单一：</strong>绝大多数硬件仅有方形按键，缺乏微调时间线所需的无级旋钮、滚轮以及支持惯性滚动的精准触控板。</li>
-        <li><strong>缺乏视觉监看反馈：</strong>无法实时将 Mac 屏幕焦点的渲染进度、Agent 状态或画中画画面嵌入小键盘中。</li>
-      </ul>
-      <p>奶猫妙控将你的 iPhone 或 iPad 直接变为全功能动态智能副控，不仅支持毫秒级无线低延迟直连，更能随 Mac 活动窗口自动载入专属方案。</p>
+      <h2>一、从预设布局开始探索</h2>
+      <p>奶猫妙控内置了覆盖日常办公、浏览器管理、多媒体播控、代码开发与设计创作的多种场景预设。在 App 底部的“布局”列表中，你可以直接点击进入任意方案试用。</p>
 
-      <h2>二、从现成专业模板起步</h2>
-      <p>为了让新用户无需从白纸开始摸索，奶猫妙控内置了经过深度人机工学测试的成熟预置布局：</p>
+      <h2>二、进入当前桌面编辑模式</h2>
+      <p>在 App 底部点<strong>“布局 → 编辑当前桌面”</strong>，进入桌面编辑器。先选择要调整的组件，再修改它的位置、外观或操作。</p>
       <ul>
-        <li><strong>Codex 智能编程控制台：</strong>实时键盘、轨迹球光标、上下文模型切换、思考深度与一键快速审批。</li>
-        <li><strong>DaVinci Resolve 调色剪辑台：</strong>时间线无级穿梭旋钮、波纹剪切、素材标记打点与调色轮盘联动。</li>
-        <li><strong>Keynote / PowerPoint 演说总控：</strong>幻灯片前进后退、一键黑屏、体感激光笔与智能提词器。</li>
-        <li><strong>Apple Music / Spotify 媒体播控：</strong>大尺寸播放暂停、曲目穿梭、红心收藏与无级音量滑块。</li>
+        <li>可以长按并拖拽按键调整其在网格中的摆放位置；</li>
+        <li>点<strong>“添加组件”</strong>，选择“按键”，再为新按钮配置操作。</li>
+        <li>轻点已有按键，可打开外观与属性配置面板。</li>
       </ul>
-      <p>进入应用后，长按任意预置布局即可选择“复制并自定”，在此基础上删减冗余、增加个人专属动作，几分钟内即可完成定制。</p>
 
       <figure class="article-figure article-figure-phone">
         <img src="../assets/screens/v1.2.0/layout-switcher.webp" alt="奶猫妙控显示多块软件小键盘" width="1206" height="2622" loading="lazy">
-        <figcaption>长按屏幕并水平轻扫，在不同软件的专属控制台间毫秒级切换</figcaption>
+        <figcaption>从布局列表选择一个预设，再进入当前桌面的编辑器。</figcaption>
       </figure>
 
-      <h2>三、四大核心控件体系与排布技巧</h2>
-      <p>在编辑器中长按画布即可调出控件库，合理选配不同形态的组件是提升操作流畅度的关键：</p>
-      
-      <h3>1. 触控按键（Buttons）—— 瞬态触发与组合热键</h3>
-      <p>支持 1×1 到 4×4 自由尺寸拉伸。建议将“播放/暂停”、“保存 (Cmd+S)”、“导出”等最关键命令设为 2×2 大按键并放置于屏幕下半部的拇指热区，实现盲操触达；而将撤销、重做、格式化等辅助命令设为 1×1 紧凑排列在顶部。</p>
-
-      <h3>2. 多向旋钮与无级滑块（Knobs &amp; Sliders）—— 连续微调操作</h3>
-      <p>为连续参数调节而生。支持自定义“单圈步长”与“阻尼灵敏度”。非常适合绑定时间线逐帧前进/后退、音量增益、画笔粗细调节、图层透明度与色彩饱和度微调。</p>
-
-      <h3>3. 虚拟触控板（Trackpad）—— 远距离精准控制</h3>
-      <p>集成了光标精准定位、双指上下惯性平滑滚动与双击拖拽手势。在 iPad 或大屏 iPhone 上排布一块触控板，可以让你的左手随时接管光标微调与页面滚动。</p>
-
-      <h3>4. 实时画中画监看（Screen Stream Preview）—— 状态监控</h3>
-      <p>可将 Mac 屏幕的特定区域（如终端运行日志、渲染输出窗口、AI Agent 执行进度）以 Retina 画质实时串流至小键盘局部，无需抬头即可掌控全局。</p>
-
-      <h2>四、快捷宏与自动化脚本绑定实战</h2>
-      <p>每一个按键不仅能发送单个基础快捷键，还能绑定强大的复合指令：</p>
+      <h2>三、添加按键并设置尺寸宽高</h2>
+      <p>奶猫妙控支持自由调节每个组件的占用网格大小。在外观设置的“尺寸”区域中：</p>
       <ul>
-        <li><strong>全局系统热键：</strong>如 <code>Cmd + Shift + 4</code>（区域截图）、<code>Cmd + Option + Esc</code>（强制退出）、<code>Cmd + Space</code>（呼出 Spotlight/Raycast）。</li>
-        <li><strong>多媒体与硬件指令：</strong>静音切换、显示器亮度增减、切歌、锁屏与睡眠。</li>
-        <li><strong>脚本与多步骤宏：</strong>触发 Mac 端 AppleScript 自动化脚本、执行终端 Shell 指令或连续模拟键盘宏操作。</li>
+        <li><strong>宽度调节：</strong>横屏握持下支持 1 到 8 格宽度，竖屏握持下支持 1 到 4 格宽度；</li>
+        <li><strong>高度调节：</strong>支持 1 到 8 格高度。</li>
+      </ul>
+      <p>你可以根据按键的高频程度，将其设置为小巧的单格图标，或设置为宽幅的大按键与多行显示面板。</p>
+
+      <h2>四、绑定动作与快捷指令</h2>
+      <p>在组件动作配置面板中，你可以为按键指定具体的执行逻辑：</p>
+      <ul>
+        <li><strong>发送文字：</strong>输入常用回复、客服文案或常用代码段，并可设置输入后是否追加回车；</li>
+        <li><strong>系统快捷键：</strong>录入如 <code>⌘C</code>、<code>⌘V</code>、<code>^Tab</code> 等单键或组合快捷键；</li>
+        <li><strong>启动 Mac App：</strong>搜索并绑定 Mac 上安装的常用软件，实现一键唤起；</li>
+        <li><strong>多步骤自动化：</strong>将文字输入、延时等待与快捷键组合串联执行。</li>
       </ul>
 
-      <h2>五、多桌面管理与智能感知自动加载</h2>
-      <p>如果单屏控件过多导致拥挤，可以点击右上角“添加页面”创建多桌面。例如为 DaVinci Resolve 创建“剪辑页”、“调色页”与“导出页”，通过边缘轻扫即可平滑翻页。</p>
-      <p>更棒的是，只要在 Mac 端开启辅助功能权限，当你在 Mac 上从 VSCode 切换到 Final Cut Pro 时，奶猫妙控将在 16ms 内自动为你换上对应的专属小键盘，完全无需手动干预。</p>
+      <h2>五、调整配色、形状与图标外观</h2>
+      <p>为了让控制面板一目了然，你可以为按键设置丰富的视觉样式：</p>
+      <ul>
+        <li><strong>颜色：</strong>为按钮选择容易区分的颜色。启动器的应用按钮还可使用“跟随 App”配色。</li>
+        <li><strong>形状轮廓：</strong>支持圆角方形、圆形与圆角菱形等多种轮廓切换；</li>
+        <li><strong>图标符号：</strong>从内置图标库中挑选符合功能的符号，或保持纯文本展示。</li>
+      </ul>
 
-      <h2>六、结语：打造属于你的肌肉记忆</h2>
-      <p>搭建一套顺手的控制台是一个渐进的过程。建议先从最常用的 3 到 5 个核心按键起步，在日常实际使用中发现卡点并随时微调位置与尺寸。随着使用时间的推移，这块屏幕将成为你双手最自然的延伸。</p>
+      <h2>六、保存并在 Mac 上试用</h2>
+      <p>完成编辑后，点击右上角<strong>“完成”</strong>保存配置。在 Mac 端打开目标文档或软件，轻点手机上的按键测试响应。</p>
+      <p>需要针对专业软件进行精细控制时，可以进入<strong>“应用创作台”</strong>——在识别到已支持的前台应用后，创作台会自动切换为针对该软件的专属操作面板。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="editing-keypad.html">← 剪辑师的掌上副控：从 DaVinci 到剪映</a>
-      <a href="presentation-tools.html">告别翻页笔：手机变身智能演说总控 →</a>
+      <a href="editing-keypad.html">← 用手机辅助剪辑：从浏览时间线到分割与撤销</a>
+      <a href="presentation-tools.html">用手机辅助演讲：翻页、设置浮窗与分段计时 →</a>
     </nav>
   </main>
 

@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff1df">
-  <meta name="description" content="用奶猫妙控在手机或平板上语音听写，随时修饰草稿，再将整段文字精准发送至 Mac">
+  <meta name="description" content="切到文本模式，在手机上听写、修改错别字，再用上屏按钮输入到 Mac。了解文本模式与实时模式的区别。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="文本预编辑与语音速记实战｜奶猫妙控">
+  <meta property="og:title" content="先在手机上口述，再把文字输入到 Mac｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/remote-text-voice.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/voice-text-input">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-08-31">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="文本预编辑与语音速记实战｜奶猫妙控">
-  <meta name="twitter:description" content="在手机上口述转写与自由修饰错别字，再整段投送至 Mac 目标光标">
+  <meta name="twitter:title" content="先在手机上口述，再把文字输入到 Mac｜奶猫妙控">
+  <meta name="twitter:description" content="切到文本模式，在手机上听写、修改错别字，再用上屏按钮输入到 Mac。了解文本模式与实时模式的区别。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/remote-text-voice.webp">
+  <meta property="og:description" content="切到文本模式，在手机上听写、修改错别字，再用上屏按钮输入到 Mac。了解文本模式与实时模式的区别。">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/voice-text-input">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +25,26 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>文本预编辑与语音速记实战｜奶猫妙控</title>
+  <title>先在手机上口述，再把文字输入到 Mac｜奶猫妙控</title>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "文本预编辑与语音速记实战",
-    "description": "在手机或平板上说话，修改识别结果，再把整段文字精准发送到 Mac，告别直接上屏的频繁退格",
-    "datePublished": "2026-08-31",
-    "dateModified": "2026-08-31",
-    "author": { "@type": "Organization", "name": "奶猫妙控" },
-    "publisher": { "@type": "Organization", "name": "奶猫妙控" },
-    "image": "https://cream-deck.vercel.app/assets/screens/v1.2.0/remote-text-voice.webp",
-    "mainEntityOfPage": "https://cream-deck.vercel.app/blog/voice-text-input"
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "先在手机上口述，再把文字输入到 Mac",
+  "description": "切到文本模式，在手机上听写、修改错别字，再用上屏按钮输入到 Mac。了解文本模式与实时模式的区别。",
+  "datePublished": "2026-08-31",
+  "dateModified": "2026-09-10",
+  "author": {
+    "@type": "Organization",
+    "name": "奶猫妙控"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "奶猫妙控"
+  },
+  "image": "https://cream-deck.vercel.app/assets/screens/v1.2.0/remote-text-voice.webp",
+  "mainEntityOfPage": "https://cream-deck.vercel.app/blog/voice-text-input"
+}
   </script>
 </head>
 <body class="content-page article-page">
@@ -73,9 +80,9 @@
 
   <main id="main" class="article-shell">
     <header class="article-header">
-      <a href="../blog.html">← 博客专栏 / 文本与语音生产力</a>
-      <h1>文本预编辑与语音速记实战</h1>
-      <p>先口述转写、自由润色，再将整段文字原子化注入 Mac 当前光标 · 阅读约 6 分钟</p>
+      <a href="../blog.html">← 博客专栏 / 文本与语音输入</a>
+      <h1>先在手机上口述，再把文字输入到 Mac</h1>
+      <p>先口述草稿、手机校对再安全发送至 Mac · 阅读约 5 分钟</p>
     </header>
 
     <figure class="article-cover article-cover-phone">
@@ -83,49 +90,30 @@
     </figure>
 
     <article class="article-body">
-      <p class="article-lead">在日常使用 Mac 处理文档、写代码或回复即时通讯软件时，传统语音输入的体验往往伴随着诸多痛点：边说边上屏极易出现同音错别字，若在终端或代码编辑器中直接口述，错误的断句与多余标点还会直接破坏代码结构。</p>
-      <p>奶猫妙控推出了创新的<strong>“文本预编辑”（Text Staging）</strong>机制与双模语音输入，将手机打造为 Mac 的掌上输入缓冲区，彻底颠覆跨设备输入体验。</p>
+      <p class="article-lead">在长文写作、消息回复或会议纪要整理时，直接在电脑端语音输入容易因环境杂音或同音词识别偏差造成输入错误。奶猫妙控采用“先在手机端起草、校对无误后一键发送”的设计理念，兼顾速度与准确度。</p>
 
-      <aside class="article-highlight">
-        <strong>三步黄金流：</strong>① 掌上流畅口述转写 → ② 移动光标精准修饰错别字 → ③ 一键整段注入 Mac 当前光标。
-      </aside>
+      <aside class="article-highlight"><strong>练习提示：</strong>先切到草稿模式，再口述、修改，最后输入到 Mac。发送前在电脑正文中放好光标。</aside>
 
-      <h2>一、为什么“先暂存、后发送”能带来质的飞跃？</h2>
-      <p>直接语音上屏的最大问题在于<strong>网络波动与语速停顿造成的不可预测性</strong>。奶猫妙控的暂存文本框具有三大优势：</p>
+      <h2>一、文本草稿模式与实时按键的区别</h2>
       <ul>
-        <li><strong>隔离错误输入：</strong>即使环境嘈杂识别出杂音文字，也只停留在手机暂存区，绝不污染 Mac 端的终稿文档；</li>
-        <li><strong>无缝混合编辑：</strong>口述完第一句后，可直接在手机屏幕上点击修改错别字，随后再次点击麦克风继续口述第二句，之前的修改内容<strong>绝对不会被重置或覆盖</strong>；</li>
-        <li><strong>原子化投递（Atomic Injection）：</strong>点击“发送”后，整篇数百字内容在 15ms 内通过 UTF-8 编码原生协议一次性键入 Mac，无论光标在 Notion、Obsidian、微信还是终端窗口，均分毫不差。</li>
+        <li><strong>文本模式：先编辑草稿：</strong>专为长文段落与口述速记设计。文本仅在手机端本地暂存，点击“上屏”按钮后，整段文字一次性投递到 Mac 当前焦点光标处，避免边识别边打乱电脑光标。</li>
+        <li><strong>实时模式：边输入边传到 Mac：</strong>专为终端命令与快捷键设计，每一次击键（如 <code>Ctrl+C</code>、<code>Tab</code>、<code>Esc</code>、方向键）即按即发。</li>
       </ul>
 
-      <h2>二、高保真无线麦克风模式：将手机变身为 Mac 的外置声卡</h2>
-      <p>除了语音转文字外，奶猫妙控还支持纯净的<strong>“无线麦克风模式”</strong>：</p>
-      <ul>
-        <li>iPhone / iPad 搭载的多阵列麦克风硬件素质通常远优于 MacBook 内置麦克风；</li>
-        <li>长按麦克风图标，手机会以 48kHz 无损低延迟音频流直接无线接入 Mac 系统的 CoreAudio 音频总线；</li>
-        <li>非常适合用于远程视频会议（Zoom / 腾讯会议 / 飞书）、播客录音、即时语音消息发送与游戏连麦。</li>
-      </ul>
+      <h2>二、语音速记与校对四步流程</h2>
+      <ol class="article-steps-list">
+        <li><strong>打开文本模式：</strong>从工作桌面的“实时键盘”进入输入面板，点顶部的“文本”。App 会记住上次使用的模式，先确认选中“文本”，再在草稿区输入。</li>
+        <li><strong>轻点麦克风开始口述：</strong>点击界面底部的“麦克风”按键，调用 iOS 系统的语音识别引擎，将口述内容实时转录为文字（语音识别的联网与离线处理取决于 iOS 系统版本与语言设置）。</li>
+        <li><strong>手机端检查与修改：</strong>再次点击麦克风停止录音。在手机触控屏上直接修改错别字、微调分段与标点符号。</li>
+        <li><strong>输入到 Mac：</strong>在 Mac 的测试文档正文中放好光标，再点手机输入面板上的向上箭头（“上屏”）。检查文字出现在预期位置；它只负责输入，不会替你选择聊天对象或提交消息。</li>
+      </ol>
 
-      <h2>三、四大高生产力软件联动组合拳</h2>
-      
-      <h3>1. 搭配 Raycast / Spotlight</h3>
-      <p>在手机上口述长搜索词或 AI Prompt，一键发送至 Raycast AI 对话框，免去键盘敲击。</p>
-
-      <h3>2. 搭配 Notion / Obsidian</h3>
-      <p>躺在沙发上口述会议纪要与读书笔记灵感，在掌上完成结构化分段后，一键投送至知识库大纲。</p>
-
-      <h3>3. 搭配 飞书 / 微信 / Slack</h3>
-      <p>快速回复同事的复杂业务长文，在手机端完成错别字精修后再发送，专业严谨。</p>
-
-      <h3>4. 搭配 VSCode / Xcode 注释</h3>
-      <p>为复杂算法函数快速口述详细的中文业务逻辑注释与 JSDoc 文档。</p>
-
-      <h2>四、隐私与安全：本地转写零泄露</h2>
-      <p>奶猫妙控的语音识别引擎采用 iOS 原生端侧神经网络模型，所有的录音数据均在设备本地完成离线计算与转写。音频数据与文字草稿绝不上传至任何云端第三方服务器，确保商业秘密与个人隐私万无一失。</p>
+      <h2>三、常用文案载入与一键清空</h2>
+      <p>在输入面板点“历史记录”，可以找回之前的文字并填回草稿，修改后再上屏。清理草稿前先确认需要的内容已经保留，避免把还没用完的文字一起清掉。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="presentation-tools.html">← 告别翻页笔：手机变身智能演说总控</a>
-      <a href="remote-control-mac.html">超低延迟串流：掌中接管 Mac 桌面 →</a>
+      <a href="presentation-tools.html">← 用手机辅助演讲：翻页、设置浮窗与分段计时</a>
+      <a href="remote-control-mac.html">在手机上查看并控制 Mac 桌面 →</a>
     </nav>
   </main>
 

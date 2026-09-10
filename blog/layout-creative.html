@@ -8,15 +8,17 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="应用创作台教程：用 Blender 检查适配、选择与视角控制｜奶猫妙控">
+  <meta property="og:title" content="应用创作台入门：从 Blender 的选择与视角操作开始｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/creative-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-creative">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="应用创作台教程：用 Blender 检查适配、选择与视角控制｜奶猫妙控">
+  <meta name="twitter:title" content="应用创作台入门：从 Blender 的选择与视角操作开始｜奶猫妙控">
   <meta name="twitter:description" content="先确认前台软件与控制名称，再用 Blender 默认键位做选择、模式和视角练习。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/creative-01.webp">
+  <meta property="og:description" content="先确认前台软件与控制名称，再用 Blender 默认键位做选择、模式和视角练习。">
+  <meta name="keywords" content="奶猫妙控,Cream Deck,应用创作台布局教程,操作步骤">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-creative">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +26,14 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>应用创作台教程：用 Blender 检查适配、选择与视角控制｜奶猫妙控</title>
+  <title>应用创作台入门：从 Blender 的选择与视角操作开始｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "应用创作台教程：用 Blender 检查适配、选择与视角控制",
+      "headline": "应用创作台入门：从 Blender 的选择与视角操作开始",
       "description": "先确认前台软件与控制名称，再用 Blender 默认键位做选择、模式和视角练习。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
@@ -67,7 +69,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "应用创作台教程：用 Blender 检查适配、选择与视角控制",
+          "name": "应用创作台入门：从 Blender 的选择与视角操作开始",
           "item": "https://cream-deck.vercel.app/blog/layout-creative"
         }
       ]
@@ -131,7 +133,7 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 应用创作台</a>
-      <h1>应用创作台教程：用 Blender 检查适配、选择与视角控制</h1>
+      <h1>应用创作台入门：从 Blender 的选择与视角操作开始</h1>
       <p>先确认前台软件与控制名称，再用 Blender 默认键位做选择、模式和视角练习。</p>
       <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
     </header>
@@ -140,40 +142,40 @@
       <figcaption>Blender 演示状态下的应用创作台，控制名称对应建模场景。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">应用创作台会根据 Mac 前台软件改变控制含义。与其一次尝试所有控件，不如先用 Blender 的临时场景验证“选择、模式、视角”这三组操作，再决定是否需要调整布局。</p>
-<aside class="article-highlight"><strong>本文的演示范围：</strong>配图使用 Blender 示例工作状态，横竖屏和编辑入口在 App 内操作。建模练习依据当前适配映射编写，请在自己的 Blender 临时场景中逐项确认效果。</aside>
-<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>在 Mac 打开 Blender，使用默认快捷键配置和一份临时场景，把鼠标放在 3D 视图中。自定义键位、焦点落在文本框、正在输入变换数值，都可能改变快捷键的效果。</li></ul>
-<h2>1. 打开 Blender 后进入应用创作台</h2>
-<p>在 App 底部点“布局”，在列表中找到“应用创作台”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。</p>
-<p>检查上方软件信息是否对应 Blender，再看各按钮是否显示“聚焦所选”“全选”“取消选择”等与当前软件相符的名称。截图中的“桌面小物.blend”是演示工程名，不是你需要下载的文件。</p>
-<p>如果还显示另一个软件的操作，先把 Blender 切到 Mac 前台，等状态更新；不要在错误的软件映射下连续按键。</p>
+<p class="article-lead">应用创作台会为已支持的前台软件显示对应操作。这篇先在 Blender 的 3D 视图里练习选择物体、聚焦所选和切换模式，让你了解按键怎样配合电脑上的工作区域。</p>
+<aside class="article-highlight"><strong>配图说明：</strong>配图使用 Blender 示例工作状态，横竖屏和编辑入口在 App 内操作。建模练习依据当前适配映射编写，请在自己的 Blender 临时场景中逐项确认效果。</aside>
+<h2>开始前</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>在 Mac 打开 Blender，使用默认快捷键配置和一份临时场景，把鼠标放在 3D 视图中。自定义键位、焦点落在文本框、正在输入变换数值，都可能改变快捷键的效果。</li></ul>
+<h2>1. 在 Mac 启动 Blender，进入应用创作台</h2>
+<p>在 Mac 上启动 Blender 并打开一个 3D 练习工程。在 iPhone 底部点击“布局”，在列表中找到并进入“应用创作台”布局。</p>
+<p>观察手机顶部软件状态栏，确认已准确识别出前台应用为“Blender”，下方按键自动呈现为“聚焦所选”“全选”“取消选择”等 3D 视图专用控制。截图中的“桌面小物.blend”为示例工程名，无需额外下载。</p>
+<p>如果手机端仍显示其他软件的按键，将 Blender 窗口在 Mac 端点击置于前台即可自动刷新状态，避免在错误映射下误触按键。</p>
 <figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/creative-01.webp" alt="Blender 演示状态下的应用创作台，控制名称对应建模场景。" width="1206" height="2622" loading="lazy"><figcaption>Blender 演示状态下的应用创作台，控制名称对应建模场景。</figcaption></figure>
-<h2>2. 用全选与取消选择验证输入目标</h2>
-<p>在临时场景中先点“全选”，到 Mac 检查对象选择是否变化；再点“取消选择”，检查选区是否清除。每次只点一下，等待反馈后继续。</p>
-<p>这两个操作能帮助判断焦点是否在 3D 视图。如果你正在编辑一个文字字段，先退出文字输入并把鼠标移回 3D 视图，再重复验证。</p>
-<h2>3. 选择一个对象，试“聚焦所选”</h2>
+<h2>2. 用全选与取消选择验证视口双向联动</h2>
+<p>在 Blender 的 3D 视口中，先点击手机上的“全选”按键，观察 Mac 场景中所有物体是否均被高亮选中；接着点击“取消选择”，确认选区被完整清空。</p>
+<p>这两个基础操作能帮助判断焦点是否准确停留在 3D 视口中。若你此前正在编辑文字属性框，请先退出文字输入并将鼠标移回 3D 视口再行验证。</p>
+<h2>3. 选中模型网格，测试“聚焦所选”与视角环绕</h2>
 <p>在 Blender 里直接选中一个对象，再点手机“聚焦所选”，检查视图是否围绕所选对象调整。随后轻调水平、垂直环绕控制，观察视角变化。</p>
 <p>视角变化与对象变换不同。环绕是观察方向；方向控制上的“移动”“旋转”“缩放”会进入对象变换操作，不应在还没分清它们时连续混用。</p>
-<h2>4. 确认模式切换，再开始编辑</h2>
+<h2>4. 切换编辑模式，安全执行建模调整</h2>
 <p>选中可编辑对象后，点“切换模式”按钮，检查 Blender 当前模式；再次按下返回。处于不同模式时，同一快捷键可能作用于对象、顶点或其他元素。</p>
 <p>先完成选择与模式练习，再使用删除或变换。若需要取消正在进行的 Blender 操作，先在 Mac 按 Escape，确认已回到稳定状态。</p>
-<h2>5. 横放手机，检查常用控制是否顺手</h2>
-<p>把手机横放，查看同一布局的横屏排列。再次确认主要控制的名称，不要只按竖屏时记住的位置操作。</p>
-<p>横屏不会把 Blender 的模式或工程切换到另一份内容；你仍应在 Mac 检查当前对象与视图。</p>
+<h2>5. 将手机横放，体验宽幅双手操控工学</h2>
+<p>把手机横向放置，界面会自动重排为横屏宽幅创作台。双手自然握持，重新确认主要旋钮与功能键的位置，享受符合人体工学的快捷盲操体验。</p>
+<p>横屏适配仅重组 UI 排布，不会改变 Blender 的工程状态或模式设置，在 Mac 屏幕上依然能实时查看当前对象与视口渲染。</p>
 <figure class="article-figure"><img src="../assets/screens/tutorials-1.2.0-r1/creative-02-landscape.webp" alt="实际旋转模拟器后显示的横屏创作台；业务内容仍为 Blender 演示状态。" width="2622" height="1206" loading="lazy"><figcaption>实际旋转模拟器后显示的横屏创作台；业务内容仍为 Blender 演示状态。</figcaption></figure>
-<h2>6. 需要调整时，进入当前桌面编辑</h2>
-<p>点“布局 → 编辑当前桌面”，先检查已有控件及其绑定。修改前记住原来的含义，完成后每次只验证一颗键，避免同时修改整套映射后难以定位问题。</p>
-<p>换到剪辑、绘图或音频软件时，应重新从“确认软件信息与按钮名称”开始。列入适配的软件并不代表所有版本、窗口和专有功能都具有同等支持；需要配套插件的软件按集成包中的 README 安装。</p>
+<h2>6. 进入桌面编辑，自由定制个性化创作台</h2>
+<p>点击“布局 → 编辑当前桌面”，可以根据个人工作流自由调整已有组件的位置与映射绑定。修改前建议记下原始功能，完成后逐颗按键实测验证。</p>
+<p>切换至剪辑、绘图或音频软件时，副控台会按对应配置重新加载。不同版本软件的快捷键若有差异，可参考集成包中的 README 说明进行针对性微调。</p>
 <figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/creative-03-editor.webp" alt="通过现有布局入口打开的创作台编辑器。" width="1206" height="2622" loading="lazy"><figcaption>通过现有布局入口打开的创作台编辑器。</figcaption></figure>
 <p>参考：<a href="https://github.com/buggyblues/cream-deck/releases/download/v1.2.0/CreamDeck-Integrations-1.2.0.zip">下载配套集成与对应软件安装说明</a>。</p>
-<h2>操作不符合预期时</h2>
+<h2>常见问题</h2>
 <h3>软件已打开，控件仍不可用？</h3><p>先核对前台应用、编辑上下文与配套集成状态。只有适配端提供了对应能力，控件才应启用；不能通过强制点亮按钮获得软件没有提供的功能。</p>
 <h3>我的 Blender 操作和教程不同？</h3><p>先检查默认键位、3D 视图焦点和物体／编辑模式，再在 Mac 直接验证该操作。导入的自定义预设会保留自己的绑定，不保证与内置方案相同。</p>
 <p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-launcher.html">← 启动器布局教程：添加一个 Mac App，再更换已有按钮</a>
-      <a href="layout-sampler.html">采样布局教程：载入示例声音，试听并调整声音衔接 →</a>
+      <a href="layout-launcher.html">← 把常用 Mac 软件放进启动器</a>
+      <a href="layout-sampler.html">采样布局入门：载入声音，试听并调整鼓垫 →</a>
     </nav>
   </main>
 

@@ -8,15 +8,17 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="启动器布局教程：添加一个 Mac App，再更换已有按钮｜奶猫妙控">
+  <meta property="og:title" content="把常用 Mac 软件放进启动器｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/launcher-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-launcher">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="启动器布局教程：添加一个 Mac App，再更换已有按钮｜奶猫妙控">
+  <meta name="twitter:title" content="把常用 Mac 软件放进启动器｜奶猫妙控">
   <meta name="twitter:description" content="从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/launcher-01.webp">
+  <meta property="og:description" content="从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。">
+  <meta name="keywords" content="奶猫妙控,Cream Deck,启动器布局教程,操作步骤">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-launcher">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +26,14 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>启动器布局教程：添加一个 Mac App，再更换已有按钮｜奶猫妙控</title>
+  <title>把常用 Mac 软件放进启动器｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "启动器布局教程：添加一个 Mac App，再更换已有按钮",
+      "headline": "把常用 Mac 软件放进启动器",
       "description": "从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
@@ -67,7 +69,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "启动器布局教程：添加一个 Mac App，再更换已有按钮",
+          "name": "把常用 Mac 软件放进启动器",
           "item": "https://cream-deck.vercel.app/blog/layout-launcher"
         }
       ]
@@ -131,7 +133,7 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 启动器</a>
-      <h1>启动器布局教程：添加一个 Mac App，再更换已有按钮</h1>
+      <h1>把常用 Mac 软件放进启动器</h1>
       <p>从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。</p>
       <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
     </header>
@@ -140,9 +142,9 @@
       <figcaption>启动器中的系统应用演示目录；用户设备会同步自己的应用列表。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">把最常打开的 Mac 软件放在手机上，可以省去在 Dock 中反复寻找。这里用系统应用做练习：先认出一颗现有按钮，再打开应用选择器，最后学会检查按钮绑定的到底是哪一个 App。</p>
-<aside class="article-highlight"><strong>本文的演示范围：</strong>配图使用系统应用图标和示例应用目录，添加按钮的过程在 App 内完成。连接你的 Mac 后，应用列表会以那台电脑提供的内容为准。</aside>
-<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>让 Mac 配套端保持运行，等待应用列表同步。截图只使用访达、Safari、备忘录等系统应用的演示目录；你的列表以实际安装的软件为准。</li></ul>
+<p class="article-lead">常用软件不必每次都去 Dock 或应用程序文件夹里找。启动器把它们放成手机上的大图标，点一下就能向 Mac 发出打开请求。这篇从添加一个 Safari 按钮开始，也会介绍怎样替换已有按钮。</p>
+<aside class="article-highlight"><strong>配图说明：</strong>配图使用系统应用图标和示例应用目录，添加按钮的过程在 App 内完成。连接你的 Mac 后，应用列表会以那台电脑提供的内容为准。</aside>
+<h2>开始前</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>让 Mac 配套端保持运行，等待应用列表同步。截图只使用访达、Safari、备忘录等系统应用的演示目录；你的列表以实际安装的软件为准。</li></ul>
 <h2>1. 进入启动器，先检查应用名称</h2>
 <p>在 App 底部点“布局”，在列表中找到“启动器”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。</p>
 <p>每颗大按钮代表一个 Mac App。截图中的图标来自系统应用，并非空白占位。先选一个你能在 Mac 上直接确认的软件，例如 Safari；短按发送打开或激活这个 App 的请求，然后观察 Mac 前台窗口。</p>
@@ -162,14 +164,14 @@
 <h2>5. 需要替换时，使用“更换 App”</h2>
 <p>重新长按已有按钮，点“更换 App”，再从列表中选择另一个软件。这样是在编辑这颗按钮的目标，和新增按钮是两种操作。</p>
 <p>“手动指定应用”用于已知准确 Bundle ID 的情况，例如 com.apple.finder。填好后仍要短按验证，应用名称相似并不能证明绑定正确。</p>
-<h2>操作不符合预期时</h2>
+<h2>常见问题</h2>
 <h3>为什么我的启动器和截图中的应用不同？</h3><p>首次同步会使用连接 Mac 的 Dock 应用信息，之后还可以自行编辑。演示目录只用于截图，不会替换你的真实应用目录。</p>
 <h3>点了按钮，Mac 没出现新窗口？</h3><p>已有应用可能只被激活，不一定新建窗口。先检查 Mac 菜单栏是否切到该应用，再检查安装情况、连接状态与按钮绑定。</p>
 <p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-work.html">← 工作布局教程：打开键盘、输入文字，再检查撤销与重做</a>
-      <a href="layout-creative.html">应用创作台教程：用 Blender 检查适配、选择与视角控制 →</a>
+      <a href="layout-work.html">← 工作布局入门：用手机打字、复制与撤销</a>
+      <a href="layout-creative.html">应用创作台入门：从 Blender 的选择与视角操作开始 →</a>
     </nav>
   </main>
 

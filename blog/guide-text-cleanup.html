@@ -8,15 +8,17 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查｜奶猫妙控">
+  <meta property="og:title" content="用 SUBSTITUTE 和 TRIM 清理商品名称｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-text-cleanup">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查｜奶猫妙控">
+  <meta name="twitter:title" content="用 SUBSTITUTE 和 TRIM 清理商品名称｜奶猫妙控">
   <meta name="twitter:description" content="从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
+  <meta property="og:description" content="从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。">
+  <meta name="keywords" content="奶猫妙控,Cream Deck,SUBSTITUTE 教程,TRIM 教程,Excel 文本清理,空字符串">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-text-cleanup">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +26,14 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查｜奶猫妙控</title>
+  <title>用 SUBSTITUTE 和 TRIM 清理商品名称｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查",
+      "headline": "用 SUBSTITUTE 和 TRIM 清理商品名称",
       "description": "从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
@@ -67,7 +69,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查",
+          "name": "用 SUBSTITUTE 和 TRIM 清理商品名称",
           "item": "https://cream-deck.vercel.app/blog/guide-text-cleanup"
         }
       ]
@@ -147,7 +149,7 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 表格文本</a>
-      <h1>清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查</h1>
+      <h1>用 SUBSTITUTE 和 TRIM 清理商品名称</h1>
       <p>从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。</p>
       <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
     </header>
@@ -156,34 +158,34 @@
       <figcaption>实际生成删除 SKU- 的 SUBSTITUTE 公式，保留有效的空字符串参数。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">从别处导出的商品名称，可能同时带有编号前缀和多余空格。本文把问题拆成两列：B 列移除指定文字，C 列整理普通空格。每一列都能单独检查，出错时也容易知道是哪一步造成的。</p>
-<aside class="article-highlight"><strong>本文的演示范围：</strong>截图是 App 原生公式编辑器中的实际操作，使用自制商品名练习。文中结果用于核对公式语义；没有宣称手机已经从 Excel 读取到这些单元格或自动验证整张表。</aside>
-<h2>开始前准备</h2><ul><li>在 Mac Excel 打开本文 CSV，确认 Original 位于 A1，三条商品名位于 A2:A4。</li><li>在 B1 输入 Removed，在 C1 输入 Cleaned，保留 A 列作为原始数据。</li><li>在奶猫妙控的布局列表中搜索“文本处理”，进入财务公式对应桌面。</li></ul>
-<h2>1. 先保留原始值，观察两类问题</h2>
-<p>下载练习数据。A2 是前后带普通空格的“  SKU-Blue  Mug  ”，A3 是“SKU-Red Cup”，A4 是“SKU-Gift-SKU-Box”。打开文件后不要先手动删空格。</p>
-<p>A2 用来检查空格整理，A4 用来区分“替换全部匹配”与“只替换第一次”。保留原始列，才能看出清理步骤是否误删了名称中间的内容。</p>
+<p class="article-lead">商品名称里带着 SKU- 和多余空格时，可以分两步整理：先用 SUBSTITUTE 去掉指定文字，再用 TRIM 整理普通空格。下面保留原始数据，用三列结果对照，说明何时替换全部、何时只替换第一处。</p>
+<aside class="article-highlight"><strong>配图说明：</strong>截图是 App 原生公式编辑器中的实际操作，使用自制商品名练习。文中结果用于核对公式语义；没有宣称手机已经从 Excel 读取到这些单元格或自动验证整张表。</aside>
+<h2>开始前</h2><ul><li>在 Mac Excel 打开本文 CSV，确认 Original 位于 A1，三条商品名位于 A2:A4。</li><li>在 B1 输入 Removed，在 C1 输入 Cleaned，保留 A 列作为原始数据。</li><li>在奶猫妙控的布局列表中搜索“文本处理”，进入财务公式对应桌面。</li></ul>
+<h2>1. 下载练习表，保留原始数据</h2>
+<p>在 Excel 或 Numbers 中准备测试数据：A2 单元格为前后及中间带多余空格的<code>  SKU-Blue  Mug  </code>，A3 为“SKU-Red Cup”，A4 为包含重复前缀的“SKU-Gift-SKU-Box”。打开文件后切勿先手动删除空格。</p>
+<p>A2 用于检验空格规整效果，A4 用于区分“替换所有匹配”与“仅替换首处匹配”。始终保留原始 A 列数据不动，才能清晰验证清洗步骤是否会误删商品名称内部的合法字符。</p>
 <p>下载：<a href="https://cream-deck.vercel.app/assets/examples/guides-1.2.0-r1/text-cleanup.csv">商品名称清理练习数据（CSV）</a>。</p>
-<h2>2. 长按 SUBSTITUTE，填写需要移除的文字</h2>
-<p>在文本处理桌面长按 SUBSTITUTE。将“原文本或单元格”填写为 A2，类型使用“数值／引用”；“查找文字”填 SKU-，类型使用“文字”。“替换为（留空删除）”留空，“替换第几处”暂时也留空。</p>
-<p>此时预览应为 =SUBSTITUTE(A2,&quot;SKU-&quot;,&quot;&quot;)。其中 &quot;&quot; 表示替换成空字符串，也就是删除匹配文字。这是允许的空值，不必为了让输入框“有东西”而填一个空格。</p>
+<h2>2. 长按 SUBSTITUTE，去掉 SKU-</h2>
+<p>在手机财务或文本处理桌面中，长按“SUBSTITUTE”按键打开参数面板。将“原文本或单元格”填写为 <code>A2</code>（类型保持“数值／引用”）；“查找文字”填写为 <code>SKU-</code>（类型保持“文字”）。“替换为（留空删除）”保持留空，“替换第几处”暂时亦保持留空。</p>
+<p>此时底部公式预览应为 <code>=SUBSTITUTE(A2,&quot;SKU-&quot;,&quot;&quot;)</code>。其中 <code>&quot;&quot;</code> 表示将匹配到的文字替换为空字符串（即直接删除）。这是合法的空值设定，切勿为了让输入框“有内容”而误填入空格。</p>
 <figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp" alt="SKU- 为文字参数，新文字留空，App 生成包含空字符串的完整公式。" width="1206" height="2622" loading="lazy"><figcaption>SKU- 为文字参数，新文字留空，App 生成包含空字符串的完整公式。</figcaption></figure>
-<h2>3. 在 B2 验证第一步，只检查删除文字</h2>
-<p>复制公式，在 Mac 的 B2 粘贴并确认；若手机与 Mac 没有共享剪贴板，可在 B2 手动输入上面的公式。已连接时，也可先聚焦 B2，再从手机发送公式。</p>
-<p>B2 应去掉 SKU-，但仍保留原有的多余空格。先确认这一点，再在 B3 使用 =SUBSTITUTE(A3,&quot;SKU-&quot;,&quot;&quot;)，在 B4 使用 =SUBSTITUTE(A4,&quot;SKU-&quot;,&quot;&quot;)。本例 B3 应为 Red Cup，B4 应为 Gift-Box。</p>
-<h2>4. 用 TRIM 处理第二列的普通空格</h2>
-<p>回到文本处理桌面，长按 TRIM，把参数填为 B2，保持“数值／引用”。预览应是 =TRIM(B2)，复制后放入 C2 并在 Excel 确认。</p>
-<p>C2 的预期结果是 Blue Mug：首尾普通空格消失，Blue 和 Mug 中间的连续普通空格变成一个。再在 C3、C4 分别使用 =TRIM(B3) 与 =TRIM(B4)，核对结果为 Red Cup 和 Gift-Box。</p>
+<h2>3. 把公式放到 B 列，查看替换结果</h2>
+<p>把生成的公式输入 Mac 表格的 B2，再按回车。可以在两端已共享剪贴板时粘贴，也可以连接 Mac 后选中 B2，点“发送公式”；未共享剪贴板时可手动输入。随后在 B3 使用 <code>=SUBSTITUTE(A3,&quot;SKU-&quot;,&quot;&quot;)</code>，在 B4 使用 <code>=SUBSTITUTE(A4,&quot;SKU-&quot;,&quot;&quot;)</code>。</p>
+<p>检查 B 列结果：B2 输出<code>  Blue  Mug  </code>（前缀已去除，但原有多余空格完好保留），B3 为“Red Cup”，B4 为“Gift-Box”。确认第一步前缀剔除完全后，再进入第二步空格清理。</p>
+<h2>4. 用 TRIM 整理 B 列的空格</h2>
+<p>回到手机文本处理桌面，长按“TRIM”按键打开面板，将参数填写为 <code>B2</code>，类型保持“数值／引用”。底部公式预览为 <code>=TRIM(B2)</code>，按上一步的方式将公式输入 Mac 的 C2 单元格，再按回车确认。</p>
+<p>查看 C2 单元格的计算结果：准确呈现为“Blue Mug”，首尾多余空格被彻底清除，Blue 与 Mug 之间的多个连续空格被自动压缩为单个标准空格。随后在 C3、C4 分别应用 <code>=TRIM(B3)</code> 与 <code>=TRIM(B4)</code>，核对结果为“Red Cup”与“Gift-Box”。</p>
 <figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/clean-text-02-trim.webp" alt="TRIM 引用前一步的 B2，让删除文字和整理空格两步可以分别检查。" width="1206" height="2622" loading="lazy"><figcaption>TRIM 引用前一步的 B2，让删除文字和整理空格两步可以分别检查。</figcaption></figure>
 <p>参考：<a href="https://support.microsoft.com/en-us/excel/functions/trim-function">Microsoft：TRIM 的普通空格范围</a>。</p>
-<h2>5. 只想删第一次出现时，填写次数参数</h2>
-<p>重新长按 SUBSTITUTE，仍使用 A2 和 SKU-，新文字留空，在“替换第几处”中填 1。预览应为 =SUBSTITUTE(A2,&quot;SKU-&quot;,&quot;&quot;,1)，表示只替换第一次匹配。</p>
-<p>这个差别在 A4 更明显：在一个新的空白单元格试 =SUBSTITUTE(A4,&quot;SKU-&quot;,&quot;&quot;,1)，预期是 Gift-SKU-Box；省略最后的 1 时，所有匹配都会被替换，结果是 Gift-Box。根据自己的商品编号规则选择，不要未经检查就批量覆盖原始数据。</p>
+<h2>5. 只想替换第一处时，填入 1</h2>
+<p>重新长按 SUBSTITUTE 打开面板，依然使用 A2 和 <code>SKU-</code>，新文字保持留空，但在“替换第几处”输入框中填入数字 <code>1</code>。底部公式预览变为 <code>=SUBSTITUTE(A2,&quot;SKU-&quot;,&quot;&quot;,1)</code>，表示仅替换首次匹配项。</p>
+<p>该参数在 A4 单元格尤为关键：在空白单元格测试 <code>=SUBSTITUTE(A4,&quot;SKU-&quot;,&quot;&quot;,1)</code>，预期结果为“Gift-SKU-Box”；而省略最后的 1 时所有匹配均会被清除输出为“Gift-Box”。根据实际商品编号规范灵活选择，切勿未经核验盲目全量覆盖。</p>
 <figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/clean-text-03-first.webp" alt="填入 1 后，公式明确限定为第一次出现；该数字使用“数值／引用”类型。" width="1206" height="2622" loading="lazy"><figcaption>填入 1 后，公式明确限定为第一次出现；该数字使用“数值／引用”类型。</figcaption></figure>
 <p>参考：<a href="https://support.microsoft.com/en-US/Excel/substitute-function">Microsoft：SUBSTITUTE 的次数参数</a>。</p>
-<h2>6. 确认结果后再应用到自己的表格</h2>
-<p>回看三列：A 列是原始值，B 列显示文字替换结果，C 列显示空格整理结果。先用几条有代表性的商品名检查，包括没有前缀、含重复前缀和中间空格的情况，再扩大范围。</p>
-<p>如果从网页复制的名称仍有看起来像空格的字符，先辨认字符类型。TRIM 处理普通 ASCII 空格，不能单独移除不换行空格；不要因为公式没报错，就认定所有可见空白都已清理。</p>
-<h2>操作不符合预期时</h2>
+<h2>6. 对照三列结果，再处理自己的数据</h2>
+<p>回顾三列结构：A 列为不可修改的原始数据，B 列展示前缀剥离结果，C 列展示空格规整后的最终结果。在处理海量数据前，先抽取具有代表性的样本行（包括无前缀、多前缀与特殊空格）进行验证，确认这些规则适合当前数据。</p>
+<p>如果从网页复制的数据清洗后仍残留看似空格的占位符，请先辨别字符编码。TRIM 处理标准 ASCII 空格，无法直接剔除不换行空格（NBSP，CHAR(160)）；遇到此类特殊字符时可先用 SUBSTITUTE 替换后再行 TRIM。</p>
+<h2>常见问题</h2>
 <h3>新文字留空，为什么仍能复制公式？</h3><p>SUBSTITUTE 的新文字允许为空字符串，App 会生成 &quot;&quot;。这表示删除匹配内容，属于有效公式。</p>
 <h3>为什么 A2 被当作两个字符，而没有读取单元格？</h3><p>检查原文字参数是否被切换成“文字”。引用单元格时应选“数值、引用或公式”，确保预览显示 A2 而不是 &quot;A2&quot;。</p>
 <h3>为什么名称中间的 SKU- 也没了？</h3><p>省略次数参数会替换所有匹配。如果只要替换第一次，在“替换第几处”填 1，并用含重复匹配的练习行确认。这仍是匹配位置规则，不是专门判断前缀的功能。</p>
@@ -191,8 +193,8 @@
 <p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="guide-sumifs.html">← 用 SUMIFS 汇总项目支出：一步步配置两个条件</a>
-      <a href="layout-finance.html">财务布局教程：计算 0.1＋0.2，再一步步生成 SUMIFS 公式 →</a>
+      <a href="guide-sumifs.html">← 用 SUMIFS 汇总项目中已付款的支出</a>
+      <a href="layout-finance.html">财务布局入门：计算金额，生成表格公式 →</a>
     </nav>
   </main>
 

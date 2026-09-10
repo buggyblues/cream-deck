@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eaf4ff">
-  <meta name="description" content="用手机或平板低延迟查看 Mac 桌面、操作虚拟触控板、双向惯性滚动，并灵活运用多种输入模式">
+  <meta name="description" content="完成局域网配对后，用手机移动 Mac 光标、查看画面，并按场景选择文本草稿或实时输入。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="超低延迟串流：掌中接管 Mac 桌面｜奶猫妙控">
+  <meta property="og:title" content="在手机上查看并控制 Mac 桌面｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/remote-control-mac">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-08-31">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="超低延迟串流：掌中接管 Mac 桌面｜奶猫妙控">
-  <meta name="twitter:description" content="低延迟桌面原画串流、虚拟触控板与多任务窗口漫游，在手机上轻松操控 Mac">
+  <meta name="twitter:title" content="在手机上查看并控制 Mac 桌面｜奶猫妙控">
+  <meta name="twitter:description" content="完成局域网配对后，用手机移动 Mac 光标、查看画面，并按场景选择文本草稿或实时输入。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp">
+  <meta property="og:description" content="完成局域网配对后，用手机移动 Mac 光标、查看画面，并按场景选择文本草稿或实时输入。">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/remote-control-mac">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +25,26 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>超低延迟串流：掌中接管 Mac 桌面｜奶猫妙控</title>
+  <title>在手机上查看并控制 Mac 桌面｜奶猫妙控</title>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "超低延迟串流：掌中接管 Mac 桌面",
-    "description": "用手机或平板超清查看 Mac 画面，操作光标、惯性滚动页面，并灵活使用文本与实时双模键盘",
-    "datePublished": "2026-08-31",
-    "dateModified": "2026-08-31",
-    "author": { "@type": "Organization", "name": "奶猫妙控" },
-    "publisher": { "@type": "Organization", "name": "奶猫妙控" },
-    "image": "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp",
-    "mainEntityOfPage": "https://cream-deck.vercel.app/blog/remote-control-mac"
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "在手机上查看并控制 Mac 桌面",
+  "description": "完成局域网配对后，用手机移动 Mac 光标、查看画面，并按场景选择文本草稿或实时输入。",
+  "datePublished": "2026-08-31",
+  "dateModified": "2026-09-10",
+  "author": {
+    "@type": "Organization",
+    "name": "奶猫妙控"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "奶猫妙控"
+  },
+  "image": "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp",
+  "mainEntityOfPage": "https://cream-deck.vercel.app/blog/remote-control-mac"
+}
   </script>
 </head>
 <body class="content-page article-page">
@@ -74,8 +81,8 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 远程桌面串流</a>
-      <h1>超低延迟串流：掌中接管 Mac 桌面</h1>
-      <p>Metal 直通帧捕获、多点触控手势与无损原画串流深度解析 · 阅读约 7 分钟</p>
+      <h1>在手机上查看并控制 Mac 桌面</h1>
+      <p>局域网扫码配对、虚拟触控板手势与双模键盘操作 · 阅读约 6 分钟</p>
     </header>
 
     <figure class="article-cover article-cover-phone">
@@ -83,66 +90,49 @@
     </figure>
 
     <article class="article-body">
-      <p class="article-lead">无论是在沙发上远程操控影音播放、在会议室走动控制演示电脑，还是将闲置的 iPad 或 iPhone 变身为 Mac 的第二块触控副屏，奶猫妙控都能提供丝滑、低延迟的远程掌控体验。</p>
-      <p>无需繁复配置公网穿透或第三方账户，基于本地局域网（LAN）直连握手，建立连接后即可在掌上完成 Retina 级画面串流、光标精准定位、双指平滑滚动与长短文本混合输入。</p>
+      <p class="article-lead">无论是在沙发上远程操控影音播放、在会议室走动控制演示电脑，还是将手边的 iPhone 或 iPad 变身为 Mac 的随身触控副屏，奶猫妙控都能为你提供轻快流畅的远程掌控体验。</p>
+      <p>基于本地局域网点对点直连，只需扫码即可在移动设备上监看 Mac 桌面、操控光标、双指平滑滚动，并支持草稿编辑与实时按键输入。</p>
 
-      <aside class="article-highlight">
-        <strong>极速直连：</strong>同一局域网下秒级扫码绑定，支持 Bonjour 自动静默发现与重连，无需每次输入 IP 或繁杂密码。
-      </aside>
+      <aside class="article-highlight"><strong>先做一次小练习：</strong>连接 Mac 后，在空白文档里试光标移动和文字输入。需要查看电脑画面时，再开启屏幕预览。</aside>
 
-      <h2>一、毫秒级串流引擎：Metal 硬件编码与动态自适应码率</h2>
-      <p>远程控制的核心体验取决于画质清晰度与操作跟手度。奶猫妙控采用了专为 Apple Silicon 芯片优化的串流管道：</p>
-      <ul>
-        <li><strong>Metal 硬件捕获：</strong>直接从 GPU 帧缓冲区抓取 macOS 桌面图像，绕过传统的慢速 CPU 截图接口，CPU 占用率低于 3%；</li>
-        <li><strong>自适应低延迟协议：</strong>根据局域网 Wi-Fi 信号质量动态调节编码关键帧与量化参数，将往返操作延迟压缩至 25ms 以内，光标移动如丝般顺滑；</li>
-        <li><strong>双向音频同步：</strong>支持将 Mac 的系统音频实时流式回传至手机耳机，戴着耳机在房间任意角落都能收听渲染完成提示音或影音内容。</li>
-      </ul>
+      <h2>一、局域网画面监看与点对点传输</h2>
+      <p>先在两端运行奶猫妙控，接入可互相访问的局域网并完成配对。移动光标与输入文字需要 Mac 的辅助功能权限；查看桌面画面还需要屏幕录制权限。连接后先在 Mac 打开一个测试窗口，再看手机预览是否对应这个窗口。</p>
 
-      <h2>二、两种显示模式：边看边控 vs 全屏沉浸桌面</h2>
-      <p>根据不同的操作场景，奶猫妙控提供了灵活的视口呈现方式：</p>
+      <h2>二、两种显示模式：边看边控与全屏查看</h2>
+      <p>针对不同操作场景，奶猫妙控提供了灵活的视口与操作布局：</p>
       
-      <h3>1. Studio View（工作台边看边控模式）</h3>
-      <p>屏幕上方以 16:9 画中画小窗呈现 Mac 桌面焦点区域，下方排布大尺寸虚拟触控板、无级滚动条与常用功能按键。非常适合一只手握持手机，眼睛监看任务执行，拇指盲操光标与滚轮。</p>
+      <h3>1. 在桌面上边看边控</h3>
+      <p>手机屏幕上半部分以小窗实时监看 Mac 桌面焦点区域，下半部分集中排布大面积虚拟触控板、无级滚动条与常用快捷动作。特别适合单手握持手机，一边监看渲染或编译进度，一边盲操光标与滚轮。</p>
 
-      <h3>2. Fullscreen Retina（全屏无界沉浸模式）</h3>
-      <p>轻点预览窗口即可展开为全屏。采用智能等比缩放与抗锯齿渲染算法，不会压扁或拉伸 Mac 比例。在 iPad 或大屏 iPhone 上，你的掌上设备将直接变身为一台支持触控的超轻便 macOS 终端。</p>
+      <h3>2. 展开全屏查看</h3>
+      <p>需要更大的预览时，使用画面预览区的全屏入口。展开后先确认看到的是目标窗口；返回桌面后，再继续使用触控板、滚动和常用按键。屏幕上的反馈仍要与 Mac 实际窗口对应。</p>
 
       <figure class="article-figure article-figure-phone">
         <img src="../assets/screens/v1.2.0/remote-fullscreen.webp" alt="奶猫妙控全屏显示 Mac 画面" width="1206" height="2622" loading="lazy">
-        <figcaption>全屏模式：Retina 高清画质呈现完整 macOS 桌面，支持多点触控手势</figcaption>
+        <figcaption>全屏模式：呈现完整 macOS 桌面画面，直观支持多点触控与手势交互</figcaption>
       </figure>
 
-      <h2>三、虚拟触控板深度优化：还原妙控板手感</h2>
-      <p>奶猫妙控将 Apple 妙控板的核心交互逻辑搬上了触控屏：</p>
+      <h2>三、虚拟触控板：直觉手势体验</h2>
+      <p>奶猫妙控将 Apple 妙控板的核心交互逻辑带到了触控屏上：</p>
       <ul>
-        <li><strong>单指滑动：</strong>高精度光标移动，支持速度自适应加速度曲线；</li>
-        <li><strong>单指轻点：</strong>标准左键单击；双指轻点：调出上下文右键菜单；</li>
-        <li><strong>双指上下滑动：</strong>带物理阻尼与惯性释放的平滑滚动，浏览网页与长代码流畅自如；</li>
-        <li><strong>双击长按拖拽：</strong>单手拖动窗口、框选文本与移动图层。</li>
+        <li><strong>单指滑动：</strong>平滑定位光标，支持自适应加速度曲线；</li>
+        <li><strong>单指轻点 / 双指轻点：</strong>单指轻点对应鼠标左键单击，双指轻点直接呼出上下文右键菜单；</li>
+        <li><strong>双指上下滑动：</strong>带自然惯性阻尼的双指平滑滚动，浏览长网页与代码轻松顺手；</li>
+        <li><strong>双击长按拖拽：</strong>单手轻松拖动视窗标题栏、圈选文本区域或移动时间轴元素。</li>
       </ul>
 
-      <h2>四、双模键盘架构：文本草稿 vs 实时终端</h2>
-      <p>针对不同输入场景，奶猫妙控设计了两种截然不同的键盘逻辑：</p>
+      <h2>四、双模键盘架构：草稿预编辑 vs 实时终端输入</h2>
+      <p>针对不同的输入场景，奶猫妙控提供了两种截然不同的键盘输入模式：</p>
       <ul>
-        <li><strong>文本草稿键盘（Draft Text Mode）：</strong>
-          专为写邮件、发微信、起草长文档与口述速记设计。可以在手机端自由编辑、修改错别字、口述录入，确认无误后点击“发送”，整段文字在 10ms 内完整投递至 Mac 光标处，避免因网络抖动打乱输入。</li>
-        <li><strong>实时直连键盘（Real-time Terminal Mode）：</strong>
-          专为终端命令行、代码编写与组合快捷键优化。每一次按键（如 <code>Ctrl + C</code>、<code>Cmd + W</code>、<code>Tab</code>、<code>Esc</code>、方向键）均以毫秒级低延迟即时直达 Mac 系统底层。</li>
+        <li><strong>文本模式：</strong>
+          适合撰写长文本、回复消息、整理会议速记。在手机端充分利用输入法与语音转文字工具，反复检查确认无误后点击“上屏”，整段文字一次性准确投递至 Mac 当前焦点光标处。</li>
+        <li><strong>实时模式：</strong>
+          专为终端命令行、代码调试与组合快捷键优化。每一次按键输入（如 <code>Ctrl + C</code>、<code>Cmd + W</code>、<code>Tab</code>、<code>Esc</code>、方向键及回车）均即按即发，发送到 Mac 当前输入位置。</li>
       </ul>
-
-      <h2>五、六大典型应用场景</h2>
-      <ol class="article-steps-list">
-        <li><strong>躺在沙发/床上追剧与播控：</strong>通过手机控制 Mac 外接显示器或电视播放视频、调节音量、暂停与快进；</li>
-        <li><strong>会议室站立演讲：</strong>脱离讲台走动，全屏查看 PPT 备注并无线翻页；</li>
-        <li><strong>厨房/阳台监控长时间任务：</strong>远程查看 Final Cut Pro 渲染导出、Blender 烘焙或 AI 模型训练进度；</li>
-        <li><strong>代码构建与服务重启：</strong>在床上用实时键盘执行 <code>git pull &amp;&amp; npm run build</code>；</li>
-        <li><strong>双屏副控：</strong>在 Mac 键盘旁立起 iPhone，充当专属计算器小键盘与调色盘；</li>
-        <li><strong>无线麦克风录音：</strong>利用手机高素质麦克风进行播客录制或视频会议通话。</li>
-      </ol>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="voice-text-input.html">← 文本预编辑与语音速记实战</a>
-      <a href="mac-settings.html">macOS 权限配置与安全连接指南 →</a>
+      <a href="voice-text-input.html">← 先在手机上口述，再把文字输入到 Mac</a>
+      <a href="mac-settings.html">第一次连接 Mac：配对、权限设置与常见问题 →</a>
     </nav>
   </main>
 
