@@ -4,34 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。">
+  <meta name="description" content="从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="灯光与场景放进一张布局：Home Assistant 与 Apple 家庭｜奶猫妙控">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-smart-home.webp">
+  <meta property="og:title" content="智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/smart-home-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-smart-home">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="灯光与场景放进一张布局：Home Assistant 与 Apple 家庭｜奶猫妙控">
-  <meta name="twitter:description" content="连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。">
-  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-smart-home.webp">
+  <meta name="twitter:title" content="智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读｜奶猫妙控">
+  <meta name="twitter:description" content="从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/smart-home-01.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-smart-home">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>灯光与场景放进一张布局：Home Assistant 与 Apple 家庭｜奶猫妙控</title>
+  <title>智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "灯光与场景放进一张布局：Home Assistant 与 Apple 家庭",
-      "description": "连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。",
+      "headline": "智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读",
+      "description": "从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -44,8 +44,7 @@
         "name": "奶猫妙控"
       },
       "image": [
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-smart-home.webp",
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp"
+        "https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/smart-home-01.webp"
       ],
       "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-smart-home"
     },
@@ -67,7 +66,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "灯光与场景放进一张布局：Home Assistant 与 Apple 家庭",
+          "name": "智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读",
           "item": "https://cream-deck.vercel.app/blog/layout-smart-home"
         }
       ]
@@ -77,18 +76,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "必须开着 Mac 才能控制家居吗？",
+          "name": "连接成功，桌面却没有设备？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不需要。智能家居由 iPhone／iPad 直接连接已配置的来源。"
+            "text": "先看家庭连接是否发现支持的设备，再返回布局添加并绑定家居设备组件。已有连接不会自动重排你之前编辑好的桌面。"
           }
         },
         {
           "@type": "Question",
-          "name": "能给全新的 Matter 设备配网吗？",
+          "name": "状态显示离线时，为什么按钮灰了？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "当前不提供独立 Matter 配网；请先把设备加入 Home Assistant 或 Apple 家庭。"
+            "text": "离线设备不能保证接收控制请求。先检查家庭平台中的在线状态和手机到服务地址的连接；恢复后等待新状态回读。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以改用 Apple 家庭吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以连接已有 Apple 家庭，并按系统提示允许访问。设备需要先在家庭平台加入并可用；相机、门锁等能力不在本文灯光练习的支持范围内。"
           }
         }
       ]
@@ -131,33 +138,49 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 智能家居</a>
-      <h1>灯光与场景放进一张布局：Home Assistant 与 Apple 家庭</h1>
-      <p>连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。 · 2026 年 9 月 10 日</p>
+      <h1>智能家居布局教程：连接 Home Assistant，添加灯并检查开关回读</h1>
+      <p>从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。 · 2026 年 9 月 10 日</p>
     </header>
     <figure class="article-cover article-cover-phone">
-      <img src="../assets/screens/v1.2.0/control-smart-home.webp" alt="奶猫妙控智能家居布局，使用演示数据的 App 界面" width="1206" height="2622">
+      <img src="../assets/screens/tutorials-1.2.0-r1/smart-home-01.webp" alt="奶猫妙控 1.2.0 的智能家居操作界面；截图中的书桌灯、窗帘等由本地交互式演示服务提供。" width="1206" height="2622">
+      <figcaption>奶猫妙控 1.2.0 的智能家居操作界面；截图中的书桌灯、窗帘等由本地交互式演示服务提供。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">智能家居布局直接在 iPhone 或 iPad 上连接已有 Home Assistant 或 Apple 家庭，不依赖 Mac。第一次进入时先添加来源，再把设备放到布局里。开关、滑杆和旋钮依照设备实际支持的能力生成，可以继续用原有编辑器调整。</p>
-<aside class="article-highlight"><strong>适配与使用条件：</strong>Home Assistant、Apple 家庭；经已有平台接入的 Matter 设备</aside>
-<h2>从已有家庭开始连接</h2>
-<p>Home Assistant 使用服务器地址和长期访问令牌；Apple 家庭通过系统 HomeKit 授权读取现有家庭与场景。当前默认包提供令牌连接，不承诺已启用 Home Assistant 浏览器登录。连接成功后，再选择要添加的设备。</p>
-<h2>每台设备只展示能做的事</h2>
-<p>灯光可以提供开关、亮度、色温或颜色，窗帘可以提供开关、停止与位置，温控显示目标温度和模式，传感器显示读数。具体控件来自设备能力；只读传感器不会出现可写操作，未知值也不会被替换成虚假的数字。</p>
-<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/layout-editor.webp" alt="智能家居布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
-<h2>用现有布局编辑器整理房间</h2>
-<p>设备较多时可分成多个桌面，把睡前常用灯光和场景放在同一页，或把客厅设备留成独立一页。控件的位置与外观由布局保存，设备状态从来源刷新。断开 Mac 不会清除家居连接，因为这部分由手机本地服务运行。</p>
-<h2>Matter 与远程访问的前提</h2>
-<p>已加入 Home Assistant 或 Apple 家庭的 Matter 设备，可以通过对应平台的能力控制；应用不提供独立 Matter 配网。Thread 与外网访问需要已有家庭网络设施。门锁、车库门、安防和摄像头视频不在本次设备控制范围。</p>
-<h2>开始使用</h2><ol><li>打开「智能家居」并进入连接管理。</li><li>添加 Home Assistant 地址与令牌，或授权 Apple 家庭。</li><li>将需要的设备加入布局，验证开关，再调整排布。</li></ol>
-<h2>常见问题</h2>
-<h3>必须开着 Mac 才能控制家居吗？</h3><p>不需要。智能家居由 iPhone／iPad 直接连接已配置的来源。</p>
-<h3>能给全新的 Matter 设备配网吗？</h3><p>当前不提供独立 Matter 配网；请先把设备加入 Home Assistant 或 Apple 家庭。</p>
-<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+<p class="article-lead">先让奶猫妙控连接已有家庭，再把一盏灯放上桌面。下面用 Home Assistant 讲连接流程，并用“书桌灯”演示开关与详情；确认一台设备后，再添加其他设备。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>配图中的设备由本地演示服务提供，开关操作会更新演示状态。连接真实家庭后，请同时检查手机回读、Home Assistant 状态和设备实际动作。</aside>
+<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，本功能可独立使用，不要求连接 Mac。</li><li>准备已经运行的 Home Assistant，以及能在该平台正常控制的一盏灯。手机需要能访问其地址；先在 Home Assistant 自身验证开关正常。</li></ul>
+<h2>1. 在空家居布局中点“连接家庭”</h2>
+<p>在 App 底部点“布局”，在列表中找到“智能家居”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。首次没有连接时会显示“连接家庭”。点它进入“家庭连接”，再选择添加 Home Assistant 的入口。</p>
+<p>如果已经有设备，不需要重建家庭。先检查现有连接和设备详情，再决定是否添加另一条连接。本文演示截图是连接完成后的设备桌面。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/smart-home-04-connections.webp" alt="家庭连接管理页；当前已有本地演示连接，可以继续添加 Home Assistant。" width="1206" height="2622" loading="lazy"><figcaption>家庭连接管理页；当前已有本地演示连接，可以继续添加 Home Assistant。</figcaption></figure>
+<h2>2. 填写服务地址与长期访问令牌</h2>
+<p>在连接表单的“服务地址”中填写你的 Home Assistant 地址。例如本地实例可能使用 homeassistant.local:8123，但必须替换成手机实际能访问的地址。</p>
+<p>在 Home Assistant 个人资料的“安全”页创建长期访问令牌，复制到 App 的“访问令牌”字段。不要把登录密码填成令牌。如果使用本地 HTTP，按页面提示确认“允许此本地 HTTP 连接”；令牌只用于你自己的连接，不要放进教程截图。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/smart-home-05-form.webp" alt="实际打开的 Home Assistant 连接表单；教程截图不填入真实访问令牌。" width="1206" height="2622" loading="lazy"><figcaption>实际打开的 Home Assistant 连接表单；教程截图不填入真实访问令牌。</figcaption></figure>
+<p>参考：<a href="https://www.home-assistant.io/docs/configuration/user-configuration/">Home Assistant 官方个人资料与安全设置说明</a>。</p>
+<h2>3. 连接成功后，把设备加到桌面</h2>
+<p>点“连接”，等待明确的已连接状态和设备列表。点“返回布局，添加组件”，再从空布局的“添加设备组件”进入编辑器，选择家居设备组件并绑定刚才那盏灯。</p>
+<p>也可使用空桌面上的“自动添加…台在线设备”入口批量加入。连接成功与组件已添加是两步；只填完令牌，并不会让每个设备自动出现在已有桌面上。</p>
+<h2>4. 确认设备名与房间，再按开关</h2>
+<p>回到桌面，先核对卡片上的设备名与房间，例如“书桌灯／书房”。点灯光旋钮中心切换电源，等待状态返回，再观察真实灯是否熄灭；再次点中心恢复开启。</p>
+<p>本次演示服务实际返回了“关闭”，界面也随之变化。但真实家庭中，仍要看设备或 Home Assistant 的状态，按钮按下的瞬时反馈本身不足以确认执行成功。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/smart-home-02-off.webp" alt="实际点击书桌灯电源后，演示服务回读为关闭；不是实物灯具照片。" width="1206" height="2622" loading="lazy"><figcaption>实际点击书桌灯电源后，演示服务回读为关闭；不是实物灯具照片。</figcaption></figure>
+<h2>5. 需要调亮度时，拖动外圈</h2>
+<p>灯光旋钮中心负责开关，外圈负责亮度。沿外圈顺时针小幅转动增大、逆时针减小，松手后等待状态回读。先做小幅调整，确认真实灯亮度与手机数值一致，再继续。</p>
+<p>开关与调光需要设备分别提供相应能力。只支持通断的插座不能通过旋钮获得调光功能，温度传感器也只显示它实际提供的数值。</p>
+<h2>6. 点设备名称，检查详情与连接状态</h2>
+<p>点卡片下方的设备名称区域，打开详情，查看设备提供的状态与更多控制。出现离线或错误时先在这里确认，再回到 Home Assistant 检查设备本身。</p>
+<p>当一盏灯的开关和回读都验证通过，再添加窗帘、插座等设备，并逐台检查它们的真实动作。Matter 设备先加入 Apple 家庭或 Home Assistant，本 App 不提供独立的 Matter 配网流程。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/smart-home-03-detail.webp" alt="实际点设备名称进入书桌灯详情；数据来自本地演示服务。" width="1206" height="2622" loading="lazy"><figcaption>实际点设备名称进入书桌灯详情；数据来自本地演示服务。</figcaption></figure>
+<h2>操作不符合预期时</h2>
+<h3>连接成功，桌面却没有设备？</h3><p>先看家庭连接是否发现支持的设备，再返回布局添加并绑定家居设备组件。已有连接不会自动重排你之前编辑好的桌面。</p>
+<h3>状态显示离线时，为什么按钮灰了？</h3><p>离线设备不能保证接收控制请求。先检查家庭平台中的在线状态和手机到服务地址的连接；恢复后等待新状态回读。</p>
+<h3>可以改用 Apple 家庭吗？</h3><p>可以连接已有 Apple 家庭，并按系统提示允许访问。设备需要先在家庭平台加入并可用；相机、门锁等能力不在本文灯光练习的支持范围内。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-launcher.html">← 把 Mac Dock 放到手机上：启动器布局指南</a>
-      <a href="layout-work.html">用 iPhone 控制 Mac：从工作布局开始 →</a>
+      <a href="layout-work.html">← 工作布局教程：打开键盘、输入文字，再检查撤销与重做</a>
+      <a href="layout-launcher.html">启动器布局教程：添加一个 Mac App，再更换已有按钮 →</a>
     </nav>
   </main>
 

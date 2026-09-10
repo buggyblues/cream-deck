@@ -4,34 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。">
+  <meta name="description" content="从声音库开始，认识鼓垫与采样菜单，再打开声音编辑页检查音量、衔接和细调。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="在手机上录声音、切片与打节奏：采样布局指南｜奶猫妙控">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler.webp">
+  <meta property="og:title" content="采样布局教程：载入示例声音，试听并调整声音衔接｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/sampler-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-sampler">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="在手机上录声音、切片与打节奏：采样布局指南｜奶猫妙控">
-  <meta name="twitter:description" content="录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。">
-  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler.webp">
+  <meta name="twitter:title" content="采样布局教程：载入示例声音，试听并调整声音衔接｜奶猫妙控">
+  <meta name="twitter:description" content="从声音库开始，认识鼓垫与采样菜单，再打开声音编辑页检查音量、衔接和细调。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/sampler-01.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-sampler">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>在手机上录声音、切片与打节奏：采样布局指南｜奶猫妙控</title>
+  <title>采样布局教程：载入示例声音，试听并调整声音衔接｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "在手机上录声音、切片与打节奏：采样布局指南",
-      "description": "录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。",
+      "headline": "采样布局教程：载入示例声音，试听并调整声音衔接",
+      "description": "从声音库开始，认识鼓垫与采样菜单，再打开声音编辑页检查音量、衔接和细调。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -44,8 +44,7 @@
         "name": "奶猫妙控"
       },
       "image": [
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler.webp",
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler-perform.webp"
+        "https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/sampler-01.webp"
       ],
       "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-sampler"
     },
@@ -67,7 +66,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "在手机上录声音、切片与打节奏：采样布局指南",
+          "name": "采样布局教程：载入示例声音，试听并调整声音衔接",
           "item": "https://cream-deck.vercel.app/blog/layout-sampler"
         }
       ]
@@ -77,18 +76,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "采样一定要连接电脑吗？",
+          "name": "点鼓垫没有声音？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "麦克风录音、文件导入、切片与本地演奏不需要 Mac。采集 Mac 声音时才需要相应连接。"
+            "text": "先确认它已经绑定声音，再检查设备音量、音频输出和是否仍在录音。麦克风采集期间会暂停播放；空格子需要先添加声音。"
           }
         },
         {
           "@type": "Question",
-          "name": "包含完整 DAW 或 MIDI 导出吗？",
+          "name": "为什么有些格子为空？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "当前提供本地采样、节奏与音频导出，不包含完整 DAW 的全部编排功能或 MIDI 导出。"
+            "text": "预设允许继续添加声音。四个示例只占一部分位置，空位不代表整个采样器不可用，也不需要强行填满才能演奏。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "切片和完整原声是什么关系？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "切片记录原声中的播放范围，原文件保留。先试听切片边界，再保存；不要把屏幕上的分界线理解成已经删除了原音频。"
           }
         }
       ]
@@ -131,33 +138,47 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 采样</a>
-      <h1>在手机上录声音、切片与打节奏：采样布局指南</h1>
-      <p>录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。 · 2026 年 9 月 10 日</p>
+      <h1>采样布局教程：载入示例声音，试听并调整声音衔接</h1>
+      <p>从声音库开始，认识鼓垫与采样菜单，再打开声音编辑页检查音量、衔接和细调。 · 2026 年 9 月 10 日</p>
     </header>
     <figure class="article-cover article-cover-phone">
-      <img src="../assets/screens/v1.2.0/control-sampler.webp" alt="奶猫妙控采样布局，使用演示数据的 App 界面" width="1206" height="2622">
+      <img src="../assets/screens/tutorials-1.2.0-r1/sampler-01.webp" alt="奶猫妙控 1.2.0 的采样操作界面；截图来自 App 的本机采样器，使用可播放的合成示例鼓声。" width="1206" height="2622">
+      <figcaption>奶猫妙控 1.2.0 的采样操作界面；截图来自 App 的本机采样器，使用可播放的合成示例鼓声。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">采样布局可以在不连接 Mac 时使用。录下身边的一段声音，选出有意思的片段，再把它放到鼓垫上演奏。奶猫妙控把录声音、切片与演奏做成同一套布局的三个桌面，保留原来的分页与编辑方式。</p>
-<aside class="article-highlight"><strong>适配与使用条件：</strong>iPhone／iPad 本地音频；可选采集手机或 Mac 声音</aside>
-<h2>从自己的声音或文件开始</h2>
-<p>初次进入是空工程，可以使用麦克风录音或导入音频文件，也可以主动载入示例鼓声。按住空垫开始录音，松手保存到对应位置；录音键适合持续录制。声音库保存原始声音，完整乐曲可以先保留，再选择工作片段。</p>
-<h2>切片时保留原音</h2>
-<p>切片页支持瞬态自动切片、等分和手动边界。波形中的彩色区域与试听垫对应，可以边听边调整。切片记录原音中的位置，原文件不会因为划分边界而被裁掉；演奏组合则把需要的声音映射到十六个位置。</p>
-<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/control-sampler-perform.webp" alt="采样布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
-<h2>把片段组合成节奏</h2>
-<p>演奏桌面支持多指打击、实时叠录、逐格编辑、速度、摇摆与循环。可用静音和独奏检查各声部，再加入滤波、回声、混响等效果。声音库、演奏组合和节奏段落分别保存，切换组合不需要重新导入声音。</p>
-<h2>保存与录音来源</h2>
-<p>工程自动保存，循环可导出 WAV，工程可导出包含音频的 ZIP 备份。当前版本也加入手机和 Mac 声音采集入口；手机内录由系统录屏流程启动，受来源应用限制，受保护音频可能不可采集。使用内录前先确认正确来源，录音结束后再回到声音库试听。</p>
-<h2>开始使用</h2><ol><li>打开「采样」，录一段声音或导入音频。</li><li>切到切片桌面，试听并调整边界。</li><li>在演奏桌面打节奏，最后导出 WAV 或备份工程。</li></ol>
-<h2>常见问题</h2>
-<h3>采样一定要连接电脑吗？</h3><p>麦克风录音、文件导入、切片与本地演奏不需要 Mac。采集 Mac 声音时才需要相应连接。</p>
-<h3>包含完整 DAW 或 MIDI 导出吗？</h3><p>当前提供本地采样、节奏与音频导出，不包含完整 DAW 的全部编排功能或 MIDI 导出。</p>
-<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+<p class="article-lead">先用内置示例鼓声认识采样器，不必一开始就录音或导入长音乐。本教程把一颗鼓垫、它指向的声音和声音编辑页串起来，之后再换成自己的素材。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>截图来自 App 的本机采样器，使用可播放的合成示例鼓声。本次实际点击鼓垫并打开声音编辑页；截图不能证明扬声器的听感，试听时请在自己的设备上确认。</aside>
+<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0。本练习不需要 Mac。调低音量后再开始，避免第一次试听过响。</li><li>使用内置示例或你有权使用的音频。截图中的底鼓、军鼓、踩镲和拍手是合成示例，不是用户录音。</li></ul>
+<h2>1. 从声音库载入示例</h2>
+<p>在 App 底部点“布局”，在列表中找到“采样”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。进入“录声音”桌面。初次使用没有声音时，点“声音库”，在空列表里点“试试示例声音”，等待加载完成后点右上方“关闭”返回桌面。</p>
+<p>若声音库已有你的素材，这个空状态入口可能不会出现；可以选一段已有素材练习，不要为了匹配截图清空自己的工程。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/sampler-04-library.webp" alt="从空声音库点击“试试示例声音”后，实际加载的合成示例声音。" width="1206" height="2622" loading="lazy"><figcaption>从空声音库点击“试试示例声音”后，实际加载的合成示例声音。</figcaption></figure>
+<h2>2. 点一颗鼓垫，区分选中与发声</h2>
+<p>先点“底鼓”，再点“军鼓”，听一听两种声音。注意查看当前选中声音的名称；接下来打开的编辑页应对应你准备调整的那一个声音。</p>
+<p>空鼓垫是添加声音的位置。它与已加载的底鼓不是同一种状态，不能仅凭格子存在就认为已经有音频可播放。</p>
+<h2>3. 打开采样菜单，进入声音细调</h2>
+<p>点上方小屏的采样菜单入口，选择“声音衔接与细调”。检查编辑页顶部显示的声音名称，再继续调整。</p>
+<p>如果选错声音，先返回桌面重新选择。采样菜单还提供试听、采集和切片等入口；本练习先完成一颗声音的检查，再进入切片。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/sampler-02-menu.webp" alt="实际点开的小屏采样菜单。" width="1206" height="2622" loading="lazy"><figcaption>实际点开的小屏采样菜单。</figcaption></figure>
+<h2>4. 先试听，再小幅调整音量</h2>
+<p>在声音编辑页点“试听声音”，拖动音量滑块做小幅变化，再试听比较。需要把很小声的片段调整到合适响度时，可试“整理响度”，并听清是否符合预期。</p>
+<p>这不是对所有素材都适用的固定增益配方。观察显示值、听实际结果，必要时使用还原或撤销，不要一次把所有参数推到最大。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/sampler-03-sound.webp" alt="实际打开的声音编辑页，显示试听、音量和声音衔接设置。" width="1206" height="2622" loading="lazy"><figcaption>实际打开的声音编辑页，显示试听、音量和声音衔接设置。</figcaption></figure>
+<h2>5. 分清叠加播放与接力播放</h2>
+<p>在“声音衔接”里查看“叠加播放”和“接力播放”。叠加允许声音同时发出；接力用于下一片开始时停止前一片。选择后返回鼓垫，用属于相应组的两个声音交替试听。</p>
+<p>如果两个声音没有放进同一个互斥组，不应预期它们自动互相停止。需要跨来源接力时，在“声音细调”里核对互斥组。</p>
+<h2>6. 再换自己的素材，保留试听检查</h2>
+<p>掌握声音编辑后，可以返回录声音桌面点“导入文件”，或从采集入口录一小段声音。新素材进入声音库后，仍按“选择 → 试听 → 检查名称 → 调整”的顺序操作。</p>
+<p>想切片时，从菜单进入“切成几个小声音”，先试听边界，再保存切片。导出的工程 ZIP 用于备份；当前没有应用内工程包导入界面，不要把备份包当成可直接重新导入的工程格式。</p>
+<h2>操作不符合预期时</h2>
+<h3>点鼓垫没有声音？</h3><p>先确认它已经绑定声音，再检查设备音量、音频输出和是否仍在录音。麦克风采集期间会暂停播放；空格子需要先添加声音。</p>
+<h3>为什么有些格子为空？</h3><p>预设允许继续添加声音。四个示例只占一部分位置，空位不代表整个采样器不可用，也不需要强行填满才能演奏。</p>
+<h3>切片和完整原声是什么关系？</h3><p>切片记录原声中的播放范围，原文件保留。先试听切片边界，再保存；不要把屏幕上的分界线理解成已经删除了原音频。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-media.html">← 用点击轮听歌：Apple Music、Spotify 与 Mac 媒体控制</a>
-      <a href="layout-creative.html">一套旋钮配合多款创作软件：应用创作台指南 →</a>
+      <a href="layout-media.html">← 媒体布局教程：从正在播放进入菜单，调整进度与播放模式</a>
+      <a href="layout-creative.html">应用创作台教程：用 Blender 检查适配、选择与视角控制 →</a>
     </nav>
   </main>
 

@@ -4,34 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="翻页旋钮、阅读滚轮、目录与选文工具，陪你读完电脑上的长文。">
+  <meta name="description" content="以 Mac 上的 PDF 为例，逐步打开章节目录、筛选章节和页码跳转面板。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="用手机翻 PDF 和 EPUB：Mac 阅读布局指南｜奶猫妙控">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-reading.webp">
+  <meta property="og:title" content="阅读布局教程：翻页、搜索目录，再跳到指定页｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/reading-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-reading">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="用手机翻 PDF 和 EPUB：Mac 阅读布局指南｜奶猫妙控">
-  <meta name="twitter:description" content="翻页旋钮、阅读滚轮、目录与选文工具，陪你读完电脑上的长文。">
-  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-reading.webp">
+  <meta name="twitter:title" content="阅读布局教程：翻页、搜索目录，再跳到指定页｜奶猫妙控">
+  <meta name="twitter:description" content="以 Mac 上的 PDF 为例，逐步打开章节目录、筛选章节和页码跳转面板。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/reading-01.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-reading">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>用手机翻 PDF 和 EPUB：Mac 阅读布局指南｜奶猫妙控</title>
+  <title>阅读布局教程：翻页、搜索目录，再跳到指定页｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "用手机翻 PDF 和 EPUB：Mac 阅读布局指南",
-      "description": "翻页旋钮、阅读滚轮、目录与选文工具，陪你读完电脑上的长文。",
+      "headline": "阅读布局教程：翻页、搜索目录，再跳到指定页",
+      "description": "以 Mac 上的 PDF 为例，逐步打开章节目录、筛选章节和页码跳转面板。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -44,8 +44,7 @@
         "name": "奶猫妙控"
       },
       "image": [
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-reading.webp",
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-research.webp"
+        "https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/reading-01.webp"
       ],
       "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-reading"
     },
@@ -67,7 +66,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "用手机翻 PDF 和 EPUB：Mac 阅读布局指南",
+          "name": "阅读布局教程：翻页、搜索目录，再跳到指定页",
           "item": "https://cream-deck.vercel.app/blog/layout-reading"
         }
       ]
@@ -77,18 +76,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "页码是按点击次数计算的吗？",
+          "name": "没有目录，是 App 没连接吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不是。能读取实际页码时才显示；否则保留文档名与应用信息。"
+            "text": "不一定。文档可能没有可读取书签，或阅读器没有提供目录能力。先检查翻页与正文查找，再检查文档自身的目录。"
           }
         },
         {
           "@type": "Question",
-          "name": "可以直接在手机导入 EPUB 阅读吗？",
+          "name": "手机为什么没有显示整本 PDF？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "这套布局控制 Mac 阅读器，当前不提供手机本地书籍导入与渲染。"
+            "text": "这个布局是 Mac 阅读器的控制界面。它读取可用状态并发送操作，不会自动把整本书导入手机。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "换成 EPUB 后按钮不一样？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "按钮根据阅读类型与软件能力变化。图书里的主题、章节、书签等操作不能直接套用 PDF 的页码流程。"
           }
         }
       ]
@@ -131,33 +138,48 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 阅读</a>
-      <h1>用手机翻 PDF 和 EPUB：Mac 阅读布局指南</h1>
-      <p>翻页旋钮、阅读滚轮、目录与选文工具，陪你读完电脑上的长文。 · 2026 年 9 月 10 日</p>
+      <h1>阅读布局教程：翻页、搜索目录，再跳到指定页</h1>
+      <p>以 Mac 上的 PDF 为例，逐步打开章节目录、筛选章节和页码跳转面板。 · 2026 年 9 月 10 日</p>
     </header>
     <figure class="article-cover article-cover-phone">
-      <img src="../assets/screens/v1.2.0/control-reading.webp" alt="奶猫妙控阅读布局，使用演示数据的 App 界面" width="1206" height="2622">
+      <img src="../assets/screens/tutorials-1.2.0-r1/reading-01.webp" alt="阅读桌面显示预览 App 的演示 PDF 与当前位置。" width="1206" height="2622">
+      <figcaption>阅读桌面显示预览 App 的演示 PDF 与当前位置。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">阅读布局用于控制 Mac 上正在打开的 PDF、EPUB 或网页长文。手机保留阅读画面，提供翻页、滚动、字号或缩放，以及目录、查找和选文工具。它不把整本书下载到手机，文档仍由电脑上的阅读器打开。</p>
-<aside class="article-highlight"><strong>适配与使用条件：</strong>预览、Apple 图书、Skim、Safari、Chrome；另有多款阅读器专属适配</aside>
-<h2>翻页与滚动分开操作</h2>
-<p>上一页和下一页支持按住连续翻页，旁边的小旋钮顺时针前进、逆时针后退。阅读滚轮负责正文滚动，另一枚旋钮处理字号或缩放。切换窗口或断开连接时，持续手势会停止；松手也不会额外多翻一页。</p>
-<h2>手机目录来自文档本身</h2>
-<p>点击目录后可以搜索章节并直接跳转。本地 PDF 使用内嵌大纲，网页读取实际标题，其他阅读器尝试获取其可访问章节。没有目录时会说明原因；部分在线 PDF 只能提供页码列表，界面会区分页码导航与章节目录。</p>
-<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/control-research.webp" alt="阅读布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
-<h2>在读到重点的地方留下笔记</h2>
-<p>先在 Mac 选中文字，再使用高亮、摘录、系统查询或翻译。摘录进入统一剪藏夹，并在取得真实页码时保留页码。无文本的扫描件和未开放选区的阅读器会受到限制，阅读布局不提供 OCR 或受保护文档解密。</p>
-<h2>阅读器适配范围</h2>
-<p>预览、Apple 图书、Skim、Chrome 和 Safari 的若干 PDF、EPUB 或网页流程已有实机记录。PDF Expert、Acrobat、Zotero、Calibre、Edge 和 Firefox 已接入专属适配，但尚未在本机逐款完成实测。其他软件仍可尝试通用翻页、滚动与查找，最终响应由当前窗口决定。</p>
-<h2>开始使用</h2><ol><li>在 Mac 阅读器打开文档，手机选择「阅读」。</li><li>测试前后翻页与缩放，再打开目录。</li><li>选中一段文字，尝试摘录并查看剪藏夹中的出处。</li></ol>
-<h2>常见问题</h2>
-<h3>页码是按点击次数计算的吗？</h3><p>不是。能读取实际页码时才显示；否则保留文档名与应用信息。</p>
-<h3>可以直接在手机导入 EPUB 阅读吗？</h3><p>这套布局控制 Mac 阅读器，当前不提供手机本地书籍导入与渲染。</p>
-<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+<p class="article-lead">阅读布局控制的是 Mac 上已经打开的阅读窗口。下面用 PDF 练习翻页、找章节和输入页码；手机负责操作，正文仍在 Mac 阅读器里。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>本次实际打开目录、搜索“第二章”并打开页码跳转弹窗。截图中的“阅读测试.pdf”和章节来自演示状态；是否能读取你的目录、页码以及实际跳转位置，需要在 Mac 阅读器中检查。</aside>
+<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>在 Mac“预览”中打开一份至少三页、带可搜索正文的 PDF。目录练习还需要文件本身包含书签目录；只有视觉排版出来的目录页并不一定能被读取成章节列表。</li></ul>
+<h2>1. 打开阅读，检查当前文档</h2>
+<p>在 App 底部点“布局”，在列表中找到“阅读”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。</p>
+<p>先看手机显示的应用、文档名和位置是否与 Mac 一致。如果读到的是另一个窗口，先在 Mac 把目标 PDF 放到前台。截图中的第 2 页只是演示起点，你可以从自己的第一页开始。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/reading-01.webp" alt="阅读桌面显示预览 App 的演示 PDF 与当前位置。" width="1206" height="2622" loading="lazy"><figcaption>阅读桌面显示预览 App 的演示 PDF 与当前位置。</figcaption></figure>
+<h2>2. 翻一页，再返回</h2>
+<p>点“下一页”，在 Mac 检查是否到了相邻页面；再点“上一页”回去。需要连续移动时可以使用翻页控制，但先通过单页操作确认焦点正确。</p>
+<p>滚动和翻页不是同一动作：连续滚动模式下，要以阅读器实际显示的位置为准。不要把旋钮转动次数当作绝对页码。</p>
+<h2>3. 打开目录，确认章节来自文档</h2>
+<p>点“目录”，等待章节列表出现。先核对一项你在文档中知道的标题。若没有读到章节，检查 PDF 是否含书签目录，以及当前阅读器是否提供目录读取。</p>
+<p>图中的三个章节是为操作核验准备的示例，不表示 App 能自动分析任意 PDF 并生成同样的目录。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/reading-02-contents.webp" alt="实际打开的手机目录页；章节由演示阅读状态提供。" width="1206" height="2622" loading="lazy"><figcaption>实际打开的手机目录页；章节由演示阅读状态提供。</figcaption></figure>
+<h2>4. 搜索章节，再点选</h2>
+<p>在目录的“搜索章节”框输入标题的一部分。图中输入“第二章”后只保留对应条目；你的文件应输入真实存在的章节词。</p>
+<p>点结果后，目录页收起并返回阅读桌面。接着在 Mac 检查是否跳到该章节；手机弹窗收起只证明请求已发出，不能单独证明文档跳转成功。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/reading-03-search.webp" alt="在目录页实际输入“第二章”后的筛选结果。" width="1206" height="2622" loading="lazy"><figcaption>在目录页实际输入“第二章”后的筛选结果。</figcaption></figure>
+<h2>5. 从更多菜单跳转页码</h2>
+<p>点阅读桌面的更多按钮，选择“跳转页码”。输入一个文件内存在的页码，例如 3，再点“前往”。在 Mac 检查页数与页面内容。</p>
+<p>PDF 的文件页序号可能和正文印刷页码不同：封面、目录也占页面。先用已知的文件第 3 页练习，确认对应关系后再跳较远的位置。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/reading-04-page.webp" alt="输入文件页码 3 后，“前往”按钮可用；跳转后在 Mac 核对页面内容。" width="1206" height="2622" loading="lazy"><figcaption>输入文件页码 3 后，“前往”按钮可用；跳转后在 Mac 核对页面内容。</figcaption></figure>
+<h2>6. 查找正文时，换用正文搜索</h2>
+<p>目录搜索只筛选章节名称。要找正文中的词，回到阅读桌面点查找入口，在“查找正文”弹窗输入文件中存在的词，再在 Mac 检查匹配结果。</p>
+<p>扫描图片型 PDF 如果没有文本层，不能据此保证正文查找成功。需要把选中文字保存成资料时，再使用剪藏夹整理。</p>
+<h2>操作不符合预期时</h2>
+<h3>没有目录，是 App 没连接吗？</h3><p>不一定。文档可能没有可读取书签，或阅读器没有提供目录能力。先检查翻页与正文查找，再检查文档自身的目录。</p>
+<h3>手机为什么没有显示整本 PDF？</h3><p>这个布局是 Mac 阅读器的控制界面。它读取可用状态并发送操作，不会自动把整本书导入手机。</p>
+<h3>换成 EPUB 后按钮不一样？</h3><p>按钮根据阅读类型与软件能力变化。图书里的主题、章节、书签等操作不能直接套用 PDF 的页码流程。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-research.html">← 读资料时顺手摘录：科研布局与带出处的剪藏夹</a>
-      <a href="layout-writing.html">写作副控：按字词句段移动、选择与整理 Markdown →</a>
+      <a href="layout-research.html">← 调研布局教程：把原文与笔记分开保存，再找回这条剪藏</a>
+      <a href="layout-browser.html">浏览器布局教程：输入网址、切换标签页，设置启动浏览器 →</a>
     </nav>
   </main>
 

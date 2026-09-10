@@ -4,34 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="真正的 Mac shell 会话，搭配终端小屏、全屏查看和 Esc、Tab、Ctrl 等按键。">
+  <meta name="description" content="从终端桌面操作会话标签、命名与全屏键盘，用只读命令检查真实 Mac shell。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="在 iPhone 上使用 Mac 终端：多会话与常用控制键｜奶猫妙控">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-terminal.webp">
+  <meta property="og:title" content="终端布局教程：新建会话、改名、打开全屏，再安全结束｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/terminal-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-terminal">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="在 iPhone 上使用 Mac 终端：多会话与常用控制键｜奶猫妙控">
-  <meta name="twitter:description" content="真正的 Mac shell 会话，搭配终端小屏、全屏查看和 Esc、Tab、Ctrl 等按键。">
-  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-terminal.webp">
+  <meta name="twitter:title" content="终端布局教程：新建会话、改名、打开全屏，再安全结束｜奶猫妙控">
+  <meta name="twitter:description" content="从终端桌面操作会话标签、命名与全屏键盘，用只读命令检查真实 Mac shell。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/terminal-01.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-terminal">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>在 iPhone 上使用 Mac 终端：多会话与常用控制键｜奶猫妙控</title>
+  <title>终端布局教程：新建会话、改名、打开全屏，再安全结束｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "在 iPhone 上使用 Mac 终端：多会话与常用控制键",
-      "description": "真正的 Mac shell 会话，搭配终端小屏、全屏查看和 Esc、Tab、Ctrl 等按键。",
+      "headline": "终端布局教程：新建会话、改名、打开全屏，再安全结束",
+      "description": "从终端桌面操作会话标签、命名与全屏键盘，用只读命令检查真实 Mac shell。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -44,8 +44,7 @@
         "name": "奶猫妙控"
       },
       "image": [
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-terminal.webp",
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-codex.webp"
+        "https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/terminal-01.webp"
       ],
       "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-terminal"
     },
@@ -67,7 +66,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "在 iPhone 上使用 Mac 终端：多会话与常用控制键",
+          "name": "终端布局教程：新建会话、改名、打开全屏，再安全结束",
           "item": "https://cream-deck.vercel.app/blog/layout-terminal"
         }
       ]
@@ -77,18 +76,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "能在里面运行 ssh 吗？",
+          "name": "新建按钮不可用？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以在 Mac shell 中运行 ssh；目标连接、密钥与网络条件由那台 Mac 的环境决定。"
+            "text": "先看是否提示“连接 Mac 后使用终端”或“请更新 Mac 端以使用终端”。连接成功后仍不可用时检查配套端版本与会话数量；每台移动设备最多八个会话。"
           }
         },
         {
           "@type": "Question",
-          "name": "离开终端布局会停止命令吗？",
+          "name": "全屏后文字布局变了，是新开了一个终端吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不会。会话保留到手动关闭或 Mac 适配器退出，连接中断时输出读取也可能暂停。"
+            "text": "不是。全屏改变终端窗口的行列尺寸，并继续使用同一个会话。交互式命令行程序可能按新尺寸重新绘制。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "手机断开后还能看旧输出吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "已接收的内容可以继续阅读和复制；新命令需要恢复连接。退出 Mac 配套端或主动关闭会话会结束对应会话。"
           }
         }
       ]
@@ -131,33 +138,48 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 终端</a>
-      <h1>在 iPhone 上使用 Mac 终端：多会话与常用控制键</h1>
-      <p>真正的 Mac shell 会话，搭配终端小屏、全屏查看和 Esc、Tab、Ctrl 等按键。 · 2026 年 9 月 10 日</p>
+      <h1>终端布局教程：新建会话、改名、打开全屏，再安全结束</h1>
+      <p>从终端桌面操作会话标签、命名与全屏键盘，用只读命令检查真实 Mac shell。 · 2026 年 9 月 10 日</p>
     </header>
     <figure class="article-cover article-cover-phone">
-      <img src="../assets/screens/v1.2.0/control-terminal.webp" alt="奶猫妙控终端布局，使用演示数据的 App 界面" width="1206" height="2622">
+      <img src="../assets/screens/tutorials-1.2.0-r1/terminal-01.webp" alt="终端紧凑界面：会话与输出均为明确的预览数据。" width="1206" height="2622">
+      <figcaption>终端紧凑界面：会话与输出均为明确的预览数据。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">终端布局把运行在 Mac 上的 shell 接到手机。上方的小屏显示输出和会话标签，下方是 Esc、Tab、Ctrl、方向键等常用终端按键。命令实际在已配对的 Mac 上执行，文件和进程也留在那台电脑上。</p>
-<aside class="article-highlight"><strong>适配与使用条件：</strong>Mac 登录 shell；vim、top、ssh 等命令行程序</aside>
-<h2>创建一个会话再开始输入</h2>
-<p>连接支持终端的新版本 Mac 端后，点击终端小屏的加号创建 shell。每台配对设备最多保留八个会话，标签切换分别保留屏幕、滚动记录和运行中的程序。可以为会话改名，例如把日志与交互式命令分开。</p>
-<h2>手机键盘之外的按键</h2>
-<p>Esc、Tab、Ctrl C、方向键、Home、End、退格和 Enter 在布局上直接可用。Ctrl 与 Alt 是单次修饰键；清屏发送 Ctrl L。终端支持中文输入、ANSI 颜色、文字选择与复制，粘贴会遵循当前程序的 bracketed-paste 模式。</p>
-<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/control-codex.webp" alt="终端布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
-<h2>全屏查看，或保留小屏</h2>
-<p>输出较多时打开全屏，可以调字号、展开键盘并翻阅历史。小屏与全屏共享同一个会话，来回切换不会另起 shell。浏览旧输出后，可用「回到底部」返回最新位置；字号设置也会保存。</p>
-<h2>离开布局与关闭会话的区别</h2>
-<p>切换到其他布局不会结束 shell，关闭会话则会清理对应进程。断线后手机还能查看已收到的输出，恢复连接时按会话状态继续；Mac 端退出后会话结束。这里使用现有的加密配对连接，不是一个向公网开放的独立终端服务。</p>
-<h2>开始使用</h2><ol><li>同时更新 iOS 与 Mac 端并完成配对。</li><li>选择「终端」，点加号创建会话。</li><li>先运行简单命令，随后尝试改名、切换标签和全屏。</li></ol>
-<h2>常见问题</h2>
-<h3>能在里面运行 ssh 吗？</h3><p>可以在 Mac shell 中运行 ssh；目标连接、密钥与网络条件由那台 Mac 的环境决定。</p>
-<h3>离开终端布局会停止命令吗？</h3><p>不会。会话保留到手动关闭或 Mac 适配器退出，连接中断时输出读取也可能暂停。</p>
-<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+<p class="article-lead">用终端布局时，先分清“切换会话”和“关闭会话”。本教程新建一个练习会话，把它改名为 Build，打开全屏查看，再结束这个临时会话。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>本次在原生终端界面实际完成新建、改名和全屏操作。截图中的输出由终端预览模式提供，不是本次远程执行命令的日志；下面的只读命令需要在你的配对 Mac 会话中运行。</aside>
+<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>Mac 配套端需要支持终端会话。先使用一个没有重要进程的临时会话练习，不要关闭正在运行任务的会话。</li></ul>
+<h2>1. 打开终端，认出会话标签</h2>
+<p>在 App 底部点“布局”，在列表中找到“终端”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。</p>
+<p>小屏上方是会话标签。截图中的“开发”“服务”来自演示模式；首次连接时，你可能还没有任何会话。不要把这两个名字当成必须提前创建的配置。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/terminal-01.webp" alt="终端紧凑界面：会话与输出均为明确的预览数据。" width="1206" height="2622" loading="lazy"><figcaption>终端紧凑界面：会话与输出均为明确的预览数据。</figcaption></figure>
+<h2>2. 点加号，新建临时会话</h2>
+<p>点会话栏旁的“＋”，等待新标签出现并被选中。已有两个会话时，新会话会命名为 Shell 3；首次新建时通常从 Shell 1 开始，编号以你当前列表为准。</p>
+<p>实际连接时，新会话由 Mac 启动 shell。等到提示符出现再输入；长时间没有输出时先检查连接，不要连续点加号堆积空会话。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/terminal-02-new.webp" alt="实际点击新建后出现 Shell 3 标签；预览模式提供示例输出。" width="1206" height="2622" loading="lazy"><figcaption>实际点击新建后出现 Shell 3 标签；预览模式提供示例输出。</figcaption></figure>
+<h2>3. 把练习会话改名为 Build</h2>
+<p>打开“终端菜单”，点“重命名”。选中原有名称并替换为 Build，再点“保存”。</p>
+<p>检查顶部标签变成 Build，且仍处于选中状态。这个名称只是手机端识别会话的标签，不会重命名 Mac 目录，也不会执行构建命令。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/terminal-03-renamed.webp" alt="新建会话改名为 Build 后的实际界面。" width="1206" height="2622" loading="lazy"><figcaption>新建会话改名为 Build 后的实际界面。</figcaption></figure>
+<h2>4. 全屏打开键盘，运行一个只读检查</h2>
+<p>点终端的全屏按钮，再点全屏页的键盘按钮。连接真实 Mac 后，先输入 pwd 并回车，查看当前目录；再输入 printf &#x27;tutorial-ok\n&#x27; 并回车，检查下一行是否出现 tutorial-ok。</p>
+<p>这两个命令用于确认当前目录和输入输出，不创建或删除文件。截图没有执行它们，所以请以你自己的终端输出为准。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/terminal-04-fullscreen.webp" alt="全屏终端的实际界面；与紧凑页使用同一会话。" width="1206" height="2622" loading="lazy"><figcaption>全屏终端的实际界面；与紧凑页使用同一会话。</figcaption></figure>
+<h2>5. 切换会话，确认输出保留</h2>
+<p>收起键盘，点另一个会话标签，再切回 Build。检查 Build 里刚才的输出是否还在。点“完成”返回紧凑终端，当前会话和输出也应保持一致。</p>
+<p>离开终端布局不会自动结束 Mac 进程。要暂时去其他布局操作，可以先保留会话，回来后从标签继续。</p>
+<h2>6. 结束练习会话</h2>
+<p>先确认 Build 中没有需要保留的进程，再打开“终端菜单 → 关闭会话”，在确认面板中再次选择“关闭会话”。检查 Build 标签消失，其他会话仍可选择。</p>
+<p>关闭会话会结束它对应的 shell 及会话进程。只是想隐藏键盘或离开全屏时，使用键盘按钮或“完成”，不需要关闭会话。</p>
+<h2>操作不符合预期时</h2>
+<h3>新建按钮不可用？</h3><p>先看是否提示“连接 Mac 后使用终端”或“请更新 Mac 端以使用终端”。连接成功后仍不可用时检查配套端版本与会话数量；每台移动设备最多八个会话。</p>
+<h3>全屏后文字布局变了，是新开了一个终端吗？</h3><p>不是。全屏改变终端窗口的行列尺寸，并继续使用同一个会话。交互式命令行程序可能按新尺寸重新绘制。</p>
+<h3>手机断开后还能看旧输出吗？</h3><p>已接收的内容可以继续阅读和复制；新命令需要恢复连接。退出 Mac 配套端或主动关闭会话会结束对应会话。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-codex.html">← 氛围编程布局：在手机上查看与操作 Codex 任务</a>
-      <a href="layout-work.html">用 iPhone 控制 Mac：从工作布局开始 →</a>
+      <a href="layout-codex.html">← 氛围编程布局教程：选任务、打开输入，再检查模型与额度</a>
+      <a href="layout-finance.html">财务布局教程：计算 0.1＋0.2，再一步步生成 SUMIFS 公式 →</a>
     </nav>
   </main>
 

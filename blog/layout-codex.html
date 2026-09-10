@@ -4,34 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。">
+  <meta name="description" content="认识任务键的单击与双击，打开实时键盘，并核对当前任务的模型、推理强度和额度。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="氛围编程布局：在手机上查看与操作 Codex 任务｜奶猫妙控">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-codex.webp">
+  <meta property="og:title" content="氛围编程布局教程：选任务、打开输入，再检查模型与额度｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/codex-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-codex">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="氛围编程布局：在手机上查看与操作 Codex 任务｜奶猫妙控">
-  <meta name="twitter:description" content="任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。">
-  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-codex.webp">
+  <meta name="twitter:title" content="氛围编程布局教程：选任务、打开输入，再检查模型与额度｜奶猫妙控">
+  <meta name="twitter:description" content="认识任务键的单击与双击，打开实时键盘，并核对当前任务的模型、推理强度和额度。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/codex-01.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-codex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>氛围编程布局：在手机上查看与操作 Codex 任务｜奶猫妙控</title>
+  <title>氛围编程布局教程：选任务、打开输入，再检查模型与额度｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "氛围编程布局：在手机上查看与操作 Codex 任务",
-      "description": "任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。",
+      "headline": "氛围编程布局教程：选任务、打开输入，再检查模型与额度",
+      "description": "认识任务键的单击与双击，打开实时键盘，并核对当前任务的模型、推理强度和额度。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -44,8 +44,7 @@
         "name": "奶猫妙控"
       },
       "image": [
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-codex.webp",
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/remote-keyboard.webp"
+        "https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/codex-01.webp"
       ],
       "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-codex"
     },
@@ -67,7 +66,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "氛围编程布局：在手机上查看与操作 Codex 任务",
+          "name": "氛围编程布局教程：选任务、打开输入，再检查模型与额度",
           "item": "https://cream-deck.vercel.app/blog/layout-codex"
         }
       ]
@@ -77,18 +76,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "手机会独立运行 Codex 吗？",
+          "name": "任务名称没有更新？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不会。此布局控制配对 Mac 上的 Codex 桌面应用。"
+            "text": "先确认 Mac Codex 正在运行，当前任务来源里确实有任务；再检查连接与版本。不要用截图里的演示标题判断自己是否连接成功。"
           }
         },
         {
           "@type": "Question",
-          "name": "可以控制命令行程序吗？",
+          "name": "额度为空，是否代表没有剩余额度？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "命令行程序请使用「终端」布局；它提供在 Mac 上运行的独立 shell 会话。"
+            "text": "不代表。未读取到额度时不能按零余额理解。请查看 Codex 自身提供的用量信息，等状态读取恢复后再核对。"
           }
         }
       ]
@@ -131,33 +130,47 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 氛围编程</a>
-      <h1>氛围编程布局：在手机上查看与操作 Codex 任务</h1>
-      <p>任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。 · 2026 年 9 月 10 日</p>
+      <h1>氛围编程布局教程：选任务、打开输入，再检查模型与额度</h1>
+      <p>认识任务键的单击与双击，打开实时键盘，并核对当前任务的模型、推理强度和额度。 · 2026 年 9 月 10 日</p>
     </header>
     <figure class="article-cover article-cover-phone">
-      <img src="../assets/screens/v1.2.0/control-codex.webp" alt="奶猫妙控氛围编程布局，使用演示数据的 App 界面" width="1206" height="2622">
+      <img src="../assets/screens/tutorials-1.2.0-r1/codex-01.webp" alt="氛围编程桌面，任务名称、状态与额度均为演示数据。" width="1206" height="2622">
+      <figcaption>氛围编程桌面，任务名称、状态与额度均为演示数据。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">奶猫妙控的氛围编程布局面向 Mac 上的 Codex 桌面应用。电脑负责运行任务，手机显示当前任务状态，并提供常用操作、输入和导航。它适合放在键盘旁边，让你在阅读代码或等待任务时，随手查看下一步需要处理的内容。</p>
-<aside class="article-highlight"><strong>适配与使用条件：</strong>Codex 桌面应用（Mac）</aside>
-<h2>先在 Mac 打开实际任务</h2>
-<p>完成奶猫妙控配对后，启动 Codex 并打开一个任务。状态区通过桌面集成读取任务信息，模型、推理强度、快速模式和批准状态随任务更新。首次使用先核对手机显示的任务，再发送操作，避免把指令送到另一项工作。</p>
-<h2>常用操作留给专属按钮</h2>
-<p>布局提供任务相关控制、实时键盘、轨迹球、滚轮与边栏导航。手机键盘可以补充简短说明；较长的提示词可以先在文本键盘整理，检查后再发送。按钮的可用状态取决于当前任务和 Codex 版本。</p>
-<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/remote-keyboard.webp" alt="氛围编程布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
-<h2>重复的文字可以保存下来</h2>
-<p>如果你经常发送相似的检查要求，可以把文字绑定到自己的按键。预设文字支持列表与不同发送方式，也可以扩展成桌面自动化。应把每个按钮命名为实际动作，让未来的自己看一眼就知道将发送什么。</p>
-<h2>什么时候换到终端布局</h2>
-<p>氛围编程用于 Codex 桌面任务；需要在 Mac shell 中执行命令或查看终端输出时，使用独立的终端预设。两者共享奶猫妙控连接，但任务控制与 shell 会话各自管理。Codex 的账户、权限和模型可用性仍由 Codex 决定。</p>
-<h2>开始使用</h2><ol><li>在 Mac 启动 Codex 并打开任务。</li><li>手机选择「氛围编程」，核对状态区。</li><li>测试输入与导航，再按自己的习惯编辑常用按钮。</li></ol>
-<h2>常见问题</h2>
-<h3>手机会独立运行 Codex 吗？</h3><p>不会。此布局控制配对 Mac 上的 Codex 桌面应用。</p>
-<h3>可以控制命令行程序吗？</h3><p>命令行程序请使用「终端」布局；它提供在 Mac 上运行的独立 shell 会话。</p>
-<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+<p class="article-lead">使用氛围编程布局时，第一件事是确认选中了哪项任务。这个练习先选择任务，再打开输入，最后查看任务设置，避免把指令发到另一个对话。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>配图中的任务、模型和额度使用示例数据，键盘与设置页来自实际 App。练习前请核对自己的任务，模型可选项和额度以实际账号为准。</aside>
+<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>Mac 上需要运行 Codex 桌面 App，并有可供选择的任务。这里讲的是桌面 App 的任务控制；终端中的命令行会话请使用终端布局。</li></ul>
+<h2>1. 进入氛围编程，读出当前任务</h2>
+<p>在 App 底部点“布局”，在列表中找到“氛围编程”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。</p>
+<p>先看六个任务键上的名称与状态，再在 Mac Codex 中找到对应任务。截图使用“整理项目文档”等虚构名称；你的按钮取自实际任务来源，不需要创建同名任务。</p>
+<p>任务键只显示有限的槽位，不表示账号只能有六项任务。没有任务名称时，先检查 Mac Codex 是否已运行和连接状态。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/codex-01.webp" alt="氛围编程桌面，任务名称、状态与额度均为演示数据。" width="1206" height="2622" loading="lazy"><figcaption>氛围编程桌面，任务名称、状态与额度均为演示数据。</figcaption></figure>
+<h2>2. 先理解单击与双击，再切换任务</h2>
+<p>默认设置下，单击任务键在后台选择任务；双击会在切换的同时把对应 App 带到前台。先在 Mac 放一个其他窗口到前面，单击你要继续的任务，再双击同一任务，对照前台窗口的变化。</p>
+<p>如果启用了“单击时聚焦 ChatGPT”，单击也会聚焦。操作前先检查自己的设置，不能仅凭“点了一次”推断是否会抢走当前窗口焦点。</p>
+<h2>3. 打开实时键盘，先核对输入位置</h2>
+<p>选好任务后点“实时键盘”，打开手机输入面板，再点“实时”，确认不是文本草稿模式。先在 Mac 检查当前任务标题和输入框，再输入一段准备好的草稿。</p>
+<p>实时输入与发送任务是两个动作。输入后先检查 Mac 中的完整文本，确认无误再使用任务发送操作；不要用批准键替代普通发送。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/codex-02-keyboard.webp" alt="实际从氛围编程桌面打开的实时键盘；本次未向真实任务输入。" width="1206" height="2622" loading="lazy"><figcaption>实际从氛围编程桌面打开的实时键盘；本次未向真实任务输入。</figcaption></figure>
+<h2>4. 核对模型与推理强度</h2>
+<p>回到桌面，查看“模型”和“推理强度”旋钮下方的状态。需要调整时，每次只移动一个档位，等手机与 Mac 当前任务的设置同步后再继续。</p>
+<p>可用模型和推理档位取决于实际 Codex 版本与账号。图中的 GPT-5.5 与“高”只是演示值，不应被当成所有账号固定可选的完整列表。额度面板展示可读取的使用窗口；不要把演示百分比当成你的账号余额。</p>
+<h2>5. 到设置里检查聚焦方式</h2>
+<p>点底栏“设置”，打开“氛围编程”。这里可以查看 Agent 来源、“单击时聚焦 ChatGPT”和任务事件通知等设置。</p>
+<p>想保持后台切换时，检查单击聚焦开关；希望每次选择后直接回到对应任务，则可开启它。返回任务桌面，用第 2 步的方法验证自己的设置。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/codex-04-preferences.webp" alt="氛围编程设置页，显示 Agent 来源与单击聚焦选项。" width="1206" height="2622" loading="lazy"><figcaption>氛围编程设置页，显示 Agent 来源与单击聚焦选项。</figcaption></figure>
+<h2>6. 遇到审批时，先阅读请求</h2>
+<p>当任务实际出现待审批请求时，先在 Mac 阅读请求内容与操作范围，再选择手机上的“批准”或“拒绝”。普通任务没有待审批请求时，不能靠这两颗键推进它。</p>
+<p>需要另起一项工作时使用“新任务”；想保留当前对话背景另开分支时再使用“分叉任务”。完成后仍要核对 Mac 中的新任务，避免在旧任务上继续输入。</p>
+<h2>操作不符合预期时</h2>
+<h3>任务名称没有更新？</h3><p>先确认 Mac Codex 正在运行，当前任务来源里确实有任务；再检查连接与版本。不要用截图里的演示标题判断自己是否连接成功。</p>
+<h3>额度为空，是否代表没有剩余额度？</h3><p>不代表。未读取到额度时不能按零余额理解。请查看 Codex 自身提供的用量信息，等状态读取恢复后再核对。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-terminal.html">← 在 iPhone 上使用 Mac 终端：多会话与常用控制键</a>
-      <a href="layout-work.html">用 iPhone 控制 Mac：从工作布局开始 →</a>
+      <a href="layout-terminal.html">← 终端布局教程：新建会话、改名、打开全屏，再安全结束</a>
+      <a href="layout-work.html">工作布局教程：打开键盘、输入文字，再检查撤销与重做 →</a>
     </nav>
   </main>
 

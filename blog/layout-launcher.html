@@ -4,34 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。">
+  <meta name="description" content="从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="把 Mac Dock 放到手机上：启动器布局指南｜奶猫妙控">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-launcher.webp">
+  <meta property="og:title" content="启动器布局教程：添加一个 Mac App，再更换已有按钮｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/launcher-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-launcher">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="把 Mac Dock 放到手机上：启动器布局指南｜奶猫妙控">
-  <meta name="twitter:description" content="用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。">
-  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-launcher.webp">
+  <meta name="twitter:title" content="启动器布局教程：添加一个 Mac App，再更换已有按钮｜奶猫妙控">
+  <meta name="twitter:description" content="从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/launcher-01.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-launcher">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
-  <title>把 Mac Dock 放到手机上：启动器布局指南｜奶猫妙控</title>
+  <title>启动器布局教程：添加一个 Mac App，再更换已有按钮｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "把 Mac Dock 放到手机上：启动器布局指南",
-      "description": "用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。",
+      "headline": "启动器布局教程：添加一个 Mac App，再更换已有按钮",
+      "description": "从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -44,8 +44,7 @@
         "name": "奶猫妙控"
       },
       "image": [
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-launcher.webp",
-        "https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp"
+        "https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/launcher-01.webp"
       ],
       "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-launcher"
     },
@@ -67,7 +66,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "把 Mac Dock 放到手机上：启动器布局指南",
+          "name": "启动器布局教程：添加一个 Mac App，再更换已有按钮",
           "item": "https://cream-deck.vercel.app/blog/layout-launcher"
         }
       ]
@@ -77,18 +76,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "软件已经打开，再点会发生什么？",
+          "name": "为什么我的启动器和截图中的应用不同？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "启动动作会尝试把现有应用切到前台，具体窗口由 macOS 与应用管理。"
+            "text": "首次同步会使用连接 Mac 的 Dock 应用信息，之后还可以自行编辑。演示目录只用于截图，不会替换你的真实应用目录。"
           }
         },
         {
           "@type": "Question",
-          "name": "可以修改按钮吗？",
+          "name": "点了按钮，Mac 没出现新窗口？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以。启动器使用现有布局编辑器，支持调整位置、尺寸、外观和绑定。"
+            "text": "已有应用可能只被激活，不一定新建窗口。先检查 Mac 菜单栏是否切到该应用，再检查安装情况、连接状态与按钮绑定。"
           }
         }
       ]
@@ -131,33 +130,44 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 启动器</a>
-      <h1>把 Mac Dock 放到手机上：启动器布局指南</h1>
-      <p>用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。 · 2026 年 9 月 10 日</p>
+      <h1>启动器布局教程：添加一个 Mac App，再更换已有按钮</h1>
+      <p>从真实应用列表添加按钮，认识长按编辑与“更换 App”，并在 Mac 上核对启动结果。 · 2026 年 9 月 10 日</p>
     </header>
     <figure class="article-cover article-cover-phone">
-      <img src="../assets/screens/v1.2.0/control-launcher.webp" alt="奶猫妙控启动器布局，使用演示数据的 App 界面" width="1206" height="2622">
+      <img src="../assets/screens/tutorials-1.2.0-r1/launcher-01.webp" alt="启动器中的系统应用演示目录；用户设备会同步自己的应用列表。" width="1206" height="2622">
+      <figcaption>启动器中的系统应用演示目录；用户设备会同步自己的应用列表。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">当你希望手机上只有几枚清楚的大按钮，启动器比整块远程桌面更直接。奶猫妙控从 Mac 的应用信息生成图标按键，点一下启动应用，或把已经运行的软件切到前台。电脑继续显示工作内容，手机负责选择下一件工具。</p>
-<aside class="article-highlight"><strong>适配与使用条件：</strong>Mac 已安装应用与 Dock</aside>
-<h2>从熟悉的 Dock 开始</h2>
-<p>连接 Mac 后，启动器可以按 Dock 中应用的顺序生成桌面。应用较多时使用原生分页，每个页面仍属于同一套布局。按钮上的名称与图标来自电脑，手机不需要安装对应软件。</p>
-<h2>把工作顺序变成按钮顺序</h2>
-<p>如果你经常在浏览器、笔记和编辑器之间往返，可以把它们放在同一页。布局编辑器允许调整应用按钮的位置和尺寸；选应用时可从 Mac 应用列表中查找。大型按钮适合启动常用工具，次要应用留在下一页。</p>
-<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/layout-editor.webp" alt="启动器布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
-<h2>启动之后，继续使用专属布局</h2>
-<p>打开浏览器后可以转到浏览器布局，开始写稿时转到写作，剪视频时转到应用创作台。启动器解决的是打开和切换应用；具体的播放、编辑和参数调整由对应布局承担。</p>
-<h2>应用图标与实际安装状态</h2>
-<p>首次获取应用目录需要连接 Mac。电脑卸载或移动应用后，应刷新应用信息并检查原有绑定。启动器不会替你安装付费软件，也不会代替软件本身的登录与授权。</p>
-<h2>开始使用</h2><ol><li>连接 Mac，在布局列表选择「启动器」。</li><li>检查生成的应用按键和分页。</li><li>在编辑器中调整常用应用的位置，点按验证启动。</li></ol>
-<h2>常见问题</h2>
-<h3>软件已经打开，再点会发生什么？</h3><p>启动动作会尝试把现有应用切到前台，具体窗口由 macOS 与应用管理。</p>
-<h3>可以修改按钮吗？</h3><p>可以。启动器使用现有布局编辑器，支持调整位置、尺寸、外观和绑定。</p>
-<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+<p class="article-lead">把最常打开的 Mac 软件放在手机上，可以省去在 Dock 中反复寻找。这里用系统应用做练习：先认出一颗现有按钮，再打开应用选择器，最后学会检查按钮绑定的到底是哪一个 App。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>配图使用系统应用图标和示例应用目录，添加按钮的过程在 App 内完成。连接你的 Mac 后，应用列表会以那台电脑提供的内容为准。</aside>
+<h2>开始前准备</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，Mac 安装同版本配套端；完成配对，并允许 Mac 端的辅助功能权限。需要电脑画面时，再开启屏幕录制权限。</li><li>让 Mac 配套端保持运行，等待应用列表同步。截图只使用访达、Safari、备忘录等系统应用的演示目录；你的列表以实际安装的软件为准。</li></ul>
+<h2>1. 进入启动器，先检查应用名称</h2>
+<p>在 App 底部点“布局”，在列表中找到“启动器”。布局较多时用搜索框搜索名称；有多个桌面的方案先点右侧箭头展开，再点桌面名称；搜索具体桌面名称也能找到它。</p>
+<p>每颗大按钮代表一个 Mac App。截图中的图标来自系统应用，并非空白占位。先选一个你能在 Mac 上直接确认的软件，例如 Safari；短按发送打开或激活这个 App 的请求，然后观察 Mac 前台窗口。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/launcher-01.webp" alt="启动器中的系统应用演示目录；用户设备会同步自己的应用列表。" width="1206" height="2622" loading="lazy"><figcaption>启动器中的系统应用演示目录；用户设备会同步自己的应用列表。</figcaption></figure>
+<h2>2. 长按一颗按钮进入编辑</h2>
+<p>在启动器长按已有的应用按钮约一秒，松手后会进入编辑器，并选中这颗按钮。确认页面出现“更换 App”和添加 App 的入口，再进行下一步。</p>
+<p>短按用于启动，长按用于编辑。如果 App 只是被打开了，说明这次操作被识别为短按；回到按钮上重新按住即可。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/launcher-02-edit.webp" alt="长按现有应用按钮后，编辑器显示当前选区和“更换 App”。" width="1206" height="2622" loading="lazy"><figcaption>长按现有应用按钮后，编辑器显示当前选区和“更换 App”。</figcaption></figure>
+<h2>3. 打开 App 列表，搜索想添加的软件</h2>
+<p>点编辑器左上方“添加 App”，在操作面板中找到“搜索 App”。输入软件名称，从连接 Mac 的应用列表点选需要的 App；选中后检查名称，再点面板右上方“完成”。</p>
+<p>这里显示的是连接的 Mac 提供的应用目录，不是 App Store。搜索不到时，先确认软件确实装在那台 Mac 上，再检查目录是否已经同步；不要随便填一个猜测的应用标识。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/launcher-03-picker.webp" alt="添加 App 时打开的实际应用选择器，可搜索已连接 Mac 的应用。" width="1206" height="2622" loading="lazy"><figcaption>添加 App 时打开的实际应用选择器，可搜索已连接 Mac 的应用。</figcaption></figure>
+<h2>4. 完成编辑，在 Mac 上验证新按钮</h2>
+<p>从应用选择器返回编辑器后，检查新按钮的名称和图标，再点“完成”离开编辑器。短按新按钮，确认 Mac 打开的是所选软件。</p>
+<p>如果按钮在当前屏幕外，检查方案下的其他桌面。启动器预设按每桌面最多八颗应用按钮分组；已有桌面的自定义排列也会影响你看到的位置。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/tutorials-1.2.0-r1/launcher-06-added.webp" alt="实际选择 Safari 并完成两层编辑后返回启动器；Mac 启动结果仍需在真实连接上检查。" width="1206" height="2622" loading="lazy"><figcaption>实际选择 Safari 并完成两层编辑后返回启动器；Mac 启动结果仍需在真实连接上检查。</figcaption></figure>
+<h2>5. 需要替换时，使用“更换 App”</h2>
+<p>重新长按已有按钮，点“更换 App”，再从列表中选择另一个软件。这样是在编辑这颗按钮的目标，和新增按钮是两种操作。</p>
+<p>“手动指定应用”用于已知准确 Bundle ID 的情况，例如 com.apple.finder。填好后仍要短按验证，应用名称相似并不能证明绑定正确。</p>
+<h2>操作不符合预期时</h2>
+<h3>为什么我的启动器和截图中的应用不同？</h3><p>首次同步会使用连接 Mac 的 Dock 应用信息，之后还可以自行编辑。演示目录只用于截图，不会替换你的真实应用目录。</p>
+<h3>点了按钮，Mac 没出现新窗口？</h3><p>已有应用可能只被激活，不一定新建窗口。先检查 Mac 菜单栏是否切到该应用，再检查安装情况、连接状态与按钮绑定。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-work.html">← 用 iPhone 控制 Mac：从工作布局开始</a>
-      <a href="layout-browser.html">手机输入网址、切换标签页：Mac 浏览器副控指南 →</a>
+      <a href="layout-work.html">← 工作布局教程：打开键盘、输入文字，再检查撤销与重做</a>
+      <a href="layout-creative.html">应用创作台教程：用 Blender 检查适配、选择与视角控制 →</a>
     </nav>
   </main>
 
