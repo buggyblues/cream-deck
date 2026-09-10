@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="灯光与场景放进一张布局：Home Assistant 与 Apple 家庭｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-smart-home.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-smart-home">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="灯光与场景放进一张布局：Home Assistant 与 Apple 家庭｜奶猫妙控">
+  <meta name="twitter:description" content="连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-smart-home.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-smart-home">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <title>灯光与场景放进一张布局：Home Assistant 与 Apple 家庭｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "灯光与场景放进一张布局：Home Assistant 与 Apple 家庭",
+      "description": "连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-smart-home.webp",
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-smart-home"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "灯光与场景放进一张布局：Home Assistant 与 Apple 家庭",
+          "item": "https://cream-deck.vercel.app/blog/layout-smart-home"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "必须开着 Mac 才能控制家居吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要。智能家居由 iPhone／iPad 直接连接已配置的来源。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "能给全新的 Matter 设备配网吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当前不提供独立 Matter 配网；请先把设备加入 Home Assistant 或 Apple 家庭。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 智能家居</a>
+      <h1>灯光与场景放进一张布局：Home Assistant 与 Apple 家庭</h1>
+      <p>连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。 · 2026 年 9 月 10 日</p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/v1.2.0/control-smart-home.webp" alt="奶猫妙控智能家居布局，使用演示数据的 App 界面" width="1206" height="2622">
+    </figure>
+    <article class="article-body">
+<p class="article-lead">智能家居布局直接在 iPhone 或 iPad 上连接已有 Home Assistant 或 Apple 家庭，不依赖 Mac。第一次进入时先添加来源，再把设备放到布局里。开关、滑杆和旋钮依照设备实际支持的能力生成，可以继续用原有编辑器调整。</p>
+<aside class="article-highlight"><strong>适配与使用条件：</strong>Home Assistant、Apple 家庭；经已有平台接入的 Matter 设备</aside>
+<h2>从已有家庭开始连接</h2>
+<p>Home Assistant 使用服务器地址和长期访问令牌；Apple 家庭通过系统 HomeKit 授权读取现有家庭与场景。当前默认包提供令牌连接，不承诺已启用 Home Assistant 浏览器登录。连接成功后，再选择要添加的设备。</p>
+<h2>每台设备只展示能做的事</h2>
+<p>灯光可以提供开关、亮度、色温或颜色，窗帘可以提供开关、停止与位置，温控显示目标温度和模式，传感器显示读数。具体控件来自设备能力；只读传感器不会出现可写操作，未知值也不会被替换成虚假的数字。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/layout-editor.webp" alt="智能家居布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
+<h2>用现有布局编辑器整理房间</h2>
+<p>设备较多时可分成多个桌面，把睡前常用灯光和场景放在同一页，或把客厅设备留成独立一页。控件的位置与外观由布局保存，设备状态从来源刷新。断开 Mac 不会清除家居连接，因为这部分由手机本地服务运行。</p>
+<h2>Matter 与远程访问的前提</h2>
+<p>已加入 Home Assistant 或 Apple 家庭的 Matter 设备，可以通过对应平台的能力控制；应用不提供独立 Matter 配网。Thread 与外网访问需要已有家庭网络设施。门锁、车库门、安防和摄像头视频不在本次设备控制范围。</p>
+<h2>开始使用</h2><ol><li>打开「智能家居」并进入连接管理。</li><li>添加 Home Assistant 地址与令牌，或授权 Apple 家庭。</li><li>将需要的设备加入布局，验证开关，再调整排布。</li></ol>
+<h2>常见问题</h2>
+<h3>必须开着 Mac 才能控制家居吗？</h3><p>不需要。智能家居由 iPhone／iPad 直接连接已配置的来源。</p>
+<h3>能给全新的 Matter 设备配网吗？</h3><p>当前不提供独立 Matter 配网；请先把设备加入 Home Assistant 或 Apple 家庭。</p>
+<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="layout-launcher.html">← 把 Mac Dock 放到手机上：启动器布局指南</a>
+      <a href="layout-work.html">用 iPhone 控制 Mac：从工作布局开始 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>

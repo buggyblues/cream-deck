@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="文字与格式两个桌面，把选区操作、字数统计和常用排版放到手机上。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="写作副控：按字词句段移动、选择与整理 Markdown｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-writing.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-writing">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="写作副控：按字词句段移动、选择与整理 Markdown｜奶猫妙控">
+  <meta name="twitter:description" content="文字与格式两个桌面，把选区操作、字数统计和常用排版放到手机上。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-writing.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-writing">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <title>写作副控：按字词句段移动、选择与整理 Markdown｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "写作副控：按字词句段移动、选择与整理 Markdown",
+      "description": "文字与格式两个桌面，把选区操作、字数统计和常用排版放到手机上。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-writing.webp",
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-writing-format.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-writing"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "写作副控：按字词句段移动、选择与整理 Markdown",
+          "item": "https://cream-deck.vercel.app/blog/layout-writing"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Obsidian 需要额外设置吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "精确编辑需要安装奶猫妙控随附的 Obsidian 本地插件。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "所有格式都适合 Word 吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "部分按钮发送通用快捷键，标题、列表等处理 Markdown 原文；应按目标编辑器选择功能或修改绑定。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 写作</a>
+      <h1>写作副控：按字词句段移动、选择与整理 Markdown</h1>
+      <p>文字与格式两个桌面，把选区操作、字数统计和常用排版放到手机上。 · 2026 年 9 月 10 日</p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/v1.2.0/control-writing.webp" alt="奶猫妙控写作布局，使用演示数据的 App 界面" width="1206" height="2622">
+    </figure>
+    <article class="article-body">
+<p class="article-lead">改稿时，重复动作往往比连续打字更多：选中一句、移动光标、调整标题、再回到上一处修改。奶猫妙控的写作布局把「文字」与「格式」分成两个桌面，用范围滑块和方向键处理选区，再用专门的格式控件整理文稿。</p>
+<aside class="article-highlight"><strong>适配与使用条件：</strong>TextEdit 等标准编辑器；Obsidian 需安装随附插件</aside>
+<h2>先确定这次操作的范围</h2>
+<p>文字页的滑块可选字、词、句、段。左右方向键按当前范围移动，双拼选择键向左或向右扩选；上下方向仍按编辑器的视觉行移动。引号键可以选取成对引号内的文字，开头和结尾用于文稿首尾。</p>
+<h2>查找和删除有明确的模式</h2>
+<p>点击查找填写关键词，方向键定位上一处或下一处；结束后可恢复普通移动。删除短按只处理已有选区，长按才进入按范围删除的模式。复制、粘贴、撤销与重做都有固定位置，适合在保留文稿视线时反复调整。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/control-writing-format.webp" alt="写作布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
+<h2>标题滑块与 Markdown 格式</h2>
+<p>格式页从正文到 H6 使用一条分段滑块，拖动预览、松手应用。列表、引用、待办、行内代码、代码块和表格用于整理 Markdown 原文；加粗、斜体、下划线与链接使用标准快捷键。文本编辑器与富文本软件对这些操作的解释可能不同。</p>
+<h2>选择与你的编辑器匹配的方式</h2>
+<p>标准 macOS 文本控件通过辅助功能处理全文与选区；Obsidian 可安装随附本地插件，通过其 Editor API 进行精确编辑。Chrome 只读网页的范围扩选目前不支持，阅读网页时应先在电脑手动选文。顶部统计按实际可读文稿或选区计算，不把整页网页导航算作正文。</p>
+<h2>开始使用</h2><ol><li>在 Mac 打开可编辑文稿，授予辅助功能权限。</li><li>选择「写作」，先测试字词范围与双向选择。</li><li>转到「格式」桌面设置标题，确认编辑器中的实际结果。</li></ol>
+<h2>常见问题</h2>
+<h3>Obsidian 需要额外设置吗？</h3><p>精确编辑需要安装奶猫妙控随附的 Obsidian 本地插件。</p>
+<h3>所有格式都适合 Word 吗？</h3><p>部分按钮发送通用快捷键，标题、列表等处理 Markdown 原文；应按目标编辑器选择功能或修改绑定。</p>
+<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="layout-research.html">← 读资料时顺手摘录：科研布局与带出处的剪藏夹</a>
+      <a href="layout-reading.html">用手机翻 PDF 和 EPUB：Mac 阅读布局指南 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>

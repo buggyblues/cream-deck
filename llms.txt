@@ -1,0 +1,29 @@
+# 奶猫妙控（Cream Deck）
+
+> iPhone / iPad 上的可编辑小键盘与 Mac 副控。
+
+版本：1.2.0。要求：iOS / iPadOS 17+，macOS 13+。文中截图来自 App，使用演示数据。
+
+## 使用指南
+
+- [用 iPhone 控制 Mac：从工作布局开始](https://cream-deck.vercel.app/blog/layout-work): Mac 画面、触控板、滚轮和常用按键放在同一页，查看桌面时也能直接操作。
+- [把 Mac Dock 放到手机上：启动器布局指南](https://cream-deck.vercel.app/blog/layout-launcher): 用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。
+- [手机输入网址、切换标签页：Mac 浏览器副控指南](https://cream-deck.vercel.app/blog/layout-browser): 地址输入、标签页切换、前进后退与独立滚轮，集中处理浏览时的常用动作。
+- [用点击轮听歌：Apple Music、Spotify 与 Mac 媒体控制](https://cream-deck.vercel.app/blog/layout-media): 转轮选歌、切换曲目信息、调音量和定时暂停，播放状态直接显示在手机上。
+- [iPhone 演示遥控：翻页、激光笔、提词与计时](https://cream-deck.vercel.app/blog/layout-presentation): 演讲辅助、演示控制和演讲计时三个桌面，让手机跟上讲述的节奏。
+- [氛围编程布局：在手机上查看与操作 Codex 任务](https://cream-deck.vercel.app/blog/layout-codex): 任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。
+- [在 iPhone 上使用 Mac 终端：多会话与常用控制键](https://cream-deck.vercel.app/blog/layout-terminal): 真正的 Mac shell 会话，搭配终端小屏、全屏查看和 Esc、Tab、Ctrl 等按键。
+- [写作副控：按字词句段移动、选择与整理 Markdown](https://cream-deck.vercel.app/blog/layout-writing): 文字与格式两个桌面，把选区操作、字数统计和常用排版放到手机上。
+- [读资料时顺手摘录：科研布局与带出处的剪藏夹](https://cream-deck.vercel.app/blog/layout-research): 把选文按观点、方法、证据和疑问收进手机，并保留实际取得的出处。
+- [用手机翻 PDF 和 EPUB：Mac 阅读布局指南](https://cream-deck.vercel.app/blog/layout-reading): 翻页旋钮、阅读滚轮、目录与选文工具，陪你读完电脑上的长文。
+- [手机变数字键盘：财务布局、计算器与 64 个公式](https://cream-deck.vercel.app/blog/layout-finance): 数字录入、本地计算器、表格快捷键与公式参数面板，分成六个桌面。
+- [一套旋钮配合多款创作软件：应用创作台指南](https://cream-deck.vercel.app/blog/layout-creative): 按前台软件与工作区呈现控制，覆盖剪辑、图像和音乐制作中的已适配动作。
+- [在手机上录声音、切片与打节奏：采样布局指南](https://cream-deck.vercel.app/blog/layout-sampler): 录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。
+- [手机上的游戏手柄：游戏布局与 Mac 串流](https://cream-deck.vercel.app/blog/layout-arcade): 方向键、肩键与 ABXY 放在触屏上，配合 Mac 游戏画面和游戏库使用。
+- [灯光与场景放进一张布局：Home Assistant 与 Apple 家庭](https://cream-deck.vercel.app/blog/layout-smart-home): 连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。
+
+## 发布与支持
+
+- [更新日志](https://cream-deck.vercel.app/updates)
+- [帮助](https://cream-deck.vercel.app/support)
+- [隐私](https://cream-deck.vercel.app/privacy)

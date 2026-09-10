@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="氛围编程布局：在手机上查看与操作 Codex 任务｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-codex.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-codex">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="氛围编程布局：在手机上查看与操作 Codex 任务｜奶猫妙控">
+  <meta name="twitter:description" content="任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-codex.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-codex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <title>氛围编程布局：在手机上查看与操作 Codex 任务｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "氛围编程布局：在手机上查看与操作 Codex 任务",
+      "description": "任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-codex.webp",
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/remote-keyboard.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-codex"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "氛围编程布局：在手机上查看与操作 Codex 任务",
+          "item": "https://cream-deck.vercel.app/blog/layout-codex"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "手机会独立运行 Codex 吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不会。此布局控制配对 Mac 上的 Codex 桌面应用。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以控制命令行程序吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "命令行程序请使用「终端」布局；它提供在 Mac 上运行的独立 shell 会话。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 氛围编程</a>
+      <h1>氛围编程布局：在手机上查看与操作 Codex 任务</h1>
+      <p>任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。 · 2026 年 9 月 10 日</p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/v1.2.0/control-codex.webp" alt="奶猫妙控氛围编程布局，使用演示数据的 App 界面" width="1206" height="2622">
+    </figure>
+    <article class="article-body">
+<p class="article-lead">奶猫妙控的氛围编程布局面向 Mac 上的 Codex 桌面应用。电脑负责运行任务，手机显示当前任务状态，并提供常用操作、输入和导航。它适合放在键盘旁边，让你在阅读代码或等待任务时，随手查看下一步需要处理的内容。</p>
+<aside class="article-highlight"><strong>适配与使用条件：</strong>Codex 桌面应用（Mac）</aside>
+<h2>先在 Mac 打开实际任务</h2>
+<p>完成奶猫妙控配对后，启动 Codex 并打开一个任务。状态区通过桌面集成读取任务信息，模型、推理强度、快速模式和批准状态随任务更新。首次使用先核对手机显示的任务，再发送操作，避免把指令送到另一项工作。</p>
+<h2>常用操作留给专属按钮</h2>
+<p>布局提供任务相关控制、实时键盘、轨迹球、滚轮与边栏导航。手机键盘可以补充简短说明；较长的提示词可以先在文本键盘整理，检查后再发送。按钮的可用状态取决于当前任务和 Codex 版本。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/remote-keyboard.webp" alt="氛围编程布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
+<h2>重复的文字可以保存下来</h2>
+<p>如果你经常发送相似的检查要求，可以把文字绑定到自己的按键。预设文字支持列表与不同发送方式，也可以扩展成桌面自动化。应把每个按钮命名为实际动作，让未来的自己看一眼就知道将发送什么。</p>
+<h2>什么时候换到终端布局</h2>
+<p>氛围编程用于 Codex 桌面任务；需要在 Mac shell 中执行命令或查看终端输出时，使用独立的终端预设。两者共享奶猫妙控连接，但任务控制与 shell 会话各自管理。Codex 的账户、权限和模型可用性仍由 Codex 决定。</p>
+<h2>开始使用</h2><ol><li>在 Mac 启动 Codex 并打开任务。</li><li>手机选择「氛围编程」，核对状态区。</li><li>测试输入与导航，再按自己的习惯编辑常用按钮。</li></ol>
+<h2>常见问题</h2>
+<h3>手机会独立运行 Codex 吗？</h3><p>不会。此布局控制配对 Mac 上的 Codex 桌面应用。</p>
+<h3>可以控制命令行程序吗？</h3><p>命令行程序请使用「终端」布局；它提供在 Mac 上运行的独立 shell 会话。</p>
+<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="layout-terminal.html">← 在 iPhone 上使用 Mac 终端：多会话与常用控制键</a>
+      <a href="layout-work.html">用 iPhone 控制 Mac：从工作布局开始 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "nativeApp": true,
+  "data": "synthetic demonstration fixtures",
+  "scenes": [
+    {
+      "name": "control-arcade",
+      "args": [
+        "--deck",
+        "arcade",
+        "--arcade-preview"
+      ],
+      "fixtures": {},
+      "sha256": "5d55a82b2e2cd5e7bdbece6c1fdbe1b8a31afdc5ecd542dedac807d9e81a2e67"
+    },
+    {
+      "name": "control-presentation-board",
+      "args": [
+        "--deck",
+        "presentation-assist",
+        "--show-presentation-board",
+        "--preview-presentation-tools"
+      ],
+      "fixtures": {},
+      "sha256": "feca4095ac38aa176005d48974204cf57aaaab4282239bff74314fe211e85a99"
+    }
+  ]
+}

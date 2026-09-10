@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- release-1.2.0:start -->
+  <url><loc>https://cream-deck.vercel.app/blog/layout-work</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-launcher</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-browser</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-media</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-presentation</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-codex</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-terminal</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-writing</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-research</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-reading</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-finance</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-creative</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-sampler</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-arcade</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/layout-smart-home</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+<!-- release-1.2.0:end -->
   <url><loc>https://cream-deck.vercel.app/</loc><lastmod>2026-08-31</lastmod><priority>1.0</priority></url>
   <url><loc>https://cream-deck.vercel.app/updates</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://cream-deck.vercel.app/blog</loc><lastmod>2026-08-31</lastmod><priority>0.7</priority></url>

@@ -181,74 +181,78 @@
       <div class="layout-copy">
         <p class="eyebrow">INTELLIGENT WORKSPACES</p>
         <h2>常用软件，开箱即用</h2>
-        <p>自动识别 Mac 当前使用的软件，剪辑、演示、播控等小键盘随手切换</p>
-        <div class="layout-tabs" role="tablist" aria-label="软件小键盘">
-          <button id="layout-tab-codex" class="layout-tab" type="button" role="tab" aria-selected="true" aria-controls="layout-panel" tabindex="0" data-image="assets/screens/control-codex.webp?v=20260831d" data-name="Codex" data-description="AI 编程助手控制、常用快捷指令与状态提醒" data-alt="奶猫妙控 Codex 控制台">
-            <img src="assets/software/codex.png" alt="" width="1024" height="1024">
-            <div class="layout-tab-info">
-              <strong>Codex</strong>
-              <span class="layout-tab-tag">智能编程</span>
-            </div>
+        <p>15 种预设布局，覆盖日常工作、写作阅读、财务、创作与智能家居。应用创作台可随 Mac 前台软件切换。<a href="blog.html">查看布局指南 →</a></p>
+        <div class="layout-tabs" role="tablist" aria-label="15 种预设布局">
+          <button id="layout-tab-work" class="layout-tab" type="button" role="tab" aria-selected="true" aria-controls="layout-panel" tabindex="0" data-image="assets/screens/v1.2.0/control-studio.webp" data-name="工作" data-description="macOS 桌面与当前应用 · Mac 画面、触控板、滚轮和常用按键放在同一页，查看桌面时也能直接操作。" data-alt="奶猫妙控工作布局，内容为演示数据">
+            <img src="assets/layouts/work.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>工作</strong><span class="layout-tab-tag">日常效率</span></div>
           </button>
-          <button id="layout-tab-resolve" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/control-resolve.webp?v=20260831d" data-name="DaVinci Resolve" data-description="多功能旋钮与快捷键随剪辑、调色等工作区智能联动" data-alt="奶猫妙控 DaVinci Resolve 控制台">
-            <img src="assets/software/davinci-resolve.png" alt="" width="512" height="512">
-            <div class="layout-tab-info">
-              <strong>DaVinci Resolve</strong>
-              <span class="layout-tab-tag">调色剪辑</span>
-            </div>
+          <button id="layout-tab-launcher" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-launcher.webp" data-name="启动器" data-description="Mac 已安装应用与 Dock · 用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。" data-alt="奶猫妙控启动器布局，内容为演示数据">
+            <img src="assets/layouts/launcher.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>启动器</strong><span class="layout-tab-tag">日常效率</span></div>
           </button>
-          <button id="layout-tab-powerpoint" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/control-presentation.webp?v=20260831d" data-name="Microsoft PowerPoint" data-description="幻灯片翻页、放映控制、一键黑屏与音量调节" data-alt="奶猫妙控 Microsoft PowerPoint 控制台">
-            <img src="assets/software/microsoft-powerpoint.png" alt="" width="512" height="512">
-            <div class="layout-tab-info">
-              <strong>PowerPoint</strong>
-              <span class="layout-tab-tag">幻灯演示</span>
-            </div>
+          <button id="layout-tab-browser" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-browser.webp" data-name="浏览器" data-description="默认浏览器；Safari、Chrome 等 Mac 浏览器 · 地址输入、标签页切换、前进后退与独立滚轮，集中处理浏览时的常用动作。" data-alt="奶猫妙控浏览器布局，内容为演示数据">
+            <img src="assets/layouts/browser.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>浏览器</strong><span class="layout-tab-tag">日常效率</span></div>
           </button>
-          <button id="layout-tab-music" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/control-media.webp?v=20260831d" data-name="Apple Music" data-description="曲目切换、播放暂停、喜爱收藏与音量调节" data-alt="奶猫妙控 Apple Music 控制台">
-            <img src="assets/software/apple-music.jpg" alt="" width="512" height="512">
-            <div class="layout-tab-info">
-              <strong>Apple Music</strong>
-              <span class="layout-tab-tag">音乐播控</span>
-            </div>
+          <button id="layout-tab-media" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-media.webp" data-name="媒体" data-description="Apple Music、Spotify；其他播放器提供系统媒体控制 · 转轮选歌、切换曲目信息、调音量和定时暂停，播放状态直接显示在手机上。" data-alt="奶猫妙控媒体布局，内容为演示数据">
+            <img src="assets/layouts/media.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>媒体</strong><span class="layout-tab-tag">声音与娱乐</span></div>
           </button>
-          <button id="layout-tab-spotify" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/control-media.webp?v=20260831d" data-name="Spotify" data-description="曲目切换、播放暂停、喜爱收藏与音量调节" data-alt="奶猫妙控 Spotify 控制台">
-            <img src="assets/software/spotify.png" alt="" width="939" height="940">
-            <div class="layout-tab-info">
-              <strong>Spotify</strong>
-              <span class="layout-tab-tag">流媒体播控</span>
-            </div>
+          <button id="layout-tab-presentation" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-presentation-assist.webp" data-name="演示" data-description="Keynote、Microsoft PowerPoint；Mac 屏幕演示 · 演讲辅助、演示控制和演讲计时三个桌面，让手机跟上讲述的节奏。" data-alt="奶猫妙控演示布局，内容为演示数据">
+            <img src="assets/layouts/presentation.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>演示</strong><span class="layout-tab-tag">创作与演讲</span></div>
           </button>
-          <button id="layout-tab-keynote" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/control-presentation.webp?v=20260831d" data-name="Keynote" data-description="幻灯片翻页、放映控制、一键黑屏与音量调节" data-alt="奶猫妙控 Keynote 控制台">
-            <img src="assets/software/keynote.jpg" alt="" width="512" height="512">
-            <div class="layout-tab-info">
-              <strong>Keynote</strong>
-              <span class="layout-tab-tag">演说展映</span>
-            </div>
+          <button id="layout-tab-codex" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-codex.webp" data-name="氛围编程" data-description="Codex 桌面应用（Mac） · 任务状态、模型设置与常用输入集中到一页，配合 Mac 上的 Codex 使用。" data-alt="奶猫妙控氛围编程布局，内容为演示数据">
+            <img src="assets/layouts/codex.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>氛围编程</strong><span class="layout-tab-tag">开发工具</span></div>
           </button>
-          <button id="layout-tab-final-cut" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/control-final-cut.webp?v=20260831d" data-name="Final Cut Pro" data-description="时间线穿梭、剪辑切分、标记打点与播放控制" data-alt="奶猫妙控 Final Cut Pro 控制台">
-            <img src="assets/software/final-cut-pro.png" alt="" width="512" height="512">
-            <div class="layout-tab-info">
-              <strong>Final Cut Pro</strong>
-              <span class="layout-tab-tag">专业后期</span>
-            </div>
+          <button id="layout-tab-terminal" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-terminal.webp" data-name="终端" data-description="Mac 登录 shell；vim、top、ssh 等命令行程序 · 真正的 Mac shell 会话，搭配终端小屏、全屏查看和 Esc、Tab、Ctrl 等按键。" data-alt="奶猫妙控终端布局，内容为演示数据">
+            <img src="assets/layouts/terminal.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>终端</strong><span class="layout-tab-tag">开发工具</span></div>
           </button>
-          <button id="layout-tab-jianying" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/control-jianying.webp?v=20260831d" data-name="剪映专业版" data-description="时间线穿梭、剪辑切分、标记打点与播放控制" data-alt="奶猫妙控剪映专业版控制台">
-            <img src="assets/software/jianying-pro.jpg" alt="" width="512" height="512">
-            <div class="layout-tab-info">
-              <strong>剪映专业版</strong>
-              <span class="layout-tab-tag">高效视频</span>
-            </div>
+          <button id="layout-tab-writing" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-writing.webp" data-name="写作" data-description="TextEdit 等标准编辑器；Obsidian 需安装随附插件 · 文字与格式两个桌面，把选区操作、字数统计和常用排版放到手机上。" data-alt="奶猫妙控写作布局，内容为演示数据">
+            <img src="assets/layouts/writing.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>写作</strong><span class="layout-tab-tag">阅读与写作</span></div>
+          </button>
+          <button id="layout-tab-research" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-research.webp" data-name="科研" data-description="Mac 可复制文本、浏览器与 PDF 阅读器；Wikipedia、Google Scholar 检索 · 把选文按观点、方法、证据和疑问收进手机，并保留实际取得的出处。" data-alt="奶猫妙控科研布局，内容为演示数据">
+            <img src="assets/layouts/research.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>科研</strong><span class="layout-tab-tag">阅读与写作</span></div>
+          </button>
+          <button id="layout-tab-reading" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-reading.webp" data-name="阅读" data-description="预览、Apple 图书、Skim、Safari、Chrome；另有多款阅读器专属适配 · 翻页旋钮、阅读滚轮、目录与选文工具，陪你读完电脑上的长文。" data-alt="奶猫妙控阅读布局，内容为演示数据">
+            <img src="assets/layouts/reading.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>阅读</strong><span class="layout-tab-tag">阅读与写作</span></div>
+          </button>
+          <button id="layout-tab-finance" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-finance.webp" data-name="财务" data-description="通用 Mac 键盘输入；公式由 Excel、Numbers、Google Sheets 等目标软件解释 · 数字录入、本地计算器、表格快捷键与公式参数面板，分成六个桌面。" data-alt="奶猫妙控财务布局，内容为演示数据">
+            <img src="assets/layouts/finance.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>财务</strong><span class="layout-tab-tag">日常效率</span></div>
+          </button>
+          <button id="layout-tab-creative" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-resolve.webp" data-name="应用创作台" data-description="DaVinci Resolve、Premiere Pro、Final Cut Pro、剪映／CapCut，以及图像与音乐应用适配 · 按前台软件与工作区呈现控制，覆盖剪辑、图像和音乐制作中的已适配动作。" data-alt="奶猫妙控应用创作台布局，内容为演示数据">
+            <img src="assets/layouts/creative.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>应用创作台</strong><span class="layout-tab-tag">创作与演讲</span></div>
+          </button>
+          <button id="layout-tab-sampler" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-sampler.webp" data-name="采样" data-description="iPhone／iPad 本地音频；可选采集手机或 Mac 声音 · 录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。" data-alt="奶猫妙控采样布局，内容为演示数据">
+            <img src="assets/layouts/sampler.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>采样</strong><span class="layout-tab-tag">声音与娱乐</span></div>
+          </button>
+          <button id="layout-tab-arcade" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-arcade.webp" data-name="游戏" data-description="奶猫妙控游戏库及兼容的 Mac 游戏控制方式 · 方向键、肩键与 ABXY 放在触屏上，配合 Mac 游戏画面和游戏库使用。" data-alt="奶猫妙控游戏布局，内容为演示数据">
+            <img src="assets/layouts/arcade.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>游戏</strong><span class="layout-tab-tag">声音与娱乐</span></div>
+          </button>
+          <button id="layout-tab-smart-home" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-image="assets/screens/v1.2.0/control-smart-home.webp" data-name="智能家居" data-description="Home Assistant、Apple 家庭；经已有平台接入的 Matter 设备 · 连接已有家庭，将设备能力转换为可编辑的开关、滑杆、旋钮与场景按钮。" data-alt="奶猫妙控智能家居布局，内容为演示数据">
+            <img src="assets/layouts/smart-home.svg" alt="" width="128" height="128">
+            <div class="layout-tab-info"><strong>智能家居</strong><span class="layout-tab-tag">家居生活</span></div>
           </button>
         </div>
       </div>
-      <figure class="layout-preview" id="layout-panel" role="tabpanel" aria-labelledby="layout-tab-codex" tabindex="0">
+      <figure class="layout-preview" id="layout-panel" role="tabpanel" aria-labelledby="layout-tab-work" tabindex="0">
         <div class="layout-preview-frame">
-          <img data-layout-image src="assets/screens/control-codex.webp?v=20260831d" alt="奶猫妙控 Codex 控制台" width="1206" height="2622" loading="lazy">
+          <img data-layout-image src="assets/screens/v1.2.0/control-studio.webp" alt="奶猫妙控工作布局，内容为演示数据" width="1206" height="2622" loading="lazy">
         </div>
         <figcaption>
-          <div class="layout-preview-badge"><span class="badge-dot"></span> 实时适配</div>
-          <strong data-layout-name>Codex</strong>
-          <span data-layout-description>AI 编程助手控制、常用快捷指令与状态提醒</span>
+          <div class="layout-preview-badge"><span class="badge-dot"></span> App 界面 · 演示数据</div>
+          <strong data-layout-name>工作</strong>
+          <span data-layout-description>Mac 画面、触控板、滚轮和常用按键放在同一页，查看桌面时也能直接操作。</span>
         </figcaption>
       </figure>
     </section>
@@ -263,7 +267,7 @@
       <div class="remote-showcase">
         <div class="remote-nav" role="tablist" aria-label="远程控制模式切换">
           <button class="remote-nav-item is-active" type="button" role="tab" aria-selected="true" aria-controls="remote-panel" id="remote-tab-studio"
-            data-remote-img="assets/screens/control-studio.webp?v=20260831d"
+            data-remote-img="assets/screens/v1.2.0/control-studio.webp"
             data-remote-tag="边看边控"
             data-remote-title="边看边控 · Studio View"
             data-remote-desc="将 Mac 实时画面、虚拟触控板与滚动条集成在同一界面，躺在沙发上也能轻松操控电脑。">
@@ -278,7 +282,7 @@
           </button>
 
           <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-fullscreen"
-            data-remote-img="assets/screens/remote-fullscreen.webp?v=20260831d"
+            data-remote-img="assets/screens/v1.2.0/remote-fullscreen.webp"
             data-remote-tag="全屏清晰"
             data-remote-title="展开全屏桌面"
             data-remote-desc="清晰低延迟串流，支持双指缩放与平移漫游，方便远程查看 Mac 桌面与多任务。">
@@ -293,7 +297,7 @@
           </button>
 
           <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-voice"
-            data-remote-img="assets/screens/remote-text-voice.webp?v=20260831d"
+            data-remote-img="assets/screens/v1.2.0/remote-text-voice.webp"
             data-remote-tag="先改后发"
             data-remote-title="文本键盘 · 语音与文字输入"
             data-remote-desc="在手机上口述或输入文字，修整确认后再一键发送至 Mac 当前光标，避免反复修改。">
@@ -308,7 +312,7 @@
           </button>
 
           <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-keyboard"
-            data-remote-img="assets/screens/remote-keyboard.webp?v=20260831d"
+            data-remote-img="assets/screens/v1.2.0/remote-keyboard.webp"
             data-remote-tag="低延迟按键"
             data-remote-title="虚拟键盘 · 常用按键"
             data-remote-desc="提供常用键位与 Command、Option 等修饰键，即按即发，适合快捷操作与日常输入。">
@@ -323,7 +327,7 @@
           </button>
 
           <button class="remote-nav-item" type="button" role="tab" aria-selected="false" aria-controls="remote-panel" id="remote-tab-mic"
-            data-remote-img="assets/screens/remote-microphone.webp?v=20260831d"
+            data-remote-img="assets/screens/v1.2.0/remote-microphone.webp"
             data-remote-tag="无线传输"
             data-remote-title="无线麦克风"
             data-remote-desc="将手机麦克风音频直接无线传输给 Mac，远程会议或语音通话更清晰。">
@@ -340,7 +344,7 @@
 
         <figure class="remote-display" id="remote-panel" role="tabpanel" aria-labelledby="remote-tab-studio" tabindex="0">
           <div class="remote-display-stage">
-            <img class="remote-display-img" data-remote-display-img src="assets/screens/control-studio.webp?v=20260831d" alt="奶猫妙控 Studio View 边看边控" width="1206" height="2622">
+            <img class="remote-display-img" data-remote-display-img src="assets/screens/v1.2.0/control-studio.webp" alt="奶猫妙控 Studio View 边看边控" width="1206" height="2622">
           </div>
           <figcaption class="remote-display-caption">
             <div class="remote-display-tag" data-remote-display-tag><span class="badge-dot"></span> 边看边控</div>
@@ -353,7 +357,7 @@
 
     <section class="product-section" id="control">
       <figure class="product-shot">
-        <img src="assets/screens/layout-editor.webp?v=20260831d" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy">
+        <img src="assets/screens/v1.2.0/layout-editor.webp" alt="奶猫妙控小键盘编辑器" width="1206" height="2622" loading="lazy">
       </figure>
       <div class="product-copy">
         <p class="eyebrow">CUSTOM CANVAS</p>
@@ -420,11 +424,11 @@
       </div>
       <div class="quick-screens">
         <figure>
-          <img src="assets/screens/device-pairing.webp?v=20260831d" alt="奶猫妙控设备与配对页面" width="1206" height="2622" loading="lazy">
+          <img src="assets/screens/v1.2.0/device-pairing.webp" alt="奶猫妙控设备与配对页面" width="1206" height="2622" loading="lazy">
           <figcaption><strong>设备与配对</strong><span>自动发现局域网内的 Mac，支持扫码快速绑定</span></figcaption>
         </figure>
         <figure>
-          <img src="assets/screens/layout-switcher.webp?v=20260831d" alt="奶猫妙控小键盘切换页面" width="1206" height="2622" loading="lazy">
+          <img src="assets/screens/v1.2.0/layout-switcher.webp" alt="奶猫妙控小键盘切换页面" width="1206" height="2622" loading="lazy">
           <figcaption><strong>小键盘切换</strong><span>长按并滑动，在不同工作区小键盘间快速切换</span></figcaption>
         </figure>
       </div>
@@ -493,7 +497,7 @@
       </div>
       <div class="pro-purchase">
         <figure class="pro-paywall-preview">
-          <img src="assets/screens/pro-paywall.webp?v=20260831d" alt="奶猫妙控 Pro 在 iPhone 上的套餐选择与购买界面" width="1206" height="2622" loading="lazy">
+          <img src="assets/screens/v1.2.0/pro-paywall.webp" alt="奶猫妙控 Pro 在 iPhone 上的套餐选择与购买界面" width="1206" height="2622" loading="lazy">
           <figcaption>打开移动端 App 即可一键安全订阅或随时恢复购买</figcaption>
         </figure>
         <div class="pro-plans" aria-label="奶猫妙控 Pro 中国大陆套餐价格">

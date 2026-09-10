@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="在手机上录声音、切片与打节奏：采样布局指南｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-sampler">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="在手机上录声音、切片与打节奏：采样布局指南｜奶猫妙控">
+  <meta name="twitter:description" content="录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-sampler">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <title>在手机上录声音、切片与打节奏：采样布局指南｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "在手机上录声音、切片与打节奏：采样布局指南",
+      "description": "录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler.webp",
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-sampler-perform.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-sampler"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "在手机上录声音、切片与打节奏：采样布局指南",
+          "item": "https://cream-deck.vercel.app/blog/layout-sampler"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "采样一定要连接电脑吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "麦克风录音、文件导入、切片与本地演奏不需要 Mac。采集 Mac 声音时才需要相应连接。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "包含完整 DAW 或 MIDI 导出吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当前提供本地采样、节奏与音频导出，不包含完整 DAW 的全部编排功能或 MIDI 导出。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 采样</a>
+      <h1>在手机上录声音、切片与打节奏：采样布局指南</h1>
+      <p>录声音、切片、演奏三个桌面，声音库与 16 格演奏组合在手机本地工作。 · 2026 年 9 月 10 日</p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/v1.2.0/control-sampler.webp" alt="奶猫妙控采样布局，使用演示数据的 App 界面" width="1206" height="2622">
+    </figure>
+    <article class="article-body">
+<p class="article-lead">采样布局可以在不连接 Mac 时使用。录下身边的一段声音，选出有意思的片段，再把它放到鼓垫上演奏。奶猫妙控把录声音、切片与演奏做成同一套布局的三个桌面，保留原来的分页与编辑方式。</p>
+<aside class="article-highlight"><strong>适配与使用条件：</strong>iPhone／iPad 本地音频；可选采集手机或 Mac 声音</aside>
+<h2>从自己的声音或文件开始</h2>
+<p>初次进入是空工程，可以使用麦克风录音或导入音频文件，也可以主动载入示例鼓声。按住空垫开始录音，松手保存到对应位置；录音键适合持续录制。声音库保存原始声音，完整乐曲可以先保留，再选择工作片段。</p>
+<h2>切片时保留原音</h2>
+<p>切片页支持瞬态自动切片、等分和手动边界。波形中的彩色区域与试听垫对应，可以边听边调整。切片记录原音中的位置，原文件不会因为划分边界而被裁掉；演奏组合则把需要的声音映射到十六个位置。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/control-sampler-perform.webp" alt="采样布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
+<h2>把片段组合成节奏</h2>
+<p>演奏桌面支持多指打击、实时叠录、逐格编辑、速度、摇摆与循环。可用静音和独奏检查各声部，再加入滤波、回声、混响等效果。声音库、演奏组合和节奏段落分别保存，切换组合不需要重新导入声音。</p>
+<h2>保存与录音来源</h2>
+<p>工程自动保存，循环可导出 WAV，工程可导出包含音频的 ZIP 备份。当前版本也加入手机和 Mac 声音采集入口；手机内录由系统录屏流程启动，受来源应用限制，受保护音频可能不可采集。使用内录前先确认正确来源，录音结束后再回到声音库试听。</p>
+<h2>开始使用</h2><ol><li>打开「采样」，录一段声音或导入音频。</li><li>切到切片桌面，试听并调整边界。</li><li>在演奏桌面打节奏，最后导出 WAV 或备份工程。</li></ol>
+<h2>常见问题</h2>
+<h3>采样一定要连接电脑吗？</h3><p>麦克风录音、文件导入、切片与本地演奏不需要 Mac。采集 Mac 声音时才需要相应连接。</p>
+<h3>包含完整 DAW 或 MIDI 导出吗？</h3><p>当前提供本地采样、节奏与音频导出，不包含完整 DAW 的全部编排功能或 MIDI 导出。</p>
+<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="layout-media.html">← 用点击轮听歌：Apple Music、Spotify 与 Mac 媒体控制</a>
+      <a href="layout-creative.html">一套旋钮配合多款创作软件：应用创作台指南 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="把 Mac Dock 放到手机上：启动器布局指南｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-launcher.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-launcher">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="把 Mac Dock 放到手机上：启动器布局指南｜奶猫妙控">
+  <meta name="twitter:description" content="用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-launcher.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-launcher">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <title>把 Mac Dock 放到手机上：启动器布局指南｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "把 Mac Dock 放到手机上：启动器布局指南",
+      "description": "用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/control-launcher.webp",
+        "https://cream-deck.vercel.app/assets/screens/v1.2.0/layout-editor.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/layout-launcher"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "把 Mac Dock 放到手机上：启动器布局指南",
+          "item": "https://cream-deck.vercel.app/blog/layout-launcher"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "软件已经打开，再点会发生什么？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "启动动作会尝试把现有应用切到前台，具体窗口由 macOS 与应用管理。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以修改按钮吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。启动器使用现有布局编辑器，支持调整位置、尺寸、外观和绑定。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 启动器</a>
+      <h1>把 Mac Dock 放到手机上：启动器布局指南</h1>
+      <p>用熟悉的软件图标启动或切换应用，让常用工具在手机上有固定位置。 · 2026 年 9 月 10 日</p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/v1.2.0/control-launcher.webp" alt="奶猫妙控启动器布局，使用演示数据的 App 界面" width="1206" height="2622">
+    </figure>
+    <article class="article-body">
+<p class="article-lead">当你希望手机上只有几枚清楚的大按钮，启动器比整块远程桌面更直接。奶猫妙控从 Mac 的应用信息生成图标按键，点一下启动应用，或把已经运行的软件切到前台。电脑继续显示工作内容，手机负责选择下一件工具。</p>
+<aside class="article-highlight"><strong>适配与使用条件：</strong>Mac 已安装应用与 Dock</aside>
+<h2>从熟悉的 Dock 开始</h2>
+<p>连接 Mac 后，启动器可以按 Dock 中应用的顺序生成桌面。应用较多时使用原生分页，每个页面仍属于同一套布局。按钮上的名称与图标来自电脑，手机不需要安装对应软件。</p>
+<h2>把工作顺序变成按钮顺序</h2>
+<p>如果你经常在浏览器、笔记和编辑器之间往返，可以把它们放在同一页。布局编辑器允许调整应用按钮的位置和尺寸；选应用时可从 Mac 应用列表中查找。大型按钮适合启动常用工具，次要应用留在下一页。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/v1.2.0/layout-editor.webp" alt="启动器布局的相关操作界面" width="1206" height="2622" loading="lazy"><figcaption>App 实际界面，内容为演示数据。</figcaption></figure>
+<h2>启动之后，继续使用专属布局</h2>
+<p>打开浏览器后可以转到浏览器布局，开始写稿时转到写作，剪视频时转到应用创作台。启动器解决的是打开和切换应用；具体的播放、编辑和参数调整由对应布局承担。</p>
+<h2>应用图标与实际安装状态</h2>
+<p>首次获取应用目录需要连接 Mac。电脑卸载或移动应用后，应刷新应用信息并检查原有绑定。启动器不会替你安装付费软件，也不会代替软件本身的登录与授权。</p>
+<h2>开始使用</h2><ol><li>连接 Mac，在布局列表选择「启动器」。</li><li>检查生成的应用按键和分页。</li><li>在编辑器中调整常用应用的位置，点按验证启动。</li></ol>
+<h2>常见问题</h2>
+<h3>软件已经打开，再点会发生什么？</h3><p>启动动作会尝试把现有应用切到前台，具体窗口由 macOS 与应用管理。</p>
+<h3>可以修改按钮吗？</h3><p>可以。启动器使用现有布局编辑器，支持调整位置、尺寸、外观和绑定。</p>
+<p>本文对应 1.2.0。<a href="../updates.html">查看更新说明</a>，或<a href="https://testflight.apple.com/join/Sp1sf593">加入 iPhone / iPad TestFlight</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="layout-work.html">← 用 iPhone 控制 Mac：从工作布局开始</a>
+      <a href="layout-browser.html">手机输入网址、切换标签页：Mac 浏览器副控指南 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>
