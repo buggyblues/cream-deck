@@ -1,0 +1,35 @@
+/* Reading and card layout fixes; loaded only by the blog and its articles. */
+.blog-featured, .blog-featured-content, .blog-card { min-width: 0; }
+.blog-featured-img img,
+.blog-card-thumb img,
+.blog-card-thumb.mac-thumb img { width: auto; height: auto; max-width: 100%; aspect-ratio: auto; }
+.blog-meta, .blog-card-footer { flex-wrap: wrap; column-gap: .75rem; row-gap: .35rem; }
+.blog-meta time, .blog-meta > span, .blog-card-footer time, .blog-card-footer > span { white-space: nowrap; }
+
+.article-header { width: min(100%, 43rem); margin-inline: auto; }
+.article-header h1 { font-size: clamp(1.875rem, 3.2vw, 2.5rem); line-height: 1.4; text-wrap: balance; overflow-wrap: anywhere; }
+.article-header p { max-width: none; margin: 1rem 0 0; }
+.article-header p.article-meta { margin-top: .65rem; font-size: .85rem; }
+.article-meta time { white-space: nowrap; }
+.article-cover { width: min(100%, 43rem); margin: 2rem auto; }
+.article-cover-phone { padding: 0; }
+.article-cover-phone img { width: min(100%, 18rem); }
+.article-cover figcaption { max-width: 34rem; margin: .9rem auto 0; color: var(--muted); font-size: .82rem; line-height: 1.65; text-align: center; }
+.article-body { margin-top: 2.5rem; }
+.article-body p, .article-body li { overflow-wrap: anywhere; }
+.article-body h2 { margin: 2.75rem 0 .85rem; font-size: clamp(1.3rem, 2.4vw, 1.65rem); line-height: 1.5; letter-spacing: -.02em; }
+.article-body h3 { margin: 1.75rem 0 .6rem; font-size: 1.15rem; line-height: 1.55; letter-spacing: -.015em; }
+.article-body h2 + p, .article-body h3 + p { margin-top: .6rem; }
+.article-body ul, .article-body ol { margin: 1rem 0 1.5rem; padding-left: 1.4rem; color: #4e4941; font-size: 1.06rem; line-height: 1.85; }
+.article-body li + li { margin-top: .65rem; }
+.article-highlight { margin: 1.75rem 0 2rem; padding: 1.1rem 1.25rem; font-size: 1rem; }
+.article-figure { width: 100%; margin: 2rem 0 2.5rem; transform: none; }
+.article-figure figcaption { max-width: 34rem; }
+.article-next { width: min(100%, 43rem); }
+.article-next a { min-width: 0; overflow-wrap: anywhere; }
+
+@media (max-width: 43.75rem) {
+  .article-shell { padding-top: 2.5rem; }
+  .article-header h1 { font-size: clamp(1.75rem, 7vw, 2.1rem); line-height: 1.45; }
+  .article-cover-phone img { width: min(100%, 16rem); }
+}
