@@ -27,3 +27,12 @@
 - [更新日志](https://cream-deck.vercel.app/updates)
 - [帮助](https://cream-deck.vercel.app/support)
 - [隐私](https://cream-deck.vercel.app/privacy)
+
+## 实用操作教程
+
+- [把常用回复做成按钮：从输入文字到预览、同步](https://cream-deck.vercel.app/blog/guide-text-button): 在奶猫妙控里新建文字按钮，填写常用回复，设置是否追加 Enter，并通过内容预览和 Mac 空白文档检查输入结果。
+- [做一个“记录并保存”按钮：文字、等待和快捷键串起来](https://cream-deck.vercel.app/blog/guide-automation-steps): 把文字按钮扩展成自动化，按顺序加入等待和 ⌘S，学习编辑步骤、预览内容、试运行与排查焦点问题。
+- [剪藏不只存一句话：把原文、笔记和出处一起整理好](https://cream-deck.vercel.app/blog/guide-clipping-sources): 手动建立一条带笔记和来源链接的剪藏，保存后检查出处，再用笔记关键词找回内容，适合阅读摘录和资料复盘。
+- [从一堆剪藏里挑出本周资料：筛选、跨筛选选择与导出](https://cream-deck.vercel.app/blog/guide-clipping-export): 用关键词和链接类型筛选剪藏，跨筛选选择两条资料，再通过 iOS 分享面板导出文字与附件，完成一次可检查的资料整理。
+- [用 SUMIFS 汇总项目支出：一步步配置两个条件](https://cream-deck.vercel.app/blog/guide-sumifs): 下载五行练习数据，在奶猫妙控长按 SUMIFS，配置项目和付款状态两个条件，核对公式、复制结果并处理分号分隔符。
+- [清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查](https://cream-deck.vercel.app/blog/guide-text-cleanup): 从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-text-cleanup">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查｜奶猫妙控">
+  <meta name="twitter:description" content="从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-text-cleanup">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../blog.css">
+  <title>清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查",
+      "description": "从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/guide-text-cleanup"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查",
+          "item": "https://cream-deck.vercel.app/blog/guide-text-cleanup"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "新文字留空，为什么仍能复制公式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SUBSTITUTE 的新文字允许为空字符串，App 会生成 \"\"。这表示删除匹配内容，属于有效公式。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么 A2 被当作两个字符，而没有读取单元格？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "检查原文字参数是否被切换成“文字”。引用单元格时应选“数值、引用或公式”，确保预览显示 A2 而不是 \"A2\"。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么名称中间的 SKU- 也没了？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "省略次数参数会替换所有匹配。如果只要替换第一次，在“替换第几处”填 1，并用含重复匹配的练习行确认。这仍是匹配位置规则，不是专门判断前缀的功能。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "能直接在手机看到清理后的单元格吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "本文公式编辑器展示生成的公式文本。结果应在 Excel 中确认，不能把公式预览当作单元格读回。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 表格文本</a>
+      <h1>清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查</h1>
+      <p>从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。</p>
+      <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp" alt="实际生成删除 SKU- 的 SUBSTITUTE 公式，保留有效的空字符串参数。" width="1206" height="2622">
+      <figcaption>实际生成删除 SKU- 的 SUBSTITUTE 公式，保留有效的空字符串参数。</figcaption>
+    </figure>
+    <article class="article-body">
+<p class="article-lead">从别处导出的商品名称，可能同时带有编号前缀和多余空格。本文把问题拆成两列：B 列移除指定文字，C 列整理普通空格。每一列都能单独检查，出错时也容易知道是哪一步造成的。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>截图是 App 原生公式编辑器中的实际操作，使用自制商品名练习。文中结果用于核对公式语义；没有宣称手机已经从 Excel 读取到这些单元格或自动验证整张表。</aside>
+<h2>开始前准备</h2><ul><li>在 Mac Excel 打开本文 CSV，确认 Original 位于 A1，三条商品名位于 A2:A4。</li><li>在 B1 输入 Removed，在 C1 输入 Cleaned，保留 A 列作为原始数据。</li><li>在奶猫妙控的布局列表中搜索“文本处理”，进入财务公式对应桌面。</li></ul>
+<h2>1. 先保留原始值，观察两类问题</h2>
+<p>下载练习数据。A2 是前后带普通空格的“  SKU-Blue  Mug  ”，A3 是“SKU-Red Cup”，A4 是“SKU-Gift-SKU-Box”。打开文件后不要先手动删空格。</p>
+<p>A2 用来检查空格整理，A4 用来区分“替换全部匹配”与“只替换第一次”。保留原始列，才能看出清理步骤是否误删了名称中间的内容。</p>
+<p>下载：<a href="https://cream-deck.vercel.app/assets/examples/guides-1.2.0-r1/text-cleanup.csv">商品名称清理练习数据（CSV）</a>。</p>
+<h2>2. 长按 SUBSTITUTE，填写需要移除的文字</h2>
+<p>在文本处理桌面长按 SUBSTITUTE。将“原文本或单元格”填写为 A2，类型使用“数值／引用”；“查找文字”填 SKU-，类型使用“文字”。“替换为（留空删除）”留空，“替换第几处”暂时也留空。</p>
+<p>此时预览应为 =SUBSTITUTE(A2,&quot;SKU-&quot;,&quot;&quot;)。其中 &quot;&quot; 表示替换成空字符串，也就是删除匹配文字。这是允许的空值，不必为了让输入框“有东西”而填一个空格。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp" alt="SKU- 为文字参数，新文字留空，App 生成包含空字符串的完整公式。" width="1206" height="2622" loading="lazy"><figcaption>SKU- 为文字参数，新文字留空，App 生成包含空字符串的完整公式。</figcaption></figure>
+<h2>3. 在 B2 验证第一步，只检查删除文字</h2>
+<p>复制公式，在 Mac 的 B2 粘贴并确认；若手机与 Mac 没有共享剪贴板，可在 B2 手动输入上面的公式。已连接时，也可先聚焦 B2，再从手机发送公式。</p>
+<p>B2 应去掉 SKU-，但仍保留原有的多余空格。先确认这一点，再在 B3 使用 =SUBSTITUTE(A3,&quot;SKU-&quot;,&quot;&quot;)，在 B4 使用 =SUBSTITUTE(A4,&quot;SKU-&quot;,&quot;&quot;)。本例 B3 应为 Red Cup，B4 应为 Gift-Box。</p>
+<h2>4. 用 TRIM 处理第二列的普通空格</h2>
+<p>回到文本处理桌面，长按 TRIM，把参数填为 B2，保持“数值／引用”。预览应是 =TRIM(B2)，复制后放入 C2 并在 Excel 确认。</p>
+<p>C2 的预期结果是 Blue Mug：首尾普通空格消失，Blue 和 Mug 中间的连续普通空格变成一个。再在 C3、C4 分别使用 =TRIM(B3) 与 =TRIM(B4)，核对结果为 Red Cup 和 Gift-Box。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/clean-text-02-trim.webp" alt="TRIM 引用前一步的 B2，让删除文字和整理空格两步可以分别检查。" width="1206" height="2622" loading="lazy"><figcaption>TRIM 引用前一步的 B2，让删除文字和整理空格两步可以分别检查。</figcaption></figure>
+<p>参考：<a href="https://support.microsoft.com/en-us/excel/functions/trim-function">Microsoft：TRIM 的普通空格范围</a>。</p>
+<h2>5. 只想删第一次出现时，填写次数参数</h2>
+<p>重新长按 SUBSTITUTE，仍使用 A2 和 SKU-，新文字留空，在“替换第几处”中填 1。预览应为 =SUBSTITUTE(A2,&quot;SKU-&quot;,&quot;&quot;,1)，表示只替换第一次匹配。</p>
+<p>这个差别在 A4 更明显：在一个新的空白单元格试 =SUBSTITUTE(A4,&quot;SKU-&quot;,&quot;&quot;,1)，预期是 Gift-SKU-Box；省略最后的 1 时，所有匹配都会被替换，结果是 Gift-Box。根据自己的商品编号规则选择，不要未经检查就批量覆盖原始数据。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/clean-text-03-first.webp" alt="填入 1 后，公式明确限定为第一次出现；该数字使用“数值／引用”类型。" width="1206" height="2622" loading="lazy"><figcaption>填入 1 后，公式明确限定为第一次出现；该数字使用“数值／引用”类型。</figcaption></figure>
+<p>参考：<a href="https://support.microsoft.com/en-US/Excel/substitute-function">Microsoft：SUBSTITUTE 的次数参数</a>。</p>
+<h2>6. 确认结果后再应用到自己的表格</h2>
+<p>回看三列：A 列是原始值，B 列显示文字替换结果，C 列显示空格整理结果。先用几条有代表性的商品名检查，包括没有前缀、含重复前缀和中间空格的情况，再扩大范围。</p>
+<p>如果从网页复制的名称仍有看起来像空格的字符，先辨认字符类型。TRIM 处理普通 ASCII 空格，不能单独移除不换行空格；不要因为公式没报错，就认定所有可见空白都已清理。</p>
+<h2>操作不符合预期时</h2>
+<h3>新文字留空，为什么仍能复制公式？</h3><p>SUBSTITUTE 的新文字允许为空字符串，App 会生成 &quot;&quot;。这表示删除匹配内容，属于有效公式。</p>
+<h3>为什么 A2 被当作两个字符，而没有读取单元格？</h3><p>检查原文字参数是否被切换成“文字”。引用单元格时应选“数值、引用或公式”，确保预览显示 A2 而不是 &quot;A2&quot;。</p>
+<h3>为什么名称中间的 SKU- 也没了？</h3><p>省略次数参数会替换所有匹配。如果只要替换第一次，在“替换第几处”填 1，并用含重复匹配的练习行确认。这仍是匹配位置规则，不是专门判断前缀的功能。</p>
+<h3>能直接在手机看到清理后的单元格吗？</h3><p>本文公式编辑器展示生成的公式文本。结果应在 Excel 中确认，不能把公式预览当作单元格读回。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="guide-sumifs.html">← 用 SUMIFS 汇总项目支出：一步步配置两个条件</a>
+      <a href="layout-finance.html">财务布局教程：计算 0.1＋0.2，再一步步生成 SUMIFS 公式 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>

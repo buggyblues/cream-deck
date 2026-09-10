@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="下载五行练习数据，在奶猫妙控长按 SUMIFS，配置项目和付款状态两个条件，核对公式、复制结果并处理分号分隔符。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="用 SUMIFS 汇总项目支出：一步步配置两个条件｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/sumifs-02-conditions.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-sumifs">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="用 SUMIFS 汇总项目支出：一步步配置两个条件｜奶猫妙控">
+  <meta name="twitter:description" content="下载五行练习数据，在奶猫妙控长按 SUMIFS，配置项目和付款状态两个条件，核对公式、复制结果并处理分号分隔符。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/sumifs-02-conditions.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-sumifs">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../blog.css">
+  <title>用 SUMIFS 汇总项目支出：一步步配置两个条件｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "用 SUMIFS 汇总项目支出：一步步配置两个条件",
+      "description": "下载五行练习数据，在奶猫妙控长按 SUMIFS，配置项目和付款状态两个条件，核对公式、复制结果并处理分号分隔符。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/sumifs-02-conditions.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/guide-sumifs"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "用 SUMIFS 汇总项目支出：一步步配置两个条件",
+          "item": "https://cream-deck.vercel.app/blog/guide-sumifs"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "为什么公式结果是 235？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "235 是本例只按 Alpha 项目汇总的结果。检查是否漏了 B2:B6 和 Paid 这一组条件，或是否粘贴了添加第二组条件之前的旧公式。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "条件要引用 E1，为什么预览把 E1 加上了引号？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "该参数仍处于“文字”类型。打开参数旁的内容类型，改为“数值、引用或公式”，再输入 E1。引用和字面文字含义不同，修改后检查预览。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么找不到参数编辑页？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "要长按 SUMIFS；普通点按不会打开逐项参数编辑器。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "新增一组条件后复制按钮变灰，是故障吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "先检查新组是否只填写了一半。区域与条件需要成对补齐；不再需要的新组可用“删除这组条件”移除。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 表格公式</a>
+      <h1>用 SUMIFS 汇总项目支出：一步步配置两个条件</h1>
+      <p>下载五行练习数据，在奶猫妙控长按 SUMIFS，配置项目和付款状态两个条件，核对公式、复制结果并处理分号分隔符。</p>
+      <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/guides-1.2.0-r1/sumifs-02-conditions.webp" alt="用项目和状态两组条件生成 SUMIFS，所有参数均已实际填写。" width="1206" height="2622">
+      <figcaption>用项目和状态两组条件生成 SUMIFS，所有参数均已实际填写。</figcaption>
+    </figure>
+    <article class="article-body">
+<p class="article-lead">表格里同时有不同项目和付款状态，只想统计 Alpha 项目已经付款的金额，逐行相加很容易漏。本文使用五行自制练习数据，先按项目筛一次，再加入 Paid 条件，最终应得到 155。重点是看懂每个区域和条件放在哪里。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>配图验证 App 内参数填写、完整公式生成、复制及分隔符切换；练习金额是示例。155 是按样例数据核算的预期结果，截图没有展示 Excel 实际回读或自动计算结果。</aside>
+<h2>开始前准备</h2><ul><li>使用奶猫妙控 1.2.0，并在 Mac Excel 中准备一个空白工作表。</li><li>下载下面的 CSV，确认表头在 A1:C1，五行记录在第 2 至第 6 行。</li><li>生成与复制公式可以在手机本地完成；要使用“发送公式”，需要连接 Mac 并先聚焦目标单元格。</li></ul>
+<h2>1. 导入练习数据，确认列与行号</h2>
+<p>下载练习 CSV，在 Excel 中打开，或把内容导入空白工作表的 A1。A 列是 Project，B 列是 Status，C 列是 Amount。</p>
+<p>五条记录依次为 Alpha／Paid／120、Alpha／Pending／80、Beta／Paid／200、Alpha／Paid／35、Beta／Pending／50。先人工核对：Alpha 总额为 235，其中 Paid 两笔是 120 和 35，合计 155。后续用这两个数检查筛选是否正确。</p>
+<p>下载：<a href="https://cream-deck.vercel.app/assets/examples/guides-1.2.0-r1/project-expenses.csv">项目支出练习数据（CSV）</a>。</p>
+<h2>2. 打开“统计汇总”，长按 SUMIFS</h2>
+<p>在手机点“布局”，搜索“统计汇总”，打开财务布局对应桌面。找到 SUMIFS，长按打开参数编辑页。</p>
+<p>点按公式按钮与长按含义不同：点按用于输入函数起始内容，长按才会出现逐项填写的编辑器。本文需要生成完整公式，所以使用长按。</p>
+<h2>3. 先填第一个条件：项目等于 Alpha</h2>
+<p>按下面三项填写，并保持区域是“数值／引用”、Alpha 是“文字”。文字类型会自动补上双引号，不用自己在输入框里再包一层引号。</p>
+<p>收起键盘，预览应为 =SUMIFS(C2:C6,A2:A6,&quot;Alpha&quot;)。这里先只筛项目，所以在 Excel 执行时的预期结果是 235。范围都从第 2 行到第 6 行，避开表头。</p>
+<ul><li>求和区域：C2:C6。</li><li>条件区域：A2:A6。</li><li>条件：Alpha，类型保留“文字”。</li></ul>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/sumifs-01-project.webp" alt="真实填写项目条件后，App 已生成单条件 SUMIFS 公式。" width="1206" height="2622" loading="lazy"><figcaption>真实填写项目条件后，App 已生成单条件 SUMIFS 公式。</figcaption></figure>
+<h2>4. 添加第二组条件：状态等于 Paid</h2>
+<p>点“添加一组条件”，在新的一组中将条件区域填为 B2:B6，条件填为 Paid，类型保留“文字”。新增条件尚未填完时，复制按钮暂时不能使用；两项补齐后再检查预览。</p>
+<p>最终公式应为 =SUMIFS(C2:C6,A2:A6,&quot;Alpha&quot;,B2:B6,&quot;Paid&quot;)。SUMIFS 会同时应用这些条件，本例只有 Alpha 且 Paid 的两行被计入。不要把 Paid 填进求和区域，也不要让第二组范围比其他范围少一行。 预览较长时，可以横向滑动底部公式查看末尾参数。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/sumifs-02-conditions.webp" alt="第二组条件已填入 B2:B6 和 Paid，底部生成完整公式。" width="1206" height="2622" loading="lazy"><figcaption>第二组条件已填入 B2:B6 和 Paid，底部生成完整公式。</figcaption></figure>
+<p>参考：<a href="https://support.microsoft.com/en-au/excel/functions/sumifs-function">Microsoft：SUMIFS 参数说明</a>。</p>
+<h2>5. 复制公式，在空白单元格验证 155</h2>
+<p>点“复制公式”，看到“已复制”提示后，公式在 iPhone 剪贴板中。把它传到 Mac 后，在练习表的 E2 粘贴并确认；若设备没有共享剪贴板，可以在 Mac 手动输入上面的完整公式。</p>
+<p>已连接时也可以先选中 Mac 的空白 E2，再点“发送公式”，随后在 Excel 中确认输入。无论用哪种方式，都应在表格里看到 155。奶猫妙控的公式预览展示公式文本，不能代替这一步结果核对。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/sumifs-03-copied.webp" alt="点“复制公式”后出现“已复制”；这确认本地复制完成，不代表 Excel 已经计算。" width="1206" height="2622" loading="lazy"><figcaption>点“复制公式”后出现“已复制”；这确认本地复制完成，不代表 Excel 已经计算。</figcaption></figure>
+<h2>6. 需要分号时切换分隔符，再做一次检查</h2>
+<p>如果你的 Excel 环境使用分号作为参数分隔符，点参数页左上角“参数分隔符”，选择“分号 ;”。预览会变成 =SUMIFS(C2:C6;A2:A6;&quot;Alpha&quot;;B2:B6;&quot;Paid&quot;)。</p>
+<p>重新复制修改后的公式再测试。分隔符变化不应该改变求和逻辑；结果不对时，回到原表检查 C 列是否是数值、条件是否多了空格，以及所有区域是否覆盖相同的五行。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/sumifs-04-separator.webp" alt="切换为分号后，App 按新分隔符重新生成公式。" width="1206" height="2622" loading="lazy"><figcaption>切换为分号后，App 按新分隔符重新生成公式。</figcaption></figure>
+<h2>操作不符合预期时</h2>
+<h3>为什么公式结果是 235？</h3><p>235 是本例只按 Alpha 项目汇总的结果。检查是否漏了 B2:B6 和 Paid 这一组条件，或是否粘贴了添加第二组条件之前的旧公式。</p>
+<h3>条件要引用 E1，为什么预览把 E1 加上了引号？</h3><p>该参数仍处于“文字”类型。打开参数旁的内容类型，改为“数值、引用或公式”，再输入 E1。引用和字面文字含义不同，修改后检查预览。</p>
+<h3>为什么找不到参数编辑页？</h3><p>要长按 SUMIFS；普通点按不会打开逐项参数编辑器。</p>
+<h3>新增一组条件后复制按钮变灰，是故障吗？</h3><p>先检查新组是否只填写了一半。区域与条件需要成对补齐；不再需要的新组可用“删除这组条件”移除。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="layout-finance.html">← 财务布局教程：计算 0.1＋0.2，再一步步生成 SUMIFS 公式</a>
+      <a href="guide-text-cleanup.html">清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>

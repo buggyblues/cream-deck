@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。">
+  <meta name="description" content="按使用场景查找 15 种预设布局教程，以及文字自动化、剪藏整理、表格公式和连接设置的实用指南。">
   <meta name="keywords" content="奶猫妙控博客,Mac小键盘指南,DaVinci剪辑小键盘,Mac远程桌面,语音输入转文字,智能提词器,自定义副控">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="buggyblues">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="奶猫妙控">
   <meta property="og:title" content="文章专栏｜奶猫妙控">
-  <meta property="og:description" content="按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。">
+  <meta property="og:description" content="按使用场景查找 15 种预设布局教程，以及文字自动化、剪藏整理、表格公式和连接设置的实用指南。">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="文章专栏｜奶猫妙控">
-  <meta name="twitter:description" content="按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。">
+  <meta name="twitter:description" content="按使用场景查找 15 种预设布局教程，以及文字自动化、剪藏整理、表格公式和连接设置的实用指南。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/v1.2.0/control-studio.webp">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,13 +32,33 @@
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "奶猫妙控专栏",
-  "description": "按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。",
+  "description": "按使用场景查找 15 种预设布局教程，以及文字自动化、剪藏整理、表格公式和连接设置的实用指南。",
   "url": "https://cream-deck.vercel.app/blog",
   "blogPost": [
     {
       "@type": "BlogPosting",
       "headline": "工作布局教程：打开键盘、输入文字，再检查撤销与重做",
       "url": "https://cream-deck.vercel.app/blog/layout-work"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "把常用回复做成按钮：从输入文字到预览、同步",
+      "url": "https://cream-deck.vercel.app/blog/guide-text-button"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "做一个“记录并保存”按钮：文字、等待和快捷键串起来",
+      "url": "https://cream-deck.vercel.app/blog/guide-automation-steps"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "用 SUMIFS 汇总项目支出：一步步配置两个条件",
+      "url": "https://cream-deck.vercel.app/blog/guide-sumifs"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查",
+      "url": "https://cream-deck.vercel.app/blog/guide-text-cleanup"
     },
     {
       "@type": "BlogPosting",
@@ -79,6 +99,16 @@
       "@type": "BlogPosting",
       "headline": "终端布局教程：新建会话、改名、打开全屏，再安全结束",
       "url": "https://cream-deck.vercel.app/blog/layout-terminal"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "剪藏不只存一句话：把原文、笔记和出处一起整理好",
+      "url": "https://cream-deck.vercel.app/blog/guide-clipping-sources"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "从一堆剪藏里挑出本周资料：筛选、跨筛选选择与导出",
+      "url": "https://cream-deck.vercel.app/blog/guide-clipping-export"
     },
     {
       "@type": "BlogPosting",
@@ -179,7 +209,7 @@
     <section class="content-hero content-hero-blog">
       <p class="eyebrow">&gt;w&lt; 深度专栏与使用指南</p>
       <h1>文章专栏</h1>
-      <p>按使用场景查找 15 种预设布局的操作教程，以及连接、权限和自定义指南。</p>
+      <p>按使用场景查找 15 种预设布局教程，以及文字自动化、剪藏整理、表格公式和连接设置的实用指南。</p>
     </section>
 
     <div class="blog-shell">
@@ -208,6 +238,38 @@
 
       <!-- Article Grid -->
       <div class="blog-grid" aria-label="更多文章">
+        <a class="blog-card" href="blog/guide-text-button.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/guides-1.2.0-r1/text-button-01-content.webp" alt="已填写常用回复和保存名称的原生文字编辑器。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
+          <h3>把常用回复做成按钮：从输入文字到预览、同步</h3>
+          <p>在奶猫妙控里新建文字按钮，填写常用回复，设置是否追加 Enter，并通过内容预览和 Mac 空白文档检查输入结果。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/guide-automation-steps.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/guides-1.2.0-r1/macro-04-preview.webp" alt="“记录并保存”的原生内容预览，三个步骤均有实际配置。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
+          <h3>做一个“记录并保存”按钮：文字、等待和快捷键串起来</h3>
+          <p>把文字按钮扩展成自动化，按顺序加入等待和 ⌘S，学习编辑步骤、预览内容、试运行与排查焦点问题。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/guide-sumifs.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/guides-1.2.0-r1/sumifs-02-conditions.webp" alt="用项目和状态两组条件生成 SUMIFS，所有参数均已实际填写。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
+          <h3>用 SUMIFS 汇总项目支出：一步步配置两个条件</h3>
+          <p>下载五行练习数据，在奶猫妙控长按 SUMIFS，配置项目和付款状态两个条件，核对公式、复制结果并处理分号分隔符。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/guide-text-cleanup.html" data-blog-item data-blog-cat="daily">
+          <figure class="blog-card-thumb"><img src="assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp" alt="实际生成删除 SKU- 的 SUBSTITUTE 公式，保留有效的空字符串参数。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">日常效率</span>
+          <h3>清理表格里的商品名称：用 SUBSTITUTE 和 TRIM 分两步检查</h3>
+          <p>从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
         <a class="blog-card" href="blog/layout-launcher.html" data-blog-item data-blog-cat="daily">
           <figure class="blog-card-thumb"><img src="assets/screens/tutorials-1.2.0-r1/launcher-01.webp" alt="启动器中的系统应用演示目录；用户设备会同步自己的应用列表。" width="1206" height="2622" loading="lazy"></figure>
           <span class="blog-card-tag">日常效率</span>
@@ -269,6 +331,22 @@
           <span class="blog-card-tag">开发工具</span>
           <h3>终端布局教程：新建会话、改名、打开全屏，再安全结束</h3>
           <p>从终端桌面操作会话标签、命名与全屏键盘，用只读命令检查真实 Mac shell。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/guide-clipping-sources.html" data-blog-item data-blog-cat="reading">
+          <figure class="blog-card-thumb"><img src="assets/screens/guides-1.2.0-r1/clip-source-02-detail.webp" alt="原文、笔记和出处分开保存的原生剪藏详情。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">阅读与写作</span>
+          <h3>剪藏不只存一句话：把原文、笔记和出处一起整理好</h3>
+          <p>手动建立一条带笔记和来源链接的剪藏，保存后检查出处，再用笔记关键词找回内容，适合阅读摘录和资料复盘。</p>
+          <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
+        </a>
+
+        <a class="blog-card" href="blog/guide-clipping-export.html" data-blog-item data-blog-cat="reading">
+          <figure class="blog-card-thumb"><img src="assets/screens/guides-1.2.0-r1/clip-export-03-selection.webp" alt="两条实际选中的练习剪藏，导出按钮显示明确数量。" width="1206" height="2622" loading="lazy"></figure>
+          <span class="blog-card-tag">阅读与写作</span>
+          <h3>从一堆剪藏里挑出本周资料：筛选、跨筛选选择与导出</h3>
+          <p>用关键词和链接类型筛选剪藏，跨筛选选择两条资料，再通过 iOS 分享面板导出文字与附件，完成一次可检查的资料整理。</p>
           <div class="blog-card-footer"><time datetime="2026-09-10">2026-09-10</time><span>阅读约 5 分钟 →</span></div>
         </a>
 

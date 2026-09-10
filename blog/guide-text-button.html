@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="在奶猫妙控里新建文字按钮，填写常用回复，设置是否追加 Enter，并通过内容预览和 Mac 空白文档检查输入结果。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="把常用回复做成按钮：从输入文字到预览、同步｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/text-button-01-content.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-text-button">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="把常用回复做成按钮：从输入文字到预览、同步｜奶猫妙控">
+  <meta name="twitter:description" content="在奶猫妙控里新建文字按钮，填写常用回复，设置是否追加 Enter，并通过内容预览和 Mac 空白文档检查输入结果。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/text-button-01-content.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-text-button">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../blog.css">
+  <title>把常用回复做成按钮：从输入文字到预览、同步｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "把常用回复做成按钮：从输入文字到预览、同步",
+      "description": "在奶猫妙控里新建文字按钮，填写常用回复，设置是否追加 Enter，并通过内容预览和 Mac 空白文档检查输入结果。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/text-button-01-content.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/guide-text-button"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "把常用回复做成按钮：从输入文字到预览、同步",
+          "item": "https://cream-deck.vercel.app/blog/guide-text-button"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "为什么点完按钮没有出现在预期窗口？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "文字输入依赖 Mac 当前输入位置。先确认已经同步，再切到目标软件的可编辑正文并点出光标；菜单、弹窗或其他窗口占据焦点时，输入位置也会随之改变。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "保存名称改了，按钮上的字为什么没变？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "保存名称属于文字动作。回到组件属性的“外观”页修改按钮显示文字，再退出编辑器检查。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "预览成功，能说明连接没有问题吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不能。内容预览在本地完成。Mac 执行要另外验证连接、同步状态、权限和实际输入结果。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 常用文字</a>
+      <h1>把常用回复做成按钮：从输入文字到预览、同步</h1>
+      <p>在奶猫妙控里新建文字按钮，填写常用回复，设置是否追加 Enter，并通过内容预览和 Mac 空白文档检查输入结果。</p>
+      <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/guides-1.2.0-r1/text-button-01-content.webp" alt="已填写常用回复和保存名称的原生文字编辑器。" width="1206" height="2622">
+      <figcaption>已填写常用回复和保存名称的原生文字编辑器。</figcaption>
+    </figure>
+    <article class="article-body">
+<p class="article-lead">同一句确认回复，每天都要重新输入。可以把它放进奶猫妙控的一个按钮里，在 Mac 的输入位置准备好后点一下。本文从“收到，我会先核对细节，再回复处理结果。”这句话开始，完成一个名为“确认收到”的文字动作。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>配图来自 App 原生编辑器和内容预览，使用教程文字及模拟连接状态；截图验证本地配置与预览，没有把它当作 Mac 实际输入或同步成功的证据。执行部分请在自己的 Mac 文档里检查。</aside>
+<h2>开始前准备</h2><ul><li>使用奶猫妙控 1.2.0；进入有空间添加按钮的桌面，本文从工作布局开始。</li><li>要在电脑实际使用，需要连接运行奶猫妙控 Mac 端的电脑，并按提示开启控制所需权限。</li><li>先准备一个空白测试文档，把光标放在正文里，便于确认输入位置与追加按键的效果。</li></ul>
+<h2>1. 添加一个快捷按钮，并选择“发送文字”</h2>
+<p>在底部点“布局”，再点“编辑当前桌面”。进入编辑器后点“添加组件”，选择“按键”组件；新按钮需要先配置操作。</p>
+<p>在操作列表的“常用操作”里点“发送文字”，会打开同名编辑页。如果是在调整已有按钮，则进入它的“操作”页，点当前操作旁的“更换”，再选择“发送文字”。先完成内容设置，之后再调整按钮外观。</p>
+<p>参考：<a href="https://cream-deck.vercel.app/blog/layout-work">工作布局的编辑入口图解</a>。</p>
+<h2>2. 先存一条完整、能直接使用的回复</h2>
+<p>在“输入要发送的文字”中填入练习句。检查标点和措辞，把需要每次修改的具体日期、金额或姓名留给实际使用时填写，避免把某一次回复误当作通用模板。</p>
+<p>向下找到“保存名称”，将名称改为“确认收到”。这个名称用于识别自动化内容；按钮表面的文字在组件“外观”的“名称”中调整，二者需要分别检查。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/text-button-01-content.webp" alt="实际输入的回复文字；保存名称和按钮外观文字分别设置。" width="1206" height="2622" loading="lazy"><figcaption>实际输入的回复文字；保存名称和按钮外观文字分别设置。</figcaption></figure>
+<h2>3. 决定输入结束后是否追加按键</h2>
+<p>打开“输入后”区域的“完成输入后”，可以选“不追加按键”“按 Enter”“按 ⌘Enter”或自定义快捷键。第一次练习选“不追加按键”，让文字停留在当前输入框中，留出检查和修改的机会。</p>
+<p>Enter 在不同软件中的含义不同：可能换行，也可能直接发送。只有在目标软件中确认过行为后，再为这条回复追加对应按键。输入文字不会自动寻找聊天窗口，也不会替你确认收件人。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/text-button-02-submit.webp" alt="“完成输入后”菜单显示可用的追加按键选项。练习先保留“不追加按键”。" width="1206" height="2622" loading="lazy"><figcaption>“完成输入后”菜单显示可用的追加按键选项。练习先保留“不追加按键”。</figcaption></figure>
+<h2>4. 保留“发送一次”，用内容预览核对</h2>
+<p>在“发送方式”中保留“发送一次”。本例只有一条文字，不需要重复轮次或按住连发。向下点“预览内容”，检查预览里是否完整显示那句话。</p>
+<p>“内容预览”只展示这轮将取出的内容，不会操作 Mac，也不会推进正式文字列表的取用进度。可以点“预览下一轮”重复检查；看到文字并不等于电脑已经收到了文字。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/text-button-03-preview.webp" alt="内容预览真实显示练习句，可反复检查，预览本身不操作 Mac。" width="1206" height="2622" loading="lazy"><figcaption>内容预览真实显示练习句，可反复检查，预览本身不操作 Mac。</figcaption></figure>
+<h2>5. 保存配置，再在 Mac 文档里验证一次</h2>
+<p>关闭内容预览，回到编辑页。已连接可用的自动化服务时，右上角显示“保存并同步”；尚未连接时显示“保存草稿”。按当前按钮保存，并留意页面是否报告同步失败或超时。</p>
+<p>回到组件属性点“完成”，再退出桌面编辑。现在切到 Mac 的测试文档，点正文让插入光标出现，然后点一次手机上的新按钮。应只插入一条回复；本例没有追加按键，文字应留在文档中。若仍显示“待同步”，先重新连接并打开编辑页保存同步，再重试。</p>
+<h2>6. 需要多条回复时，再扩展文字列表</h2>
+<p>回到“编辑文字与发送方式”，点“添加一条”，可以继续写第二条；已有逐行文本时可使用“按行导入…”，导入预览中的每个非空行会成为独立条目。</p>
+<p>多条文字会出现“取用方式”。“顺序下一条”用于逐条取用，“随机一条”和“打乱后依次取”适合轮换素材，“一次输入全部”会取出整个列表。先用“预览下一轮”观察所选方式，再决定是否开启“最后一条后回到第一条”。不要把“取哪一条”与“重复运行多少轮”混为一项设置。</p>
+<h2>操作不符合预期时</h2>
+<h3>为什么点完按钮没有出现在预期窗口？</h3><p>文字输入依赖 Mac 当前输入位置。先确认已经同步，再切到目标软件的可编辑正文并点出光标；菜单、弹窗或其他窗口占据焦点时，输入位置也会随之改变。</p>
+<h3>保存名称改了，按钮上的字为什么没变？</h3><p>保存名称属于文字动作。回到组件属性的“外观”页修改按钮显示文字，再退出编辑器检查。</p>
+<h3>预览成功，能说明连接没有问题吗？</h3><p>不能。内容预览在本地完成。Mac 执行要另外验证连接、同步状态、权限和实际输入结果。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="layout-work.html">← 工作布局教程：打开键盘、输入文字，再检查撤销与重做</a>
+      <a href="guide-automation-steps.html">做一个“记录并保存”按钮：文字、等待和快捷键串起来 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>

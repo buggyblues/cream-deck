@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="把文字按钮扩展成自动化，按顺序加入等待和 ⌘S，学习编辑步骤、预览内容、试运行与排查焦点问题。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="做一个“记录并保存”按钮：文字、等待和快捷键串起来｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/macro-04-preview.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-automation-steps">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="做一个“记录并保存”按钮：文字、等待和快捷键串起来｜奶猫妙控">
+  <meta name="twitter:description" content="把文字按钮扩展成自动化，按顺序加入等待和 ⌘S，学习编辑步骤、预览内容、试运行与排查焦点问题。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/macro-04-preview.webp">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-automation-steps">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../blog.css">
+  <title>做一个“记录并保存”按钮：文字、等待和快捷键串起来｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "做一个“记录并保存”按钮：文字、等待和快捷键串起来",
+      "description": "把文字按钮扩展成自动化，按顺序加入等待和 ⌘S，学习编辑步骤、预览内容、试运行与排查焦点问题。",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/macro-04-preview.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/guide-automation-steps"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "做一个“记录并保存”按钮：文字、等待和快捷键串起来",
+          "item": "https://cream-deck.vercel.app/blog/guide-automation-steps"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "为什么运行后出现“另存为”窗口？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "测试文件还没有完成第一次保存，或目标软件把 ⌘S 用于其他命令。先手动保存文件，确认该软件的快捷键行为，再回到正文重试。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "加了等待，为什么仍然把字输到错误位置？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "等待只暂停固定时长，不会纠正焦点。检查 Mac 前台应用、文档正文和弹窗；需要切换应用时应明确配置“切换应用”步骤。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "预览里有 command,s，为什么文件没保存？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "内容预览显示步骤描述，不执行快捷键。需要连接后试运行，并在目标软件中确认保存结果。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何停止正在重复运行的自动化？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "编辑器在运行期间提供“停止自动化”；也可将“停止自动化”配置为一个单独按钮。首次练习保留“运行一次”，无需启用重复模式。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 自动化步骤</a>
+      <h1>做一个“记录并保存”按钮：文字、等待和快捷键串起来</h1>
+      <p>把文字按钮扩展成自动化，按顺序加入等待和 ⌘S，学习编辑步骤、预览内容、试运行与排查焦点问题。</p>
+      <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/guides-1.2.0-r1/macro-04-preview.webp" alt="“记录并保存”的原生内容预览，三个步骤均有实际配置。" width="1206" height="2622">
+      <figcaption>“记录并保存”的原生内容预览，三个步骤均有实际配置。</figcaption>
+    </figure>
+    <article class="article-body">
+<p class="article-lead">你已经能用一个按钮输入常用文字，接下来可以把后续操作一起配好。本文练习“输入一条记录 → 等待半秒 → 按 ⌘S”，用来熟悉自动化编辑器。先在已经保存过的测试文档中完成一轮，再把步骤换成自己常用的软件操作。</p>
+<aside class="article-highlight"><strong>本文的演示范围：</strong>截图展示 App 内真实编辑的三个步骤与内容预览，Mac 连接状态为演示数据。预览不会按下 ⌘S，也不证明文件已经保存；实际保存结果需要在自己的 Mac 文档中检查。</aside>
+<h2>开始前准备</h2><ul><li>先阅读常用文字按钮教程，建立一个“发送文字”按钮。</li><li>Mac 上准备一个已保存到磁盘的测试文档，确认该软件用 ⌘S 保存；把光标放到可编辑正文。</li><li>连接 Mac 自动化服务；首次练习保留“运行一次”，避免多轮输入难以判断。</li></ul>
+<h2>1. 从已有文字按钮进入自动化编辑器</h2>
+<p>将按钮内容设为“今日记录：先确认目标，再补充下一步。”，输入后保留“不追加按键”。关闭文字编辑页，回到操作配置，点“扩展为自动化”。</p>
+<p>新打开的“编辑自动化”页会保留原来的文字步骤。在“自动化名称”里输入“记录并保存”。这样能从一个已经明确的动作继续添加步骤，无需重新输入整段文字。</p>
+<p>参考：<a href="https://cream-deck.vercel.app/blog/guide-text-button">常用文字按钮的完整创建步骤</a>。</p>
+<h2>2. 添加等待，让步骤之间留出间隔</h2>
+<p>在“步骤”下方点“添加步骤”，选择“等待”。新增步骤默认等待 0.5 秒，本例直接使用这个值；需要改动时点“等待 0.5 秒”，在步骤编辑页调整。</p>
+<p>此时列表应依次为“输入文字”和“等待 0.5 秒”。等待是固定时长，不会检查文档是否加载完成，也不会等待某个弹窗消失。如果目标软件偶尔较慢，先找出等待发生在哪一步，再调整那个间隔。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/macro-01-wait.webp" alt="从文字动作扩展后，添加真实的“等待 0.5 秒”步骤。" width="1206" height="2622" loading="lazy"><figcaption>从文字动作扩展后，添加真实的“等待 0.5 秒”步骤。</figcaption></figure>
+<h2>3. 加入保存快捷键 ⌘S</h2>
+<p>再次点“添加步骤”，选择“快捷键”，再打开刚加入的快捷键步骤。在组合键区选中“Command”，在主键输入框填 S，完成输入。</p>
+<p>返回自动化编辑页，核对第三步显示的键值对应 Command 和 S。组合键是在执行到此步骤时发给电脑当前应用的，因此测试文档要保持在前台；首次另存为对话框会改变后续流程，本文才要求先保存好测试文件。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/macro-02-shortcut.webp" alt="快捷键步骤中选中 Command 并填写主键 S。" width="1206" height="2622" loading="lazy"><figcaption>快捷键步骤中选中 Command 并填写主键 S。</figcaption></figure>
+<h2>4. 检查顺序，确认只执行一轮</h2>
+<p>回到步骤列表，顺序应是文字、等待、快捷键。执行方式选择“运行一次”。如果误加了步骤，可以使用编辑器的编辑模式删除或移动步骤，也可以用底部“撤销”恢复最近修改。</p>
+<p>需要暂时跳过某一步时，进入该步骤，关闭“启用此步骤”；确认结果以后再恢复。首次练习保持三个步骤都启用，这样能明确判断输入和保存分别发生在何时。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/macro-03-sequence.webp" alt="三个步骤按顺序排列；一次运行会依次处理已启用的步骤。" width="1206" height="2622" loading="lazy"><figcaption>三个步骤按顺序排列；一次运行会依次处理已启用的步骤。</figcaption></figure>
+<h2>5. 先预览内容，再在电脑上试运行</h2>
+<p>点“预览内容”。本例应看到练习文字、等待 0.5 秒和保存快捷键的描述。检查没有多余的 Enter 或空白步骤后，关闭预览。</p>
+<p>连接自动化服务时，可以点“试运行一次”。它会保存配置并在 Mac 当前应用实际执行一轮。先把测试文档置于前台，再触发试运行；应插入一条记录，并由目标软件处理 ⌘S。最后检查文档内容和软件的保存状态，必要时关闭再重新打开测试文件确认。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/guides-1.2.0-r1/macro-04-preview.webp" alt="原生内容预览列出文字、等待和快捷键；这里只预览，不执行电脑操作。" width="1206" height="2622" loading="lazy"><figcaption>原生内容预览列出文字、等待和快捷键；这里只预览，不执行电脑操作。</figcaption></figure>
+<h2>6. 保存到按钮，并按自己的工作流程调整</h2>
+<p>确认结果后点“保存并同步”，退出组件属性和桌面编辑。下一次使用时，同样先准备好目标文档的输入位置，再点按钮。未连接时可以保存草稿，等连接后重新进入编辑器同步。</p>
+<p>要用于其他软件，可以逐步增加“切换应用”或更多快捷键。每新增一步就试运行一轮，比一次加入很多动作更容易定位问题。涉及鼠标位置的流程还会受窗口位置影响；先用明确的文字和快捷键完成稳定的小流程，再扩展。</p>
+<h2>操作不符合预期时</h2>
+<h3>为什么运行后出现“另存为”窗口？</h3><p>测试文件还没有完成第一次保存，或目标软件把 ⌘S 用于其他命令。先手动保存文件，确认该软件的快捷键行为，再回到正文重试。</p>
+<h3>加了等待，为什么仍然把字输到错误位置？</h3><p>等待只暂停固定时长，不会纠正焦点。检查 Mac 前台应用、文档正文和弹窗；需要切换应用时应明确配置“切换应用”步骤。</p>
+<h3>预览里有 command,s，为什么文件没保存？</h3><p>内容预览显示步骤描述，不执行快捷键。需要连接后试运行，并在目标软件中确认保存结果。</p>
+<h3>如何停止正在重复运行的自动化？</h3><p>编辑器在运行期间提供“停止自动化”；也可将“停止自动化”配置为一个单独按钮。首次练习保留“运行一次”，无需启用重复模式。</p>
+<p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="guide-text-button.html">← 把常用回复做成按钮：从输入文字到预览、同步</a>
+      <a href="layout-work.html">工作布局教程：打开键盘、输入文字，再检查撤销与重做 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>
