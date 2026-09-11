@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。">
+  <meta name="description" content="在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="用 SUBSTITUTE 和 TRIM 清理商品名称｜奶猫妙控">
+  <meta property="og:title" content="规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-text-cleanup">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="用 SUBSTITUTE 和 TRIM 清理商品名称｜奶猫妙控">
-  <meta name="twitter:description" content="从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。">
+  <meta name="twitter:title" content="规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本｜奶猫妙控">
+  <meta name="twitter:description" content="在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
-  <meta property="og:description" content="从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。">
+  <meta property="og:description" content="在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。">
   <meta name="keywords" content="奶猫妙控,Cream Deck,SUBSTITUTE 教程,TRIM 教程,Excel 文本清理,空字符串">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-text-cleanup">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,15 +26,15 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>用 SUBSTITUTE 和 TRIM 清理商品名称｜奶猫妙控</title>
+  <title>规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "用 SUBSTITUTE 和 TRIM 清理商品名称",
-      "description": "从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。",
+      "headline": "规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本",
+      "description": "在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -69,7 +69,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "用 SUBSTITUTE 和 TRIM 清理商品名称",
+          "name": "规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本",
           "item": "https://cream-deck.vercel.app/blog/guide-text-cleanup"
         }
       ]
@@ -149,8 +149,8 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 表格文本</a>
-      <h1>用 SUBSTITUTE 和 TRIM 清理商品名称</h1>
-      <p>从带 SKU- 和多余空格的练习数据开始，用奶猫妙控生成 SUBSTITUTE 与 TRIM，分别检查删除文字、保留空字符串和指定替换次数。</p>
+      <h1>规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本</h1>
+      <p>在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。</p>
       <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
     </header>
     <figure class="article-cover article-cover-phone">
@@ -158,7 +158,7 @@
       <figcaption>实际生成删除 SKU- 的 SUBSTITUTE 公式，保留有效的空字符串参数。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">商品名称里带着 SKU- 和多余空格时，可以分两步整理：先用 SUBSTITUTE 去掉指定文字，再用 TRIM 整理普通空格。下面保留原始数据，用三列结果对照，说明何时替换全部、何时只替换第一处。</p>
+<p class="article-lead">拿到包含冗余前缀和乱七八糟空格的商品清单？无需手动逐行删改。通过手机端可视化配置 SUBSTITUTE 剔除特定标识，再配合 TRIM 规范连续空格，两步建立清晰对照，轻松搞定大批量表格文本清洗。</p>
 <aside class="article-highlight"><strong>配图说明：</strong>截图是 App 原生公式编辑器中的实际操作，使用自制商品名练习。文中结果用于核对公式语义；没有宣称手机已经从 Excel 读取到这些单元格或自动验证整张表。</aside>
 <h2>开始前</h2><ul><li>在 Mac Excel 打开本文 CSV，确认 Original 位于 A1，三条商品名位于 A2:A4。</li><li>在 B1 输入 Removed，在 C1 输入 Cleaned，保留 A 列作为原始数据。</li><li>在奶猫妙控的布局列表中搜索“文本处理”，进入财务公式对应桌面。</li></ul>
 <h2>1. 下载练习表，保留原始数据</h2>
@@ -193,8 +193,8 @@
 <p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="guide-sumifs.html">← 用 SUMIFS 汇总项目中已付款的支出</a>
-      <a href="layout-finance.html">财务布局入门：计算金额，生成表格公式 →</a>
+      <a href="guide-sumifs.html">← 告别记错函数参数：用手机可视化生成 SUMIFS 多条件公式</a>
+      <a href="layout-finance.html">数字与表格好帮手：快速算账，在手机上可视化构建函数公式 →</a>
     </nav>
   </main>
 

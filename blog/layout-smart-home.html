@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eee9fb">
-  <meta name="description" content="从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。">
+  <meta name="description" content="通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
-  <meta property="og:title" content="用智能家居布局连接 Home Assistant，控制一盏灯｜奶猫妙控">
+  <meta property="og:title" content="全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感｜奶猫妙控">
   <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/smart-home-01.webp">
   <meta property="og:url" content="https://cream-deck.vercel.app/blog/layout-smart-home">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="用智能家居布局连接 Home Assistant，控制一盏灯｜奶猫妙控">
-  <meta name="twitter:description" content="从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。">
+  <meta name="twitter:title" content="全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感｜奶猫妙控">
+  <meta name="twitter:description" content="通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。">
   <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/tutorials-1.2.0-r1/smart-home-01.webp">
-  <meta property="og:description" content="从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。">
+  <meta property="og:description" content="通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。">
   <meta name="keywords" content="奶猫妙控,Cream Deck,智能家居布局教程,操作步骤">
   <link rel="canonical" href="https://cream-deck.vercel.app/blog/layout-smart-home">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,15 +26,15 @@
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog.css">
-  <title>用智能家居布局连接 Home Assistant，控制一盏灯｜奶猫妙控</title>
+  <title>全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感｜奶猫妙控</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "用智能家居布局连接 Home Assistant，控制一盏灯",
-      "description": "从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。",
+      "headline": "全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感",
+      "description": "通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。",
       "datePublished": "2026-09-10",
       "dateModified": "2026-09-10",
       "inLanguage": "zh-CN",
@@ -69,7 +69,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "用智能家居布局连接 Home Assistant，控制一盏灯",
+          "name": "全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感",
           "item": "https://cream-deck.vercel.app/blog/layout-smart-home"
         }
       ]
@@ -141,8 +141,8 @@
   <main id="main" class="article-shell">
     <header class="article-header">
       <a href="../blog.html">← 博客专栏 / 智能家居</a>
-      <h1>用智能家居布局连接 Home Assistant，控制一盏灯</h1>
-      <p>从地址与令牌到设备组件，逐步绑定一盏灯，再区分按钮反馈和设备真实状态。</p>
+      <h1>全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感</h1>
+      <p>通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。</p>
       <p class="article-meta"><time datetime="2026-09-10">2026 年 9 月 10 日</time></p>
     </header>
     <figure class="article-cover article-cover-phone">
@@ -150,7 +150,7 @@
       <figcaption>奶猫妙控 1.2.0 的智能家居操作界面；截图中的书桌灯、窗帘等由本地交互式演示服务提供。</figcaption>
     </figure>
     <article class="article-body">
-<p class="article-lead">接入 Home Assistant 后，可以把一盏灯放到智能家居桌面上，用旋钮控制开关和亮度。这篇从连接地址与令牌开始，带你添加灯光组件，并确认手机状态与真实设备一致。</p>
+<p class="article-lead">把常用的家居控制从繁琐的 App 菜单中解放出来。通过智能家居布局绑定 Home Assistant，你可以将书桌灯或房间灯光做成带有细腻刻度的旋钮组件，开关与亮度调节尽在掌心。</p>
 <aside class="article-highlight"><strong>配图说明：</strong>配图中的设备由本地演示服务提供，开关操作会更新演示状态。连接真实家庭后，请同时检查手机回读、Home Assistant 状态和设备实际动作。</aside>
 <h2>开始前</h2><ul><li>iPhone / iPad 安装奶猫妙控 1.2.0，本功能可独立使用，不要求连接 Mac。</li><li>准备已经运行的 Home Assistant，以及能在该平台正常控制的一盏灯。手机需要能访问其地址；先在 Home Assistant 自身验证开关正常。</li></ul>
 <h2>1. 进入智能家居布局，点击“连接家庭”入口</h2>
@@ -183,8 +183,8 @@
 <p>本文按奶猫妙控 1.2.0 的界面与操作编写，更新于 2026 年 9 月 10 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
     </article>
     <nav class="article-next" aria-label="继续阅读">
-      <a href="layout-work.html">← 工作布局入门：用手机打字、复制与撤销</a>
-      <a href="layout-launcher.html">把常用 Mac 软件放进启动器 →</a>
+      <a href="layout-work.html">← 工作台副控入门：让 iPhone 成为 Mac 键盘旁的得力搭档</a>
+      <a href="layout-launcher.html">Mac 常用软件随身控：打造属于你的掌上应用启动器 →</a>
     </nav>
   </main>
 
