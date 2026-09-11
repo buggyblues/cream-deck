@@ -1,4 +1,4 @@
-# 奶猫妙控（Cream Deck）
+# 奶猫妙控（NinoPad）
 
 > iPhone / iPad 上的可编辑小键盘与 Mac 副控。
 

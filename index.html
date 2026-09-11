@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0e6">
-  <meta name="description" content="奶猫妙控（Cream Deck）是专为 Mac 打造的掌上副控与全能小键盘。支持剪映/DaVinci/FCP 剪辑自适应、低延迟桌面画面镜像、虚拟触控板、演讲提词器与激光笔、语音文字速传。局域网本地直连，安全顺手。">
-  <meta name="keywords" content="奶猫妙控,Cream Deck,Mac小键盘,Mac远程控制,剪辑小键盘,DaVinci Resolve副控,Final Cut Pro控制台,剪映快捷键,Mac触控板,无线麦克风,演讲提词器,虚拟激光笔,掌上副控,Stream Deck替代">
+  <meta name="description" content="奶猫妙控（NinoPad）是专为 Mac 打造的掌上副控与全能小键盘。支持 Codex 氛围编程、Mac 原生 Shell 终端、剪映/DaVinci/FCP 剪辑自适应、低延迟桌面画面镜像与虚拟触控板。局域网本地直连，安全顺手。">
+  <meta name="keywords" content="奶猫妙控,NinoPad,Mac小键盘,Mac远程控制,氛围编程,Codex副控,Mac终端,Shell,剪辑小键盘,DaVinci Resolve副控,Final Cut Pro控制台,剪映快捷键,Mac触控板,无线麦克风,演讲提词器,虚拟激光笔,掌上副控,Stream Deck替代">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="application-name" content="奶猫妙控">
   <meta name="apple-mobile-web-app-title" content="奶猫妙控">
@@ -58,13 +58,13 @@
         "@type": "SoftwareApplication",
         "@id": "https://cream-deck.vercel.app/#software",
         "name": "奶猫妙控",
-        "alternateName": "Cream Deck",
+        "alternateName": "NinoPad",
         "url": "https://cream-deck.vercel.app/",
         "downloadUrl": "https://github.com/buggyblues/cream-deck/releases/latest",
         "image": "https://cream-deck.vercel.app/assets/app-icon.png",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS 13+, iOS 17+, iPadOS 17+",
-        "description": "专为 Mac 打造的自由全能掌上副控与小键盘，支持实时画面串流、触控板、文本键盘、语音输入及专业软件专属控制台。",
+        "description": "专为 Mac 打造的自由全能掌上副控与小键盘，支持 Codex 氛围编程、Mac 原生 Shell 终端、实时画面串流、触控板、文本键盘及专业软件专属控制台。",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -74,6 +74,8 @@
         "featureList": [
           "自由定制的按键、旋钮与触控板",
           "Mac 桌面实时画面镜像与全屏操作",
+          "Codex 氛围编程任务状态回读与推理调节",
+          "Mac 原生 Shell 终端多会话管理与全屏输入",
           "远程触控板、双向滚动与低延迟实时键盘",
           "整段文本预编辑与精准语音转文字",
           "将移动设备麦克风无线传输至 Mac",
@@ -182,7 +184,7 @@
       <div class="layout-copy">
         <p class="eyebrow">INTELLIGENT WORKSPACES</p>
         <h2>17 套开箱即用布局，专为高频工作流而生</h2>
-        <p>从日常效率、剪辑调色到写稿研读与终端开发，按需挑选专属工作区。更有合成器与吉他两套掌上乐器，随时随地开启创作。<a href="blog.html">浏览使用教程 →</a></p>
+        <p>从日常效率、剪辑调色到写稿研读、氛围编程与终端会话，按需挑选专属工作区。更有合成器与吉他两套掌上乐器，随时随地开启创作。<a href="blog.html">浏览使用教程 →</a></p>
         <div class="layout-filters" role="group" aria-label="按用途浏览布局">
 <button type="button" data-layout-filter="daily" aria-pressed="true" aria-controls="layout-options">日常效率 <span>4</span></button>
 <button type="button" data-layout-filter="reading" aria-pressed="false" aria-controls="layout-options">阅读写作 <span>3</span></button>
@@ -221,11 +223,11 @@
 <img src="assets/layouts/reading.svg" alt="" width="128" height="128">
 <div class="layout-tab-info"><strong>阅读</strong><span class="layout-tab-tag">阅读与写作</span></div>
 </button>
-<button id="layout-tab-codex" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-layout-group="development" data-image="assets/screens/v1.2.0/control-codex.webp" data-name="氛围编程" data-description="Codex 桌面应用（Mac） · 任务状态实时回读、模型与推理强度旋钮调节，随手把控 AI 编程进度。" data-alt="奶猫妙控氛围编程布局，App 实际界面，内容为演示数据" data-blog-href="blog/layout-codex.html">
+<button id="layout-tab-codex" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-layout-group="development" data-image="assets/screens/v1.2.0/control-codex.webp" data-name="氛围编程" data-description="Codex 桌面应用（Mac） · 任务槽位状态实时回读、单击查看与双击聚焦，模型与推理强度旋钮调节。" data-alt="奶猫妙控氛围编程布局，App 实际界面，内容为演示数据" data-blog-href="blog/layout-codex.html">
 <img src="assets/layouts/codex.svg" alt="" width="128" height="128">
 <div class="layout-tab-info"><strong>氛围编程</strong><span class="layout-tab-tag">开发工具</span></div>
 </button>
-<button id="layout-tab-terminal" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-layout-group="development" data-image="assets/screens/v1.2.0/control-terminal.webp" data-name="终端" data-description="Mac 登录 shell；vim、top、ssh 等命令行程序 · 直连 Mac 原生 Shell 会话，搭配终端信息屏、全屏键盘与常用控制键。" data-alt="奶猫妙控终端布局，App 实际界面，内容为演示数据" data-blog-href="blog/layout-terminal.html">
+<button id="layout-tab-terminal" class="layout-tab" type="button" role="tab" aria-selected="false" aria-controls="layout-panel" tabindex="-1" data-layout-group="development" data-image="assets/screens/v1.2.0/control-terminal.webp" data-name="终端" data-description="Mac 登录 shell；vim、top、ssh 等命令行程序 · 直连 Mac 原生 Shell 多会话管理，实时输出、全屏展开与常用控制键。" data-alt="奶猫妙控终端布局，App 实际界面，内容为演示数据" data-blog-href="blog/layout-terminal.html">
 <img src="assets/layouts/terminal.svg" alt="" width="128" height="128">
 <div class="layout-tab-info"><strong>终端</strong><span class="layout-tab-tag">开发工具</span></div>
 </button>
@@ -493,7 +495,7 @@
           <article class="role-panel" id="role-panel-code" role="tabpanel" aria-labelledby="role-tab-code" aria-hidden="true">
             <p class="role-name">效率</p>
             <h2>高频快捷指令，指尖一触即发</h2>
-            <p>写作排版、公式生成、Shell 终端与常用回复化繁为简，让日常办公快人一步。</p>
+            <p>Codex 任务状态回读与聚焦、Shell 终端会话管理、写作排版与常用回复化繁为简，让开发与日常办公快人一步。</p>
             <ul class="role-apps" aria-label="效率软件">
               <li><img src="assets/software/codex.png" alt="" width="1024" height="1024"><span>Codex</span></li>
             </ul>

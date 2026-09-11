@@ -1,4 +1,4 @@
-# Cream Deck Character SOP
+# NinoPad Character SOP
 
 Use this guide for the website, releases, and promotional artwork. Poses may change. Shape, color, and material must stay consistent.
 

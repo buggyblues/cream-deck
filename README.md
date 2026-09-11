@@ -1,4 +1,4 @@
-# 奶猫妙控 (Cream Deck)
+# 奶猫妙控 (NinoPad)
 
 > 自由全能小键盘，跃然掌上 · A customizable Mac control deck for phones and tablets.
 
@@ -34,5 +34,5 @@
 
 ## 📄 Repository Notes
 
-This repository contains official website assets, documentation, and release distributions for Cream Deck.
+This repository contains official website assets, documentation, and release distributions for NinoPad.
 
