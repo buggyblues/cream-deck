@@ -113,17 +113,32 @@ const initLayoutTabs = () => {
     });
   };
 
-  tabs.forEach((tab, index) => {
+  const filters = Array.from(document.querySelectorAll('[data-layout-filter]'));
+  const results = document.querySelector('[data-layout-results]');
+  const filter = (button) => {
+    filters.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+    tabs.forEach((tab) => { tab.hidden = tab.dataset.layoutGroup !== button.dataset.layoutFilter; });
+    const visible = tabs.filter((tab) => !tab.hidden);
+    if (results) results.textContent = `${button.childNodes[0].textContent.trim()} · ${visible.length} 套布局`;
+    const selected = visible.find((tab) => tab.getAttribute('aria-selected') === 'true');
+    select(selected || visible[0]);
+  };
+  filters.forEach((button) => button.addEventListener('click', () => filter(button)));
+  if (filters.length) filter(filters.find((button) => button.getAttribute('aria-pressed') === 'true') || filters[0]);
+
+  tabs.forEach((tab) => {
     tab.addEventListener('click', () => select(tab));
     tab.addEventListener('keydown', (event) => {
+      const visible = tabs.filter((item) => !item.hidden);
+      const index = visible.indexOf(tab);
       let nextIndex = index;
-      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % tabs.length;
-      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % visible.length;
+      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + visible.length) % visible.length;
       else if (event.key === 'Home') nextIndex = 0;
-      else if (event.key === 'End') nextIndex = tabs.length - 1;
+      else if (event.key === 'End') nextIndex = visible.length - 1;
       else return;
       event.preventDefault();
-      select(tabs[nextIndex], true);
+      select(visible[nextIndex], true);
     });
   });
 };
@@ -585,7 +600,7 @@ const initMotion = () => {
 
     gsap.timeline({ scrollTrigger: { trigger: '.layouts-section', start: 'top 76%', once: true } })
       .from('.layout-copy h2, .layout-copy > p', { ...reveal, y: 25, stagger: .07 })
-      .from('.layout-tab', { ...reveal, y: 20, stagger: .045 }, '-=.3')
+      .from('.layout-tabs', { ...reveal, y: 20, clearProps: 'transform,opacity,visibility' }, '-=.3')
       .from('.layout-preview', { ...reveal, x: desktop ? 48 : 0, rotation: 2 }, '-=.5');
 
     gsap.timeline({ scrollTrigger: { trigger: '.product-section', start: 'top 76%', once: true } })

@@ -18,8 +18,8 @@
   <url><loc>https://cream-deck.vercel.app/blog/layout-smart-home</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
 <!-- release-1.2.0:end -->
   <url><loc>https://cream-deck.vercel.app/</loc><lastmod>2026-08-31</lastmod><priority>1.0</priority></url>
-  <url><loc>https://cream-deck.vercel.app/updates</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://cream-deck.vercel.app/blog</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/updates</loc><lastmod>2026-09-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog</loc><lastmod>2026-09-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://cream-deck.vercel.app/blog/editing-keypad</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://cream-deck.vercel.app/blog/voice-text-input</loc><lastmod>2026-08-31</lastmod><priority>0.7</priority></url>
   <url><loc>https://cream-deck.vercel.app/blog/presentation-tools</loc><lastmod>2026-08-31</lastmod><priority>0.7</priority></url>
@@ -36,5 +36,8 @@
   <url><loc>https://cream-deck.vercel.app/blog/guide-clipping-export</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://cream-deck.vercel.app/blog/guide-sumifs</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://cream-deck.vercel.app/blog/guide-text-cleanup</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/guide-synthesizer</loc><lastmod>2026-09-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/guide-guitar</loc><lastmod>2026-09-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://cream-deck.vercel.app/blog/guide-dynamic-wallpaper</loc><lastmod>2026-09-11</lastmod><priority>0.7</priority></url>
 <!-- practical-guides:end -->
 </urlset>

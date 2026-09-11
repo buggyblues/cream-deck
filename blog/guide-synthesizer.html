@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eee9fb">
+  <meta name="description" content="从七级和弦键开始，练习延音、打开详细编辑、生成鼓点变体与播放停止，认识合成器的四个桌面。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="奶猫妙控">
+  <meta property="og:title" content="合成器入门：弹出和弦，再给它加一段鼓点｜奶猫妙控">
+  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/release-1.3.0/synth-01-chord.webp">
+  <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-synthesizer">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-09-11">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="合成器入门：弹出和弦，再给它加一段鼓点｜奶猫妙控">
+  <meta name="twitter:description" content="从七级和弦键开始，练习延音、打开详细编辑、生成鼓点变体与播放停止，认识合成器的四个桌面。">
+  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/release-1.3.0/synth-01-chord.webp">
+  <meta property="og:description" content="从七级和弦键开始，练习延音、打开详细编辑、生成鼓点变体与播放停止，认识合成器的四个桌面。">
+  <meta name="keywords" content="奶猫妙控,Cream Deck,合成器,入门教程,iPhone,iPad">
+  <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-synthesizer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../blog.css">
+  <title>合成器入门：弹出和弦，再给它加一段鼓点｜奶猫妙控</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "合成器入门：弹出和弦，再给它加一段鼓点",
+      "description": "从七级和弦键开始，练习延音、打开详细编辑、生成鼓点变体与播放停止，认识合成器的四个桌面。",
+      "datePublished": "2026-09-11",
+      "dateModified": "2026-09-11",
+      "inLanguage": "zh-CN",
+      "author": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "奶猫妙控"
+      },
+      "image": [
+        "https://cream-deck.vercel.app/assets/screens/release-1.3.0/synth-01-chord.webp"
+      ],
+      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/guide-synthesizer"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://cream-deck.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://cream-deck.vercel.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "合成器入门：弹出和弦，再给它加一段鼓点",
+          "item": "https://cream-deck.vercel.app/blog/guide-synthesizer"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "按键没有声音，先检查什么？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "先检查手机音量和当前音频输出设备，再确认没有停留在错误提示或导出弹窗中。手机本地发声不需要 Mac 配对；选择外部 MIDI 后，应分别检查本地声音和外部目标的设置。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "切到其他桌面后是不是另一首曲子？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "合成器的四个桌面从不同角度操作同一份工程。换桌面不等于新建工程，也不必重复导入声音。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以直接当 Mac 上的乐器插件吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "它可以发送 MIDI，但手机上的本地音源与 Mac 软件中的乐器是不同的输出路径。需要电脑发声时，应先连接 Mac、选择 MIDI 目标，并在接收软件中配置输入。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="content-page article-page">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="奶猫妙控首页">
+      <img src="../assets/app-icon.webp" alt="" width="42" height="42">
+      <span>奶猫妙控</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="../index.html#layouts">功能</a>
+      <a href="../index.html#pro">价格</a>
+      <a href="../blog.html" aria-current="page">博客</a>
+      <a href="../index.html#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <ul>
+      <li><a href="../index.html#layouts" data-mobile-nav-link>功能</a></li>
+      <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
+      <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
+      <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
+    </ul>
+    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+  </div>
+
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a href="../blog.html">← 博客专栏 / 合成器</a>
+      <h1>合成器入门：弹出和弦，再给它加一段鼓点</h1>
+      <p>从七级和弦键开始，练习延音、打开详细编辑、生成鼓点变体与播放停止，认识合成器的四个桌面。</p>
+      <p class="article-meta"><time datetime="2026-09-11">2026 年 9 月 11 日</time></p>
+    </header>
+    <figure class="article-cover article-cover-phone">
+      <img src="../assets/screens/release-1.3.0/synth-01-chord.webp" alt="合成器的和弦桌面：延音已开启，当前和弦显示在上方小屏。" width="1206" height="2622">
+      <figcaption>合成器的和弦桌面：延音已开启，当前和弦显示在上方小屏。</figcaption>
+    </figure>
+    <article class="article-body">
+<p class="article-lead">不必先连接电脑，也不必先学会整套编曲工具。打开合成器，按下一枚和弦键就可以开始。这篇先带你听清楚一个和弦，再切到编曲桌面，试一段鼓点；每一步都能在手机上检查结果。</p>
+<aside class="article-highlight"><strong>配图说明：</strong>配图来自专用模拟器中的原生 App，由脚本实际操作并截图。连接状态使用演示数据；本篇的本地操作无需连接 Mac。截图不作为真实 Mac MIDI 输出的验证。</aside>
+<h2>开始前</h2><ul><li>更新到奶猫妙控 1.3.0，打开声音并从较低音量开始。</li><li>从底部「布局」中选择「合成器」，先进入「和弦」桌面。</li><li>这次练习使用手机本地音源；Mac MIDI 输出可以之后再配置。</li></ul>
+<h2>1. 先按一枚和弦键</h2>
+<p>和弦桌面有七枚带数字的按键，上排为 2、4、6，下排为 1、3、5、7。先按住 1，再松手，听一次完整的起音和收尾；随后换按 4 或 5，比较听到的变化。</p>
+<p>上方小屏显示当前调性、和弦和状态。数字表示调性中的级数，不能把 1 固定理解成 C 大三和弦。第一次先保留当前调性，只换按键，比较容易听出差别。</p>
+<h2>2. 用延音留住一个和弦</h2>
+<p>点「延音」，再点一次和弦键。现在松手后声音仍可继续，方便腾出手调整其他控件；截图就是启用延音后的状态。</p>
+<p>练习结束时再点「延音」关闭。若声音仍在延续，先检查是否还有编曲或循环正在播放。延音控制和弦的保持，播放键还负责其他正在运行的音乐内容。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/release-1.3.0/synth-01-chord.webp" alt="开启延音后，小屏与和弦键保留当前演奏状态。" width="1206" height="2622" loading="lazy"><figcaption>开启延音后，小屏与和弦键保留当前演奏状态。</figcaption></figure>
+<h2>3. 点小屏，查看当前演奏设置</h2>
+<p>点上方小屏会打开详细编辑。这里的内容跟随当前桌面和演奏模式；先看清标题与参数，再一次只改一个选项，回到桌面按相同的和弦比较。</p>
+<p>看完点右上角「完成」返回。想专门研究音色时，再切到「音色」桌面。不要在还没记住原来声音时同时改动多个旋钮，这样更容易知道哪项调整产生了作用。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/release-1.3.0/synth-02-editor.webp" alt="点击和弦桌面的小屏进入详细编辑，完成后可返回原桌面。" width="1206" height="2622" loading="lazy"><figcaption>点击和弦桌面的小屏进入详细编辑，完成后可返回原桌面。</figcaption></figure>
+<h2>4. 切到编曲，生成一段鼓点</h2>
+<p>用 App 底部的桌面切换条进入「编曲」，也可以从布局列表选择它。合成器的和弦、音色、编曲和循环属于同一套布局，不需要重新创建工程。</p>
+<p>点「变体」生成鼓点变化，再点「播放」。步进区会显示当前节奏，播放键变成停止状态。先听一轮再改动，避免把连续点按产生的几个版本混在一起。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/release-1.3.0/synth-03-sequence.webp" alt="编曲桌面已经生成鼓点变体，并进入播放状态。" width="1206" height="2622" loading="lazy"><figcaption>编曲桌面已经生成鼓点变体，并进入播放状态。</figcaption></figure>
+<h2>5. 打开编曲编辑，认识不同声部</h2>
+<p>播放时可以观察节奏；准备详细编辑前先点停止，再点编曲桌面上方小屏。详细编辑按鼓点、和弦、贝斯、旋律和歌曲组织内容，先从鼓点页了解每一步的位置。</p>
+<p>这里调整的是工程里的音乐内容。若只是想换声音，回到音色桌面更直接；若要录入自己的演奏，继续使用循环桌面。先把一条鼓点听顺，再逐渐加入其他声部。</p>
+<figure class="article-figure article-figure-phone"><img src="../assets/screens/release-1.3.0/synth-04-sequence-editor.webp" alt="编曲详细编辑按声部分页，避免一次面对所有参数。" width="1206" height="2622" loading="lazy"><figcaption>编曲详细编辑按声部分页，避免一次面对所有参数。</figcaption></figure>
+<h2>6. 把这一轮练习停下来</h2>
+<p>点「完成」回到桌面，确认播放键回到播放状态，再关闭延音。这样可以区分参数变化、持续和弦和循环播放各自的作用。</p>
+<p>接下来可以尝试循环桌面的录制、叠录和撤销，或从更多操作中保存、导出工程。这些会涉及自己的音乐内容，建议先保存一份练习工程，再继续修改。当前教程的目标是完成一次和弦与鼓点的本地试听。</p>
+<h2>常见问题</h2>
+<h3>按键没有声音，先检查什么？</h3><p>先检查手机音量和当前音频输出设备，再确认没有停留在错误提示或导出弹窗中。手机本地发声不需要 Mac 配对；选择外部 MIDI 后，应分别检查本地声音和外部目标的设置。</p>
+<h3>切到其他桌面后是不是另一首曲子？</h3><p>合成器的四个桌面从不同角度操作同一份工程。换桌面不等于新建工程，也不必重复导入声音。</p>
+<h3>可以直接当 Mac 上的乐器插件吗？</h3><p>它可以发送 MIDI，但手机上的本地音源与 Mac 软件中的乐器是不同的输出路径。需要电脑发声时，应先连接 Mac、选择 MIDI 目标，并在接收软件中配置输入。</p>
+<p>本文按奶猫妙控 1.3.0 的界面与操作编写，更新于 2026 年 9 月 11 日。<a href="../updates.html">查看更新日志</a> · <a href="../support.html">连接与权限帮助</a>。</p>
+    </article>
+    <nav class="article-next" aria-label="继续阅读">
+      <a href="guide-guitar.html">← 吉他入门：扫响六根弦，跟着提示练一段和弦</a>
+      <a href="layout-sampler.html">采样布局入门：载入声音，试听并调整鼓垫 →</a>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="brand" href="../index.html"><img src="../assets/app-icon.webp" alt="" width="40" height="40"><span>奶猫妙控</span></a>
+    <p>&gt;w&lt; 自由全能小键盘，跃然掌上</p>
+    <nav aria-label="页脚导航">
+      <a href="https://github.com/buggyblues/cream-deck/releases">下载</a>
+      <a href="../updates.html">更新</a>
+      <a href="../blog.html">博客</a>
+      <a href="../support.html">支持</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../terms.html">条款</a>
+    </nav>
+    <small>© <span data-year></span> 奶猫妙控</small>
+  </footer>
+  <script src="../script.js" defer></script>
+</body>
+</html>
