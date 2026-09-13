@@ -1,6 +1,6 @@
 # 奶猫妙控 (NinoPad)
 
-> 自由全能小键盘，跃然掌上 · A customizable Mac control deck for phones and tablets.
+> 随心全能小键盘，跃然掌上 · A customizable Mac control deck for phones and tablets.
 
 [官网 (Website)](https://cream-deck.vercel.app) · [最新下载 (Download)](https://github.com/buggyblues/cream-deck/releases/latest) · [专栏与指南 (Blog)](https://cream-deck.vercel.app/blog) · [问题反馈 (Support)](https://github.com/buggyblues/cream-deck/issues)
 

@@ -229,7 +229,7 @@ const initTypewriter = (gsap) => {
   if (!target) return;
 
   const phrases = [
-    '自由全能小键盘，',
+    '随心全能小键盘，',
     '剪辑调色自适应，',
     '桌面镜像低延迟，',
     '语音文字速输入，',
