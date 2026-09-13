@@ -11,7 +11,7 @@
 - [网页浏览利器：在手机上直达网址、轻滑切换标签页](https://cream-deck.vercel.app/blog/layout-browser): 通过手机端快速输入并直达目标 URL，利用滑块控件自如切换标签页，结合页内搜索与自动化联动打造流畅冲浪流。
 - [经典点击轮回归：用手机优雅掌控 Mac 音乐与播放进度](https://cream-deck.vercel.app/blog/layout-media): 重现经典点击轮与层级菜单手感，随时查看当前曲目与封面，平滑微调播放进度与切换播放模式。
 - [演讲从容掌控：无线遥控翻页、画中画浮窗与精准分段计时](https://cream-deck.vercel.app/blog/layout-presentation): 配置前后翻页与画中画摄像头/投屏浮窗，利用分段计时器精准把控排练与演说节奏，从容驾驭每个演讲台。
-- [多 Agent 并行调度：用氛围编程布局从容切换 Codex 任务](https://cream-deck.vercel.app/blog/layout-codex): 掌握任务槽位的单击查看与双击前台聚焦，实时调节模型推理强度与用量回读，安全审批代码操作。
+- [多 Agent 并行调度：用 Codex 布局从容切换任务](https://cream-deck.vercel.app/blog/layout-codex): 掌握任务槽位的单击查看与双击前台聚焦，实时调节模型推理强度与用量回读，安全审批代码操作。
 - [命令行随身监控：在手机上新建、切换与全屏管理终端会话](https://cream-deck.vercel.app/blog/layout-terminal): 掌上管理 Mac 终端会话标签，运行只读命令验证链路，全屏展开沉浸输入，随时掌握后台编译与运维状态。
 - [专注文字创作：用写作布局随心跳段、文内查找与一键排版](https://cream-deck.vercel.app/blog/layout-writing): 利用字/词/句/段四级范围精准游走光标，配合文内查找与 Markdown 格式面板，大幅减少键盘快捷键记忆负担。
 - [知识摘录工作流：捕捉灵感碎片，将原文、个人笔记与出处沉淀归档](https://cream-deck.vercel.app/blog/layout-research): 无缝读取 Mac 选区或手动录入资料，为摘录补充专属思考与来源链接，在手机剪藏夹中建立条理分明的素材库。
