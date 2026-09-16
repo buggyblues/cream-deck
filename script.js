@@ -23,9 +23,10 @@ const initPlatformDownloads = () => {
   const pickers = [...document.querySelectorAll('[data-platform-download]')];
   if (!pickers.length) return;
 
+  const isIPhone = /iPhone|iPod/.test(navigator.userAgent);
   const isIPad = /iPad/.test(navigator.userAgent)
     || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  const initialPlatform = isIPad ? 'ipad' : /Mac/.test(navigator.platform) ? 'mac' : 'iphone';
+  const initialPlatform = isIPhone ? 'iphone' : isIPad ? 'ipad' : /Mac/.test(navigator.platform) ? 'mac' : 'iphone';
 
   const select = (platform) => {
     pickers.forEach((picker) => {
