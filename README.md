@@ -2,7 +2,7 @@
 
 > 随心全能小键盘，跃然掌上 · A customizable Mac control deck for phones and tablets.
 
-[官网 (Website)](https://cream-deck.vercel.app) · [最新下载 (Download)](https://github.com/buggyblues/cream-deck/releases/latest) · [专栏与指南 (Blog)](https://cream-deck.vercel.app/blog) · [问题反馈 (Support)](https://github.com/buggyblues/cream-deck/issues)
+[官网 (Website)](https://cream-deck.vercel.app) · [iPhone / iPad (App Store)](https://apps.apple.com/app/id6805378609) · [Mac 下载](https://github.com/buggyblues/cream-deck/releases/latest) · [专栏与指南 (Blog)](https://cream-deck.vercel.app/blog) · [问题反馈 (Support)](https://github.com/buggyblues/cream-deck/issues)
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## 🚀 快速开始 (Quick Start)
 
-1. 从 [Releases](https://github.com/buggyblues/cream-deck/releases/latest) 下载 Universal DMG 安装包，将“奶猫妙控”拖入“应用程序”文件夹；
+1. 在 [App Store](https://apps.apple.com/app/id6805378609) 安装 iPhone / iPad 版；再从 [Releases](https://github.com/buggyblues/cream-deck/releases/latest) 下载 Universal DMG 安装包，将“奶猫妙控”拖入“应用程序”文件夹；
 2. 按照系统提示在“系统设置 → 隐私与安全性 → 辅助功能”中授予权限；
 3. 确保手机与 Mac 处于同一 Wi-Fi 网络，在手机端 App 扫描 Mac 菜单栏中的二维码即可秒级配对。
 

@@ -98,7 +98,8 @@ section[id], section {
 .hero-paw { width: .88em; height: .88em; aspect-ratio: 1; margin: .04em -.02em -.02em .02em; flex: none; object-fit: contain; }
 .type-caret { display: inline-block; width: .08em; height: .85em; margin-left: .05em; vertical-align: -.02em; border-radius: 999px; background: currentColor; transform: translateY(.02em); }
 .type-caret.is-done { opacity: 0; }
-.hero-actions { margin-top: 1.75rem; display: flex; justify-content: center; }
+.hero-actions { margin-top: 1.75rem; display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; }
+.download-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; }
 .availability { margin-top: .85rem; color: var(--muted); font-size: .8125rem; }
 .hero-field { position: absolute; inset: 0; z-index: 3; overflow: visible; pointer-events: none; }
 .hero-control { position: absolute; display: grid; place-items: center; color: var(--ink); font-weight: 900; line-height: 1.08; will-change: transform, opacity; }
