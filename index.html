@@ -137,7 +137,7 @@
       <a href="#faq">常见问题</a>
     </nav>
     <div class="header-actions">
-      <a class="header-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+      <a class="header-download" href="#download" aria-label="选择设备并下载奶猫妙控">免费下载</a>
       <button class="mobile-nav-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" data-mobile-nav-toggle>
         <svg class="icon-menu" viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
@@ -151,7 +151,7 @@
       <li><a href="blog.html" data-mobile-nav-link>博客</a></li>
       <li><a href="#faq" data-mobile-nav-link>常见问题</a></li>
     </ul>
-    <a class="mobile-drawer-download" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link>免费下载 Mac 端</a>
+    <a class="mobile-drawer-download" data-mobile-nav-link href="#download" aria-label="选择设备并下载奶猫妙控">免费下载</a>
   </div>
 
   <main id="main">
@@ -174,11 +174,23 @@
           <span class="hero-line hero-line-first"><span data-typewriter data-text="随心全能小键盘，">随心全能小键盘，</span><span class="type-caret" aria-hidden="true"></span></span>
           <span class="hero-line hero-line-accent" aria-hidden="true">跃然<img class="hero-paw" src="assets/panda-paw-glyph-v1.webp" alt="" width="320" height="320">上</span>
         </h1>
-        <div class="hero-actions">
-          <a class="button primary" href="https://apps.apple.com/app/id6805378609" aria-label="在 App Store 下载奶猫妙控 iPhone / iPad 版">App Store 下载</a>
-          <a class="button dark" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a>
+        <div class="hero-actions platform-download" data-platform-download>
+          <div class="download-platforms" role="tablist" aria-label="选择下载设备" hidden>
+            <button type="button" class="download-platform" id="hero-iphone-tab" role="tab" aria-selected="true" aria-controls="hero-iphone-panel" tabindex="0" data-download-platform="iphone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/></svg><span>iPhone</span></button>
+            <button type="button" class="download-platform" id="hero-ipad-tab" role="tab" aria-selected="false" aria-controls="hero-ipad-panel" tabindex="-1" data-download-platform="ipad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2.5"/></svg><span>iPad</span></button>
+            <button type="button" class="download-platform" id="hero-mac-tab" role="tab" aria-selected="false" aria-controls="hero-mac-panel" tabindex="-1" data-download-platform="mac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="12" rx="1.5"/><path d="m4 15-2 4h20l-2-4M9 19h6"/></svg><span>Mac</span></button>
+          </div>
+          <div class="download-panel" id="hero-iphone-panel" role="tabpanel" aria-labelledby="hero-iphone-tab" data-download-panel="iphone">
+            <a class="download-badge" href="https://apps.apple.com/app/id6805378609" aria-label="在 App Store 下载奶猫妙控 iPhone 版"><img src="assets/badges/app-store-zh-cn-black.svg" alt="在 App Store 下载" width="142" height="52"></a>
+          </div>
+          <div class="download-panel" id="hero-ipad-panel" role="tabpanel" aria-labelledby="hero-ipad-tab" data-download-panel="ipad" hidden>
+            <a class="download-badge" href="https://apps.apple.com/app/id6805378609" aria-label="在 App Store 下载奶猫妙控 iPad 版"><img src="assets/badges/app-store-zh-cn-black.svg" alt="在 App Store 下载" width="142" height="52"></a>
+          </div>
+          <div class="download-panel" id="hero-mac-panel" role="tabpanel" aria-labelledby="hero-mac-tab" data-download-panel="mac" hidden>
+            <a class="download-badge download-badge-mac" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 版"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="12" rx="1.5"/><path d="m4 15-2 4h20l-2-4M9 19h6"/></svg><span>下载 Mac 版</span></a>
+          </div>
+          <noscript><a class="download-fallback" href="https://github.com/buggyblues/cream-deck/releases/latest">下载 Mac 版 →</a></noscript>
         </div>
-        <p class="availability">已上架 App Store · iOS / iPadOS 17+ · macOS 13+</p>
       </div>
     </section>
 
@@ -685,8 +697,24 @@
         <img class="sprite-frame download-frame" src="assets/mascot-download-v2-frame-08.webp" alt="" width="768" height="768" loading="lazy" aria-hidden="true">
       </figure>
       <h2>把小键盘放到手边</h2>
-      <p class="download-copy">iPhone / iPad 在 App Store 下载，Mac 安装配套端，扫码即可连接<span>iOS / iPadOS 17+ · macOS 13+ · Apple 芯片与 Intel</span></p>
-      <div class="download-actions"><a class="button primary" href="https://apps.apple.com/app/id6805378609">App Store 下载</a><a class="button dark" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 端">下载 Mac 端</a></div>
+      <p class="download-copy">手机、平板与电脑，扫码即刻搭档。</p>
+      <div class="download-actions platform-download" data-platform-download>
+        <div class="download-platforms" role="tablist" aria-label="选择下载设备" hidden>
+          <button type="button" class="download-platform" id="footer-iphone-tab" role="tab" aria-selected="true" aria-controls="footer-iphone-panel" tabindex="0" data-download-platform="iphone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/></svg><span>iPhone</span></button>
+          <button type="button" class="download-platform" id="footer-ipad-tab" role="tab" aria-selected="false" aria-controls="footer-ipad-panel" tabindex="-1" data-download-platform="ipad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2.5"/></svg><span>iPad</span></button>
+          <button type="button" class="download-platform" id="footer-mac-tab" role="tab" aria-selected="false" aria-controls="footer-mac-panel" tabindex="-1" data-download-platform="mac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="12" rx="1.5"/><path d="m4 15-2 4h20l-2-4M9 19h6"/></svg><span>Mac</span></button>
+        </div>
+        <div class="download-panel" id="footer-iphone-panel" role="tabpanel" aria-labelledby="footer-iphone-tab" data-download-panel="iphone">
+          <a class="download-badge" href="https://apps.apple.com/app/id6805378609" aria-label="在 App Store 下载奶猫妙控 iPhone 版"><img src="assets/badges/app-store-zh-cn-black.svg" alt="在 App Store 下载" width="142" height="52"></a>
+        </div>
+        <div class="download-panel" id="footer-ipad-panel" role="tabpanel" aria-labelledby="footer-ipad-tab" data-download-panel="ipad" hidden>
+          <a class="download-badge" href="https://apps.apple.com/app/id6805378609" aria-label="在 App Store 下载奶猫妙控 iPad 版"><img src="assets/badges/app-store-zh-cn-black.svg" alt="在 App Store 下载" width="142" height="52"></a>
+        </div>
+        <div class="download-panel" id="footer-mac-panel" role="tabpanel" aria-labelledby="footer-mac-tab" data-download-panel="mac" hidden>
+          <a class="download-badge download-badge-mac" href="https://github.com/buggyblues/cream-deck/releases/latest" data-release-link aria-label="下载奶猫妙控 Mac 版"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="12" rx="1.5"/><path d="m4 15-2 4h20l-2-4M9 19h6"/></svg><span>下载 Mac 版</span></a>
+        </div>
+        <noscript><a class="download-fallback" href="https://github.com/buggyblues/cream-deck/releases/latest">下载 Mac 版 →</a></noscript>
+      </div>
     </section>
   </main>
 

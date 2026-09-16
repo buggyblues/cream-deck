@@ -19,6 +19,50 @@ fetch('https://api.github.com/repos/buggyblues/cream-deck/releases/latest', {
     });
   });
 
+const initPlatformDownloads = () => {
+  const pickers = [...document.querySelectorAll('[data-platform-download]')];
+  if (!pickers.length) return;
+
+  const isIPad = /iPad/.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const initialPlatform = isIPad ? 'ipad' : /Mac/.test(navigator.platform) ? 'mac' : 'iphone';
+
+  const select = (platform) => {
+    pickers.forEach((picker) => {
+      picker.querySelectorAll('[data-download-platform]').forEach((tab) => {
+        const selected = tab.dataset.downloadPlatform === platform;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      picker.querySelectorAll('[data-download-panel]').forEach((panel) => {
+        panel.hidden = panel.dataset.downloadPanel !== platform;
+      });
+    });
+  };
+
+  pickers.forEach((picker) => {
+    const tablist = picker.querySelector('[role="tablist"]');
+    const tabs = [...tablist.querySelectorAll('[data-download-platform]')];
+    tablist.hidden = false;
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(tab.dataset.downloadPlatform));
+      tab.addEventListener('keydown', (event) => {
+        let next;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next === undefined) return;
+        event.preventDefault();
+        select(tabs[next].dataset.downloadPlatform);
+        tabs[next].focus();
+      });
+    });
+  });
+  select(initialPlatform);
+};
+initPlatformDownloads();
+
 const initMobileNav = () => {
   const toggle = document.querySelector('[data-mobile-nav-toggle]');
   const drawer = document.querySelector('[data-mobile-drawer]');
@@ -544,7 +588,7 @@ const initMotion = () => {
     gsap.timeline({ defaults: { ease: 'power3.out' } })
       .from('.site-header', { autoAlpha: 0, y: -18, duration: .5 })
       .from('.hero-line-accent', { autoAlpha: 0, y: 38, rotation: 1.2, duration: .65 }, '-=.12')
-      .from('.hero-actions, .availability', { autoAlpha: 0, y: 16, duration: .42, stagger: .07 }, '-=.28')
+      .from('.hero-actions .download-platforms', { autoAlpha: 0, y: 16, duration: .42 }, '-=.28')
       .from('.hero-control', {
         autoAlpha: 0,
         y: desktop ? 42 : 28,
@@ -763,7 +807,7 @@ const initMotion = () => {
     gsap.timeline({ scrollTrigger: { trigger: '.download-section', start: 'top 82%', once: true } })
       .from('.download-art', { autoAlpha: 0, scale: .74, rotation: -8, duration: .65, ease: 'back.out(1.7)' })
       .from('.download-section h2, .download-copy', { ...reveal, y: 21, stagger: .07 }, '-=.32')
-      .from('.download-section .button', { autoAlpha: 0, y: 16, scale: .95, duration: .5, ease: 'back.out(1.5)' }, '-=.25');
+      .from('.download-section .download-platforms', { autoAlpha: 0, y: 16, duration: .5, ease: 'power3.out' }, '-=.25');
 
     gsap.utils.toArray('.button, .header-download').forEach((target) => {
       const onEnter = () => gsap.to(target, { y: -3, scale: 1.035, duration: .2, ease: 'power2.out', overwrite: 'auto' });

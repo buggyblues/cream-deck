@@ -98,12 +98,26 @@ section[id], section {
 .hero-paw { width: .88em; height: .88em; aspect-ratio: 1; margin: .04em -.02em -.02em .02em; flex: none; object-fit: contain; }
 .type-caret { display: inline-block; width: .08em; height: .85em; margin-left: .05em; vertical-align: -.02em; border-radius: 999px; background: currentColor; transform: translateY(.02em); }
 .type-caret.is-done { opacity: 0; }
-.hero-actions { margin-top: 1.75rem; display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; }
-.download-actions { grid-area: button; align-self: center; display: flex; flex-direction: column; gap: .75rem; }
-.download-section .download-actions .button { margin-top: 0; }
-.download-actions .button.primary { background: var(--cream); color: var(--ink); box-shadow: none; }
-.download-actions .button.primary:hover { background: white; }
-.availability { margin-top: .85rem; color: var(--muted); font-size: .8125rem; }
+.hero-actions { margin-top: 1.75rem; }
+.platform-download { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
+.download-platforms { display: inline-flex; align-items: center; gap: .25rem; padding: .25rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,253,248,.5); }
+.download-platform { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 2.75rem; padding: .5rem .75rem; border-radius: 999px; background: transparent; color: var(--muted); font-size: .875rem; font-weight: 600; cursor: pointer; transition: color .18s ease, background .18s ease, box-shadow .18s ease; }
+.download-platform svg { width: 1.25rem; height: 1.25rem; flex: none; }
+.download-platform:hover { color: var(--ink); background: rgba(255,255,255,.65); }
+.download-platform[aria-selected="true"] { color: var(--purple); background: var(--paper); box-shadow: 0 .125rem .5rem rgba(33,31,26,.09); }
+.download-panel { display: flex; justify-content: center; }
+.download-platforms[hidden], .download-panel[hidden] { display: none; }
+.download-badge { display: inline-flex; align-items: center; justify-content: center; height: 3.25rem; border-radius: .5rem; }
+.download-badge img { width: auto; height: 100%; }
+.download-badge-mac { gap: .6rem; padding: 0 1.15rem; border: 1px solid #a6a6a6; background: #000; color: white; font-size: 1rem; font-weight: 700; }
+.download-badge-mac svg { width: 1.75rem; height: 1.75rem; }
+.download-fallback { font-size: .875rem; text-decoration: underline; text-underline-offset: .2rem; }
+.download-actions { grid-area: button; align-self: center; }
+.download-actions .download-platforms { border-color: rgba(255,255,255,.28); background: rgba(255,255,255,.08); }
+.download-actions .download-platform { color: white; }
+.download-actions .download-platform:hover { background: rgba(255,255,255,.16); }
+.download-actions .download-platform[aria-selected="true"] { background: var(--cream); color: var(--purple); }
+.download-actions :focus-visible { outline-color: white; }
 .hero-field { position: absolute; inset: 0; z-index: 3; overflow: visible; pointer-events: none; }
 .hero-control { position: absolute; display: grid; place-items: center; color: var(--ink); font-weight: 900; line-height: 1.08; will-change: transform, opacity; }
 .hero-key { width: clamp(5.8rem, 8.2vw, 7.4rem); aspect-ratio: 1; padding: .8rem; border: .08rem solid rgba(255,255,255,.82); border-radius: 25%; background: linear-gradient(145deg, rgba(255,255,255,.96), rgba(239,235,226,.98)); box-shadow: inset 0 .18rem .25rem rgba(255,255,255,.96), inset 0 -.62rem 0 rgba(33,31,26,.1), 0 1.2rem 2.2rem rgba(80,64,42,.17); font-size: clamp(.9rem, 1.35vw, 1.18rem); letter-spacing: -.04em; }
@@ -325,8 +339,6 @@ section[id], section {
 .download-section h2 { grid-area: title; max-width: 45rem; font-size: clamp(2.25rem, 3.5vw, 3.15rem); }
 .download-section p { grid-area: copy; margin-top: .45rem; color: rgba(255,255,255,.84); }
 .download-copy { max-width: 43rem; }
-.download-copy span { margin-top: .35rem; display: block; color: rgba(255,255,255,.62); font-size: .8125rem; }
-.download-section .button { grid-area: button; align-self: center; }
 
 .look-panda { position: fixed; right: -2.25rem; bottom: -2.6rem; z-index: 45; width: clamp(11rem, 16vw, 14.5rem); display: none; opacity: 0; pointer-events: none; transform-origin: 58% 82%; filter: drop-shadow(0 1rem 1.2rem rgba(28,24,18,.18)); transition: opacity .3s ease; }
 .look-panda.is-ready { opacity: 1; }
@@ -663,7 +675,6 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .faq-section > h2 { margin-bottom: 2.5rem; }
   .download-section { grid-template-columns: 7rem 1fr; grid-template-areas: "icon title" "icon copy" "button button"; }
   .download-art { width: 6.5rem; }
-  .download-section .button { margin-top: 1.35rem; }
   .download-section .download-actions { margin-top: 1.35rem; }
   .layout-copy, .product-copy, .quick-copy, .mac-copy, .faq-section > h2 { text-align: center; }
   .layout-copy > p, .quick-copy > p:not(.eyebrow), .product-copy > p:not(.eyebrow), .mac-copy > p:not(.eyebrow) { margin-right: auto; margin-left: auto; }
@@ -712,7 +723,6 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .pro-paywall-preview { width: min(76vw, 20rem); }
   .download-section { grid-template-columns: 1fr; grid-template-areas: "icon" "title" "copy" "button"; text-align: center; }
   .download-art { width: min(48vw, 8rem); margin: auto; }
-  .download-section .button { width: 100%; }
   footer { padding: 2.9rem 1.25rem; grid-template-columns: 1fr; }
   footer nav { grid-column: auto; grid-row: auto; flex-wrap: wrap; margin-top: .75rem; }
   footer small { grid-column: auto; }
