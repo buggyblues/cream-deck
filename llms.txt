@@ -19,7 +19,7 @@
 - [数字与表格好帮手：快速算账，在手机上可视化构建函数公式](https://cream-deck.vercel.app/blog/layout-finance): 内置独立好用的本地计算器，支持长按 SUMIFS 逐项填充参数并生成规范公式，轻松搞定数据汇总与录入。
 - [三维建模掌上助手：从 Blender 视角漫游到快捷操作的自然协同](https://cream-deck.vercel.app/blog/layout-creative): 随前台软件自动切换专用按键，配合 Blender 默认键位轻松完成物体全选、聚焦与视口环绕，支持横屏双手操控。
 - [掌上节奏工作站：载入示例鼓点，微调音色与探索切片玩法](https://cream-deck.vercel.app/blog/layout-sampler): 在手机上敲击触控鼓垫、探索采样菜单与响度整理，分清声音叠放与接力切断规则，开启随时随地的律动创作。
-- [街机布局入门：认识触屏按键与 Mac 端使用条件](https://cream-deck.vercel.app/blog/layout-arcade): 认识十字方向键、动作键与游戏管理菜单；使用前先核对 Mac 端系统虚拟手柄授权与目标游戏支持。
+- [如何用手机作为手柄畅玩妙控游戏大厅](https://cream-deck.vercel.app/blog/layout-arcade): 带你快速上手妙控游戏大厅。将已配对的手机作为触屏手柄，选择喜欢的派对或单人游戏，与朋友同屏开启趣味对战。
 - [全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感](https://cream-deck.vercel.app/blog/layout-smart-home): 通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。
 
 ## 发布与支持

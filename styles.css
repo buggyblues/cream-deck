@@ -250,14 +250,15 @@ section[id], section {
 
 .scenarios-section { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(18rem, .88fr); gap: clamp(3rem, 8vw, 7rem); align-items: center; overflow: hidden; background: var(--lavender); }
 .scenario-copy { min-width: 0; }
-.role-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .35rem; padding: .35rem; border: .0625rem solid rgba(33,31,26,.08); border-radius: 1.15rem; background: rgba(255,255,255,.34); }
+.role-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .25rem; padding: .35rem; border: .0625rem solid rgba(33,31,26,.08); border-radius: 1.15rem; background: rgba(255,255,255,.34); }
 .role-tabs button { min-width: 0; padding: .7rem .45rem; display: grid; gap: .12rem; border-radius: .85rem; background: transparent; cursor: pointer; text-align: center; transition: background .18s ease, box-shadow .18s ease, transform .18s ease; }
 .role-tabs button:hover { transform: translateY(-.08rem); }
 .role-tabs button[aria-selected="true"] { background: rgba(255,255,255,.88); box-shadow: 0 .35rem 1rem rgba(53,42,92,.1); }
 .role-tabs strong { overflow: hidden; font-size: .92rem; text-overflow: ellipsis; white-space: nowrap; }
 .role-tabs span { color: var(--muted); font-size: .72rem; }
-.role-panels { position: relative; min-height: 21rem; margin-top: 2rem; }
-.role-panel { position: absolute; inset: 0; width: 100%; }
+.role-panels { display: grid; align-items: start; position: relative; min-height: 21rem; margin-top: 2rem; }
+.role-panel { grid-area: 1 / 1; position: relative; width: 100%; }
+.role-panel h2 { text-wrap: balance; }
 .role-panel:not(.is-active) { visibility: hidden; opacity: 0; }
 .role-name { margin-bottom: .7rem; color: var(--purple); font-size: .84rem; font-weight: 900; }
 .role-panel > p:not(.role-name) { max-width: 40rem; margin-top: 1rem; color: var(--muted); font-size: 1rem; }
@@ -266,8 +267,29 @@ section[id], section {
 .role-apps li:hover { transform: translateY(-.15rem); background: rgba(255,255,255,.85); box-shadow: 0 .4rem 1.2rem rgba(53,42,92,.08); }
 .role-apps img { width: 2rem; height: 2rem; border-radius: .5rem; object-fit: contain; }
 .role-apps span { font-size: .78rem; font-weight: 800; }
+.role-links { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem 1.2rem; margin-top: 1.5rem; }
+.role-links a { display: inline-flex; align-items: center; min-height: 2.75rem; color: var(--purple); font-size: .85rem; font-weight: 800; text-decoration: underline; text-underline-offset: .25rem; }
+.role-links .role-game-link { padding: .55rem 1rem; background: var(--purple); color: white; border-radius: .85rem; text-decoration: none; }
+.role-links a:hover { text-decoration-thickness: .15rem; }
+.quick-details { margin-top: 1.5rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.quick-details summary { cursor: pointer; color: var(--purple); font-size: .875rem; font-weight: 750; }
+.quick-details > p { margin-top: .8rem; font-size: .875rem; color: var(--muted); }
+.quick-details .quick-screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 0; padding: 0; }
+.quick-details .quick-screens img { width: auto; height: 14rem; margin: auto; }
+.quick-details .quick-screens figcaption { text-align: center; }
+.pro-companion { mix-blend-mode: multiply; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.pro-companion > img { width: min(100%, 20rem); height: auto; mix-blend-mode: multiply; }
+.pro-companion ul { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: .9rem; }
+.pro-companion li { display: flex; align-items: baseline; gap: .6rem; }
+.pro-companion li::before { content: '✓'; color: var(--purple); font-weight: 800; }
+.pro-benefits-details { max-width: 66rem; margin: 2rem auto 0; border: 1px solid var(--line); border-radius: 1rem; background: rgba(255,255,255,.45); }
+.pro-benefits-details summary { padding: 1rem 1.4rem; color: var(--purple); font-size: .9rem; font-weight: 800; cursor: pointer; }
+.pro-benefits-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 2rem; padding: .5rem 1.4rem 1.4rem; }
+.pro-benefit-item h3 { font-size: .95rem; line-height: 1.4; }
+.pro-benefit-item p { margin-top: .4rem; font-size: .85rem; color: var(--muted); }
 .role-stage { position: relative; width: min(100%, 28rem); aspect-ratio: 1; justify-self: center; }
 .role-figure { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transform-origin: 50% 78%; will-change: transform, opacity; }
+.role-stage:has(.role-art-white.is-active) { mix-blend-mode: multiply; }
 .role-figure:not(.is-active) { visibility: hidden; opacity: 0; }
 
 .pro-section { background: radial-gradient(circle at 85% 15%, rgba(240, 225, 255, 0.75), transparent 45%), radial-gradient(circle at 10% 85%, rgba(255, 240, 220, 0.65), transparent 45%), linear-gradient(145deg, #f5efff 0%, #fff6ec 52%, #fffdf8 100%); }
@@ -666,7 +688,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .scenarios-section { grid-template-columns: 1fr; gap: 1.1rem; padding-top: 3.9rem; padding-bottom: 3.9rem; }
   .role-panels { min-height: 15rem; text-align: center; }
   .role-panel > p:not(.role-name) { margin-right: auto; margin-left: auto; }
-  .role-apps { justify-content: center; }
+  .role-apps, .role-links { justify-content: center; }
   .role-stage { width: min(72vw, 19rem); }
   .pro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pro-purchase { grid-template-columns: minmax(14rem, .8fr) minmax(0, 1.2fr); }
@@ -705,7 +727,7 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .quick-screens figure { scroll-snap-align: start; }
   .product-feature-item { grid-template-columns: 2.4rem 1fr; gap: .9rem; }
   .product-feature-icon { width: 2.4rem; height: 2.4rem; border-radius: .75rem; }
-  .role-tabs { gap: .25rem; padding: .25rem; }
+  .role-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .25rem; padding: .25rem; }
   .role-tabs button { padding: .62rem .2rem; }
   .role-tabs strong { font-size: .82rem; }
   .role-tabs span { font-size: .68rem; }
@@ -718,6 +740,8 @@ footer small { grid-column: 1 / -1; margin-top: 1rem; color: rgba(33,31,26,.48);
   .benefit-top { margin-bottom: .95rem; }
   .benefit-icon { width: 2.5rem; height: 2.5rem; border-radius: .85rem; }
   .pro-purchase { grid-template-columns: 1fr; }
+  .pro-companion > img { width: 13rem; }
+  .pro-benefits-list { grid-template-columns: 1fr; gap: 1.2rem; }
   .pro-plan-card { padding: 1.25rem 1.25rem; }
   .pro-plan-badge { right: .85rem; top: -.65rem; font-size: .65rem; padding: .2rem .6rem; }
   .pro-paywall-preview { width: min(76vw, 20rem); }

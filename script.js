@@ -433,6 +433,8 @@ const initRoleCarousel = (gsap) => {
   let timer = null;
   let transition = null;
   let isVisible = false;
+  let isHovered = false;
+  let hasInteracted = false;
 
   const syncState = (index) => {
     tabs.forEach((tab, tabIndex) => {
@@ -444,6 +446,7 @@ const initRoleCarousel = (gsap) => {
       const selected = panelIndex === index;
       panel.classList.toggle('is-active', selected);
       panel.setAttribute('aria-hidden', String(!selected));
+      panel.inert = !selected;
     });
     figures.forEach((figure, figureIndex) => {
       figure.classList.toggle('is-active', figureIndex === index);
@@ -453,8 +456,8 @@ const initRoleCarousel = (gsap) => {
   const schedule = () => {
     timer?.kill();
     timer = null;
-    if (!gsap || prefersReducedMotion || !isVisible || document.hidden) return;
-    timer = gsap.delayedCall(4.4, () => select((current + 1) % tabs.length));
+    if (!gsap || prefersReducedMotion || !isVisible || document.hidden || isHovered || hasInteracted) return;
+    timer = gsap.delayedCall(7, () => select((current + 1) % tabs.length));
   };
 
   const select = (index, moveFocus = false) => {
@@ -468,6 +471,8 @@ const initRoleCarousel = (gsap) => {
     current = index;
     if (moveFocus) tabs[index].focus();
     transition?.kill();
+    if (gsap) gsap.set([...panels, ...figures], { clearProps: 'all' });
+    syncState(previous);
 
     if (!gsap || prefersReducedMotion) {
       syncState(index);
@@ -476,7 +481,6 @@ const initRoleCarousel = (gsap) => {
     }
 
     const outgoing = [panels[previous], figures[previous]];
-    const incoming = [panels[index], figures[index]];
     tabs.forEach((tab, tabIndex) => {
       const selected = tabIndex === index;
       tab.setAttribute('aria-selected', String(selected));
@@ -484,6 +488,8 @@ const initRoleCarousel = (gsap) => {
     });
     panels[index].classList.add('is-active');
     panels[index].setAttribute('aria-hidden', 'false');
+    panels[index].inert = false;
+    panels[previous].inert = true;
     figures[index].classList.add('is-active');
 
     transition = gsap.timeline({
@@ -519,7 +525,7 @@ const initRoleCarousel = (gsap) => {
   };
 
   tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => select(index));
+    tab.addEventListener('click', () => { hasInteracted = true; select(index); });
     tab.addEventListener('keydown', (event) => {
       let nextIndex = index;
       if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % tabs.length;
@@ -528,9 +534,15 @@ const initRoleCarousel = (gsap) => {
       else if (event.key === 'End') nextIndex = tabs.length - 1;
       else return;
       event.preventDefault();
+      hasInteracted = true;
       select(nextIndex, true);
     });
   });
+
+  syncState(current);
+  section.addEventListener('pointerenter', () => { isHovered = true; schedule(); });
+  section.addEventListener('pointerleave', () => { isHovered = false; schedule(); });
+  section.addEventListener('focusin', () => { hasInteracted = true; schedule(); });
 
   const observer = new IntersectionObserver(([entry]) => {
     isVisible = entry.isIntersecting && entry.intersectionRatio >= .28;
@@ -538,7 +550,6 @@ const initRoleCarousel = (gsap) => {
   }, { threshold: [.28] });
   observer.observe(section);
   document.addEventListener('visibilitychange', schedule);
-  syncState(0);
 };
 
 const initMotion = () => {
@@ -663,10 +674,6 @@ const initMotion = () => {
       .from('.how-copy > *', { ...reveal, y: 24, stagger: .07 }, '-=.4')
       .from('.steps li', { ...reveal, y: 19, stagger: .08 }, '-=.32');
 
-    gsap.timeline({ scrollTrigger: { trigger: '.quick-section', start: 'top 76%', once: true } })
-      .from('.quick-copy > *', { ...reveal, y: 24, stagger: .07 })
-      .from('.quick-screens figure', { ...reveal, y: 52, rotation: (index) => index ? 2 : -2, stagger: .12 }, '-=.34');
-
     gsap.timeline({ scrollTrigger: { trigger: '.scenarios-section', start: 'top 76%', once: true } })
       .from('.role-tabs', { ...reveal, y: 18 })
       .from('.role-panel.is-active > *', { ...reveal, y: 23, stagger: .07 }, '-=.34')
@@ -674,20 +681,15 @@ const initMotion = () => {
 
     gsap.timeline({ scrollTrigger: { trigger: '.pro-section', start: 'top 76%', once: true } })
       .from('.pro-heading .eyebrow, .pro-heading h2, .pro-heading > p', { ...reveal, y: 26, stagger: .07 })
-      .from('.pro-paywall-preview', { ...reveal, x: desktop ? -36 : 0, rotation: desktop ? -2 : 0, scale: .96, duration: .72, ease: 'back.out(1.2)' }, '-=.35')
+      .from('.pro-companion', { ...reveal, x: desktop ? -24 : 0, duration: .65 }, '-=.35')
       .from('.pro-plan-card', { ...reveal, y: 28, scale: .97, stagger: .09, duration: .55, ease: 'back.out(1.25)' }, '-=.48')
       .from('.pro-trust-badges span', { autoAlpha: 0, y: 12, stagger: .06, duration: .4 }, '-=.2');
 
-    gsap.timeline({ scrollTrigger: { trigger: '.pro-benefits-header', start: 'top 78%', once: true } })
-      .from('.pro-benefits-header > *', { ...reveal, y: 22, stagger: .07 })
-      .from('.benefit-card', {
-        ...reveal,
-        y: 32,
-        scale: .94,
-        stagger: .045,
-        duration: .55,
-        ease: 'back.out(1.3)'
-      }, '-=.32');
+    document.querySelectorAll('.quick-details, .pro-benefits-details').forEach((details) => {
+      const onToggle = () => ScrollTrigger.refresh();
+      details.addEventListener('toggle', onToggle);
+      cleanups.push(() => details.removeEventListener('toggle', onToggle));
+    });
 
     const startSpriteLoop = ({ frameSelector, keyframes, repeatDelay = 0.8, trigger }) => {
       const frames = gsap.utils.toArray(frameSelector);
