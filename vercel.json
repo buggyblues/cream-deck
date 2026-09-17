@@ -31,6 +31,11 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://ninopad.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "destination": "https://ninopad.com/:path*",
       "permanent": true
