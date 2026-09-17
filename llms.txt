@@ -25,7 +25,7 @@
 ## 发布与支持
 
 - [iPhone / iPad 正式版 · App Store](https://apps.apple.com/app/id6805378609)
-- [Mac 配套端 · Universal 安装包](https://github.com/buggyblues/cream-deck/releases/latest)
+- [Mac 配套端 · Universal 安装包](https://github.com/buggyblues/ninopad/releases/latest)
 
 - [更新日志](https://ninopad.com/updates)
 - [帮助](https://ninopad.com/support)

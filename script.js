@@ -15,7 +15,7 @@ fetch('https://api.github.com/repos/buggyblues/cream-deck/releases/latest', {
   })
   .catch(() => {
     releaseLinks.forEach((link) => {
-      link.href = 'https://github.com/buggyblues/cream-deck/releases';
+      link.href = 'https://github.com/buggyblues/ninopad/releases';
     });
   });
 
