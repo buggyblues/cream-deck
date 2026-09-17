@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cream-deck.vercel.app/sitemap.xml
+Sitemap: https://ninopad.com/sitemap.xml

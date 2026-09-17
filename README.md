@@ -2,7 +2,7 @@
 
 > 随心全能小键盘，跃然掌上 · A customizable Mac control deck for phones and tablets.
 
-[官网 (Website)](https://cream-deck.vercel.app) · [iPhone / iPad (App Store)](https://apps.apple.com/app/id6805378609) · [Mac 下载](https://github.com/buggyblues/cream-deck/releases/latest) · [专栏与指南 (Blog)](https://cream-deck.vercel.app/blog) · [问题反馈 (Support)](https://github.com/buggyblues/cream-deck/issues)
+[官网 (Website)](https://ninopad.com) · [iPhone / iPad (App Store)](https://apps.apple.com/app/id6805378609) · [Mac 下载](https://github.com/buggyblues/cream-deck/releases/latest) · [专栏与指南 (Blog)](https://ninopad.com/blog) · [问题反馈 (Support)](https://github.com/buggyblues/cream-deck/issues)
 
 ---
 
@@ -36,3 +36,10 @@
 
 This repository contains official website assets, documentation, and release distributions for NinoPad.
 
+## Website deployment
+
+- Canonical site: [ninopad.com](https://ninopad.com/).
+- EdgeOne Makers project: `ninopad-website` (`makers-smtejewta4a4`), connected to this repository's `main` branch. Each push triggers a new production deployment.
+- Static output is the repository root. [edgeone.json](edgeone.json) defines the extensionless public routes and response headers.
+- DNSPod `@` CNAME target: `ninopad.com.pages.dnsoe4.com`. HTTPS is configured in the Makers custom-domain page.
+- The website articles and release content are generated from the private product repository's `Website/content/` by `Scripts/update-website-content.py`; check both repositories when changing public URLs.

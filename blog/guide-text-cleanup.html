@@ -9,17 +9,17 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="奶猫妙控">
   <meta property="og:title" content="规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本｜奶猫妙控">
-  <meta property="og:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
-  <meta property="og:url" content="https://cream-deck.vercel.app/blog/guide-text-cleanup">
+  <meta property="og:image" content="https://ninopad.com/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
+  <meta property="og:url" content="https://ninopad.com/blog/guide-text-cleanup">
   <meta property="og:locale" content="zh_CN">
   <meta property="article:published_time" content="2026-09-10">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本｜奶猫妙控">
   <meta name="twitter:description" content="在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。">
-  <meta name="twitter:image" content="https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
+  <meta name="twitter:image" content="https://ninopad.com/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp">
   <meta property="og:description" content="在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。">
   <meta name="keywords" content="奶猫妙控,NinoPad,SUBSTITUTE 教程,TRIM 教程,Excel 文本清理,空字符串">
-  <link rel="canonical" href="https://cream-deck.vercel.app/blog/guide-text-cleanup">
+  <link rel="canonical" href="https://ninopad.com/blog/guide-text-cleanup">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;family=ZCOOL+KuaiLe&amp;display=swap" rel="stylesheet">
@@ -47,9 +47,9 @@
         "name": "奶猫妙控"
       },
       "image": [
-        "https://cream-deck.vercel.app/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp"
+        "https://ninopad.com/assets/screens/guides-1.2.0-r1/clean-text-01-remove.webp"
       ],
-      "mainEntityOfPage": "https://cream-deck.vercel.app/blog/guide-text-cleanup"
+      "mainEntityOfPage": "https://ninopad.com/blog/guide-text-cleanup"
     },
     {
       "@type": "BreadcrumbList",
@@ -58,19 +58,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "https://cream-deck.vercel.app"
+          "item": "https://ninopad.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "博客",
-          "item": "https://cream-deck.vercel.app/blog"
+          "item": "https://ninopad.com/blog"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本",
-          "item": "https://cream-deck.vercel.app/blog/guide-text-cleanup"
+          "item": "https://ninopad.com/blog/guide-text-cleanup"
         }
       ]
     },
@@ -127,7 +127,7 @@
       <a href="../index.html#pro">价格</a>
       <a href="../blog.html" aria-current="page">博客</a>
       <a href="../index.html#faq">常见问题</a>
-      <a href="https://arcade.day1zen.cn/" target="_blank" rel="noopener">游戏大厅</a>
+      <a href="https://arcade.ninopad.com/" target="_blank" rel="noopener">游戏大厅</a>
     </nav>
     <div class="header-actions">
       <a class="header-download" href="/#download" aria-label="选择设备并下载奶猫妙控">免费下载</a>
@@ -143,7 +143,7 @@
       <li><a href="../index.html#pro" data-mobile-nav-link>价格</a></li>
       <li><a href="../blog.html" data-mobile-nav-link>博客</a></li>
       <li><a href="../index.html#faq" data-mobile-nav-link>常见问题</a></li>
-      <li><a href="https://arcade.day1zen.cn/" target="_blank" rel="noopener" data-mobile-nav-link>游戏大厅</a></li>
+      <li><a href="https://arcade.ninopad.com/" target="_blank" rel="noopener" data-mobile-nav-link>游戏大厅</a></li>
     </ul>
     <a class="mobile-drawer-download" data-mobile-nav-link href="/#download" aria-label="选择设备并下载奶猫妙控">免费下载</a>
   </div>
@@ -166,7 +166,7 @@
 <h2>1. 下载练习表，保留原始数据</h2>
 <p>在 Excel 或 Numbers 中准备测试数据：A2 单元格为前后及中间带多余空格的<code>  SKU-Blue  Mug  </code>，A3 为“SKU-Red Cup”，A4 为包含重复前缀的“SKU-Gift-SKU-Box”。打开文件后切勿先手动删除空格。</p>
 <p>A2 用于检验空格规整效果，A4 用于区分“替换所有匹配”与“仅替换首处匹配”。始终保留原始 A 列数据不动，才能清晰验证清洗步骤是否会误删商品名称内部的合法字符。</p>
-<p>下载：<a href="https://cream-deck.vercel.app/assets/examples/guides-1.2.0-r1/text-cleanup.csv">商品名称清理练习数据（CSV）</a>。</p>
+<p>下载：<a href="https://ninopad.com/assets/examples/guides-1.2.0-r1/text-cleanup.csv">商品名称清理练习数据（CSV）</a>。</p>
 <h2>2. 长按 SUBSTITUTE，去掉 SKU-</h2>
 <p>在手机财务或文本处理桌面中，长按“SUBSTITUTE”按键打开参数面板。将“原文本或单元格”填写为 <code>A2</code>（类型保持“数值／引用”）；“查找文字”填写为 <code>SKU-</code>（类型保持“文字”）。“替换为（留空删除）”保持留空，“替换第几处”暂时亦保持留空。</p>
 <p>此时底部公式预览应为 <code>=SUBSTITUTE(A2,&quot;SKU-&quot;,&quot;&quot;)</code>。其中 <code>&quot;&quot;</code> 表示将匹配到的文字替换为空字符串（即直接删除）。这是合法的空值设定，切勿为了让输入框“有内容”而误填入空格。</p>
@@ -211,7 +211,7 @@
       <a href="../support.html">支持</a>
       <a href="../privacy.html">隐私</a>
       <a href="../terms.html">条款</a>
-      <a href="https://arcade.day1zen.cn/" target="_blank" rel="noopener">游戏大厅</a>
+      <a href="https://arcade.ninopad.com/" target="_blank" rel="noopener">游戏大厅</a>
     </nav>
     <small>© <span data-year></span> 奶猫妙控</small>
   </footer>

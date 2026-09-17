@@ -6,42 +6,42 @@
 
 ## 使用指南
 
-- [工作台副控入门：让 iPhone 成为 Mac 键盘旁的得力搭档](https://cream-deck.vercel.app/blog/layout-work): 快速上手多功能工作桌面：用触控板随心导航、用实时键盘流畅打字，配合撤销、重做与一键剪贴，全面提速桌面日常。
-- [Mac 常用软件随身控：打造属于你的掌上应用启动器](https://cream-deck.vercel.app/blog/layout-launcher): 自动同步 Mac 常用软件列表，以醒目大图标排布桌面，支持长按编辑与随心更换，体验一触即达的窗口切换。
-- [网页浏览利器：在手机上直达网址、轻滑切换标签页](https://cream-deck.vercel.app/blog/layout-browser): 通过手机端快速输入并直达目标 URL，利用滑块控件自如切换标签页，结合页内搜索与自动化联动打造流畅冲浪流。
-- [经典点击轮回归：用手机优雅掌控 Mac 音乐与播放进度](https://cream-deck.vercel.app/blog/layout-media): 重现经典点击轮与层级菜单手感，随时查看当前曲目与封面，平滑微调播放进度与切换播放模式。
-- [演讲从容掌控：无线遥控翻页、画中画浮窗与精准分段计时](https://cream-deck.vercel.app/blog/layout-presentation): 配置前后翻页与画中画摄像头/投屏浮窗，利用分段计时器精准把控排练与演说节奏，从容驾驭每个演讲台。
-- [多 Agent 并行调度：用 Codex 布局从容切换任务](https://cream-deck.vercel.app/blog/layout-codex): 掌握任务槽位的单击查看与双击前台聚焦，实时调节模型推理强度与用量回读，安全审批代码操作。
-- [命令行随身监控：在手机上新建、切换与全屏管理终端会话](https://cream-deck.vercel.app/blog/layout-terminal): 掌上管理 Mac 终端会话标签，运行只读命令验证链路，全屏展开沉浸输入，随时掌握后台编译与运维状态。
-- [专注文字创作：用写作布局随心跳段、文内查找与一键排版](https://cream-deck.vercel.app/blog/layout-writing): 利用字/词/句/段四级范围精准游走光标，配合文内查找与 Markdown 格式面板，大幅减少键盘快捷键记忆负担。
-- [知识摘录工作流：捕捉灵感碎片，将原文、个人笔记与出处沉淀归档](https://cream-deck.vercel.app/blog/layout-research): 无缝读取 Mac 选区或手动录入资料，为摘录补充专属思考与来源链接，在手机剪藏夹中建立条理分明的素材库。
-- [深度阅读辅助：用手机翻阅 PDF、直达章节与精准跳转页码](https://cream-deck.vercel.app/blog/layout-reading): 同步读取文档书签与层级目录，支持关键词筛选章节、绝对页码跳转与正文查找，让大部头文献阅读更轻松。
-- [数字与表格好帮手：快速算账，在手机上可视化构建函数公式](https://cream-deck.vercel.app/blog/layout-finance): 内置独立好用的本地计算器，支持长按 SUMIFS 逐项填充参数并生成规范公式，轻松搞定数据汇总与录入。
-- [三维建模掌上助手：从 Blender 视角漫游到快捷操作的自然协同](https://cream-deck.vercel.app/blog/layout-creative): 随前台软件自动切换专用按键，配合 Blender 默认键位轻松完成物体全选、聚焦与视口环绕，支持横屏双手操控。
-- [掌上节奏工作站：载入示例鼓点，微调音色与探索切片玩法](https://cream-deck.vercel.app/blog/layout-sampler): 在手机上敲击触控鼓垫、探索采样菜单与响度整理，分清声音叠放与接力切断规则，开启随时随地的律动创作。
-- [如何用手机作为手柄畅玩妙控游戏大厅](https://cream-deck.vercel.app/blog/layout-arcade): 带你快速上手妙控游戏大厅。将已配对的手机作为触屏手柄，选择喜欢的派对或单人游戏，与朋友同屏开启趣味对战。
-- [全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感](https://cream-deck.vercel.app/blog/layout-smart-home): 通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。
+- [工作台副控入门：让 iPhone 成为 Mac 键盘旁的得力搭档](https://ninopad.com/blog/layout-work): 快速上手多功能工作桌面：用触控板随心导航、用实时键盘流畅打字，配合撤销、重做与一键剪贴，全面提速桌面日常。
+- [Mac 常用软件随身控：打造属于你的掌上应用启动器](https://ninopad.com/blog/layout-launcher): 自动同步 Mac 常用软件列表，以醒目大图标排布桌面，支持长按编辑与随心更换，体验一触即达的窗口切换。
+- [网页浏览利器：在手机上直达网址、轻滑切换标签页](https://ninopad.com/blog/layout-browser): 通过手机端快速输入并直达目标 URL，利用滑块控件自如切换标签页，结合页内搜索与自动化联动打造流畅冲浪流。
+- [经典点击轮回归：用手机优雅掌控 Mac 音乐与播放进度](https://ninopad.com/blog/layout-media): 重现经典点击轮与层级菜单手感，随时查看当前曲目与封面，平滑微调播放进度与切换播放模式。
+- [演讲从容掌控：无线遥控翻页、画中画浮窗与精准分段计时](https://ninopad.com/blog/layout-presentation): 配置前后翻页与画中画摄像头/投屏浮窗，利用分段计时器精准把控排练与演说节奏，从容驾驭每个演讲台。
+- [多 Agent 并行调度：用 Codex 布局从容切换任务](https://ninopad.com/blog/layout-codex): 掌握任务槽位的单击查看与双击前台聚焦，实时调节模型推理强度与用量回读，安全审批代码操作。
+- [命令行随身监控：在手机上新建、切换与全屏管理终端会话](https://ninopad.com/blog/layout-terminal): 掌上管理 Mac 终端会话标签，运行只读命令验证链路，全屏展开沉浸输入，随时掌握后台编译与运维状态。
+- [专注文字创作：用写作布局随心跳段、文内查找与一键排版](https://ninopad.com/blog/layout-writing): 利用字/词/句/段四级范围精准游走光标，配合文内查找与 Markdown 格式面板，大幅减少键盘快捷键记忆负担。
+- [知识摘录工作流：捕捉灵感碎片，将原文、个人笔记与出处沉淀归档](https://ninopad.com/blog/layout-research): 无缝读取 Mac 选区或手动录入资料，为摘录补充专属思考与来源链接，在手机剪藏夹中建立条理分明的素材库。
+- [深度阅读辅助：用手机翻阅 PDF、直达章节与精准跳转页码](https://ninopad.com/blog/layout-reading): 同步读取文档书签与层级目录，支持关键词筛选章节、绝对页码跳转与正文查找，让大部头文献阅读更轻松。
+- [数字与表格好帮手：快速算账，在手机上可视化构建函数公式](https://ninopad.com/blog/layout-finance): 内置独立好用的本地计算器，支持长按 SUMIFS 逐项填充参数并生成规范公式，轻松搞定数据汇总与录入。
+- [三维建模掌上助手：从 Blender 视角漫游到快捷操作的自然协同](https://ninopad.com/blog/layout-creative): 随前台软件自动切换专用按键，配合 Blender 默认键位轻松完成物体全选、聚焦与视口环绕，支持横屏双手操控。
+- [掌上节奏工作站：载入示例鼓点，微调音色与探索切片玩法](https://ninopad.com/blog/layout-sampler): 在手机上敲击触控鼓垫、探索采样菜单与响度整理，分清声音叠放与接力切断规则，开启随时随地的律动创作。
+- [如何用手机作为手柄畅玩妙控游戏大厅](https://ninopad.com/blog/layout-arcade): 带你快速上手妙控游戏大厅。将已配对的手机作为触屏手柄，选择喜欢的派对或单人游戏，与朋友同屏开启趣味对战。
+- [全屋设备触手可及：接入 Home Assistant，用实体旋钮点亮灵感](https://ninopad.com/blog/layout-smart-home): 通过服务地址与访问令牌接入 Home Assistant，在手机桌面上添加智能灯具，体验顺滑的开关与无级明暗调光。
 
 ## 发布与支持
 
 - [iPhone / iPad 正式版 · App Store](https://apps.apple.com/app/id6805378609)
 - [Mac 配套端 · Universal 安装包](https://github.com/buggyblues/cream-deck/releases/latest)
 
-- [更新日志](https://cream-deck.vercel.app/updates)
-- [帮助](https://cream-deck.vercel.app/support)
-- [隐私](https://cream-deck.vercel.app/privacy)
+- [更新日志](https://ninopad.com/updates)
+- [帮助](https://ninopad.com/support)
+- [隐私](https://ninopad.com/privacy)
 
 ## 实用操作教程
 
-- [把高频短语做成实体按键：指尖轻触，一键输入到 Mac](https://cream-deck.vercel.app/blog/guide-text-button): 在手机上配置常用语快捷按钮，设置追加回车或按键，通过内置预览核对文字，彻底告别重复敲键盘。
-- [把操作连成一条流：打造“记录并自动保存”的多步宏](https://cream-deck.vercel.app/blog/guide-automation-steps): 将基础文字按键扩展为自动化流程，串联文本输入、防冲突延时与 ⌘S 快捷键，并用实测与预览确保每步稳定执行。
-- [做好资料摘录：把原文、个人思考与出处链接分门别类](https://cream-deck.vercel.app/blog/guide-clipping-sources): 在剪藏夹中建立结构化摘录条目，清晰拆分正文、笔记备忘与出处 URL，日后仅凭零碎记忆词即可精准检索。
-- [精准整理与归档：按类型筛选剪藏，一键打包导出文件](https://cream-deck.vercel.app/blog/guide-clipping-export): 利用关键词与媒体类型多重过滤资料，跨条件自由多选，通过 iOS 原生分享面板轻松导出文本与附件。
-- [告别记错函数参数：用手机可视化生成 SUMIFS 多条件公式](https://cream-deck.vercel.app/blog/guide-sumifs): 长按 SUMIFS 唤起可视化编辑面板，直观配置多组求和与筛选条件，即时生成标准公式并一键注入 Excel 表格。
-- [规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本](https://cream-deck.vercel.app/blog/guide-text-cleanup): 在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。
-- [合成器入门：弹奏动听和弦，为灵感加入鼓点节拍](https://cream-deck.vercel.app/blog/guide-synthesizer): 从七级和弦键轻松起步，掌握延音技巧、开启音色编辑、生成丰富鼓点变体并随时掌控播放，带你全面认识合成器的四大功能桌面。
-- [吉他入门：扫响六根弦，跟着提示练一段和弦](https://cream-deck.vercel.app/blog/guide-guitar): 认识吉他桌面的琴弦、和弦与控制台，再进入学习桌面选曲、听示范和逐步跟练。
-- [换一张会动的壁纸：从内置动物到自己的视频](https://cream-deck.vercel.app/blog/guide-dynamic-wallpaper): 在主题与壁纸中搜索动物、应用动态壁纸，调整显示方式，并了解多选导入、保存与布局单独设置。
+- [把高频短语做成实体按键：指尖轻触，一键输入到 Mac](https://ninopad.com/blog/guide-text-button): 在手机上配置常用语快捷按钮，设置追加回车或按键，通过内置预览核对文字，彻底告别重复敲键盘。
+- [把操作连成一条流：打造“记录并自动保存”的多步宏](https://ninopad.com/blog/guide-automation-steps): 将基础文字按键扩展为自动化流程，串联文本输入、防冲突延时与 ⌘S 快捷键，并用实测与预览确保每步稳定执行。
+- [做好资料摘录：把原文、个人思考与出处链接分门别类](https://ninopad.com/blog/guide-clipping-sources): 在剪藏夹中建立结构化摘录条目，清晰拆分正文、笔记备忘与出处 URL，日后仅凭零碎记忆词即可精准检索。
+- [精准整理与归档：按类型筛选剪藏，一键打包导出文件](https://ninopad.com/blog/guide-clipping-export): 利用关键词与媒体类型多重过滤资料，跨条件自由多选，通过 iOS 原生分享面板轻松导出文本与附件。
+- [告别记错函数参数：用手机可视化生成 SUMIFS 多条件公式](https://ninopad.com/blog/guide-sumifs): 长按 SUMIFS 唤起可视化编辑面板，直观配置多组求和与筛选条件，即时生成标准公式并一键注入 Excel 表格。
+- [规范杂乱商品数据：用 SUBSTITUTE 与 TRIM 轻松清洗文本](https://ninopad.com/blog/guide-text-cleanup): 在手机上可视化配置文本替换与去空格函数，区分全局替换与指定首处匹配，配合对照列安全清洗表格数据。
+- [合成器入门：弹奏动听和弦，为灵感加入鼓点节拍](https://ninopad.com/blog/guide-synthesizer): 从七级和弦键轻松起步，掌握延音技巧、开启音色编辑、生成丰富鼓点变体并随时掌控播放，带你全面认识合成器的四大功能桌面。
+- [吉他入门：扫响六根弦，跟着提示练一段和弦](https://ninopad.com/blog/guide-guitar): 认识吉他桌面的琴弦、和弦与控制台，再进入学习桌面选曲、听示范和逐步跟练。
+- [换一张会动的壁纸：从内置动物到自己的视频](https://ninopad.com/blog/guide-dynamic-wallpaper): 在主题与壁纸中搜索动物、应用动态壁纸，调整显示方式，并了解多选导入、保存与布局单独设置。
 
 1.3.1：原氛围编程更名 Codex；新增独立氛围编程布局，连接本地 Claude Code、Codex 与 Antigravity。两者的前提与操作见 /blog/layout-codex。
 
